@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":false,"showMaterialUpdate":false,"showSkybox":false,"showFlares":false,"showImageEffects":false,"showParticleSystems":false},"in2DMode":false,"pivot":{"x":5.90396785736084,"y":0.3387652039527893,"z":1.8932396173477173},"rotation":{"x":-0.04193684458732605,"y":-0.049140553921461108,"z":0.002064924919977784,"w":-0.9979092478752136},"size":7.259736061096191,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":false,"showMaterialUpdate":false,"showSkybox":false,"showFlares":false,"showImageEffects":false,"showParticleSystems":false},"in2DMode":true,"pivot":{"x":0.01085961889475584,"y":1.047829508781433,"z":-11.7978515625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":5.879589080810547,"orthographic":true}
+>>>>>>> parent of 08b1b90 (Revert "Meta Updates")
