@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class CharacterControllerCustom : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] float m_movementSpeed;

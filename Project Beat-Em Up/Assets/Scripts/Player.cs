@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : CharacterController
+public class Player : CharacterControllerCustom
 {
 
     //https://docs.unity3d.com/ScriptReference/Input.GetAxis.html

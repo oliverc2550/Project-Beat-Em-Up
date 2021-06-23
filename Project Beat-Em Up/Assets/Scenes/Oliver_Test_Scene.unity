@@ -247,7 +247,6 @@ GameObject:
   - component: {fileID: 336539563}
   - component: {fileID: 336539562}
   - component: {fileID: 336539561}
-  - component: {fileID: 336539564}
   - component: {fileID: 336539566}
   - component: {fileID: 336539565}
   m_Layer: 0
@@ -268,7 +267,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b95265f99b6d90e438df1308a89c8bab, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -341,22 +340,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &336539564
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336539560}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &336539565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_movementSpeed: 1
   m_jumpForce: 4
-  m_rigidbody: {fileID: 336539564}
+  m_rigidbody: {fileID: 0}
   m_spriteRenderer: {fileID: 336539562}
 --- !u!65 &336539566
 BoxCollider:
