@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Changelog
+/*Inital Script created by Thea (date)
+ * 24/06/21 - Oliver - Changed from using rigidbody.addforce to transform.position += within Move() for smoother movement. Also added in Time.deltaTime to insure framerate independence.
+ * Changed Move() and Jump() to virtual functions allowing addition character specific code to be added in inherited functions. Added an Animator property.
+ * 
+ */
+
 public class CharacterController1 : MonoBehaviour
 {
     [Header("Settings")]
@@ -9,15 +16,17 @@ public class CharacterController1 : MonoBehaviour
     [SerializeField] float m_jumpForce;
 
     [Header("References")]
-    [SerializeField] Rigidbody m_rigidbody;
-    [SerializeField] SpriteRenderer m_spriteRenderer;
+    [SerializeField] protected Animator m_animator;
+    [SerializeField] protected Rigidbody m_rigidbody;
+    [SerializeField] protected SpriteRenderer m_spriteRenderer;
 
 
-    protected void Move(Vector3 direction)
+    protected virtual void Move(Vector3 direction)
     {
-        m_rigidbody.AddForce(direction * m_movementSpeed);
+        transform.position += direction * Time.deltaTime * m_movementSpeed;
+        //m_rigidbody.AddForce(direction * m_movementSpeed);
     }
-    protected void Jump()
+    protected virtual void Jump()
     {
         m_rigidbody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
     }
