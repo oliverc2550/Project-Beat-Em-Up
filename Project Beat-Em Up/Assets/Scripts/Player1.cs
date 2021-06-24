@@ -28,8 +28,15 @@ public class Player1 : CharacterController1
     protected override void Move(Vector3 direction)
     {
         base.Move(direction);
-        m_animator.SetInteger("AnimState", 2);
-        if (Mathf.Abs(m_rigidbody.velocity.y) >= 0.001f)
+        if(direction.x > 0 || direction.z > 0 || direction.x < 0 || direction.z < 0)
+        {
+            m_animator.SetInteger("AnimState", 2);
+            if (Mathf.Abs(m_rigidbody.velocity.y) >= 0.001f)
+            {
+                m_animator.SetInteger("AnimState", 0);
+            }
+        }
+        else if(direction.x == 0 || direction.z == 0)
         {
             m_animator.SetInteger("AnimState", 0);
         }

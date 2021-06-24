@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 476
     height: 1347
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -72,10 +72,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1347
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 579, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 60
+  controlID: 126
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
     y: 0
     width: 2084
     height: 1347
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 303, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 61
@@ -218,8 +218,8 @@ MonoBehaviour:
     y: 0
     width: 2084
     height: 1039
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 303, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 62
 --- !u!114 &10
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -267,17 +267,17 @@ MonoBehaviour:
     y: 0
     width: 1789
     height: 1039
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 16}
   - {fileID: 14}
   - {fileID: 17}
   - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -446,7 +446,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -506,9 +506,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a380000
+      m_SelectedIDs: 9c3f0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 56c8ffff5cfbffffb23c0000
+      m_ExpandedIDs: c4e9ffff24f2ffff5cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -568,9 +568,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -15.21901, y: -19.139875, z: 156.71347}
+    m_Target: {x: -7.8451476, y: -59.596996, z: 145.60454}
     speed: 2
-    m_Value: {x: -15.21901, y: -19.139875, z: 156.71347}
+    m_Value: {x: -7.8451476, y: -59.596996, z: 145.60454}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -616,9 +616,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 1
   m_Rotation:
-    m_Target: {x: -0.05273321, y: 0.044021048, z: -0.0023274797, w: -0.9976342}
+    m_Target: {x: -0.1881098, y: 0.027100105, z: -0.0051952284, w: -0.98176426}
     speed: 2
-    m_Value: {x: -0.05273326, y: 0.044021092, z: -0.002327482, w: -0.9976352}
+    m_Value: {x: -0.18810908, y: 0.0271, z: -0.0051952084, w: -0.9817605}
   m_Size:
     m_Target: 82.114265
     speed: 2
@@ -712,11 +712,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 72
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 72
   m_LastProjectPath: C:\Users\olive\Documents\GitHub\Project-Beat-Em-Up\Project Beat-Em
     Up
@@ -724,9 +724,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 25}
-    m_SelectedIDs: 383f0000
-    m_LastClickedID: 16184
-    m_ExpandedIDs: 00000000223f0000243f0000263f000000ca9a3b
+    m_SelectedIDs: 783f0000
+    m_LastClickedID: 16248
+    m_ExpandedIDs: 000000005e3f0000603f0000623f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -754,7 +754,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a4410000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000223f0000243f0000263f0000
+    m_ExpandedIDs: 000000005e3f0000603f0000623f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
