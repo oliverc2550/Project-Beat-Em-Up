@@ -12,7 +12,7 @@ using UnityEngine;
 public class CharacterController1 : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] float m_movementSpeed;
+    [SerializeField] protected float m_movementSpeed;
     [SerializeField] float m_jumpForce;
 
     [Header("References")]
