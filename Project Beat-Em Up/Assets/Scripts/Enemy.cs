@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : CharacterController1
+public class Enemy : CombatandMovementController
 {
     [SerializeField] NavMeshAgent m_agent;
 
@@ -11,7 +11,7 @@ public class Enemy : CharacterController1
 
     private void Start()
     {
-       SetTarget(FindObjectOfType<Player1>().transform);
+       SetTarget(FindObjectOfType<PlayerController>().transform);
     }
 
     private void Update()

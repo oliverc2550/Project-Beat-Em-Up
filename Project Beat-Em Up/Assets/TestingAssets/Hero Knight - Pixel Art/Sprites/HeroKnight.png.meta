@@ -1,277 +1,289 @@
 fileFormatVersion: 2
-guid: ae297123f091bbf4e8f1835eb98fb293
+guid: f7ba785a3cd7eea4a91cc79ccbf249f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
+      213: -7357797988063737743
     second: HeroKnight_0
   - first:
-      213: 21300002
+      213: 3512593026476662326
     second: HeroKnight_1
   - first:
-      213: 21300004
+      213: -124786382948628084
     second: HeroKnight_2
   - first:
-      213: 21300006
+      213: 7970523947391987758
     second: HeroKnight_3
   - first:
-      213: 21300008
+      213: -7787729717272468553
     second: HeroKnight_4
   - first:
-      213: 21300010
+      213: 2125910826022465951
     second: HeroKnight_5
   - first:
-      213: 21300012
+      213: 252653891942459300
     second: HeroKnight_6
   - first:
-      213: 21300014
+      213: -8388972923550342200
     second: HeroKnight_7
   - first:
-      213: 21300016
+      213: 3323923944230278279
     second: HeroKnight_8
   - first:
-      213: 21300018
+      213: -8337154125909986106
     second: HeroKnight_9
   - first:
-      213: 21300020
+      213: -5098964010609699078
     second: HeroKnight_10
   - first:
-      213: 21300022
+      213: -1235302168702799205
     second: HeroKnight_11
   - first:
-      213: 21300024
+      213: -1060617727152267471
     second: HeroKnight_12
   - first:
-      213: 21300026
+      213: 3655784061218813123
     second: HeroKnight_13
   - first:
-      213: 21300028
+      213: -1264463737979248643
     second: HeroKnight_14
   - first:
-      213: 21300030
+      213: 6318752081942698288
     second: HeroKnight_15
   - first:
-      213: 21300032
+      213: 3976493821104330473
     second: HeroKnight_16
   - first:
-      213: 21300034
+      213: 5966382329375329461
     second: HeroKnight_17
   - first:
-      213: 21300036
+      213: -3176810353904627769
     second: HeroKnight_18
   - first:
-      213: 21300038
+      213: -5993887360652194665
     second: HeroKnight_19
   - first:
-      213: 21300040
+      213: 4711292185766173509
     second: HeroKnight_20
   - first:
-      213: 21300042
+      213: 946427592695480334
     second: HeroKnight_21
   - first:
-      213: 21300044
+      213: -4894418960276772857
     second: HeroKnight_22
   - first:
-      213: 21300046
+      213: 2885050567975417819
     second: HeroKnight_23
   - first:
-      213: 21300048
+      213: 973927010134293491
     second: HeroKnight_24
   - first:
-      213: 21300050
+      213: 6341982509133532500
     second: HeroKnight_25
   - first:
-      213: 21300052
+      213: 753305953665342046
     second: HeroKnight_26
   - first:
-      213: 21300054
+      213: 6313690391001604011
     second: HeroKnight_27
   - first:
-      213: 21300056
+      213: -4245077406475783197
     second: HeroKnight_28
   - first:
-      213: 21300058
+      213: 4453959963325820934
     second: HeroKnight_29
   - first:
-      213: 21300060
+      213: 1791934506739023117
     second: HeroKnight_30
   - first:
-      213: 21300062
+      213: -4137450849949020332
     second: HeroKnight_31
   - first:
-      213: 21300064
+      213: -5134731514218233545
     second: HeroKnight_32
   - first:
-      213: 21300066
+      213: -582058313250614197
     second: HeroKnight_33
   - first:
-      213: 21300068
+      213: -5130382960978514348
     second: HeroKnight_34
   - first:
-      213: 21300070
+      213: -6014022660474136463
     second: HeroKnight_35
   - first:
-      213: 21300072
+      213: 4873965464126267751
     second: HeroKnight_36
   - first:
-      213: 21300074
+      213: -575750697980779115
     second: HeroKnight_37
   - first:
-      213: 21300076
+      213: -504967399503113872
     second: HeroKnight_38
   - first:
-      213: 21300078
+      213: 3588385130084391501
     second: HeroKnight_39
   - first:
-      213: 21300080
+      213: -7621990347924620012
     second: HeroKnight_40
   - first:
-      213: 21300082
+      213: 358428806763893455
     second: HeroKnight_41
   - first:
-      213: 21300084
+      213: -672906263598977215
     second: HeroKnight_42
   - first:
-      213: 21300086
+      213: -5499143247290303553
     second: HeroKnight_43
   - first:
-      213: 21300088
+      213: -3268870572185850169
     second: HeroKnight_44
   - first:
-      213: 21300090
+      213: -4870082807181345482
     second: HeroKnight_45
   - first:
-      213: 21300092
+      213: -8456527112066601790
     second: HeroKnight_46
   - first:
-      213: 21300094
+      213: -975723088991628463
     second: HeroKnight_47
   - first:
-      213: 21300096
+      213: 2085106817689865712
     second: HeroKnight_48
   - first:
-      213: 21300098
+      213: -5337273099258485124
     second: HeroKnight_49
   - first:
-      213: 21300100
+      213: 3765553826894037235
     second: HeroKnight_50
   - first:
-      213: 21300102
+      213: 2248196255204965181
     second: HeroKnight_51
   - first:
-      213: 21300104
+      213: -4112107698468626969
     second: HeroKnight_52
   - first:
-      213: 21300106
+      213: 6814800164921709591
     second: HeroKnight_53
   - first:
-      213: 21300108
+      213: 7215491874182366598
     second: HeroKnight_54
   - first:
-      213: 21300110
+      213: 8916276743974120342
     second: HeroKnight_55
   - first:
-      213: 21300112
+      213: 7450784991418527920
     second: HeroKnight_56
   - first:
-      213: 21300114
+      213: 6182240301916592527
     second: HeroKnight_57
   - first:
-      213: 21300116
+      213: -1441633551177549439
     second: HeroKnight_58
   - first:
-      213: 21300118
+      213: -7346772227376761501
     second: HeroKnight_59
   - first:
-      213: 21300120
+      213: 1083209462468502394
     second: HeroKnight_60
   - first:
-      213: 21300122
+      213: -899773550075009147
     second: HeroKnight_61
   - first:
-      213: 21300124
+      213: 7908077213219410035
     second: HeroKnight_62
   - first:
-      213: 21300126
+      213: 8991151664634894510
     second: HeroKnight_63
   - first:
-      213: 21300128
+      213: 8033672922746860508
     second: HeroKnight_64
   - first:
-      213: 21300130
+      213: -2956777940927116518
     second: HeroKnight_65
   - first:
-      213: 21300132
+      213: -3378368782454778923
     second: HeroKnight_66
   - first:
-      213: 21300134
+      213: -5976487082683598045
     second: HeroKnight_67
   - first:
-      213: 21300136
+      213: -2979076345342783400
     second: HeroKnight_68
   - first:
-      213: 21300138
+      213: 1117901136893291585
     second: HeroKnight_69
   - first:
-      213: 21300140
+      213: -4841384895507565432
     second: HeroKnight_70
   - first:
-      213: 21300142
+      213: -4821242456201728152
     second: HeroKnight_71
   - first:
-      213: 21300144
+      213: 1527045960694179484
     second: HeroKnight_72
   - first:
-      213: 21300146
+      213: -6647386495125142441
     second: HeroKnight_73
   - first:
-      213: 21300148
+      213: -6402147663238019225
     second: HeroKnight_74
   - first:
-      213: 21300150
+      213: 7384348661338487032
     second: HeroKnight_75
   - first:
-      213: 21300152
+      213: 3789121594438123221
     second: HeroKnight_76
   - first:
-      213: 21300154
+      213: -7088592959811703965
     second: HeroKnight_77
   - first:
-      213: 21300156
+      213: 4815745753748979736
     second: HeroKnight_78
   - first:
-      213: 21300158
+      213: 7809183637874724509
     second: HeroKnight_79
   - first:
-      213: 21300160
+      213: -8815784538151309842
     second: HeroKnight_80
   - first:
-      213: 21300162
+      213: 3182929768041914423
     second: HeroKnight_81
   - first:
-      213: 21300164
+      213: -6941053056645262639
     second: HeroKnight_82
   - first:
-      213: 21300166
+      213: -1351689395503517949
     second: HeroKnight_83
   - first:
-      213: 21300168
+      213: 5535971919508268693
     second: HeroKnight_84
   - first:
-      213: 21300170
+      213: 3622809048791833595
     second: HeroKnight_85
   - first:
-      213: 21300172
+      213: 7862825127739834755
     second: HeroKnight_86
   - first:
-      213: 21300174
+      213: 5138135816391183870
     second: HeroKnight_87
   - first:
-      213: 21300176
+      213: 2639929186425698602
     second: HeroKnight_88
   - first:
-      213: 21300178
+      213: -8138995811250331855
     second: HeroKnight_89
+  - first:
+      213: 1227722658420683368
+    second: HeroKnight_90
+  - first:
+      213: -62067134549690196
+    second: HeroKnight_91
+  - first:
+      213: -7313229396200468683
+    second: HeroKnight_92
+  - first:
+      213: -174334233137331589
+    second: HeroKnight_93
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -302,11 +314,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
+    aniso: 2
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -327,23 +339,35 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -352,7 +376,43 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -360,10 +420,10 @@ TextureImporter:
       name: HeroKnight_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 440
-        width: 100
-        height: 55
+        x: 18
+        y: 442
+        width: 44
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c779570b9b2effe4b87f55962dfdcb87
-      internalID: 21300000
+      spriteID: 178806096b9d3e990800000000000000
+      internalID: -7357797988063737743
       vertices: []
       indices: 
       edges: []
@@ -381,10 +441,10 @@ TextureImporter:
       name: HeroKnight_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 440
-        width: 100
-        height: 55
+        x: 117
+        y: 442
+        width: 44
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,8 +452,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2169ea9f9f2b8bb448c1d4222fb91849
-      internalID: 21300002
+      spriteID: 63ed7af3fbc3fb030800000000000000
+      internalID: 3512593026476662326
       vertices: []
       indices: 
       edges: []
@@ -402,10 +462,10 @@ TextureImporter:
       name: HeroKnight_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 440
-        width: 100
-        height: 55
+        x: 216
+        y: 442
+        width: 45
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,8 +473,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34367ed0f782fd340b3dd7a60b806bbb
-      internalID: 21300004
+      spriteID: c898a83227ba44ef0800000000000000
+      internalID: -124786382948628084
       vertices: []
       indices: 
       edges: []
@@ -423,10 +483,10 @@ TextureImporter:
       name: HeroKnight_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 440
-        width: 100
-        height: 55
+        x: 316
+        y: 442
+        width: 45
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,8 +494,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b1fd1f1491579240a1d197082f9fe47
-      internalID: 21300006
+      spriteID: e203b0eec4dfc9e60800000000000000
+      internalID: 7970523947391987758
       vertices: []
       indices: 
       edges: []
@@ -444,10 +504,10 @@ TextureImporter:
       name: HeroKnight_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 440
-        width: 100
-        height: 55
+        x: 416
+        y: 443
+        width: 45
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,8 +515,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbcadbb8323af374da3bb2e4e979b105
-      internalID: 21300008
+      spriteID: 7b3a833551d6ce390800000000000000
+      internalID: -7787729717272468553
       vertices: []
       indices: 
       edges: []
@@ -465,10 +525,10 @@ TextureImporter:
       name: HeroKnight_5
       rect:
         serializedVersion: 2
-        x: 500
-        y: 440
-        width: 100
-        height: 55
+        x: 517
+        y: 442
+        width: 44
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,8 +536,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b3f9933199018b4bace512bc253d911
-      internalID: 21300010
+      spriteID: f91f939f1a0c08d10800000000000000
+      internalID: 2125910826022465951
       vertices: []
       indices: 
       edges: []
@@ -486,10 +546,10 @@ TextureImporter:
       name: HeroKnight_6
       rect:
         serializedVersion: 2
-        x: 600
-        y: 440
-        width: 100
-        height: 55
+        x: 618
+        y: 442
+        width: 44
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,8 +557,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0446bd255a6ecde4c9472293e8bf3fc7
-      internalID: 21300012
+      spriteID: 4a7a958406b918300800000000000000
+      internalID: 252653891942459300
       vertices: []
       indices: 
       edges: []
@@ -507,10 +567,10 @@ TextureImporter:
       name: HeroKnight_7
       rect:
         serializedVersion: 2
-        x: 700
-        y: 440
-        width: 100
-        height: 55
+        x: 718
+        y: 442
+        width: 44
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,8 +578,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c6a65337b43c9043a000aa98af0dc06
-      internalID: 21300014
+      spriteID: 8c3696d9291649b80800000000000000
+      internalID: -8388972923550342200
       vertices: []
       indices: 
       edges: []
@@ -528,10 +588,10 @@ TextureImporter:
       name: HeroKnight_8
       rect:
         serializedVersion: 2
-        x: 800
-        y: 440
-        width: 100
-        height: 55
+        x: 818
+        y: 442
+        width: 42
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,8 +599,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 385b706ec5f45a142ae91e451d5b1fc6
-      internalID: 21300016
+      spriteID: 784d2446733f02e20800000000000000
+      internalID: 3323923944230278279
       vertices: []
       indices: 
       edges: []
@@ -549,10 +609,10 @@ TextureImporter:
       name: HeroKnight_9
       rect:
         serializedVersion: 2
-        x: 900
-        y: 440
-        width: 100
-        height: 55
+        x: 917
+        y: 442
+        width: 44
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,8 +620,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdc610abd12828d4287f5d19480031cd
-      internalID: 21300018
+      spriteID: 6c4f37f9e7a7c4c80800000000000000
+      internalID: -8337154125909986106
       vertices: []
       indices: 
       edges: []
@@ -570,10 +630,10 @@ TextureImporter:
       name: HeroKnight_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 385
-        width: 100
-        height: 55
+        x: 17
+        y: 387
+        width: 45
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -581,8 +641,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dd226e17f1e49c40be7ca90c6fd22a5
-      internalID: 21300020
+      spriteID: af69b117f37dc39b0800000000000000
+      internalID: -5098964010609699078
       vertices: []
       indices: 
       edges: []
@@ -591,10 +651,10 @@ TextureImporter:
       name: HeroKnight_11
       rect:
         serializedVersion: 2
-        x: 100
-        y: 385
-        width: 100
-        height: 55
+        x: 116
+        y: 387
+        width: 47
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -602,8 +662,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47421b2965a5fee4cb6c71c4387814dc
-      internalID: 21300022
+      spriteID: b923334f8335bdee0800000000000000
+      internalID: -1235302168702799205
       vertices: []
       indices: 
       edges: []
@@ -612,10 +672,10 @@ TextureImporter:
       name: HeroKnight_12
       rect:
         serializedVersion: 2
-        x: 200
-        y: 385
-        width: 100
-        height: 55
+        x: 216
+        y: 387
+        width: 45
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,8 +683,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d815054cd6f6bed42b0c9dae09198ebe
-      internalID: 21300024
+      spriteID: 13f5b9aebcde741f0800000000000000
+      internalID: -1060617727152267471
       vertices: []
       indices: 
       edges: []
@@ -633,10 +693,10 @@ TextureImporter:
       name: HeroKnight_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 385
-        width: 100
-        height: 55
+        x: 317
+        y: 387
+        width: 44
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -644,8 +704,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8378baa9e58aa84c86b954061f15ccf
-      internalID: 21300026
+      spriteID: 3c47b780c34fbb230800000000000000
+      internalID: 3655784061218813123
       vertices: []
       indices: 
       edges: []
@@ -654,10 +714,10 @@ TextureImporter:
       name: HeroKnight_14
       rect:
         serializedVersion: 2
-        x: 400
-        y: 385
-        width: 100
-        height: 55
+        x: 417
+        y: 387
+        width: 45
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,8 +725,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc5b4b1579bee54db9953213a18cac2
-      internalID: 21300028
+      spriteID: dff52620ee8b37ee0800000000000000
+      internalID: -1264463737979248643
       vertices: []
       indices: 
       edges: []
@@ -675,10 +735,10 @@ TextureImporter:
       name: HeroKnight_15
       rect:
         serializedVersion: 2
-        x: 500
-        y: 385
-        width: 100
-        height: 55
+        x: 517
+        y: 387
+        width: 45
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,8 +746,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64dbfdd2d860c98459b2260b745616c6
-      internalID: 21300030
+      spriteID: 03954f35a87b0b750800000000000000
+      internalID: 6318752081942698288
       vertices: []
       indices: 
       edges: []
@@ -696,10 +756,10 @@ TextureImporter:
       name: HeroKnight_16
       rect:
         serializedVersion: 2
-        x: 600
-        y: 385
-        width: 100
-        height: 55
+        x: 617
+        y: 387
+        width: 47
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -707,8 +767,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d988ab4cf5870645a8c74c569d22454
-      internalID: 21300032
+      spriteID: 9e6957adf085f2730800000000000000
+      internalID: 3976493821104330473
       vertices: []
       indices: 
       edges: []
@@ -717,10 +777,10 @@ TextureImporter:
       name: HeroKnight_17
       rect:
         serializedVersion: 2
-        x: 700
-        y: 385
-        width: 100
-        height: 55
+        x: 717
+        y: 387
+        width: 43
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,8 +788,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8e7990a7bb44fa4db099db19b1059ae
-      internalID: 21300034
+      spriteID: 5bc85980e19dcc250800000000000000
+      internalID: 5966382329375329461
       vertices: []
       indices: 
       edges: []
@@ -738,10 +798,10 @@ TextureImporter:
       name: HeroKnight_18
       rect:
         serializedVersion: 2
-        x: 800
-        y: 385
-        width: 100
-        height: 55
+        x: 821
+        y: 387
+        width: 41
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -749,8 +809,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 173142069c964984a95146fbed9ab12a
-      internalID: 21300036
+      spriteID: 7cf4bb880d3b9e3d0800000000000000
+      internalID: -3176810353904627769
       vertices: []
       indices: 
       edges: []
@@ -759,10 +819,10 @@ TextureImporter:
       name: HeroKnight_19
       rect:
         serializedVersion: 2
-        x: 900
-        y: 385
-        width: 100
-        height: 55
+        x: 935
+        y: 387
+        width: 32
+        height: 45
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -770,8 +830,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 165122f641eafca49bd384993650c1ab
-      internalID: 21300038
+      spriteID: 79c4f94d33f61dca0800000000000000
+      internalID: -5993887360652194665
       vertices: []
       indices: 
       edges: []
@@ -780,10 +840,10 @@ TextureImporter:
       name: HeroKnight_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 330
-        width: 100
-        height: 55
+        x: 22
+        y: 332
+        width: 39
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -791,8 +851,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 848cbe96f6a7eea46adc5fee3655b487
-      internalID: 21300040
+      spriteID: 54b9aad084fd16140800000000000000
+      internalID: 4711292185766173509
       vertices: []
       indices: 
       edges: []
@@ -801,19 +861,19 @@ TextureImporter:
       name: HeroKnight_21
       rect:
         serializedVersion: 2
-        x: 100
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 37
+        y: 341
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7948cc803899da409505d653d8033d6
-      internalID: 21300042
+      spriteID: e000e3491e2622d00800000000000000
+      internalID: 946427592695480334
       vertices: []
       indices: 
       edges: []
@@ -822,10 +882,10 @@ TextureImporter:
       name: HeroKnight_22
       rect:
         serializedVersion: 2
-        x: 200
-        y: 330
-        width: 100
-        height: 55
+        x: 122
+        y: 332
+        width: 49
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -833,8 +893,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7424109778aefb4c8fb207b62094ee1
-      internalID: 21300044
+      spriteID: 70824ca23e7831cb0800000000000000
+      internalID: -4894418960276772857
       vertices: []
       indices: 
       edges: []
@@ -843,10 +903,10 @@ TextureImporter:
       name: HeroKnight_23
       rect:
         serializedVersion: 2
-        x: 300
-        y: 330
-        width: 100
-        height: 55
+        x: 225
+        y: 332
+        width: 38
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -854,8 +914,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 573866d2890f1db4f9d18aa30b52e6a8
-      internalID: 21300046
+      spriteID: bd7b637b432c90820800000000000000
+      internalID: 2885050567975417819
       vertices: []
       indices: 
       edges: []
@@ -864,10 +924,10 @@ TextureImporter:
       name: HeroKnight_24
       rect:
         serializedVersion: 2
-        x: 400
-        y: 330
-        width: 100
-        height: 55
+        x: 335
+        y: 332
+        width: 28
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -875,8 +935,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1e147af6e5bb1b428a3d25c2fcf3c1f
-      internalID: 21300048
+      spriteID: 3fb7634a475148d00800000000000000
+      internalID: 973927010134293491
       vertices: []
       indices: 
       edges: []
@@ -885,10 +945,10 @@ TextureImporter:
       name: HeroKnight_25
       rect:
         serializedVersion: 2
-        x: 500
-        y: 330
-        width: 100
-        height: 55
+        x: 435
+        y: 332
+        width: 27
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -896,8 +956,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe4bc9d51bf217498089a7d793bf046
-      internalID: 21300050
+      spriteID: 45d05a4ad7f330850800000000000000
+      internalID: 6341982509133532500
       vertices: []
       indices: 
       edges: []
@@ -906,10 +966,10 @@ TextureImporter:
       name: HeroKnight_26
       rect:
         serializedVersion: 2
-        x: 600
-        y: 330
-        width: 100
-        height: 55
+        x: 511
+        y: 332
+        width: 50
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -917,8 +977,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0a971e0bfdaa9149ba779bb42735d36
-      internalID: 21300052
+      spriteID: e5ad86f06c7447a00800000000000000
+      internalID: 753305953665342046
       vertices: []
       indices: 
       edges: []
@@ -927,19 +987,19 @@ TextureImporter:
       name: HeroKnight_27
       rect:
         serializedVersion: 2
-        x: 700
-        y: 330
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 553
+        y: 351
+        width: 44
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cdcdc4da4b0ab845810ec877f016200
-      internalID: 21300054
+      spriteID: baf927195fbbe9750800000000000000
+      internalID: 6313690391001604011
       vertices: []
       indices: 
       edges: []
@@ -948,10 +1008,10 @@ TextureImporter:
       name: HeroKnight_28
       rect:
         serializedVersion: 2
-        x: 800
-        y: 330
-        width: 100
-        height: 55
+        x: 611
+        y: 332
+        width: 70
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -959,8 +1019,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc2ec79487cb34f4e8882df0219d1167
-      internalID: 21300056
+      spriteID: 3e379f617947615c0800000000000000
+      internalID: -4245077406475783197
       vertices: []
       indices: 
       edges: []
@@ -969,10 +1029,10 @@ TextureImporter:
       name: HeroKnight_29
       rect:
         serializedVersion: 2
-        x: 900
-        y: 330
-        width: 100
-        height: 55
+        x: 710
+        y: 332
+        width: 51
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -980,8 +1040,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 327ec33205eca084e823f680dc860481
-      internalID: 21300058
+      spriteID: 600f8d11df4afcd30800000000000000
+      internalID: 4453959963325820934
       vertices: []
       indices: 
       edges: []
@@ -990,10 +1050,10 @@ TextureImporter:
       name: HeroKnight_30
       rect:
         serializedVersion: 2
-        x: 0
-        y: 275
-        width: 100
-        height: 55
+        x: 810
+        y: 332
+        width: 51
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1001,8 +1061,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cd695586ed2dc14dbeaca1765389ef0
-      internalID: 21300060
+      spriteID: d0db1f690fa3ed810800000000000000
+      internalID: 1791934506739023117
       vertices: []
       indices: 
       edges: []
@@ -1011,10 +1071,10 @@ TextureImporter:
       name: HeroKnight_31
       rect:
         serializedVersion: 2
-        x: 100
-        y: 275
-        width: 100
-        height: 55
+        x: 914
+        y: 332
+        width: 47
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1022,8 +1082,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e68bd3a833c64040904cf28ead6e2f0
-      internalID: 21300062
+      spriteID: 45f86258f52d496c0800000000000000
+      internalID: -4137450849949020332
       vertices: []
       indices: 
       edges: []
@@ -1032,10 +1092,10 @@ TextureImporter:
       name: HeroKnight_32
       rect:
         serializedVersion: 2
-        x: 200
-        y: 275
-        width: 100
-        height: 55
+        x: 19
+        y: 278
+        width: 43
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1043,8 +1103,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bd4633cdeba0dd4aaa692de81c11c69
-      internalID: 21300064
+      spriteID: 731c40e84e4cdb8b0800000000000000
+      internalID: -5134731514218233545
       vertices: []
       indices: 
       edges: []
@@ -1053,10 +1113,10 @@ TextureImporter:
       name: HeroKnight_33
       rect:
         serializedVersion: 2
-        x: 300
-        y: 275
-        width: 100
-        height: 55
+        x: 135
+        y: 277
+        width: 29
+        height: 45
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1064,8 +1124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16eb94f8761bf924ea54454850f0278c
-      internalID: 21300066
+      spriteID: b4452284c0d1ce7f0800000000000000
+      internalID: -582058313250614197
       vertices: []
       indices: 
       edges: []
@@ -1074,10 +1134,10 @@ TextureImporter:
       name: HeroKnight_34
       rect:
         serializedVersion: 2
-        x: 400
-        y: 275
-        width: 100
-        height: 55
+        x: 234
+        y: 277
+        width: 56
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1085,8 +1145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02a92ddf2c00f7c4ea39f2514e0447b5
-      internalID: 21300068
+      spriteID: 45ea82101e73dc8b0800000000000000
+      internalID: -5130382960978514348
       vertices: []
       indices: 
       edges: []
@@ -1095,19 +1155,19 @@ TextureImporter:
       name: HeroKnight_35
       rect:
         serializedVersion: 2
-        x: 500
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 282
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb9b633f82f9fe4ca98ca9593a1ef7d
-      internalID: 21300070
+      spriteID: 1781a430146e98ca0800000000000000
+      internalID: -6014022660474136463
       vertices: []
       indices: 
       edges: []
@@ -1116,10 +1176,10 @@ TextureImporter:
       name: HeroKnight_36
       rect:
         serializedVersion: 2
-        x: 600
-        y: 275
-        width: 100
-        height: 55
+        x: 333
+        y: 277
+        width: 67
+        height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1127,8 +1187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1041edceee372e40bfe5512a67b9bd0
-      internalID: 21300072
+      spriteID: 761a4c824cdc3a340800000000000000
+      internalID: 4873965464126267751
       vertices: []
       indices: 
       edges: []
@@ -1137,10 +1197,10 @@ TextureImporter:
       name: HeroKnight_37
       rect:
         serializedVersion: 2
-        x: 700
-        y: 275
-        width: 100
-        height: 55
+        x: 433
+        y: 277
+        width: 67
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1148,8 +1208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e4fb1eb261ff940a31c65d0edbba14
-      internalID: 21300074
+      spriteID: 5952ca76ac58208f0800000000000000
+      internalID: -575750697980779115
       vertices: []
       indices: 
       edges: []
@@ -1158,19 +1218,19 @@ TextureImporter:
       name: HeroKnight_38
       rect:
         serializedVersion: 2
-        x: 800
-        y: 275
-        width: 100
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 494
+        y: 282
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ed0c3fd14af0084eb79220dc44e7742
-      internalID: 21300076
+      spriteID: 071d67953defdf8f0800000000000000
+      internalID: -504967399503113872
       vertices: []
       indices: 
       edges: []
@@ -1179,10 +1239,10 @@ TextureImporter:
       name: HeroKnight_39
       rect:
         serializedVersion: 2
-        x: 900
-        y: 275
-        width: 100
-        height: 55
+        x: 533
+        y: 277
+        width: 56
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1190,8 +1250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a78f94dc60bf4d4da543328dd7f4b26
-      internalID: 21300078
+      spriteID: d4a59f383418cc130800000000000000
+      internalID: 3588385130084391501
       vertices: []
       indices: 
       edges: []
@@ -1200,10 +1260,10 @@ TextureImporter:
       name: HeroKnight_40
       rect:
         serializedVersion: 2
-        x: 0
-        y: 220
-        width: 100
-        height: 55
+        x: 640
+        y: 277
+        width: 36
+        height: 35
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1211,8 +1271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b397b0ec1711cab468f2b3625c76483f
-      internalID: 21300080
+      spriteID: 41d3f7e5920493690800000000000000
+      internalID: -7621990347924620012
       vertices: []
       indices: 
       edges: []
@@ -1221,10 +1281,10 @@ TextureImporter:
       name: HeroKnight_41
       rect:
         serializedVersion: 2
-        x: 100
-        y: 220
-        width: 100
-        height: 55
+        x: 720
+        y: 277
+        width: 41
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1232,8 +1292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7be3bd5b8d40dd418ae5891500c89b5
-      internalID: 21300082
+      spriteID: fc2dd68c91569f400800000000000000
+      internalID: 358428806763893455
       vertices: []
       indices: 
       edges: []
@@ -1242,10 +1302,10 @@ TextureImporter:
       name: HeroKnight_42
       rect:
         serializedVersion: 2
-        x: 200
-        y: 220
-        width: 100
-        height: 55
+        x: 818
+        y: 277
+        width: 42
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1253,8 +1313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 298f918b7f6e1684cb265e1ce82e6664
-      internalID: 21300084
+      spriteID: 14f2c07815b59a6f0800000000000000
+      internalID: -672906263598977215
       vertices: []
       indices: 
       edges: []
@@ -1263,10 +1323,10 @@ TextureImporter:
       name: HeroKnight_43
       rect:
         serializedVersion: 2
-        x: 300
-        y: 220
-        width: 100
-        height: 55
+        x: 918
+        y: 280
+        width: 43
+        height: 37
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1274,8 +1334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67f14dda5d23db1449ed7bb54da1534b
-      internalID: 21300086
+      spriteID: fbbf5403a5e1fa3b0800000000000000
+      internalID: -5499143247290303553
       vertices: []
       indices: 
       edges: []
@@ -1284,10 +1344,10 @@ TextureImporter:
       name: HeroKnight_44
       rect:
         serializedVersion: 2
-        x: 400
-        y: 220
-        width: 100
-        height: 55
+        x: 18
+        y: 227
+        width: 43
+        height: 35
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1295,8 +1355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bb56648c087d3c49a34ca944b95c8cb
-      internalID: 21300088
+      spriteID: 7ce6228a883a2a2d0800000000000000
+      internalID: -3268870572185850169
       vertices: []
       indices: 
       edges: []
@@ -1305,10 +1365,10 @@ TextureImporter:
       name: HeroKnight_45
       rect:
         serializedVersion: 2
-        x: 500
-        y: 220
-        width: 100
-        height: 55
+        x: 117
+        y: 224
+        width: 45
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1316,8 +1376,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 566f583519e698f4ebf30c85c983326f
-      internalID: 21300090
+      spriteID: 63df73b5d7df96cb0800000000000000
+      internalID: -4870082807181345482
       vertices: []
       indices: 
       edges: []
@@ -1326,10 +1386,10 @@ TextureImporter:
       name: HeroKnight_46
       rect:
         serializedVersion: 2
-        x: 600
-        y: 220
-        width: 100
-        height: 55
+        x: 217
+        y: 224
+        width: 45
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1337,8 +1397,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 200529a2f3665a849a30f6e6f58a2de4
-      internalID: 21300092
+      spriteID: 2cc6fcb656164aa80800000000000000
+      internalID: -8456527112066601790
       vertices: []
       indices: 
       edges: []
@@ -1347,10 +1407,10 @@ TextureImporter:
       name: HeroKnight_47
       rect:
         serializedVersion: 2
-        x: 700
-        y: 220
-        width: 100
-        height: 55
+        x: 317
+        y: 224
+        width: 45
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1358,8 +1418,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 070c0f914df6e64428db9a673b6bb737
-      internalID: 21300094
+      spriteID: 153d18925098572f0800000000000000
+      internalID: -975723088991628463
       vertices: []
       indices: 
       edges: []
@@ -1368,10 +1428,10 @@ TextureImporter:
       name: HeroKnight_48
       rect:
         serializedVersion: 2
-        x: 800
-        y: 220
-        width: 100
-        height: 55
+        x: 417
+        y: 224
+        width: 45
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1379,8 +1439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0f19d76f6b7d7b4fbad45b4c88045ca
-      internalID: 21300096
+      spriteID: 0fd46237a99cfec10800000000000000
+      internalID: 2085106817689865712
       vertices: []
       indices: 
       edges: []
@@ -1389,10 +1449,10 @@ TextureImporter:
       name: HeroKnight_49
       rect:
         serializedVersion: 2
-        x: 900
-        y: 220
-        width: 100
-        height: 55
+        x: 518
+        y: 223
+        width: 44
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1400,8 +1460,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e52168b04ab3f94488caeee83588cfb
-      internalID: 21300098
+      spriteID: c762371f4623ee5b0800000000000000
+      internalID: -5337273099258485124
       vertices: []
       indices: 
       edges: []
@@ -1410,10 +1470,10 @@ TextureImporter:
       name: HeroKnight_50
       rect:
         serializedVersion: 2
-        x: 0
-        y: 165
-        width: 100
-        height: 55
+        x: 616
+        y: 222
+        width: 45
+        height: 37
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1421,8 +1481,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49b6709606895054cbd70fc522822219
-      internalID: 21300100
+      spriteID: 3f0c1aa314fe14430800000000000000
+      internalID: 3765553826894037235
       vertices: []
       indices: 
       edges: []
@@ -1431,10 +1491,10 @@ TextureImporter:
       name: HeroKnight_51
       rect:
         serializedVersion: 2
-        x: 100
-        y: 165
-        width: 100
-        height: 55
+        x: 717
+        y: 222
+        width: 44
+        height: 37
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1442,8 +1502,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0c70d91bf33f18448d17b05a2684806
-      internalID: 21300102
+      spriteID: d3bfad82592333f10800000000000000
+      internalID: 2248196255204965181
       vertices: []
       indices: 
       edges: []
@@ -1452,10 +1512,10 @@ TextureImporter:
       name: HeroKnight_52
       rect:
         serializedVersion: 2
-        x: 200
-        y: 165
-        width: 100
-        height: 55
+        x: 818
+        y: 222
+        width: 44
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1463,8 +1523,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5066d9eabd6ab24f97fa8d3ace89715
-      internalID: 21300104
+      spriteID: 7edd0aac5dbdee6c0800000000000000
+      internalID: -4112107698468626969
       vertices: []
       indices: 
       edges: []
@@ -1473,10 +1533,10 @@ TextureImporter:
       name: HeroKnight_53
       rect:
         serializedVersion: 2
-        x: 300
-        y: 165
-        width: 100
-        height: 55
+        x: 917
+        y: 222
+        width: 47
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1484,8 +1544,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc3c7641253c0734987b9b83da9ffbb8
-      internalID: 21300106
+      spriteID: 7149e65c4a8039e50800000000000000
+      internalID: 6814800164921709591
       vertices: []
       indices: 
       edges: []
@@ -1494,10 +1554,10 @@ TextureImporter:
       name: HeroKnight_54
       rect:
         serializedVersion: 2
-        x: 400
-        y: 165
-        width: 100
-        height: 55
+        x: 19
+        y: 167
+        width: 46
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1505,8 +1565,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18eda4d70d390cb4bb4275a994d42d2a
-      internalID: 21300108
+      spriteID: 6858b5851a3922460800000000000000
+      internalID: 7215491874182366598
       vertices: []
       indices: 
       edges: []
@@ -1515,10 +1575,10 @@ TextureImporter:
       name: HeroKnight_55
       rect:
         serializedVersion: 2
-        x: 500
-        y: 165
-        width: 100
-        height: 55
+        x: 115
+        y: 167
+        width: 53
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1526,8 +1586,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c36e57dcc1e29054c9597ddffb7fdc77
-      internalID: 21300110
+      spriteID: 69b67ab457afcbb70800000000000000
+      internalID: 8916276743974120342
       vertices: []
       indices: 
       edges: []
@@ -1536,10 +1596,10 @@ TextureImporter:
       name: HeroKnight_56
       rect:
         serializedVersion: 2
-        x: 600
-        y: 165
-        width: 100
-        height: 55
+        x: 214
+        y: 167
+        width: 55
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1547,8 +1607,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8984ada0c039f344ad50e9b63587b9b
-      internalID: 21300112
+      spriteID: 0b030574971866760800000000000000
+      internalID: 7450784991418527920
       vertices: []
       indices: 
       edges: []
@@ -1557,10 +1617,10 @@ TextureImporter:
       name: HeroKnight_57
       rect:
         serializedVersion: 2
-        x: 700
-        y: 165
-        width: 100
-        height: 55
+        x: 312
+        y: 167
+        width: 55
+        height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1568,8 +1628,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4013ed91bfe102348b1af7e946162387
-      internalID: 21300114
+      spriteID: f8997d7bccabbc550800000000000000
+      internalID: 6182240301916592527
       vertices: []
       indices: 
       edges: []
@@ -1578,10 +1638,10 @@ TextureImporter:
       name: HeroKnight_58
       rect:
         serializedVersion: 2
-        x: 800
-        y: 165
-        width: 100
-        height: 55
+        x: 412
+        y: 167
+        width: 56
+        height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1589,8 +1649,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6326e5701138be14784f19af5d1756fb
-      internalID: 21300116
+      spriteID: 189f6cd5ce94efbe0800000000000000
+      internalID: -1441633551177549439
       vertices: []
       indices: 
       edges: []
@@ -1599,10 +1659,10 @@ TextureImporter:
       name: HeroKnight_59
       rect:
         serializedVersion: 2
-        x: 900
-        y: 165
-        width: 100
-        height: 55
+        x: 512
+        y: 167
+        width: 70
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1610,8 +1670,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa538263a8926cf488a30e868a367fe2
-      internalID: 21300118
+      spriteID: 365b08585950b0a90800000000000000
+      internalID: -7346772227376761501
       vertices: []
       indices: 
       edges: []
@@ -1620,10 +1680,10 @@ TextureImporter:
       name: HeroKnight_60
       rect:
         serializedVersion: 2
-        x: 0
-        y: 110
-        width: 100
-        height: 55
+        x: 612
+        y: 167
+        width: 70
+        height: 10
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1631,8 +1691,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1299c6e44b33374b97b90b0e4250425
-      internalID: 21300120
+      spriteID: a73e6cb5445580f00800000000000000
+      internalID: 1083209462468502394
       vertices: []
       indices: 
       edges: []
@@ -1641,10 +1701,10 @@ TextureImporter:
       name: HeroKnight_61
       rect:
         serializedVersion: 2
-        x: 100
-        y: 110
-        width: 100
-        height: 55
+        x: 712
+        y: 167
+        width: 70
+        height: 6
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1652,8 +1712,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e3b24cb532293b4a8b3c69bdea49dfd
-      internalID: 21300122
+      spriteID: 587ac7139bc5383f0800000000000000
+      internalID: -899773550075009147
       vertices: []
       indices: 
       edges: []
@@ -1662,10 +1722,10 @@ TextureImporter:
       name: HeroKnight_62
       rect:
         serializedVersion: 2
-        x: 200
-        y: 110
-        width: 100
-        height: 55
+        x: 820
+        y: 167
+        width: 42
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1673,8 +1733,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f81468db2a58e4b90c941ecb00171d
-      internalID: 21300124
+      spriteID: 370dd4e93522fbd60800000000000000
+      internalID: 7908077213219410035
       vertices: []
       indices: 
       edges: []
@@ -1683,10 +1743,10 @@ TextureImporter:
       name: HeroKnight_63
       rect:
         serializedVersion: 2
-        x: 300
-        y: 110
-        width: 100
-        height: 55
+        x: 920
+        y: 167
+        width: 42
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1694,8 +1754,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea05f2c593908234da089e83f413fd9c
-      internalID: 21300126
+      spriteID: ea899344dccf6cc70800000000000000
+      internalID: 8991151664634894510
       vertices: []
       indices: 
       edges: []
@@ -1704,10 +1764,10 @@ TextureImporter:
       name: HeroKnight_64
       rect:
         serializedVersion: 2
-        x: 400
-        y: 110
-        width: 100
-        height: 55
+        x: 20
+        y: 103
+        width: 42
+        height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1715,8 +1775,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12100958cdb4efd4d9aad30213e27dd7
-      internalID: 21300128
+      spriteID: cd3300285f65d7f60800000000000000
+      internalID: 8033672922746860508
       vertices: []
       indices: 
       edges: []
@@ -1725,10 +1785,10 @@ TextureImporter:
       name: HeroKnight_65
       rect:
         serializedVersion: 2
-        x: 500
-        y: 110
-        width: 100
-        height: 55
+        x: 120
+        y: 112
+        width: 42
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1736,8 +1796,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d22252ed845a474fba5a95a7a97e5f0
-      internalID: 21300130
+      spriteID: a1b045fd02a67f6d0800000000000000
+      internalID: -2956777940927116518
       vertices: []
       indices: 
       edges: []
@@ -1746,10 +1806,10 @@ TextureImporter:
       name: HeroKnight_66
       rect:
         serializedVersion: 2
-        x: 600
-        y: 110
-        width: 100
-        height: 55
+        x: 220
+        y: 112
+        width: 41
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1757,8 +1817,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72a3b05ac3ca01e45b52953153576d28
-      internalID: 21300132
+      spriteID: 5d39381ed7f9d11d0800000000000000
+      internalID: -3378368782454778923
       vertices: []
       indices: 
       edges: []
@@ -1767,10 +1827,10 @@ TextureImporter:
       name: HeroKnight_67
       rect:
         serializedVersion: 2
-        x: 700
-        y: 110
-        width: 100
-        height: 55
+        x: 320
+        y: 112
+        width: 41
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1778,8 +1838,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 103d8441b7710ea43b0c39604eabb7ca
-      internalID: 21300134
+      spriteID: 32bfeefb9a04f0da0800000000000000
+      internalID: -5976487082683598045
       vertices: []
       indices: 
       edges: []
@@ -1788,10 +1848,10 @@ TextureImporter:
       name: HeroKnight_68
       rect:
         serializedVersion: 2
-        x: 800
-        y: 110
-        width: 100
-        height: 55
+        x: 420
+        y: 112
+        width: 41
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1799,8 +1859,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 979d8fa151649f5428d4b945f4fffd5b
-      internalID: 21300136
+      spriteID: 850131509d138a6d0800000000000000
+      internalID: -2979076345342783400
       vertices: []
       indices: 
       edges: []
@@ -1809,10 +1869,10 @@ TextureImporter:
       name: HeroKnight_69
       rect:
         serializedVersion: 2
-        x: 900
-        y: 110
-        width: 100
-        height: 55
+        x: 520
+        y: 112
+        width: 41
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1820,8 +1880,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44e2efb18512b224cb89dff3f12a22d4
-      internalID: 21300138
+      spriteID: 14ca78e3925938f00800000000000000
+      internalID: 1117901136893291585
       vertices: []
       indices: 
       edges: []
@@ -1830,10 +1890,10 @@ TextureImporter:
       name: HeroKnight_70
       rect:
         serializedVersion: 2
-        x: 0
-        y: 55
-        width: 100
-        height: 55
+        x: 620
+        y: 112
+        width: 41
+        height: 36
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1841,8 +1901,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13033b2c42673dc4697d4451d6d30d19
-      internalID: 21300140
+      spriteID: 884745a9612ffccb0800000000000000
+      internalID: -4841384895507565432
       vertices: []
       indices: 
       edges: []
@@ -1851,10 +1911,10 @@ TextureImporter:
       name: HeroKnight_71
       rect:
         serializedVersion: 2
-        x: 100
-        y: 55
-        width: 100
-        height: 55
+        x: 718
+        y: 112
+        width: 49
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1862,8 +1922,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d1b73f9024083a41955e7eb199c355e
-      internalID: 21300142
+      spriteID: 86f6016b781871db0800000000000000
+      internalID: -4821242456201728152
       vertices: []
       indices: 
       edges: []
@@ -1872,10 +1932,10 @@ TextureImporter:
       name: HeroKnight_72
       rect:
         serializedVersion: 2
-        x: 200
-        y: 55
-        width: 100
-        height: 55
+        x: 817
+        y: 113
+        width: 53
+        height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1883,8 +1943,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88bbbcb5da91a4e42b16265d6a087935
-      internalID: 21300144
+      spriteID: c962fdae538213510800000000000000
+      internalID: 1527045960694179484
       vertices: []
       indices: 
       edges: []
@@ -1893,10 +1953,10 @@ TextureImporter:
       name: HeroKnight_73
       rect:
         serializedVersion: 2
-        x: 300
-        y: 55
-        width: 100
-        height: 55
+        x: 918
+        y: 112
+        width: 55
+        height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1904,8 +1964,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83f0be5fabab0e5458151590e79216aa
-      internalID: 21300146
+      spriteID: 7544659b33dbfb3a0800000000000000
+      internalID: -6647386495125142441
       vertices: []
       indices: 
       edges: []
@@ -1914,10 +1974,10 @@ TextureImporter:
       name: HeroKnight_74
       rect:
         serializedVersion: 2
-        x: 400
-        y: 55
-        width: 100
-        height: 55
+        x: 20
+        y: 57
+        width: 55
+        height: 40
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1925,8 +1985,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da84ea99e4c7b284e8d401fbb5d4dd67
-      internalID: 21300148
+      spriteID: 767c91dce900727a0800000000000000
+      internalID: -6402147663238019225
       vertices: []
       indices: 
       edges: []
@@ -1935,10 +1995,10 @@ TextureImporter:
       name: HeroKnight_75
       rect:
         serializedVersion: 2
-        x: 500
-        y: 55
-        width: 100
-        height: 55
+        x: 136
+        y: 57
+        width: 31
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1946,8 +2006,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7652255276960fa489c10bc7581aa958
-      internalID: 21300150
+      spriteID: 8f836b8cbf97a7660800000000000000
+      internalID: 7384348661338487032
       vertices: []
       indices: 
       edges: []
@@ -1956,10 +2016,10 @@ TextureImporter:
       name: HeroKnight_76
       rect:
         serializedVersion: 2
-        x: 600
-        y: 55
-        width: 100
-        height: 55
+        x: 236
+        y: 57
+        width: 45
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1967,8 +2027,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d34f2f26aee31434292557ae3ded68de
-      internalID: 21300152
+      spriteID: 5defe37b30aa59430800000000000000
+      internalID: 3789121594438123221
       vertices: []
       indices: 
       edges: []
@@ -1977,10 +2037,10 @@ TextureImporter:
       name: HeroKnight_77
       rect:
         serializedVersion: 2
-        x: 700
-        y: 55
-        width: 100
-        height: 55
+        x: 344
+        y: 57
+        width: 32
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1988,8 +2048,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f9a6d50dff168e4daf62c81edfa1ac0
-      internalID: 21300154
+      spriteID: 36ba611924240ad90800000000000000
+      internalID: -7088592959811703965
       vertices: []
       indices: 
       edges: []
@@ -1998,10 +2058,10 @@ TextureImporter:
       name: HeroKnight_78
       rect:
         serializedVersion: 2
-        x: 800
-        y: 55
-        width: 100
-        height: 55
+        x: 440
+        y: 58
+        width: 24
+        height: 21
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2009,8 +2069,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fafefabeb49dcf4d927623dd02c718a
-      internalID: 21300156
+      spriteID: 810cdc48f37f4d240800000000000000
+      internalID: 4815745753748979736
       vertices: []
       indices: 
       edges: []
@@ -2019,10 +2079,10 @@ TextureImporter:
       name: HeroKnight_79
       rect:
         serializedVersion: 2
-        x: 900
-        y: 55
-        width: 100
-        height: 55
+        x: 540
+        y: 57
+        width: 24
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2030,8 +2090,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35e1cbe45e0545447851463baef97515
-      internalID: 21300158
+      spriteID: d9ec051d42bcf5c60800000000000000
+      internalID: 7809183637874724509
       vertices: []
       indices: 
       edges: []
@@ -2040,10 +2100,10 @@ TextureImporter:
       name: HeroKnight_80
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 55
+        x: 640
+        y: 57
+        width: 24
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2051,8 +2111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce08b02c27aa4064a8161ab8d54bcb67
-      internalID: 21300160
+      spriteID: eed2c1babaa08a580800000000000000
+      internalID: -8815784538151309842
       vertices: []
       indices: 
       edges: []
@@ -2061,10 +2121,10 @@ TextureImporter:
       name: HeroKnight_81
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 55
+        x: 740
+        y: 57
+        width: 22
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2072,8 +2132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef17fd3ce7b100247a31ddd8d57d8237
-      internalID: 21300162
+      spriteID: 730a72992c90c2c20800000000000000
+      internalID: 3182929768041914423
       vertices: []
       indices: 
       edges: []
@@ -2082,10 +2142,10 @@ TextureImporter:
       name: HeroKnight_82
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 55
+        x: 838
+        y: 57
+        width: 25
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2093,8 +2153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5edc2cfd5caf5d946af0ce3400a411b6
-      internalID: 21300164
+      spriteID: 1d2158f250d6caf90800000000000000
+      internalID: -6941053056645262639
       vertices: []
       indices: 
       edges: []
@@ -2103,10 +2163,10 @@ TextureImporter:
       name: HeroKnight_83
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 55
+        x: 923
+        y: 57
+        width: 39
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2114,8 +2174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5253059d0eb53a49bd04ed06f42e3aa
-      internalID: 21300166
+      spriteID: 30fa95608a5dd3de0800000000000000
+      internalID: -1351689395503517949
       vertices: []
       indices: 
       edges: []
@@ -2124,10 +2184,10 @@ TextureImporter:
       name: HeroKnight_84
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 55
+        x: 18
+        y: 13
+        width: 45
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2135,8 +2195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eefcfcbf49910a04a8a2946b6ca561c9
-      internalID: 21300168
+      spriteID: 596e3d44129b3dc40800000000000000
+      internalID: 5535971919508268693
       vertices: []
       indices: 
       edges: []
@@ -2145,10 +2205,10 @@ TextureImporter:
       name: HeroKnight_85
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 55
+        x: 120
+        y: 11
+        width: 43
+        height: 35
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2156,8 +2216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d47bccf910568d469da124ab4cf490c
-      internalID: 21300170
+      spriteID: bfbde4aa2adc64230800000000000000
+      internalID: 3622809048791833595
       vertices: []
       indices: 
       edges: []
@@ -2166,10 +2226,10 @@ TextureImporter:
       name: HeroKnight_86
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 100
-        height: 55
+        x: 222
+        y: 2
+        width: 41
+        height: 44
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2177,8 +2237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2695fed0359749c428c976f486f4a65d
-      internalID: 21300172
+      spriteID: 381c2fd6bcd5e1d60800000000000000
+      internalID: 7862825127739834755
       vertices: []
       indices: 
       edges: []
@@ -2187,10 +2247,10 @@ TextureImporter:
       name: HeroKnight_87
       rect:
         serializedVersion: 2
-        x: 700
+        x: 331
         y: 0
-        width: 100
-        height: 55
+        width: 32
+        height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2198,8 +2258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15aedeb49807bc54b86369955ad5c1c0
-      internalID: 21300174
+      spriteID: efd45bf4d435e4740800000000000000
+      internalID: 5138135816391183870
       vertices: []
       indices: 
       edges: []
@@ -2208,10 +2268,10 @@ TextureImporter:
       name: HeroKnight_88
       rect:
         serializedVersion: 2
-        x: 800
+        x: 433
         y: 0
-        width: 100
-        height: 55
+        width: 30
+        height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2219,8 +2279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 458519a376f77dd4db0cfa793c194cfc
-      internalID: 21300176
+      spriteID: a29f61dab99e2a420800000000000000
+      internalID: 2639929186425698602
       vertices: []
       indices: 
       edges: []
@@ -2229,10 +2289,10 @@ TextureImporter:
       name: HeroKnight_89
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 100
-        height: 55
+        x: 531
+        y: 1
+        width: 31
+        height: 49
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2240,8 +2300,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac4225d4ccbb05d41a28d08297f79bdc
-      internalID: 21300178
+      spriteID: 13f18029e6a7c0f80800000000000000
+      internalID: -8138995811250331855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_90
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1
+        width: 31
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862fcd9c04fb90110800000000000000
+      internalID: 1227722658420683368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_91
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1
+        width: 31
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca870fc154e732ff0800000000000000
+      internalID: -62067134549690196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_92
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1
+        width: 31
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fc68e7c90328a90800000000000000
+      internalID: -7313229396200468683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_93
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 1
+        width: 31
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72c8a940f3a49df0800000000000000
+      internalID: -174334233137331589
       vertices: []
       indices: 
       edges: []
@@ -2249,13 +2393,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8a123db65155bf1438dffb9aefe2380c
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 1c4a51ce07a03d64b84af5e54dd47437, type: 3}
+      name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
