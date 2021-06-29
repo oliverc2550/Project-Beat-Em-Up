@@ -7,6 +7,7 @@ using UnityEngine;
  * 24/06/21 - Oliver - Changed from using rigidbody.addforce to transform.position += within Move() for smoother movement. Also added in Time.deltaTime to insure framerate independence.
  * Changed Move() and Jump() to virtual functions allowing addition character specific code to be added in inherited functions. Added an Animator property.
  * 29/06/21 - Oliver - Changed class name from CharacterController1 to CombatandMovementController. Moved Pickup and Drop to CombatandMovementController, made both methods virtual methods.
+ * Thea - Moved the movement logic from the Move function to the PlayerController as Enemy doesn't use it. Enemy movement is done with NavMeshAgents
  */
 
 public class CombatandMovementController : MonoBehaviour
@@ -27,8 +28,6 @@ public class CombatandMovementController : MonoBehaviour
 
     protected virtual void Move(Vector3 direction)
     {
-        transform.position += direction * Time.deltaTime * m_movementSpeed;
-        //m_rigidbody.AddForce(direction * m_movementSpeed);
     }
     protected virtual void Jump()
     {
@@ -42,7 +41,7 @@ public class CombatandMovementController : MonoBehaviour
             m_spriteRenderer.flipX = true;
         }
         // if the direction is right
-        else if(direction > 0)
+        else if (direction > 0)
         {
             m_spriteRenderer.flipX = false;
         }

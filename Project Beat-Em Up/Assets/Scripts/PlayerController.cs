@@ -10,6 +10,7 @@ using UnityEngine;
  * This insures that the player cannot double jump and changes the animator state.
  * Created Pickup()/Drop(), Added OnDrawGizmosSelected() and all associated properties and methods.
  * 29/06/21 - Oliver - Changed class name from Player1 to PlayerController. Moved Pickup and Drop to CombatandMovementController, made both methods virtual methods.
+ * Thea - Moved the movement logic from base character to here.
  */
 
 public class PlayerController : CombatandMovementController
@@ -24,7 +25,10 @@ public class PlayerController : CombatandMovementController
     protected override void Move(Vector3 direction)
     {
         base.Move(direction);
-        if(direction.x != 0 || direction.z != 0)
+
+        transform.position += direction * Time.deltaTime * m_movementSpeed;
+
+        if (direction.x != 0 || direction.z != 0)
         {
             m_animator.SetInteger("AnimState", 1);
             if (Mathf.Abs(m_rigidbody.velocity.y) >= 0.001f)
@@ -32,7 +36,7 @@ public class PlayerController : CombatandMovementController
                 m_animator.SetInteger("AnimState", 0);
             }
         }
-        else if(direction.x == 0 || direction.z == 0)
+        else if (direction.x == 0 || direction.z == 0)
         {
             m_animator.SetInteger("AnimState", 0);
         }
@@ -54,7 +58,7 @@ public class PlayerController : CombatandMovementController
         _input.y = Input.GetAxis("Vertical");
 
         LookAtDirection(_input.x);
-        Move(new Vector3(_input.x, 0 , _input.y));
+        Move(new Vector3(_input.x, 0, _input.y));
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -71,13 +75,13 @@ public class PlayerController : CombatandMovementController
             m_animator.SetBool("Grounded", true);
         }
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if(m_objPickedup == false)
+            if (m_objPickedup == false)
             {
                 Pickup();
             }
-            else if(m_objPickedup == true)
+            else if (m_objPickedup == true)
             {
                 Drop();
             }
