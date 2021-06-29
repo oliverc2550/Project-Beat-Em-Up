@@ -17,6 +17,8 @@ public class CombatandMovementController : MonoBehaviour
     [SerializeField] protected float m_jumpForce;
     [SerializeField] protected LayerMask m_pickupLayer;
     [SerializeField] protected float m_pickupRange = 0.25f;
+    [SerializeField] protected float m_normalAttackRange = 1.0f;
+    [SerializeField] protected float m_normalAttackDamage = 1.0f;
     protected bool m_objPickedup;
 
     [Header("References")]
@@ -24,6 +26,7 @@ public class CombatandMovementController : MonoBehaviour
     [SerializeField] protected Rigidbody m_rigidbody;
     [SerializeField] protected SpriteRenderer m_spriteRenderer;
     [SerializeField] protected Transform m_originPoint;
+    [SerializeField] protected Transform m_normalAttackPoint;
 
 
     protected virtual void Move(Vector3 direction)
@@ -73,6 +76,11 @@ public class CombatandMovementController : MonoBehaviour
     }
 
     protected virtual void NormalAttack()
+    {
+
+    }
+
+    protected virtual void Block()
     {
 
     }

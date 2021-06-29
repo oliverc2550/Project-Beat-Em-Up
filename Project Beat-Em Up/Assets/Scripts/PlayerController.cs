@@ -36,7 +36,7 @@ public class PlayerController : CombatandMovementController
                 m_animator.SetInteger("AnimState", 0);
             }
         }
-        else if (direction.x == 0 || direction.z == 0)
+        if (direction.x == 0 || direction.z == 0)
         {
             m_animator.SetInteger("AnimState", 0);
         }
