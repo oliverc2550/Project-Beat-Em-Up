@@ -9,28 +9,24 @@ using UnityEngine;
  * Over rode the Move() function to add in m_animator controls for changing the animator state. Added a rigidbody velocity check to the if statement used to activate Jump().
  * This insures that the player cannot double jump and changes the animator state.
  * Created Pickup()/Drop(), Added OnDrawGizmosSelected() and all associated properties and methods.
- * 
+ * 29/06/21 - Oliver - Changed class name from Player1 to PlayerController. Moved Pickup and Drop to CombatandMovementController, made both methods virtual methods.
  */
 
 public class PlayerController : CombatandMovementController
 {
     private Vector2 _input;
-    [SerializeField] private Transform _originPoint;
-    [SerializeField] private LayerMask _pickupLayer;
-    [SerializeField] private float _pickupRange = 0.25f;
-    [SerializeField] private bool _objPickedup;
 
     private void Start()
     {
-        _objPickedup = false;
+        m_objPickedup = false;
     }
 
     protected override void Move(Vector3 direction)
     {
         base.Move(direction);
-        if(direction.x > 0 || direction.z > 0 || direction.x < 0 || direction.z < 0)
+        if(direction.x != 0 || direction.z != 0)
         {
-            m_animator.SetInteger("AnimState", 2);
+            m_animator.SetInteger("AnimState", 1);
             if (Mathf.Abs(m_rigidbody.velocity.y) >= 0.001f)
             {
                 m_animator.SetInteger("AnimState", 0);
@@ -42,38 +38,13 @@ public class PlayerController : CombatandMovementController
         }
     }
 
-    private void Pickup()
-    {
-        Collider[] colliders = Physics.OverlapSphere(_originPoint.position, _pickupRange, _pickupLayer); //Get an array of colliders using Physics.OverlapSphere
-        foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
-        {
-            nearbyObject.GetComponent<Rigidbody>().useGravity = false;
-            nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            nearbyObject.transform.position = _originPoint.position;
-            nearbyObject.transform.parent = _originPoint;
-            _objPickedup = true;
-        }
-    }
-
-    private void Drop()
-    {
-        Collider[] colliders = Physics.OverlapSphere(_originPoint.position, _pickupRange, _pickupLayer); //Get an array of colliders using Physics.OverlapSphere
-        foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
-        {
-            nearbyObject.transform.parent = null;
-            nearbyObject.GetComponent<Rigidbody>().useGravity = true;
-            nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            _objPickedup = false;
-        }
-    }
-
     public void OnDrawGizmosSelected()
     {
-        if (_originPoint == null)
+        if (m_originPoint == null)
         {
             return;
         }
-        Gizmos.DrawWireSphere(_originPoint.position, _pickupRange);
+        Gizmos.DrawWireSphere(m_originPoint.position, m_pickupRange);
     }
 
     //https://docs.unity3d.com/ScriptReference/Input.GetAxis.html
@@ -102,11 +73,11 @@ public class PlayerController : CombatandMovementController
 
         if(Input.GetKeyDown(KeyCode.E))
         {
-            if(_objPickedup == false)
+            if(m_objPickedup == false)
             {
                 Pickup();
             }
-            else if(_objPickedup == true)
+            else if(m_objPickedup == true)
             {
                 Drop();
             }

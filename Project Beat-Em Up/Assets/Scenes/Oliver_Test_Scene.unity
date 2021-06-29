@@ -407,7 +407,7 @@ Animator:
   m_GameObject: {fileID: 336539560}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3c2a5b7097b0fe44394328c0bdb9252e, type: 2}
+  m_Controller: {fileID: 9100000, guid: f76410cdea9f1d745899e3971ee2e63a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -511,15 +511,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_movementSpeed: 3.5
   m_jumpForce: 100
+  m_pickupLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  m_pickupRange: 1.25
   m_animator: {fileID: 336539561}
   m_rigidbody: {fileID: 336539564}
   m_spriteRenderer: {fileID: 336539562}
-  _originPoint: {fileID: 211719848}
-  _pickupLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  _pickupRange: 1.25
-  _objPickedup: 0
+  m_originPoint: {fileID: 211719848}
 --- !u!65 &336539566
 BoxCollider:
   m_ObjectHideFlags: 0
