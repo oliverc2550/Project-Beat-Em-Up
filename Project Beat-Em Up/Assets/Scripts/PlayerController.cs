@@ -19,27 +19,50 @@ public class PlayerController : CombatandMovementController
 
     private void Start()
     {
-        m_objPickedup = false;
+        m_holdingObj = false;
+        m_isAttacking = false;
+        m_isBlocking = false;
+    }
+
+    protected void SetAttackBool()
+    {
+        if(m_isAttacking == false)
+        {
+            m_isAttacking = true;
+        }
+        else
+        {
+            m_isAttacking = false;
+        }
     }
 
     protected override void Move(Vector3 direction)
     {
-        base.Move(direction);
-
-        transform.position += direction * Time.deltaTime * m_movementSpeed;
-
-        if (direction.x != 0 || direction.z != 0)
+        if(m_isAttacking == false && m_isBlocking == false)
         {
-            m_animator.SetInteger("AnimState", 1);
-            if (Mathf.Abs(m_rigidbody.velocity.y) >= 0.001f)
-            {
-                m_animator.SetInteger("AnimState", 0);
-            }
+            Vector3 movement = direction * Time.deltaTime * m_movementSpeed;
+
+            transform.position += movement;
+
+            //if (direction.x != 0 || direction.z != 0)
+            //{
+            //    m_animator.SetInteger("AnimState", 1);
+            //}
+            //if (direction.x == 0 || direction.z == 0)
+            //{
+            //    m_animator.SetInteger("AnimState", 0);
+            //}
         }
-        if (direction.x == 0 || direction.z == 0)
-        {
-            m_animator.SetInteger("AnimState", 0);
-        }
+    }
+
+    protected override void NormalAttackEffects()
+    {
+
+    }
+
+    protected override void BlockEffects()
+    {
+        
     }
 
     public void OnDrawGizmosSelected()
@@ -57,12 +80,29 @@ public class PlayerController : CombatandMovementController
         _input.x = Input.GetAxis("Horizontal");
         _input.y = Input.GetAxis("Vertical");
 
+        m_animator.SetFloat("InputX", _input.x);
+        m_animator.SetFloat("InputY", _input.y);
+
         LookAtDirection(_input.x);
         Move(new Vector3(_input.x, 0, _input.y));
 
         if (Input.GetButtonDown("Fire1"))
         {
-            // TODO: play attack animation
+            m_animator.SetTrigger("Attack");
+        }
+
+        if(Input.GetButtonDown("Fire2"))
+        {
+            Debug.Log("Blocking");
+            m_animator.SetBool("Block", true);
+            m_isBlocking = true;
+            Block();
+        }
+        else if (Input.GetButtonUp("Fire2"))
+        {
+            Debug.Log("Not Blocking");
+            m_animator.SetBool("Block", false);
+            m_isBlocking = false;
         }
 
         if (Input.GetButtonDown("Jump") && Mathf.Abs(m_rigidbody.velocity.y) < 0.001f)
@@ -77,14 +117,7 @@ public class PlayerController : CombatandMovementController
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (m_objPickedup == false)
-            {
-                Pickup();
-            }
-            else if (m_objPickedup == true)
-            {
-                Drop();
-            }
+            Interact(ref m_holdingObj);
         }
     }
 }

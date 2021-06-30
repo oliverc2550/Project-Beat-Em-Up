@@ -17,9 +17,12 @@ public class CombatandMovementController : MonoBehaviour
     [SerializeField] protected float m_jumpForce;
     [SerializeField] protected LayerMask m_pickupLayer;
     [SerializeField] protected float m_pickupRange = 0.25f;
+    [SerializeField] protected LayerMask m_enemyLayer;
     [SerializeField] protected float m_normalAttackRange = 1.0f;
     [SerializeField] protected float m_normalAttackDamage = 1.0f;
-    protected bool m_objPickedup;
+    protected bool m_holdingObj;
+    protected bool m_isAttacking;
+    protected bool m_isBlocking;
 
     [Header("References")]
     [SerializeField] protected Animator m_animator;
@@ -50,37 +53,54 @@ public class CombatandMovementController : MonoBehaviour
         }
     }
 
-    protected virtual void Pickup()
+    protected void Interact(ref bool holdingObj)
     {
         Collider[] colliders = Physics.OverlapSphere(m_originPoint.position, m_pickupRange, m_pickupLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
         {
-            nearbyObject.GetComponent<Rigidbody>().useGravity = false;
-            nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            nearbyObject.transform.position = m_originPoint.position;
-            nearbyObject.transform.parent = m_originPoint;
-            m_objPickedup = true;
+            if(holdingObj != true)
+            {
+                nearbyObject.GetComponent<Rigidbody>().useGravity = false;
+                nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                nearbyObject.transform.position = m_originPoint.position;
+                nearbyObject.transform.parent = m_originPoint;
+                holdingObj = true;
+                //Debug.Log(holdingObj);
+            }
+            else if(holdingObj == true)
+            {
+                nearbyObject.transform.parent = null;
+                nearbyObject.GetComponent<Rigidbody>().useGravity = true;
+                nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                holdingObj = false;
+                //Debug.Log(holdingObj);
+            }
         }
     }
 
-    protected virtual void Drop()
+    protected virtual void NormalAttackEffects()
     {
-        Collider[] colliders = Physics.OverlapSphere(m_originPoint.position, m_pickupRange, m_pickupLayer); //Get an array of colliders using Physics.OverlapSphere
+
+    }
+
+    protected void NormalAttack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
+    {
+        Debug.Log("DefaultAttack");
+        Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
         {
-            nearbyObject.transform.parent = null;
-            nearbyObject.GetComponent<Rigidbody>().useGravity = true;
-            nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            m_objPickedup = false;
+            Debug.Log("Attack Hit");
+            Debug.Log("Dealt " + attackDamage + " to " + nearbyObject.gameObject);
+            NormalAttackEffects();
         }
     }
 
-    protected virtual void NormalAttack()
+    protected virtual void BlockEffects()
     {
 
     }
 
-    protected virtual void Block()
+    protected void Block()
     {
 
     }
