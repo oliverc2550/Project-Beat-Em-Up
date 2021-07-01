@@ -11,6 +11,9 @@ using UnityEngine;
  * Created Pickup()/Drop(), Added OnDrawGizmosSelected() and all associated properties and methods.
  * 29/06/21 - Oliver - Changed class name from Player1 to PlayerController. Moved Pickup and Drop to CombatandMovementController, made both methods virtual methods.
  * Thea - Moved the movement logic from base character to here.
+ * 30/06/21 - Oliver - Added in animator functionality for Attacking and Blocking. Added a SetAttackBool() Method to stop the the player from moving while attacking.
+ * 01/07/21 - Oliver - Moved LookAtDirection to LateUpdate to enable localScale functionality in conjuction with Animator component. 
+ * Created AttackAnimEvent() so that NormalAttack() can be called via animation event.
  */
 
 public class PlayerController : CombatandMovementController
@@ -43,16 +46,12 @@ public class PlayerController : CombatandMovementController
             Vector3 movement = direction * Time.deltaTime * m_movementSpeed;
 
             transform.position += movement;
-
-            //if (direction.x != 0 || direction.z != 0)
-            //{
-            //    m_animator.SetInteger("AnimState", 1);
-            //}
-            //if (direction.x == 0 || direction.z == 0)
-            //{
-            //    m_animator.SetInteger("AnimState", 0);
-            //}
         }
+    }
+
+    protected void AttackAnimEvent()
+    {
+        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_enemyLayer, m_normalAttackDamage);
     }
 
     protected override void NormalAttackEffects()
@@ -83,10 +82,10 @@ public class PlayerController : CombatandMovementController
         m_animator.SetFloat("InputX", _input.x);
         m_animator.SetFloat("InputY", _input.y);
 
-        LookAtDirection(_input.x);
+        //LookAtDirection(_input.x);
         Move(new Vector3(_input.x, 0, _input.y));
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && m_isAttacking == false)
         {
             m_animator.SetTrigger("Attack");
         }
@@ -119,5 +118,10 @@ public class PlayerController : CombatandMovementController
         {
             Interact(ref m_holdingObj);
         }
+    }
+
+    void LateUpdate()
+    {
+        LookAtDirection(_input.x);
     }
 }

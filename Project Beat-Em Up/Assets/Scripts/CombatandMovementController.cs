@@ -8,6 +8,8 @@ using UnityEngine;
  * Changed Move() and Jump() to virtual functions allowing addition character specific code to be added in inherited functions. Added an Animator property.
  * 29/06/21 - Oliver - Changed class name from CharacterController1 to CombatandMovementController. Moved Pickup and Drop to CombatandMovementController, made both methods virtual methods.
  * Thea - Moved the movement logic from the Move function to the PlayerController as Enemy doesn't use it. Enemy movement is done with NavMeshAgents
+ * 30/06/21 - Oliver - Refactored the Pickup() and Drop() methods into a single Interact() method. Added the NormalAttack(), NormalAttackEffects(), Block(), and BlockEffects() methods.
+ * 01/07/21 - Oliver - Changed spriteRenderer.flipx to localscale.x = +/- to enable originpoints (used for object pickup & attacks) to flip with the rest of the character.
  */
 
 public class CombatandMovementController : MonoBehaviour
@@ -41,16 +43,23 @@ public class CombatandMovementController : MonoBehaviour
     }
     protected void LookAtDirection(float direction)
     {
+        Vector3 CharacterScale = transform.localScale;
+        //Debug.Log(CharacterScale);
         // if the direction is left
         if (direction < 0)
         {
-            m_spriteRenderer.flipX = true;
+            //m_spriteRenderer.flipX = true;
+            CharacterScale.x = -2;
+            transform.localScale = CharacterScale;
         }
         // if the direction is right
         else if (direction > 0)
         {
-            m_spriteRenderer.flipX = false;
+            //m_spriteRenderer.flipX = false;
+            CharacterScale.x = 2;
+            transform.localScale = CharacterScale;
         }
+        //Debug.Log(CharacterScale);
     }
 
     protected void Interact(ref bool holdingObj)
@@ -91,6 +100,7 @@ public class CombatandMovementController : MonoBehaviour
         {
             Debug.Log("Attack Hit");
             Debug.Log("Dealt " + attackDamage + " to " + nearbyObject.gameObject);
+            nearbyObject.gameObject.GetComponent<AttackHitDemo>().TakeDamage();
             NormalAttackEffects();
         }
     }
@@ -102,7 +112,10 @@ public class CombatandMovementController : MonoBehaviour
 
     protected void Block()
     {
-
+        if(m_isBlocking == true)
+        {
+            Debug.Log("Reducing Damage Taken");
+        }
     }
 
 }
