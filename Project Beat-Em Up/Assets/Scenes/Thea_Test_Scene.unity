@@ -1510,9 +1510,9 @@ GameObject:
   - component: {fileID: 1694961238}
   - component: {fileID: 1694961237}
   - component: {fileID: 1694961236}
-  - component: {fileID: 1694961235}
   - component: {fileID: 1694961234}
   - component: {fileID: 1694961233}
+  - component: {fileID: 1694961235}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Untagged
@@ -1580,7 +1580,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.38
-  m_Speed: 0.5
+  m_Speed: 0.05
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1601,19 +1601,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1694961232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eeec9f8df3d813419748829061c7811, type: 3}
+  m_Script: {fileID: 11500000, guid: 17b544d0c9f8bac4f9a37842e7a81a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_movementSpeed: 0.07
+  m_movementSpeed: 0
   m_jumpForce: 0
+  m_pickupRange: 2
+  m_normalAttackRange: 1
+  m_normalAttackDamage: 1
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
-  m_pickupRange: 0.25
+  m_enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   m_animator: {fileID: 1694961238}
   m_rigidbody: {fileID: 1694961236}
   m_spriteRenderer: {fileID: 1694961233}
   m_originPoint: {fileID: 70540564}
+  m_normalAttackPoint: {fileID: 1694961239}
   m_agent: {fileID: 1694961234}
   m_currentState: 0
 --- !u!54 &1694961236
@@ -1785,9 +1791,9 @@ GameObject:
   - component: {fileID: 1907616770}
   - component: {fileID: 1907616769}
   - component: {fileID: 1907616768}
-  - component: {fileID: 1907616767}
   - component: {fileID: 1907616766}
   - component: {fileID: 1907616771}
+  - component: {fileID: 1907616767}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1826,19 +1832,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1907616765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eeec9f8df3d813419748829061c7811, type: 3}
+  m_Script: {fileID: 11500000, guid: 17b544d0c9f8bac4f9a37842e7a81a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_movementSpeed: 0.07
+  m_movementSpeed: 0
   m_jumpForce: 0
+  m_pickupRange: 0.25
+  m_normalAttackRange: 1
+  m_normalAttackDamage: 1
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
-  m_pickupRange: 0.25
+  m_enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   m_animator: {fileID: 1907616770}
   m_rigidbody: {fileID: 1907616768}
   m_spriteRenderer: {fileID: 1907616771}
   m_originPoint: {fileID: 829546180}
+  m_normalAttackPoint: {fileID: 1907616772}
   m_agent: {fileID: 1907616766}
   m_currentState: 0
 --- !u!54 &1907616768
@@ -2366,19 +2378,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2040982597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5e92c3d31a9f7f4eb9416baad8b4de3, type: 3}
+  m_Script: {fileID: 11500000, guid: 387432b626ab8014d9b5ecd87989f293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_movementSpeed: 3.5
-  m_jumpForce: 100
+  m_movementSpeed: 3.97
+  m_jumpForce: 173
+  m_pickupRange: 0.25
+  m_normalAttackRange: 1
+  m_normalAttackDamage: 1
   m_pickupLayer:
     serializedVersion: 2
-    m_Bits: 512
-  m_pickupRange: 1.25
+    m_Bits: 0
+  m_enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   m_animator: {fileID: 2040982602}
   m_rigidbody: {fileID: 2040982600}
   m_spriteRenderer: {fileID: 2040982603}
   m_originPoint: {fileID: 33656300}
+  m_normalAttackPoint: {fileID: 2040982604}
 --- !u!54 &2040982600
 Rigidbody:
   m_ObjectHideFlags: 0

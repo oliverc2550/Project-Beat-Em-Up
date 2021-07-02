@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Changelog
-/*Inital Script created by Thea (date)
+/*Inital Script and movement logic created by Thea (date)
  * 24/06/21 - Oliver - Changed local float variables h and v to declared Vector2 _input. _input.x/y used in same way that float h/v were.
  * Changed Input.GetKeyDown(Spacebar) to (Input.GetButtonDown("Jump") to make the base movement more platform agnostic.
  * Over rode the Move() function to add in m_animator controls for changing the animator state. Added a rigidbody velocity check to the if statement used to activate Jump().
@@ -29,7 +29,7 @@ public class PlayerController : CombatandMovement
 
     protected void SetAttackBool()
     {
-        if(m_isAttacking == false)
+        if (m_isAttacking == false)
         {
             m_isAttacking = true;
         }
@@ -41,7 +41,7 @@ public class PlayerController : CombatandMovement
 
     protected override void Move(Vector3 direction)
     {
-        if(m_isAttacking == false && m_isBlocking == false)
+        if (m_isAttacking == false && m_isBlocking == false)
         {
             Vector3 movement = direction * Time.deltaTime * m_movementSpeed;
 
@@ -61,7 +61,7 @@ public class PlayerController : CombatandMovement
 
     protected override void BlockEffects()
     {
-        
+
     }
 
     public void OnDrawGizmosSelected()
@@ -90,7 +90,7 @@ public class PlayerController : CombatandMovement
             m_animator.SetTrigger("Attack");
         }
 
-        if(Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
             Debug.Log("Blocking");
             m_animator.SetBool("Block", true);

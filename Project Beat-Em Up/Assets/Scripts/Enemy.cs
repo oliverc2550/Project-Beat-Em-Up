@@ -41,7 +41,7 @@ public class Enemy : CombatandMovement
             float distance = Vector3.Distance(m_target.position, transform.position);
             if (distance < 1.5f)
             {
-               m_animator.SetTrigger("Attack");
+                m_animator.SetTrigger("Attack");
             }
         }
         else if (m_currentState == EnemyState.Run)
@@ -72,3 +72,4 @@ public class Enemy : CombatandMovement
         m_currentState = state;
     }
 }
+
