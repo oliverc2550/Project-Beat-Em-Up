@@ -16,7 +16,7 @@ using UnityEngine;
  * Created AttackAnimEvent() so that NormalAttack() can be called via animation event.
  */
 
-public class PlayerController : CombatandMovementController
+public class PlayerController : CombatandMovement
 {
     private Vector2 _input;
 

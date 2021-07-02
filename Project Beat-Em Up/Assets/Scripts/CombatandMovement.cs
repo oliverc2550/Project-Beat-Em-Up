@@ -12,7 +12,7 @@ using UnityEngine;
  * 01/07/21 - Oliver - Changed spriteRenderer.flipx to localscale.x = +/- to enable originpoints (used for object pickup & attacks) to flip with the rest of the character.
  */
 
-public class CombatandMovementController : MonoBehaviour
+public class CombatandMovement : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] protected float m_movementSpeed;

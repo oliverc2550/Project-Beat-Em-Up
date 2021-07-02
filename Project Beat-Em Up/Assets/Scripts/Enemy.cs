@@ -8,7 +8,7 @@ using UnityEngine.AI;
  */
 public enum EnemyState { Idle, Chase, Run, Patrol }
 
-public class Enemy : CombatandMovementController
+public class Enemy : CombatandMovement
 {
     [SerializeField] NavMeshAgent m_agent;
 
