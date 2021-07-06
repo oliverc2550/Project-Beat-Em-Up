@@ -14,9 +14,12 @@ using UnityEngine;
  * 02/07/21 - Thea - Added tooltips for the designer
  * 04/07/21 - Oliver - Created instance of CombatandMovement due to github errors. Added fields for special attack functionality and boxcasting functionality.
  * Created the Attack() method so that Normal/SpecialAttack() could use it, to reduce duplicate code.
+ * 6/07/21 - Thea - Setting the currentHealth to the maxHealth in this script rather than the player script; Created EquipItem and UnequipItem functions 
+ * so that they can be also called by the thiefEnemy; Added collider[] return type to the Attack function in order to know what are the hit objects; 
+ * Stored held item as an object; Removed the Attack function and created an Attack animation event instead
  */
 
-public class CombatandMovement : MonoBehaviour, IDamagable_Oliver
+public class CombatandMovement : MonoBehaviour, IDamageable
 {
     [Header("Settings")]
     [SerializeField] [Range(50, 300)] protected float m_maxHealth;
@@ -152,6 +155,8 @@ public class CombatandMovement : MonoBehaviour, IDamagable_Oliver
         Debug.Log("Normal Attack");
         Attack(m_normalAttackPoint, m_normalAttackRange, m_enemyLayer, m_normalAttackDamage);
     }
+
+    //TODO: ADD THE ATTACKS ANIMATION EVENTS THAT WERE REMOVED FROM THE PLAYER CONTROLLER IF THEY ARE NEEDED
 
 
     //Mandatory functions, coming from the interface. If these functions are not added to this script, there will be an error. 

@@ -16,7 +16,7 @@ public class Enemy : CombatandMovement
     protected override void Start()
     {
         base.Start();
-        SetTarget(FindObjectOfType<PlayerController>().transform);
+        SetTarget(FindObjectOfType<Oliver_PlayerController>().transform);
         SetEnemyState(EnemyState.Chase);
     }
 

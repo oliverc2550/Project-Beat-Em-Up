@@ -32,6 +32,10 @@ public class PlayerController : CombatandMovement
 
     protected override void Start()
     {
+
+        //MAXHEALTH MOVED TO THE COMBAT AND MOVEMENT
+        //OVERRIDE START
+
         m_currentCharge = m_maxCharge;
         m_holdingObj = false;
         m_normalAttackActive = false;
@@ -100,7 +104,7 @@ public class PlayerController : CombatandMovement
         }
     }
 
-    //Debug
+    //REMOVED THE ATTACKS ANIMATION EVENTS BECAUSE THEY NEED TO BE USED BY THE ENEMIES TOO
 
     public void OnDrawGizmosSelected()
     {

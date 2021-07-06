@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Changelog
+/*Inital Script created by Thea (6/07/21)
+ */
 public class EnemyThief : Enemy
 {
     [SerializeField] private float m_healthTresholdToRun = 20;
@@ -25,6 +27,7 @@ public class EnemyThief : Enemy
     protected override Collider[] Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
     {
         Collider[] colliders = base.Attack(attackPoint, attackRange, enemyLayer, attackDamage);
+        Debug.Log(colliders.Length);
         if (colliders.Length > 0)
         {
             StealWeapon(colliders[0].GetComponent<CombatandMovement>());
@@ -32,6 +35,7 @@ public class EnemyThief : Enemy
 
         return colliders;
     }
+
 
     private void StealWeapon(CombatandMovement combatAndMovement)
     {
