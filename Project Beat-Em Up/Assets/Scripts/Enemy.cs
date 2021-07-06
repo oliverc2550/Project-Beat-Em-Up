@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 // Changelog
@@ -13,28 +11,27 @@ public class Enemy : CombatandMovement
     [SerializeField] NavMeshAgent m_agent;
 
     Transform m_target;
-    [SerializeField] EnemyState m_currentState;
+    EnemyState m_currentState;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         SetTarget(FindObjectOfType<PlayerController>().transform);
-        SetEnemyState(EnemyState.Idle);
-
-        // TBD: do enemies jump? 
-        m_animator.SetBool("Grounded", true);
+        SetEnemyState(EnemyState.Chase);
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (m_currentState == EnemyState.Idle)
         {
-            //todo: set animations
-            m_animator.SetInteger("AnimState", 0);
+            m_animator.SetBool("Walking", false);
         }
-        else if (m_currentState == EnemyState.Chase)
+
+        //https://answers.unity.com/questions/362629/how-can-i-check-if-an-animation-is-being-played-or.html
+        else if (m_currentState == EnemyState.Chase && !m_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
-            //run animation
-            m_animator.SetInteger("AnimState", 1);
+            m_animator.SetBool("Walking", true);
+
             Vector3 direction = (m_target.position - transform.position).normalized;
             Move(direction);
 
@@ -47,7 +44,7 @@ public class Enemy : CombatandMovement
         else if (m_currentState == EnemyState.Run)
         {
             //run animation
-            m_animator.SetInteger("AnimState", 1);
+            m_animator.SetBool("Walking", true);
             Vector3 direction = -(m_target.position - transform.position).normalized;
             Move(direction);
         }
@@ -67,7 +64,7 @@ public class Enemy : CombatandMovement
         m_target = target;
     }
 
-    void SetEnemyState(EnemyState state)
+    protected void SetEnemyState(EnemyState state)
     {
         m_currentState = state;
     }

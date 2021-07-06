@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 //Changelog
 /*Inital Script and movement logic created by Thea (date)
@@ -14,34 +15,84 @@ using UnityEngine;
  * 30/06/21 - Oliver - Added in animator functionality for Attacking and Blocking. Added a SetAttackBool() Method to stop the the player from moving while attacking.
  * 01/07/21 - Oliver - Moved LookAtDirection to LateUpdate to enable localScale functionality in conjuction with Animator component. 
  * Created AttackAnimEvent() so that NormalAttack() can be called via animation event.
+ * 04/07/21 - Oliver - Created instance of PlayerController due to github errors. Transitioned over from Unity's old input system to the new input system.
+ * Due to change added methods OnMovement(), OnNormalAttack(), OnSpecialAttack(), OnChargedAttack(), OnInteract(), OnBlock() and OnJump(). Added SetSpecialAttackBool(), SetChargedAttackBool()
+ * SpecialAttackAnimEvent() and ChargedAttackAnimEvent() to control additional attacks. Created IsGrounded() to check if the player had jumped and set the corresponding bool. Added FixedUpdate for physics.
+ * Created m_maxCharge and m_currentCharge for ChargedAttack.
  */
 
 public class PlayerController : CombatandMovement
 {
-    private Vector2 _input;
+    private Vector2 m_input;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected PlayerInput m_playerInput;
+    [Header("Player Settings ")]
+    [SerializeField] protected float m_maxCharge;
+    private float m_currentCharge;
 
-    private void Start()
+    protected override void Start()
     {
+        m_currentCharge = m_maxCharge;
         m_holdingObj = false;
-        m_isAttacking = false;
+        m_normalAttackActive = false;
+        m_specialAttackActive = false;
+        m_chargedAttackActive = false;
         m_isBlocking = false;
+        isBlocking = m_isBlocking;
+        m_isGrounded = true;
     }
 
-    protected void SetAttackBool()
+    protected void SetNormalAttackBool()
     {
-        if (m_isAttacking == false)
+        if (m_normalAttackActive == false)
         {
-            m_isAttacking = true;
+            m_normalAttackActive = true;
         }
         else
         {
-            m_isAttacking = false;
+            m_normalAttackActive = false;
+        }
+    }
+
+    protected void SetSpecialAttackBool()
+    {
+        if (m_specialAttackActive == false)
+        {
+            m_specialAttackActive = true;
+        }
+        else
+        {
+            m_specialAttackActive = false;
+        }
+    }
+
+    protected void SetChargedAttackBool()
+    {
+        if (m_chargedAttackActive == false)
+        {
+            m_chargedAttackActive = true;
+        }
+        else
+        {
+            m_chargedAttackActive = false;
+        }
+    }
+
+    protected bool IsGrounded(ref bool isGrounded)
+    {
+        if (Physics.BoxCast(m_collider.bounds.max, m_collider.bounds.extents, Vector3.down, transform.rotation, 1.2f, m_collisionLayer))
+        {
+            return isGrounded = true;
+        }
+        else
+        {
+            return isGrounded = false;
         }
     }
 
     protected override void Move(Vector3 direction)
     {
-        if (m_isAttacking == false && m_isBlocking == false)
+        if (m_normalAttackActive == false && m_isBlocking == false)
         {
             Vector3 movement = direction * Time.deltaTime * m_movementSpeed;
 
@@ -49,79 +100,93 @@ public class PlayerController : CombatandMovement
         }
     }
 
-    protected void AttackAnimEvent()
-    {
-        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_enemyLayer, m_normalAttackDamage);
-    }
-
-    protected override void NormalAttackEffects()
-    {
-
-    }
-
-    protected override void BlockEffects()
-    {
-
-    }
+    //Debug
 
     public void OnDrawGizmosSelected()
     {
-        if (m_originPoint == null)
+        if (m_interactPoint == null)
         {
             return;
         }
-        Gizmos.DrawWireSphere(m_originPoint.position, m_pickupRange);
+        Gizmos.DrawWireSphere(m_interactPoint.position, m_pickupRange);
     }
 
-    //https://docs.unity3d.com/ScriptReference/Input.GetAxis.html
-    void Update()
+    //Unity Input Systems Action Callbacks
+
+    public void OnMovement(InputAction.CallbackContext value)
     {
-        _input.x = Input.GetAxis("Horizontal");
-        _input.y = Input.GetAxis("Vertical");
+        m_input = value.ReadValue<Vector2>();
 
-        m_animator.SetFloat("InputX", _input.x);
-        m_animator.SetFloat("InputY", _input.y);
+        m_animator.SetFloat("InputX", m_input.x);
+        m_animator.SetFloat("InputY", m_input.y);
+    }
 
-        //LookAtDirection(_input.x);
-        Move(new Vector3(_input.x, 0, _input.y));
+    public void OnInteract(InputAction.CallbackContext value)
+    {
+        Interact(ref m_holdingObj);
+    }
 
-        if (Input.GetButtonDown("Fire1") && m_isAttacking == false)
+    public void OnNormalAttack(InputAction.CallbackContext value)
+    {
+        if (m_normalAttackActive == false)
         {
-            m_animator.SetTrigger("Attack");
+            m_animator.SetTrigger("NormalAttack");
         }
+    }
 
-        if (Input.GetButtonDown("Fire2"))
+    public void OnSpecialAttack(InputAction.CallbackContext value)
+    {
+        if (m_specialAttackActive == false)
+        {
+            m_animator.SetTrigger("SpecialAttack");
+        }
+    }
+
+    public void OnChargedAttack(InputAction.CallbackContext value)
+    {
+        if (m_chargedAttackActive == false /*&& m_currentCharge >= m_maxCharge*/)
+        {
+            m_animator.SetTrigger("ChargedAttack");
+        }
+    }
+
+    public void OnBlock(InputAction.CallbackContext value)
+    {
+        m_isBlocking = value.performed;
+
+        if (m_isBlocking == true)
         {
             Debug.Log("Blocking");
             m_animator.SetBool("Block", true);
-            m_isBlocking = true;
-            Block();
         }
-        else if (Input.GetButtonUp("Fire2"))
+        else if (m_isBlocking != true)
         {
-            Debug.Log("Not Blocking");
             m_animator.SetBool("Block", false);
-            m_isBlocking = false;
         }
+    }
 
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(m_rigidbody.velocity.y) < 0.001f)
+    public void OnJump(InputAction.CallbackContext value)
+    {
+        if (m_isGrounded == true)
         {
-            m_animator.SetBool("Grounded", false);
             Jump();
         }
-        else if (Mathf.Abs(m_rigidbody.velocity.y) <= 0.001f)
-        {
-            m_animator.SetBool("Grounded", true);
-        }
+    }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Interact(ref m_holdingObj);
-        }
+    void Update()
+    {
+        Move(new Vector3(m_input.x, 0, m_input.y));
+        m_animator.SetBool("Grounded", m_isGrounded);
+    }
+
+    private void FixedUpdate()
+    {
+        IsGrounded(ref m_isGrounded);
+        //Debug.Log(IsGrounded(ref m_isGrounded));
     }
 
     void LateUpdate()
     {
-        LookAtDirection(_input.x);
+        LookAtDirection(m_input.x);
     }
 }

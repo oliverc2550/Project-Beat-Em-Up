@@ -11,37 +11,60 @@ using UnityEngine;
  * 30/06/21 - Oliver - Refactored the Pickup() and Drop() methods into a single Interact() method. Added the NormalAttack(), NormalAttackEffects(), Block(), and BlockEffects() methods.
  * 01/07/21 - Oliver - Changed spriteRenderer.flipx to localscale.x = +/- to enable originpoints (used for object pickup & attacks) to flip with the rest of the character.
  * Thea - Inherited from IDamagable interface. Added logic and filled the functions that came from the interface
- * 2/07/21 - Thea - Added tooltips for the designer
+ * 02/07/21 - Thea - Added tooltips for the designer
+ * 04/07/21 - Oliver - Created instance of CombatandMovement due to github errors. Added fields for special attack functionality and boxcasting functionality.
+ * Created the Attack() method so that Normal/SpecialAttack() could use it, to reduce duplicate code.
  */
 
-public class CombatandMovement : MonoBehaviour, IDamageable
+public class CombatandMovement : MonoBehaviour, IDamagable_Oliver
 {
     [Header("Settings")]
-    [SerializeField] [Range(1,7)] protected float m_movementSpeed;
-    [SerializeField] [Range(100, 300)] protected float m_jumpForce;
-    [SerializeField] protected float m_pickupRange = 0.25f;
-    [SerializeField] protected float m_normalAttackRange = 1.0f;
+    [SerializeField] [Range(50, 300)] protected float m_maxHealth;
+    [SerializeField] [Range(0, 7)] protected float m_movementSpeed;
+    [SerializeField] [Range(25, 300)] protected float m_jumpForce;
+    [SerializeField] protected float m_pickupRange = 1.25f;
+    [SerializeField] protected float m_normalAttackRange = 1.25f;
     [SerializeField] protected float m_normalAttackDamage = 1.0f;
+    [SerializeField] protected float m_specialAttackRange = 0.75f;
+    [SerializeField] protected float m_specialAttackDamage = 2.0f;
     [SerializeField] protected LayerMask m_pickupLayer;
     [SerializeField] protected LayerMask m_enemyLayer;
+    [SerializeField] protected LayerMask m_collisionLayer;
     protected bool m_holdingObj;
-    protected bool m_isAttacking;
+    protected bool m_normalAttackActive;
+    protected bool m_specialAttackActive;
+    protected bool m_chargedAttackActive;
     protected bool m_isBlocking;
+    protected bool m_isGrounded;
+
+    public GameObject heldObject;
 
     [Header("References")]
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")] 
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Animator m_animator;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")] 
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected Collider m_collider;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Rigidbody m_rigidbody;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")] 
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected SpriteRenderer m_spriteRenderer;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")] 
-    [SerializeField] protected Transform m_originPoint;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")] 
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected Transform m_interactPoint;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Transform m_normalAttackPoint;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected Transform m_specialAttackPoint;
 
     //Coming from the interface.
-    public float health { get; set; }
+    public float maxHealth { get; set; }
+    public float currentHealth { get; set; }
+    public bool isBlocking { get; set; }
+
+    protected virtual void Start()
+    {
+        maxHealth = m_maxHealth;
+        currentHealth = maxHealth;
+    }
 
     protected virtual void Move(Vector3 direction)
     {
@@ -57,14 +80,12 @@ public class CombatandMovement : MonoBehaviour, IDamageable
         // if the direction is left
         if (direction < 0)
         {
-            //m_spriteRenderer.flipX = true;
             CharacterScale.x = -2;
             transform.localScale = CharacterScale;
         }
         // if the direction is right
         else if (direction > 0)
         {
-            //m_spriteRenderer.flipX = false;
             CharacterScale.x = 2;
             transform.localScale = CharacterScale;
         }
@@ -73,80 +94,71 @@ public class CombatandMovement : MonoBehaviour, IDamageable
 
     protected void Interact(ref bool holdingObj)
     {
-        Collider[] colliders = Physics.OverlapSphere(m_originPoint.position, m_pickupRange, m_pickupLayer); //Get an array of colliders using Physics.OverlapSphere
+        Collider[] colliders = Physics.OverlapSphere(m_interactPoint.position, m_pickupRange, m_pickupLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
         {
             if (holdingObj != true)
             {
-                nearbyObject.GetComponent<Rigidbody>().useGravity = false;
-                nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                nearbyObject.transform.position = m_originPoint.position;
-                nearbyObject.transform.parent = m_originPoint;
+                EquipItem(nearbyObject.gameObject);
                 holdingObj = true;
                 //Debug.Log(holdingObj);
             }
             else if (holdingObj == true)
             {
-                nearbyObject.transform.parent = null;
-                nearbyObject.GetComponent<Rigidbody>().useGravity = true;
-                nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                UnequipHeldItem();
                 holdingObj = false;
                 //Debug.Log(holdingObj);
             }
         }
     }
-
-    protected virtual void NormalAttackEffects()
+    public void EquipItem(GameObject item)
     {
-
+        heldObject = item;
+        heldObject.GetComponent<Rigidbody>().useGravity = false;
+        heldObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        heldObject.transform.position = m_interactPoint.position;
+        heldObject.transform.parent = m_interactPoint;
     }
 
-    protected void NormalAttack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
+    public void UnequipHeldItem()
     {
-        Debug.Log("DefaultAttack");
+        heldObject = null;
+        heldObject.transform.parent = null;
+        heldObject.GetComponent<Rigidbody>().useGravity = true;
+        heldObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+    }
+
+    protected virtual Collider[] Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
+    {
         Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
         {
             Debug.Log("Attack Hit");
             Debug.Log("Dealt " + attackDamage + " to " + nearbyObject.gameObject);
-            nearbyObject.gameObject.GetComponent<AttackHitDemo>().TakeDamage();
-            NormalAttackEffects();
-
             // Checking if the nearby objects have damageable interface. If they do, they receive damage.
-            IDamageable damageable = nearbyObject.GetComponent<IDamageable>();
-            if (damageable != null)
+            nearbyObject.gameObject.GetComponent<IDamageable>();
+            if (nearbyObject.gameObject.GetComponent<IDamageable>() != null)
             {
-                damageable.DealDamage(m_normalAttackDamage);
+                nearbyObject.gameObject.GetComponent<IDamageable>().OnTakeDamage(attackDamage);
             }
         }
-    }
 
-    protected virtual void BlockEffects()
+        return colliders;
+    }
+    
+    // animation event
+    private void NormalAttackAnimEvent()
     {
-
+        Debug.Log("Normal Attack");
+        Attack(m_normalAttackPoint, m_normalAttackRange, m_enemyLayer, m_normalAttackDamage);
     }
 
-    protected void Block()
-    {
-        if (m_isBlocking == true)
-        {
-            Debug.Log("Reducing Damage Taken");
-        }
-    }
 
     //Mandatory functions, coming from the interface. If these functions are not added to this script, there will be an error. 
     //If these functions are not needed here anymore, they must be removed from the interface too
 
-    public void DealDamage(float amount)
+    public void OnTakeDamage(float damage)
     {
-        health -= amount;
-
-        if (health <= 0)
-        {
-            health = 0;
-            Die();
-        }
-
         //todo: some particles, sounds and animations
     }
 
@@ -157,4 +169,3 @@ public class CombatandMovement : MonoBehaviour, IDamageable
         //todo: some particles, sounds and animations
     }
 }
-
