@@ -8,7 +8,7 @@ using UnityEngine;
  * Changed DealDamage() to OnTakeDamage() for better outside readability.
  */
 
-public interface IDamagable_Oliver
+public interface OLD_IDamagable
 {
     // every class that inherits from this interface is forced to have health, deal damage and die.
     float ImaxHealth { get; set; }

@@ -19,6 +19,8 @@ using UnityEngine.InputSystem;
  * Due to change added methods OnMovement(), OnNormalAttack(), OnSpecialAttack(), OnChargedAttack(), OnInteract(), OnBlock() and OnJump(). Added SetSpecialAttackBool(), SetChargedAttackBool()
  * SpecialAttackAnimEvent() and ChargedAttackAnimEvent() to control additional attacks. Created IsGrounded() to check if the player had jumped and set the corresponding bool. Added FixedUpdate for physics.
  * Created m_maxCharge and m_currentCharge for ChargedAttack.
+ * 07/07/21 - Oliver - Moved SetNormalAttackBool(), SetSpecialAttackBool(), SetChargedAttackBool(), NormalAttackAnimEvent(), and SpecialAttackAnimEvent() to CombatandMovement 
+ * so that these methods can be called by all inheriting classes via animation events.
  */
 
 public class PlayerController : CombatandMovement
@@ -29,57 +31,15 @@ public class PlayerController : CombatandMovement
     [Header("Player Settings ")]
     [SerializeField] protected float m_maxCharge;
     private float m_currentCharge;
+    private bool m_chargedAttackActive;
+    protected bool m_isGrounded;
 
     protected override void Start()
     {
-
-        //MAXHEALTH MOVED TO THE COMBAT AND MOVEMENT
-        //OVERRIDE START
-
+        base.Start();
         m_currentCharge = m_maxCharge;
-        m_holdingObj = false;
-        m_normalAttackActive = false;
-        m_specialAttackActive = false;
         m_chargedAttackActive = false;
-        m_isBlocking = false;
-        isBlocking = m_isBlocking;
         m_isGrounded = true;
-    }
-
-    protected void SetNormalAttackBool()
-    {
-        if (m_normalAttackActive == false)
-        {
-            m_normalAttackActive = true;
-        }
-        else
-        {
-            m_normalAttackActive = false;
-        }
-    }
-
-    protected void SetSpecialAttackBool()
-    {
-        if (m_specialAttackActive == false)
-        {
-            m_specialAttackActive = true;
-        }
-        else
-        {
-            m_specialAttackActive = false;
-        }
-    }
-
-    protected void SetChargedAttackBool()
-    {
-        if (m_chargedAttackActive == false)
-        {
-            m_chargedAttackActive = true;
-        }
-        else
-        {
-            m_chargedAttackActive = false;
-        }
     }
 
     protected bool IsGrounded(ref bool isGrounded)
@@ -96,7 +56,7 @@ public class PlayerController : CombatandMovement
 
     protected override void Move(Vector3 direction)
     {
-        if (m_normalAttackActive == false && m_isBlocking == false)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking == false)
         {
             Vector3 movement = direction * Time.deltaTime * m_movementSpeed;
 
@@ -104,7 +64,28 @@ public class PlayerController : CombatandMovement
         }
     }
 
-    //REMOVED THE ATTACKS ANIMATION EVENTS BECAUSE THEY NEED TO BE USED BY THE ENEMIES TOO
+    protected void SetChargedAttackBool()
+    {
+        if (m_chargedAttackActive == false)
+        {
+            m_chargedAttackActive = true;
+        }
+        else
+        {
+            m_chargedAttackActive = false;
+        }
+    }
+
+    protected override void AttackEffects(GameObject gameObject)
+    {
+        Debug.Log(gameObject + " takes shock damage");
+    }
+
+    protected void ChargedAttack()
+    {
+        Debug.Log("ChargedAttack");
+    }
+    //Debug
 
     public void OnDrawGizmosSelected()
     {
@@ -132,7 +113,7 @@ public class PlayerController : CombatandMovement
 
     public void OnNormalAttack(InputAction.CallbackContext value)
     {
-        if (m_normalAttackActive == false)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false)
         {
             m_animator.SetTrigger("NormalAttack");
         }
@@ -140,7 +121,7 @@ public class PlayerController : CombatandMovement
 
     public void OnSpecialAttack(InputAction.CallbackContext value)
     {
-        if (m_specialAttackActive == false)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false)
         {
             m_animator.SetTrigger("SpecialAttack");
         }
@@ -148,7 +129,7 @@ public class PlayerController : CombatandMovement
 
     public void OnChargedAttack(InputAction.CallbackContext value)
     {
-        if (m_chargedAttackActive == false /*&& m_currentCharge >= m_maxCharge*/)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false /*&& m_currentCharge >= m_maxCharge*/)
         {
             m_animator.SetTrigger("ChargedAttack");
         }

@@ -10,10 +10,10 @@ public class EnemyThief : Enemy
     protected override void Update()
     {
         base.Update();
-        Debug.Log(currentHealth);
-        Debug.Log(maxHealth);
+        Debug.Log(IcurrentHealth);
+        Debug.Log(ImaxHealth);
 
-        if (currentHealth <= m_healthTresholdToRun)
+        if (IcurrentHealth <= m_healthTresholdToRun)
         {
             StartRunning();
         }
@@ -24,17 +24,24 @@ public class EnemyThief : Enemy
         SetEnemyState(EnemyState.Run);
     }
 
-    protected override Collider[] Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
+    protected override void AttackEffects(GameObject gameObject)
     {
-        Collider[] colliders = base.Attack(attackPoint, attackRange, enemyLayer, attackDamage);
-        Debug.Log(colliders.Length);
-        if (colliders.Length > 0)
-        {
-            StealWeapon(colliders[0].GetComponent<CombatandMovement>());
-        }
-
-        return colliders;
+        Debug.Log(gameObject);
+        StealWeapon(gameObject.GetComponent<CombatandMovement>());
     }
+
+    //Commented out for now so errors aren't thrown
+    //protected override Collider[] Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
+    //{
+    //    Collider[] colliders = base.Attack(attackPoint, attackRange, enemyLayer, attackDamage);
+    //    Debug.Log(colliders.Length);
+    //    if (colliders.Length > 0)
+    //    {
+    //        StealWeapon(colliders[0].GetComponent<CombatandMovement>());
+    //    }
+    //
+    //    return colliders;
+    //}
 
 
     private void StealWeapon(CombatandMovement combatAndMovement)

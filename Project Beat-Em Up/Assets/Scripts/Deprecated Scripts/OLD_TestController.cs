@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestController : MonoBehaviour
+public class OLD_TestController : MonoBehaviour
 {
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     public float movementSpeed = 0.5f;
     public float jumpForce = 1f;
     public Transform glowLightPos;
-    private Rigidbody2D rigidbody2D;
+    private new Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
     void Start()

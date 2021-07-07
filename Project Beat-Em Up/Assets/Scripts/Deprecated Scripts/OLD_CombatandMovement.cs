@@ -16,7 +16,7 @@ using UnityEngine;
  * Created the Attack() method so that Normal/SpecialAttack() could use it, to reduce duplicate code.
  */
 
-public class Oliver_CombatandMovement : MonoBehaviour, IDamagable_Oliver
+public class OLD_CombatandMovement : MonoBehaviour, OLD_IDamagable
 {
     [Header("Settings")]
     [SerializeField] [Range(50, 300)] protected float m_maxHealth;
@@ -144,11 +144,11 @@ public class Oliver_CombatandMovement : MonoBehaviour, IDamagable_Oliver
             Debug.Log("Attack Hit");
             Debug.Log("Dealt " + attackDamage + " to " + nearbyObject.gameObject);
             // Checking if the nearby objects have damageable interface. If they do, they receive damage.
-            nearbyObject.gameObject.GetComponent<IDamagable_Oliver>();
-            if (nearbyObject.gameObject.GetComponent<IDamagable_Oliver>() != null)
+            nearbyObject.gameObject.GetComponent<OLD_IDamagable>();
+            if (nearbyObject.gameObject.GetComponent<OLD_IDamagable>() != null)
             {
-                nearbyObject.gameObject.GetComponent<IDamagable_Oliver>().TakeDamage(attackDamage);
-                AttackEffects(nearbyObject.gameObject);
+                //nearbyObject.gameObject.GetComponent<OLD_IDamagable>().TakeDamage(attackDamage);
+                //AttackEffects(nearbyObject.gameObject);
             }
         }
     }

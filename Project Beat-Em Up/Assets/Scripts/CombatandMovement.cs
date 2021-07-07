@@ -14,16 +14,20 @@ using UnityEngine;
  * 02/07/21 - Thea - Added tooltips for the designer
  * 04/07/21 - Oliver - Created instance of CombatandMovement due to github errors. Added fields for special attack functionality and boxcasting functionality.
  * Created the Attack() method so that Normal/SpecialAttack() could use it, to reduce duplicate code.
- * 6/07/21 - Thea - Setting the currentHealth to the maxHealth in this script rather than the player script; Created EquipItem and UnequipItem functions 
+ * 06/07/21 - Thea - Setting the currentHealth to the maxHealth in this script rather than the player script; Created EquipItem and UnequipItem functions 
  * so that they can be also called by the thiefEnemy; Added collider[] return type to the Attack function in order to know what are the hit objects; 
  * Stored held item as an object; Removed the Attack function and created an Attack animation event instead
+ * 07/07/21 - Oliver - Merged Oliver_CombatandMovement with CombatandMovement. Some 06/07 changes have been reverted. Created AttackEffects() as a virtual method to fill the same role as
+ * the collider[] Attack() method change from 06/07. Restored Attack() and moved SetNormalAttackBool(), SetSpecialAttackBool(), SetChargedAttackBool(), NormalAttackAnimEvent(), 
+ * and SpecialAttackAnimEvent() from PlayerController so that these methods can be called by all inheriting classes via animation events. 
+ * Added more variables to the virtual Start() method to allow them to also be easily called via inherited classes. Added Regions to help with readability
  */
 
-public class CombatandMovement : MonoBehaviour, IDamageable
+public class CombatandMovement : MonoBehaviour, IDamagable
 {
     [Header("Settings")]
     [SerializeField] [Range(50, 300)] protected float m_maxHealth;
-    [SerializeField] [Range(0, 7)] protected float m_movementSpeed;
+    [SerializeField] [Range(1, 7)] protected float m_movementSpeed;
     [SerializeField] [Range(25, 300)] protected float m_jumpForce;
     [SerializeField] protected float m_pickupRange = 1.25f;
     [SerializeField] protected float m_normalAttackRange = 1.25f;
@@ -36,9 +40,7 @@ public class CombatandMovement : MonoBehaviour, IDamageable
     protected bool m_holdingObj;
     protected bool m_normalAttackActive;
     protected bool m_specialAttackActive;
-    protected bool m_chargedAttackActive;
     protected bool m_isBlocking;
-    protected bool m_isGrounded;
 
     public GameObject heldObject;
 
@@ -59,16 +61,21 @@ public class CombatandMovement : MonoBehaviour, IDamageable
     [SerializeField] protected Transform m_specialAttackPoint;
 
     //Coming from the interface.
-    public float maxHealth { get; set; }
-    public float currentHealth { get; set; }
-    public bool isBlocking { get; set; }
+    public float ImaxHealth { get; set; }
+    public float IcurrentHealth { get; set; }
+    public bool IisBlocking { get; set; }
 
     protected virtual void Start()
     {
-        maxHealth = m_maxHealth;
-        currentHealth = maxHealth;
+        ImaxHealth = m_maxHealth;
+        IcurrentHealth = ImaxHealth;
+        m_holdingObj = false;
+        m_normalAttackActive = false;
+        m_specialAttackActive = false;
+        m_isBlocking = false;
+        IisBlocking = m_isBlocking;
     }
-
+    #region Movement Methods
     protected virtual void Move(Vector3 direction)
     {
     }
@@ -94,8 +101,9 @@ public class CombatandMovement : MonoBehaviour, IDamageable
         }
         //Debug.Log(CharacterScale);
     }
-
-    protected void Interact(ref bool holdingObj)
+    #endregion
+    #region Interaction Methods
+    public void Interact(ref bool holdingObj)
     {
         Collider[] colliders = Physics.OverlapSphere(m_interactPoint.position, m_pickupRange, m_pickupLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
@@ -130,8 +138,14 @@ public class CombatandMovement : MonoBehaviour, IDamageable
         heldObject.GetComponent<Rigidbody>().useGravity = true;
         heldObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
+    #endregion
+    #region Attack Methods
+    protected virtual void AttackEffects(GameObject gameObject)
+    {
 
-    protected virtual Collider[] Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
+    }
+
+    protected void Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
     {
         Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
@@ -139,26 +153,64 @@ public class CombatandMovement : MonoBehaviour, IDamageable
             Debug.Log("Attack Hit");
             Debug.Log("Dealt " + attackDamage + " to " + nearbyObject.gameObject);
             // Checking if the nearby objects have damageable interface. If they do, they receive damage.
-            nearbyObject.gameObject.GetComponent<IDamageable>();
-            if (nearbyObject.gameObject.GetComponent<IDamageable>() != null)
+            nearbyObject.gameObject.GetComponent<IDamagable>();
+            if (nearbyObject.gameObject.GetComponent<IDamagable>() != null)
             {
-                nearbyObject.gameObject.GetComponent<IDamageable>().OnTakeDamage(attackDamage);
+                nearbyObject.gameObject.GetComponent<IDamagable>().TakeDamage(attackDamage);
+                AttackEffects(nearbyObject.gameObject);
             }
         }
-
-        return colliders;
     }
-    
-    // animation event
-    private void NormalAttackAnimEvent()
+
+    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, LayerMask enemyLayer, float normalAttackDamage)
     {
         Debug.Log("Normal Attack");
-        Attack(m_normalAttackPoint, m_normalAttackRange, m_enemyLayer, m_normalAttackDamage);
+        Attack(normalAttackPoint, normalAttackRange, enemyLayer, normalAttackDamage);
     }
 
-    //TODO: ADD THE ATTACKS ANIMATION EVENTS THAT WERE REMOVED FROM THE PLAYER CONTROLLER IF THEY ARE NEEDED
+    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, LayerMask enemyLayer, float specialAttackDamage)
+    {
+        Debug.Log("Special Attack");
+        Attack(specialAttackPoint, specialAttackRange, enemyLayer, specialAttackDamage);
+    }
 
+    //Following Methods needed due to limitations with Unity's Animation Events. Normal/SpecialAttack() have to be wrapped in a method to to the number of parameters they need.
+    //SetNormal/SpecialAttackBool() methods needed as Unity Animation events are unable to directly toggle bools.
+    protected void NormalAttackAnimEvent()
+    {
+        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_enemyLayer, m_normalAttackDamage);
+    }
 
+    protected void SpecialAttackAnimEvent()
+    {
+        SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_enemyLayer, m_specialAttackDamage);
+    }
+
+    protected void SetNormalAttackBool()
+    {
+        if (m_normalAttackActive == false)
+        {
+            m_normalAttackActive = true;
+        }
+        else
+        {
+            m_normalAttackActive = false;
+        }
+    }
+
+    protected void SetSpecialAttackBool()
+    {
+        if (m_specialAttackActive == false)
+        {
+            m_specialAttackActive = true;
+        }
+        else
+        {
+            m_specialAttackActive = false;
+        }
+    }
+    #endregion
+    #region Interface Required Methods
     //Mandatory functions, coming from the interface. If these functions are not added to this script, there will be an error. 
     //If these functions are not needed here anymore, they must be removed from the interface too
 
@@ -173,4 +225,5 @@ public class CombatandMovement : MonoBehaviour, IDamageable
         Destroy(gameObject);
         //todo: some particles, sounds and animations
     }
+    #endregion
 }

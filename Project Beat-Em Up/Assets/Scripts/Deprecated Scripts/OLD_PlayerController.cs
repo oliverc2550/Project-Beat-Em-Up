@@ -21,7 +21,7 @@ using UnityEngine.InputSystem;
  * Created m_maxCharge and m_currentCharge for ChargedAttack.
  */
 
-public class Oliver_PlayerController : Oliver_CombatandMovement
+public class OLD_PlayerController : OLD_CombatandMovement
 {
     private Vector2 m_input;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]

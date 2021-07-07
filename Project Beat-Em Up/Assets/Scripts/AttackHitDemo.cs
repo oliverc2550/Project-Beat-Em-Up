@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackHitDemo : MonoBehaviour, IDamagable_Oliver
+public class AttackHitDemo : MonoBehaviour, IDamagable
 {
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material HitMat;
@@ -23,10 +23,6 @@ public class AttackHitDemo : MonoBehaviour, IDamagable_Oliver
 
     public void OnTakeDamage(float damage)
     {
-        if (IisBlocking == true)
-        {
-            damage /= 2;
-        }
         if(IcurrentHealth < 2 && IcurrentHealth > 0)
         {
             meshRenderer.material = HitMat;
@@ -40,16 +36,4 @@ public class AttackHitDemo : MonoBehaviour, IDamagable_Oliver
         Destroy(gameObject);
         //todo: some particles, sounds and animations
     }
-
-    //private void UpdateObj()
-    //{
-    //    if(hp == 1)
-    //    {
-    //        meshRenderer.material = HitMat;
-    //    }
-    //    if(hp == 0)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
 }
