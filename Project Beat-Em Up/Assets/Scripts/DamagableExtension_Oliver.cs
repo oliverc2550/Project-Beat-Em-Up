@@ -11,17 +11,17 @@ public static class DamagableExtension_Oliver
 {
     public static void TakeDamage(this IDamagable_Oliver idamagable, float damage)
     {
-        if(idamagable.isBlocking == true)
+        if(idamagable.IisBlocking == true)
         {
-            idamagable.currentHealth -= (damage / 2);
+            idamagable.IcurrentHealth -= (damage / 2);
         }
         else
         {
-            idamagable.currentHealth -= damage;
+            idamagable.IcurrentHealth -= damage;
         }
         //add in health bar updating to individual implementation
         idamagable.OnTakeDamage(damage);
-        if (idamagable.currentHealth <= 0)
+        if (idamagable.IcurrentHealth <= 0)
         {
             idamagable.Die();
         }

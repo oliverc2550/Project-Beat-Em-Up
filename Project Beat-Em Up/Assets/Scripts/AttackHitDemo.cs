@@ -8,26 +8,26 @@ public class AttackHitDemo : MonoBehaviour, IDamagable_Oliver
     [SerializeField] private Material HitMat;
     private float hp;
     public bool m_isBlocking;
-    public float maxHealth { get; set; }
-    public float currentHealth { get; set; }
-    public bool isBlocking { get; set; }
+    public float ImaxHealth { get; set; }
+    public float IcurrentHealth { get; set; }
+    public bool IisBlocking { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
         hp = 2;
-        maxHealth = hp;
-        currentHealth = maxHealth;
-        isBlocking = m_isBlocking;
+        ImaxHealth = hp;
+        IcurrentHealth = ImaxHealth;
+        IisBlocking = m_isBlocking;
     }
 
     public void OnTakeDamage(float damage)
     {
-        if (isBlocking == true)
+        if (IisBlocking == true)
         {
             damage /= 2;
         }
-        if(currentHealth < 2 && currentHealth > 0)
+        if(IcurrentHealth < 2 && IcurrentHealth > 0)
         {
             meshRenderer.material = HitMat;
         }

@@ -11,9 +11,9 @@ using UnityEngine;
 public interface IDamagable_Oliver
 {
     // every class that inherits from this interface is forced to have health, deal damage and die.
-    float maxHealth { get; set; }
-    float currentHealth { get; set; }
-    bool isBlocking { get; set; }
+    float ImaxHealth { get; set; }
+    float IcurrentHealth { get; set; }
+    bool IisBlocking { get; set; }
 
     void OnTakeDamage(float amount);
     void Die();

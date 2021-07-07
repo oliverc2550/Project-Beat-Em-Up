@@ -33,9 +33,9 @@ public class Oliver_CombatandMovement : MonoBehaviour, IDamagable_Oliver
     protected bool m_holdingObj;
     protected bool m_normalAttackActive;
     protected bool m_specialAttackActive;
-    protected bool m_chargedAttackActive;
     protected bool m_isBlocking;
-    protected bool m_isGrounded;
+
+    public GameObject heldObject;
 
     [Header("References")]
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
@@ -54,9 +54,20 @@ public class Oliver_CombatandMovement : MonoBehaviour, IDamagable_Oliver
     [SerializeField] protected Transform m_specialAttackPoint;
 
     //Coming from the interface.
-    public float maxHealth { get; set; }
-    public float currentHealth { get; set; }
-    public bool isBlocking { get; set; }
+    public float ImaxHealth { get; set; }
+    public float IcurrentHealth { get; set; }
+    public bool IisBlocking { get; set; }
+
+    protected virtual void Start()
+    {
+        ImaxHealth = m_maxHealth;
+        IcurrentHealth = ImaxHealth;
+        m_holdingObj = false;
+        m_normalAttackActive = false;
+        m_specialAttackActive = false;
+        m_isBlocking = false;
+        IisBlocking = m_isBlocking;
+    }
 
     protected virtual void Move(Vector3 direction)
     {
@@ -91,22 +102,38 @@ public class Oliver_CombatandMovement : MonoBehaviour, IDamagable_Oliver
         {
             if (holdingObj != true)
             {
-                nearbyObject.GetComponent<Rigidbody>().useGravity = false;
-                nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                nearbyObject.transform.position = m_interactPoint.position;
-                nearbyObject.transform.parent = m_interactPoint;
+                EquipItem(nearbyObject.gameObject);
                 holdingObj = true;
                 //Debug.Log(holdingObj);
             }
             else if (holdingObj == true)
             {
-                nearbyObject.transform.parent = null;
-                nearbyObject.GetComponent<Rigidbody>().useGravity = true;
-                nearbyObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                UnequipHeldItem();
                 holdingObj = false;
                 //Debug.Log(holdingObj);
             }
         }
+    }
+    public void EquipItem(GameObject item)
+    {
+        heldObject = item;
+        heldObject.GetComponent<Rigidbody>().useGravity = false;
+        heldObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        heldObject.transform.position = m_interactPoint.position;
+        heldObject.transform.parent = m_interactPoint;
+    }
+
+    public void UnequipHeldItem()
+    {
+        heldObject = null;
+        heldObject.transform.parent = null;
+        heldObject.GetComponent<Rigidbody>().useGravity = true;
+        heldObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+    }
+
+    protected virtual void AttackEffects(GameObject gameObject)
+    {
+
     }
 
     protected void Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
@@ -121,6 +148,7 @@ public class Oliver_CombatandMovement : MonoBehaviour, IDamagable_Oliver
             if (nearbyObject.gameObject.GetComponent<IDamagable_Oliver>() != null)
             {
                 nearbyObject.gameObject.GetComponent<IDamagable_Oliver>().TakeDamage(attackDamage);
+                AttackEffects(nearbyObject.gameObject);
             }
         }
     }

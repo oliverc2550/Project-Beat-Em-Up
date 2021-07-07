@@ -29,19 +29,37 @@ public class Oliver_PlayerController : Oliver_CombatandMovement
     [Header("Player Settings ")]
     [SerializeField] protected float m_maxCharge;
     private float m_currentCharge;
+    private bool m_chargedAttackActive;
+    protected bool m_isGrounded;
 
-    private void Start()
+    protected override void Start()
     {
-        maxHealth = m_maxHealth;
-        currentHealth = maxHealth;
+        base.Start();
         m_currentCharge = m_maxCharge;
-        m_holdingObj = false;
-        m_normalAttackActive = false;
-        m_specialAttackActive = false;
         m_chargedAttackActive = false;
-        m_isBlocking = false;
-        isBlocking = m_isBlocking;
         m_isGrounded = true;
+    }
+
+    protected bool IsGrounded(ref bool isGrounded)
+    {
+        if (Physics.BoxCast(m_collider.bounds.max, m_collider.bounds.extents, Vector3.down, transform.rotation, 1.2f, m_collisionLayer))
+        {
+            return isGrounded = true;
+        }
+        else
+        {
+            return isGrounded = false;
+        }
+    }
+
+    protected override void Move(Vector3 direction)
+    {
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking == false)
+        {
+            Vector3 movement = direction * Time.deltaTime * m_movementSpeed;
+
+            transform.position += movement;
+        }
     }
 
     protected void SetNormalAttackBool()
@@ -80,31 +98,9 @@ public class Oliver_PlayerController : Oliver_CombatandMovement
         }
     }
 
-    protected bool IsGrounded(ref bool isGrounded)
+    protected override void AttackEffects(GameObject gameObject)
     {
-        if(Physics.BoxCast(m_collider.bounds.max, m_collider.bounds.extents, Vector3.down, transform.rotation, 1.2f, m_collisionLayer))
-        {
-            return isGrounded = true;
-        }
-        else
-        {
-            return isGrounded = false;
-        }
-    }
-
-    protected override void Move(Vector3 direction)
-    {
-        if (m_normalAttackActive == false && m_isBlocking == false)
-        {
-            Vector3 movement = direction * Time.deltaTime * m_movementSpeed;
-
-            transform.position += movement;
-        }
-    }
-
-    protected void ChargedAttack()
-    {
-        Debug.Log("ChargedAttack");
+        Debug.Log(gameObject + " takes shock damage");
     }
 
     protected void NormalAttackAnimEvent()
@@ -117,11 +113,10 @@ public class Oliver_PlayerController : Oliver_CombatandMovement
         SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_enemyLayer, m_specialAttackDamage);
     }
 
-    protected void ChargedAttackAnimEvent()
+    protected void ChargedAttack()
     {
-        ChargedAttack();
+        Debug.Log("ChargedAttack");
     }
-
     //Debug
 
     public void OnDrawGizmosSelected()
@@ -150,7 +145,7 @@ public class Oliver_PlayerController : Oliver_CombatandMovement
 
     public void OnNormalAttack(InputAction.CallbackContext value)
     {
-        if (m_normalAttackActive == false)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false)
         {
             m_animator.SetTrigger("NormalAttack");
         }
@@ -158,7 +153,7 @@ public class Oliver_PlayerController : Oliver_CombatandMovement
 
     public void OnSpecialAttack(InputAction.CallbackContext value)
     {
-        if (m_specialAttackActive == false)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false)
         {
             m_animator.SetTrigger("SpecialAttack");
         }
@@ -166,7 +161,7 @@ public class Oliver_PlayerController : Oliver_CombatandMovement
 
     public void OnChargedAttack(InputAction.CallbackContext value)
     {
-        if (m_chargedAttackActive == false /*&& m_currentCharge >= m_maxCharge*/)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false /*&& m_currentCharge >= m_maxCharge*/)
         {
             m_animator.SetTrigger("ChargedAttack");
         }
