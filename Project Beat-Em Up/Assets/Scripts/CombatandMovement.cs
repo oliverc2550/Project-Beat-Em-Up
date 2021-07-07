@@ -90,13 +90,13 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         // if the direction is left
         if (direction < 0)
         {
-            CharacterScale.x = -2;
+            CharacterScale.x = -0.3f;
             transform.localScale = CharacterScale;
         }
         // if the direction is right
         else if (direction > 0)
         {
-            CharacterScale.x = 2;
+            CharacterScale.x = 0.3f;
             transform.localScale = CharacterScale;
         }
         //Debug.Log(CharacterScale);

@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: 6399aa6127a29f94eab885a0ea1c30fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3762163528396922864
+    second: EnemyAtlas_0
+  - first:
+      213: -1771854233833445843
+    second: EnemyAtlas_1
+  - first:
+      213: -5480859717716103770
+    second: EnemyAtlas_2
+  - first:
+      213: 5367070571725494411
+    second: EnemyAtlas_3
+  - first:
+      213: 4399734398992850688
+    second: EnemyAtlas_4
+  - first:
+      213: 941506561749366264
+    second: EnemyAtlas_5
+  - first:
+      213: 8031127753213159275
+    second: EnemyAtlas_6
+  - first:
+      213: -9051275244584383259
+    second: EnemyAtlas_7
+  - first:
+      213: -2178646555863097372
+    second: EnemyAtlas_8
+  - first:
+      213: -1900247857181147757
+    second: EnemyAtlas_9
+  - first:
+      213: 5364369306016362463
+    second: EnemyAtlas_10
+  - first:
+      213: 4396194004490196918
+    second: EnemyAtlas_11
+  - first:
+      213: 2034867656617944762
+    second: EnemyAtlas_12
+  - first:
+      213: -6471993433965070660
+    second: EnemyAtlas_13
+  - first:
+      213: 6203338774346925041
+    second: EnemyAtlas_14
+  - first:
+      213: -1178593228082072218
+    second: EnemyAtlas_15
+  - first:
+      213: -1446343646753725998
+    second: EnemyAtlas_16
+  - first:
+      213: -5041298163727269015
+    second: EnemyAtlas_17
+  - first:
+      213: -7998231114399017131
+    second: EnemyAtlas_18
+  - first:
+      213: 5700749151655974331
+    second: EnemyAtlas_19
+  - first:
+      213: -3991667124460525293
+    second: EnemyAtlas_20
+  - first:
+      213: 5777053366484905515
+    second: EnemyAtlas_21
+  - first:
+      213: -4968130998263557303
+    second: EnemyAtlas_22
+  - first:
+      213: -4957792517473699103
+    second: EnemyAtlas_23
+  - first:
+      213: -2755543277759751929
+    second: EnemyAtlas_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemyAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1022
+        width: 275
+        height: 804
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff5709dbc3e53430800000000000000
+      internalID: 3762163528396922864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1022
+        width: 276
+        height: 804
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26e59646fb1967e0800000000000000
+      internalID: -1771854233833445843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 1022
+        width: 307
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ada8c5202310f3b0800000000000000
+      internalID: -5480859717716103770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 1022
+        width: 306
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b889620cf3aab7a40800000000000000
+      internalID: 5367070571725494411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 4110
+        y: 1022
+        width: 380
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f1906002ffe0d30800000000000000
+      internalID: 4399734398992850688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 5072
+        y: 1022
+        width: 377
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f535c6ca37e01d00800000000000000
+      internalID: 941506561749366264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 6022
+        y: 1022
+        width: 523
+        height: 779
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b672d0c042c447f60800000000000000
+      internalID: 8031127753213159275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 6999
+        y: 1022
+        width: 387
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecc24aee19636280800000000000000
+      internalID: -9051275244584383259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 7958
+        y: 1022
+        width: 387
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efd6aa1084e3c1e0800000000000000
+      internalID: -2178646555863097372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 8959
+        y: 1022
+        width: 329
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d358f44a6f0a5e0800000000000000
+      internalID: -1900247857181147757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 1022
+        width: 331
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf2d115671127a40800000000000000
+      internalID: 5364369306016362463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 10879
+        y: 1022
+        width: 330
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b71751b72b620d30800000000000000
+      internalID: 4396194004490196918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 11871
+        y: 1022
+        width: 274
+        height: 804
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6e4ad3a5d4d3c10800000000000000
+      internalID: 2034867656617944762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 87
+        width: 274
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6f9db034cde26a0800000000000000
+      internalID: -6471993433965070660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 87
+        width: 274
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f30b52afbfa61650800000000000000
+      internalID: 6203338774346925041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 2262
+        y: 87
+        width: 275
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665bc7914bbc4afe0800000000000000
+      internalID: -1178593228082072218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 87
+        width: 282
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1e918cd1e8debe0800000000000000
+      internalID: -1446343646753725998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 4167
+        y: 87
+        width: 281
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9630530b706b90ab0800000000000000
+      internalID: -5041298163727269015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 5126
+        y: 87
+        width: 284
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55715ca8d23900190800000000000000
+      internalID: -7998231114399017131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 6103
+        y: 87
+        width: 274
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5501a46212d1f40800000000000000
+      internalID: 5700749151655974331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 7063
+        y: 87
+        width: 274
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319ece826efba98c0800000000000000
+      internalID: -3991667124460525293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 8022
+        y: 87
+        width: 275
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2eaecdbd673c2050800000000000000
+      internalID: 5777053366484905515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 8999
+        y: 87
+        width: 274
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943d4eaed27ad0bb0800000000000000
+      internalID: -4968130998263557303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 9959
+        y: 87
+        width: 274
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaf3ed09f1623bb0800000000000000
+      internalID: -4957792517473699103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 10918
+        y: 87
+        width: 275
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7091ae50df752c9d0800000000000000
+      internalID: -2755543277759751929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3e277f928b7825448921dc3a18b99626
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
