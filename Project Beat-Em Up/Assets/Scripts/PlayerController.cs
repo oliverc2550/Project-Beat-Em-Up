@@ -32,8 +32,11 @@ public class PlayerController : CombatandMovement
     [Header("Player Settings ")]
     [SerializeField] protected Text HealthUIDebug;
     [SerializeField] protected Text ChargeLvlUIDebug;
-    [SerializeField] protected float m_maxCharge;
-    private float m_currentCharge;
+    [SerializeField] protected float m_maxCharge = 75f;
+    [SerializeField] protected float minimumChargeLevel = 25f;
+    [SerializeField] protected float chargeGain = 2.5f;
+    [SerializeField] protected float attackchargeDrain = 5f;
+    [HideInInspector] public float m_currentCharge;
     private bool m_chargedAttackActive;
     protected bool m_isGrounded;
 
@@ -83,10 +86,10 @@ public class PlayerController : CombatandMovement
 
     protected override void AttackEffects(GameObject gameObject)
     {
-        if(m_currentCharge >= 25f)
+        if(m_currentCharge >= minimumChargeLevel)
         {
             gameObject.GetComponent<IDamagable>().TakeDamage(5f);
-            m_currentCharge -= 5f;
+            m_currentCharge -= attackchargeDrain;
             Debug.Log(gameObject + " takes 5 shock damage");
         }
     }
@@ -175,7 +178,7 @@ public class PlayerController : CombatandMovement
         m_animator.SetBool("Grounded", m_isGrounded);
         if(m_currentCharge <= m_maxCharge)
         {
-            m_currentCharge += 2.5f * Time.deltaTime;
+            m_currentCharge += chargeGain * Time.deltaTime;
         }
         HealthUIDebug.text = IcurrentHealth.ToString();
         ChargeLvlUIDebug.text = m_currentCharge.ToString();
