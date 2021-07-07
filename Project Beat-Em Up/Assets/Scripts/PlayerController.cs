@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 //Changelog
 /*Inital Script and movement logic created by Thea (date)
@@ -29,6 +30,8 @@ public class PlayerController : CombatandMovement
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected PlayerInput m_playerInput;
     [Header("Player Settings ")]
+    [SerializeField] protected Text HealthUIDebug;
+    [SerializeField] protected Text ChargeLvlUIDebug;
     [SerializeField] protected float m_maxCharge;
     private float m_currentCharge;
     private bool m_chargedAttackActive;
@@ -37,9 +40,11 @@ public class PlayerController : CombatandMovement
     protected override void Start()
     {
         base.Start();
-        m_currentCharge = m_maxCharge;
+        m_currentCharge = 0;
         m_chargedAttackActive = false;
         m_isGrounded = true;
+        HealthUIDebug.text = IcurrentHealth.ToString();
+        ChargeLvlUIDebug.text = m_currentCharge.ToString();
     }
 
     protected bool IsGrounded(ref bool isGrounded)
@@ -78,12 +83,18 @@ public class PlayerController : CombatandMovement
 
     protected override void AttackEffects(GameObject gameObject)
     {
-        Debug.Log(gameObject + " takes shock damage");
+        if(m_currentCharge >= 25f)
+        {
+            gameObject.GetComponent<IDamagable>().TakeDamage(5f);
+            m_currentCharge -= 5f;
+            Debug.Log(gameObject + " takes 5 shock damage");
+        }
     }
 
     protected void ChargedAttack()
     {
         Debug.Log("ChargedAttack");
+        m_currentCharge -= m_maxCharge;
     }
     //Debug
 
@@ -129,7 +140,7 @@ public class PlayerController : CombatandMovement
 
     public void OnChargedAttack(InputAction.CallbackContext value)
     {
-        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false /*&& m_currentCharge >= m_maxCharge*/)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_currentCharge >= m_maxCharge)
         {
             m_animator.SetTrigger("ChargedAttack");
         }
@@ -162,6 +173,12 @@ public class PlayerController : CombatandMovement
     {
         Move(new Vector3(m_input.x, 0, m_input.y));
         m_animator.SetBool("Grounded", m_isGrounded);
+        if(m_currentCharge <= m_maxCharge)
+        {
+            m_currentCharge += 2.5f * Time.deltaTime;
+        }
+        HealthUIDebug.text = IcurrentHealth.ToString();
+        ChargeLvlUIDebug.text = m_currentCharge.ToString();
     }
 
     private void FixedUpdate()
