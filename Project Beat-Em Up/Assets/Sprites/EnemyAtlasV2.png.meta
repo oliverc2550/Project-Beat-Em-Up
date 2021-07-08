@@ -1,0 +1,968 @@
+fileFormatVersion: 2
+guid: 45a10c36bfad35d4c821e69563ec3e12
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3172147997925953965
+    second: EnemyAtlasV2_0
+  - first:
+      213: -6567025817809897629
+    second: EnemyAtlasV2_1
+  - first:
+      213: -8425299628166923554
+    second: EnemyAtlasV2_2
+  - first:
+      213: 3105531325918617796
+    second: EnemyAtlasV2_3
+  - first:
+      213: 2123895106170393941
+    second: EnemyAtlasV2_4
+  - first:
+      213: -6692799656546610027
+    second: EnemyAtlasV2_5
+  - first:
+      213: 5319757690673655416
+    second: EnemyAtlasV2_6
+  - first:
+      213: -7817404945373363947
+    second: EnemyAtlasV2_7
+  - first:
+      213: 5489322915846094425
+    second: EnemyAtlasV2_8
+  - first:
+      213: 2051079752552871291
+    second: EnemyAtlasV2_9
+  - first:
+      213: 2390229815494505768
+    second: EnemyAtlasV2_10
+  - first:
+      213: 1663631777734349299
+    second: EnemyAtlasV2_11
+  - first:
+      213: -4605942328669803621
+    second: EnemyAtlasV2_12
+  - first:
+      213: -8784140528623441734
+    second: EnemyAtlasV2_13
+  - first:
+      213: -4604559000337593919
+    second: EnemyAtlasV2_14
+  - first:
+      213: 4355989323856396825
+    second: EnemyAtlasV2_15
+  - first:
+      213: 421257713024269508
+    second: EnemyAtlasV2_16
+  - first:
+      213: 7267947298743406146
+    second: EnemyAtlasV2_17
+  - first:
+      213: 2956496877388870371
+    second: EnemyAtlasV2_18
+  - first:
+      213: -898618818310052856
+    second: EnemyAtlasV2_19
+  - first:
+      213: 5936038995054851224
+    second: EnemyAtlasV2_20
+  - first:
+      213: 6460320027924019315
+    second: EnemyAtlasV2_21
+  - first:
+      213: -6674237203131030477
+    second: EnemyAtlasV2_22
+  - first:
+      213: -8675322582434547496
+    second: EnemyAtlasV2_23
+  - first:
+      213: 1935756782773272996
+    second: EnemyAtlasV2_24
+  - first:
+      213: 8312460629737578771
+    second: EnemyAtlasV2_25
+  - first:
+      213: 5417568751887350276
+    second: EnemyAtlasV2_26
+  - first:
+      213: -5902421804957056411
+    second: EnemyAtlasV2_27
+  - first:
+      213: 6243166652333440579
+    second: EnemyAtlasV2_28
+  - first:
+      213: -1439467984173345768
+    second: EnemyAtlasV2_29
+  - first:
+      213: 8277991337714164917
+    second: EnemyAtlasV2_30
+  - first:
+      213: -357059520425909401
+    second: EnemyAtlasV2_31
+  - first:
+      213: 7424647582666452023
+    second: EnemyAtlasV2_32
+  - first:
+      213: -6781306440271625851
+    second: EnemyAtlasV2_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemyAtlasV2_0
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1982
+        width: 275
+        height: 804
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e28a0e3344af3d0800000000000000
+      internalID: -3172147997925953965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_1
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1982
+        width: 276
+        height: 804
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3673f92ffcc3dd4a0800000000000000
+      internalID: -6567025817809897629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_2
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 1982
+        width: 307
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda31e890a2531b80800000000000000
+      internalID: -8425299628166923554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_3
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 1982
+        width: 306
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c02a308940191b20800000000000000
+      internalID: 3105531325918617796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_4
+      rect:
+        serializedVersion: 2
+        x: 4110
+        y: 1982
+        width: 380
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5551a7f9857997d10800000000000000
+      internalID: 2123895106170393941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_5
+      rect:
+        serializedVersion: 2
+        x: 5072
+        y: 1982
+        width: 377
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594deae1c266e13a0800000000000000
+      internalID: -6692799656546610027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_6
+      rect:
+        serializedVersion: 2
+        x: 6022
+        y: 1982
+        width: 523
+        height: 779
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e61c33f6393d940800000000000000
+      internalID: 5319757690673655416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_7
+      rect:
+        serializedVersion: 2
+        x: 6999
+        y: 1982
+        width: 387
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51183adde9ff28390800000000000000
+      internalID: -7817404945373363947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_8
+      rect:
+        serializedVersion: 2
+        x: 7958
+        y: 1982
+        width: 387
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95efa68bb1efd2c40800000000000000
+      internalID: 5489322915846094425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_9
+      rect:
+        serializedVersion: 2
+        x: 8959
+        y: 1982
+        width: 329
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75f8e8fa26e67c10800000000000000
+      internalID: 2051079752552871291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_10
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 1982
+        width: 331
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825f81c6a5dcb2120800000000000000
+      internalID: 2390229815494505768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_11
+      rect:
+        serializedVersion: 2
+        x: 10879
+        y: 1982
+        width: 330
+        height: 796
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f158ec9948661710800000000000000
+      internalID: 1663631777734349299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_12
+      rect:
+        serializedVersion: 2
+        x: 11871
+        y: 1982
+        width: 274
+        height: 804
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b63bbfad76410c0800000000000000
+      internalID: -4605942328669803621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_13
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1047
+        width: 274
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8a946cab6781680800000000000000
+      internalID: -8784140528623441734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_14
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 1047
+        width: 274
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9cc853cf15910c0800000000000000
+      internalID: -4604559000337593919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_15
+      rect:
+        serializedVersion: 2
+        x: 2262
+        y: 1047
+        width: 275
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912cad50635937c30800000000000000
+      internalID: 4355989323856396825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_16
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 1047
+        width: 282
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc74b778ab98d500800000000000000
+      internalID: 421257713024269508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_17
+      rect:
+        serializedVersion: 2
+        x: 4167
+        y: 1047
+        width: 281
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e4cdb9f8fecd460800000000000000
+      internalID: 7267947298743406146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_18
+      rect:
+        serializedVersion: 2
+        x: 5126
+        y: 1047
+        width: 284
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2b05cee36970920800000000000000
+      internalID: 2956496877388870371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_19
+      rect:
+        serializedVersion: 2
+        x: 6103
+        y: 1047
+        width: 274
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804e52222f67783f0800000000000000
+      internalID: -898618818310052856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_20
+      rect:
+        serializedVersion: 2
+        x: 7063
+        y: 1047
+        width: 274
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8947c19f30c016250800000000000000
+      internalID: 5936038995054851224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_21
+      rect:
+        serializedVersion: 2
+        x: 8022
+        y: 1047
+        width: 275
+        height: 803
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378b0cf46daa7a950800000000000000
+      internalID: 6460320027924019315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_22
+      rect:
+        serializedVersion: 2
+        x: 8999
+        y: 1047
+        width: 274
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334ada810a85063a0800000000000000
+      internalID: -6674237203131030477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_23
+      rect:
+        serializedVersion: 2
+        x: 9959
+        y: 1047
+        width: 274
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8701a33101b9780800000000000000
+      internalID: -8675322582434547496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_24
+      rect:
+        serializedVersion: 2
+        x: 10918
+        y: 1047
+        width: 275
+        height: 794
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a101c0b9803dda10800000000000000
+      internalID: 1935756782773272996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_25
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 166
+        width: 555
+        height: 700
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311ade4c6eacb5370800000000000000
+      internalID: 8312460629737578771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_26
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 102
+        width: 372
+        height: 747
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a708a83121f2b40800000000000000
+      internalID: 5417568751887350276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_27
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 102
+        width: 243
+        height: 764
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562c30904a2661ea0800000000000000
+      internalID: -5902421804957056411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_28
+      rect:
+        serializedVersion: 2
+        x: 3047
+        y: 102
+        width: 530
+        height: 788
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e36e91efe24a650800000000000000
+      internalID: 6243166652333440579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_29
+      rect:
+        serializedVersion: 2
+        x: 3950
+        y: 158
+        width: 562
+        height: 715
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814dcc9be7bf50ce0800000000000000
+      internalID: -1439467984173345768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_30
+      rect:
+        serializedVersion: 2
+        x: 4902
+        y: 134
+        width: 515
+        height: 739
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4a632534551e270800000000000000
+      internalID: 8277991337714164917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_31
+      rect:
+        serializedVersion: 2
+        x: 5855
+        y: 102
+        width: 434
+        height: 764
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763a75902487b0bf0800000000000000
+      internalID: -357059520425909401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_32
+      rect:
+        serializedVersion: 2
+        x: 6942
+        y: 102
+        width: 339
+        height: 747
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ceb4393a5a90760800000000000000
+      internalID: 7424647582666452023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAtlasV2_33
+      rect:
+        serializedVersion: 2
+        x: 7774
+        y: 175
+        width: 603
+        height: 691
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5818a82b8b5f3e1a0800000000000000
+      internalID: -6781306440271625851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 73f3f17ef69d73f4db5ba52a16cd8a9f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
