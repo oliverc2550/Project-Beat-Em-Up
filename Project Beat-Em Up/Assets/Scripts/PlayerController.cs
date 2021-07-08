@@ -180,8 +180,8 @@ public class PlayerController : CombatandMovement
         {
             m_currentCharge += chargeGain * Time.deltaTime;
         }
-        HealthUIDebug.text = IcurrentHealth.ToString();
-        ChargeLvlUIDebug.text = m_currentCharge.ToString();
+        HealthUIDebug.text = "Health: " + IcurrentHealth.ToString();
+        ChargeLvlUIDebug.text = "Charge: " + m_currentCharge.ToString();
     }
 
     private void FixedUpdate()

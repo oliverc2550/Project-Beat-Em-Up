@@ -6,12 +6,12 @@ using UnityEngine;
  */
 public class EnemyThief : Enemy
 {
+    [Header("Thief Settings")]
+    [SerializeField][Range(0,50)] private float m_ChargeToStealOnHit = 10;
     [SerializeField] private float m_healthTresholdToRun = 20;
     protected override void Update()
     {
         base.Update();
-        Debug.Log(IcurrentHealth);
-        Debug.Log(ImaxHealth);
 
         if (IcurrentHealth <= m_healthTresholdToRun)
         {
@@ -27,7 +27,7 @@ public class EnemyThief : Enemy
     protected override void AttackEffects(GameObject gameObject)
     {
         Debug.Log(gameObject);
-        StealWeapon(gameObject.GetComponent<CombatandMovement>());
+        StealCharge(gameObject.GetComponent<PlayerController>());
     }
 
     //Commented out for now so errors aren't thrown
@@ -44,12 +44,13 @@ public class EnemyThief : Enemy
     //}
 
 
-    private void StealWeapon(CombatandMovement combatAndMovement)
+    private void StealCharge(PlayerController player)
     {
-        if (combatAndMovement.heldObject != null)
+        player.m_currentCharge -= m_ChargeToStealOnHit;
+        if (player.m_currentCharge < 0)
         {
-            EquipItem(combatAndMovement.heldObject);
-            combatAndMovement.heldObject = null;
+            player.m_currentCharge = 0;
         }
+        Debug.Log("Player's charge is stolen by " + m_ChargeToStealOnHit + ". New charge is: " + player.m_currentCharge);
     }
 }

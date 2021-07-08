@@ -25,26 +25,7 @@ using UnityEngine;
 
 public class CombatandMovement : MonoBehaviour, IDamagable
 {
-    [Header("Settings")]
-    [SerializeField] [Range(50, 300)] protected float m_maxHealth;
-    [SerializeField] [Range(1, 7)] protected float m_movementSpeed;
-    [SerializeField] [Range(25, 300)] protected float m_jumpForce;
-    [SerializeField] protected float m_pickupRange = 1.25f;
-    [SerializeField] protected float m_normalAttackRange = 1.25f;
-    [SerializeField] protected float m_normalAttackDamage = 1.0f;
-    [SerializeField] protected float m_specialAttackRange = 0.75f;
-    [SerializeField] protected float m_specialAttackDamage = 2.0f;
-    [SerializeField] protected LayerMask m_pickupLayer;
-    [SerializeField] protected LayerMask m_enemyLayer;
-    [SerializeField] protected LayerMask m_collisionLayer;
-    protected bool m_holdingObj;
-    protected bool m_normalAttackActive;
-    protected bool m_specialAttackActive;
-    protected bool m_isBlocking;
-
-    public GameObject heldObject;
-
-    [Header("References")]
+    [Header("References (DO NOT EDIT)")]
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Animator m_animator;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
@@ -60,6 +41,29 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Transform m_specialAttackPoint;
 
+
+    [Header("Settings")]
+    [SerializeField] [Range(50, 300)] protected float m_maxHealth;
+    [SerializeField] [Range(0, 7)] protected float m_movementSpeed;
+    [SerializeField] [Range(25, 300)] protected float m_jumpForce;
+    [SerializeField] protected float m_pickupRange = 1.25f;
+    [SerializeField] protected float m_normalAttackRange = 1.25f;
+    [SerializeField] protected float m_normalAttackDamage = 1.0f;
+    [SerializeField] protected float m_specialAttackRange = 0.75f;
+    [SerializeField] protected float m_specialAttackDamage = 2.0f;
+    [SerializeField] protected LayerMask m_pickupLayer;
+    [SerializeField] protected LayerMask m_enemyLayer;
+    [SerializeField] protected LayerMask m_collisionLayer;
+    protected bool m_holdingObj;
+    protected bool m_normalAttackActive;
+    protected bool m_specialAttackActive;
+    protected bool m_isBlocking;
+
+    private Vector3 m_startScale;
+
+    public GameObject heldObject;
+
+
     //Coming from the interface.
     public float ImaxHealth { get; set; }
     public float IcurrentHealth { get; set; }
@@ -74,6 +78,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         m_specialAttackActive = false;
         m_isBlocking = false;
         IisBlocking = m_isBlocking;
+        m_startScale = transform.localScale;
     }
     #region Movement Methods
     protected virtual void Move(Vector3 direction)
@@ -90,13 +95,13 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         // if the direction is left
         if (direction < 0)
         {
-            CharacterScale.x = -0.3f;
+            CharacterScale.x = -m_startScale.x;
             transform.localScale = CharacterScale;
         }
         // if the direction is right
         else if (direction > 0)
         {
-            CharacterScale.x = 0.3f;
+            CharacterScale.x = m_startScale.x;
             transform.localScale = CharacterScale;
         }
         //Debug.Log(CharacterScale);
@@ -219,11 +224,17 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         //todo: some particles, sounds and animations
     }
 
-    public void Die()
+    public virtual void Die()
     {
         //debug:
         Destroy(gameObject);
         //todo: some particles, sounds and animations
     }
+
+    
+    //private void OnDestroy()
+    //{
+    //    Die();
+    //}
     #endregion
 }

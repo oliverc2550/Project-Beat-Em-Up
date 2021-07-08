@@ -9,6 +9,7 @@ public enum EnemyState { Idle, Chase, Run, Patrol }
 public class Enemy : CombatandMovement
 {
     [SerializeField] NavMeshAgent m_agent;
+    [SerializeField] private float m_stoppingDistance = 1.5f;
 
     Transform m_target;
     EnemyState m_currentState;
@@ -35,10 +36,9 @@ public class Enemy : CombatandMovement
             Vector3 direction = (m_target.position - transform.position).normalized;
             Move(direction);
 
-            float distance = Vector3.Distance(m_target.position, transform.position);
-            if (distance < 1.5f)
+            if (PlayerInRange())
             {
-                m_animator.SetTrigger("Attack");
+                OnPlayerInRange();
             }
         }
         else if (m_currentState == EnemyState.Run)
@@ -48,6 +48,17 @@ public class Enemy : CombatandMovement
             Vector3 direction = -(m_target.position - transform.position).normalized;
             Move(direction);
         }
+    }
+
+    protected bool PlayerInRange()
+    {
+        float distance = Vector3.Distance(m_target.position, transform.position);
+        return distance < m_stoppingDistance;
+    }
+
+    protected virtual void OnPlayerInRange()
+    {
+        m_animator.SetTrigger("Attack");
     }
 
     protected override void Move(Vector3 direction)
@@ -67,6 +78,13 @@ public class Enemy : CombatandMovement
     protected void SetEnemyState(EnemyState state)
     {
         m_currentState = state;
+    }
+
+    public override void Die()
+    {
+        FindObjectOfType<EnemySpawner>().spawnedEnemies.Remove(this);
+
+        base.Die();
     }
 }
 
