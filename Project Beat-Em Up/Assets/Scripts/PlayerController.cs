@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 //Changelog
 /*Inital Script and movement logic created by Thea (date)
@@ -22,6 +21,7 @@ using UnityEngine.UI;
  * Created m_maxCharge and m_currentCharge for ChargedAttack.
  * 07/07/21 - Oliver - Moved SetNormalAttackBool(), SetSpecialAttackBool(), SetChargedAttackBool(), NormalAttackAnimEvent(), and SpecialAttackAnimEvent() to CombatandMovement 
  * so that these methods can be called by all inheriting classes via animation events.
+ * 09/07/21 - Oliver - Added in the functionality to update the UI Charge Bar.
  */
 
 public class PlayerController : CombatandMovement
@@ -30,11 +30,9 @@ public class PlayerController : CombatandMovement
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected PlayerInput m_playerInput;
     [Header("Player Settings ")]
-    [SerializeField] protected Text HealthUIDebug;
-    [SerializeField] protected Text ChargeLvlUIDebug;
     [SerializeField] protected float m_maxCharge = 75f;
     [SerializeField] protected float minimumChargeLevel = 25f;
-    [SerializeField] protected float chargeGain = 2.5f;
+    [SerializeField] protected float chargeGain = 0.5f;
     [SerializeField] protected float attackchargeDrain = 5f;
     [HideInInspector] public float m_currentCharge;
     private bool m_chargedAttackActive;
@@ -46,8 +44,6 @@ public class PlayerController : CombatandMovement
         m_currentCharge = 0;
         m_chargedAttackActive = false;
         m_isGrounded = true;
-        HealthUIDebug.text = IcurrentHealth.ToString();
-        ChargeLvlUIDebug.text = m_currentCharge.ToString();
     }
 
     protected bool IsGrounded(ref bool isGrounded)
@@ -90,6 +86,7 @@ public class PlayerController : CombatandMovement
         {
             gameObject.GetComponent<IDamagable>().TakeDamage(5f);
             m_currentCharge -= attackchargeDrain;
+            m_uiController.SetChargeMeterPercent(m_currentCharge / m_maxCharge);
             Debug.Log(gameObject + " takes 5 shock damage");
         }
     }
@@ -180,8 +177,7 @@ public class PlayerController : CombatandMovement
         {
             m_currentCharge += chargeGain * Time.deltaTime;
         }
-        HealthUIDebug.text = "Health: " + IcurrentHealth.ToString();
-        ChargeLvlUIDebug.text = "Charge: " + m_currentCharge.ToString();
+        m_uiController.SetChargeMeterPercent(m_currentCharge / m_maxCharge);
     }
 
     private void FixedUpdate()

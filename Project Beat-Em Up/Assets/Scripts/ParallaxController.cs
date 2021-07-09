@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Changelog
+/*Inital Script created by Oliver (09/07/21)
+ * ParallaxController code from https://youtu.be/wBol2xzxCOU?t=195 timestamp ~3:15
+ */
+
 public class ParallaxController : MonoBehaviour
 {
     [Tooltip("For best effect keep the X and Y values between 0 and 1.")]
@@ -16,7 +21,6 @@ public class ParallaxController : MonoBehaviour
         m_lastCameraPos = m_cameraTransform.position;
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         Vector3 deltaMovement = m_cameraTransform.position - m_lastCameraPos;

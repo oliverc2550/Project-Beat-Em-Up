@@ -20,7 +20,9 @@ using UnityEngine;
  * 07/07/21 - Oliver - Merged Oliver_CombatandMovement with CombatandMovement. Some 06/07 changes have been reverted. Created AttackEffects() as a virtual method to fill the same role as
  * the collider[] Attack() method change from 06/07. Restored Attack() and moved SetNormalAttackBool(), SetSpecialAttackBool(), SetChargedAttackBool(), NormalAttackAnimEvent(), 
  * and SpecialAttackAnimEvent() from PlayerController so that these methods can be called by all inheriting classes via animation events. 
- * Added more variables to the virtual Start() method to allow them to also be easily called via inherited classes. Added Regions to help with readability
+ * Added more variables to the virtual Start() method to allow them to also be easily called via inherited classes. Added Regions to help with readability.
+ * 09/07/21 - Oliver - Added reference to the UIController Script. Slightly refactored the Attack() Method to reduce some duplicate code as well as add in functionality to update newly
+ * created Healthbars. Added ranges to all of the attack related properties to assist with designer ease of use.
  */
 
 public class CombatandMovement : MonoBehaviour, IDamagable
@@ -35,6 +37,8 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected SpriteRenderer m_spriteRenderer;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected UIController m_uiController;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Transform m_interactPoint;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Transform m_normalAttackPoint;
@@ -46,13 +50,14 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [SerializeField] [Range(50, 300)] protected float m_maxHealth;
     [SerializeField] [Range(0, 7)] protected float m_movementSpeed;
     [SerializeField] [Range(25, 300)] protected float m_jumpForce;
-    [SerializeField] protected float m_pickupRange = 1.25f;
-    [SerializeField] protected float m_normalAttackRange = 1.25f;
-    [SerializeField] protected float m_normalAttackDamage = 1.0f;
-    [SerializeField] protected float m_specialAttackRange = 0.75f;
-    [SerializeField] protected float m_specialAttackDamage = 2.0f;
+    [SerializeField] [Range(0, 3)] protected float m_pickupRange = 1.25f;
+    [SerializeField] [Range(0, 10)] protected float m_normalAttackRange = 1.25f;
+    [SerializeField] [Range(0, 50)] protected float m_normalAttackDamage = 1.0f;
+    [SerializeField] [Range(0, 10)] protected float m_specialAttackRange = 0.75f;
+    [SerializeField] [Range(0, 65)] protected float m_specialAttackDamage = 2.0f;
     [SerializeField] protected LayerMask m_pickupLayer;
-    [SerializeField] protected LayerMask m_enemyLayer;
+    [SerializeField] protected string m_targetTag;
+    [SerializeField] protected LayerMask m_targetLayer;
     [SerializeField] protected LayerMask m_collisionLayer;
     protected bool m_holdingObj;
     protected bool m_normalAttackActive;
@@ -150,45 +155,49 @@ public class CombatandMovement : MonoBehaviour, IDamagable
 
     }
 
-    protected void Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
+    protected void Attack(Transform attackPoint, float attackRange, string targetTag, LayerMask targetLayer, float attackDamage)
     {
-        Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer); //Get an array of colliders using Physics.OverlapSphere
+        Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, targetLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
         {
             Debug.Log("Attack Hit");
             Debug.Log("Dealt " + attackDamage + " to " + nearbyObject.gameObject);
             // Checking if the nearby objects have damageable interface. If they do, they receive damage.
-            nearbyObject.gameObject.GetComponent<IDamagable>();
-            if (nearbyObject.gameObject.GetComponent<IDamagable>() != null)
+            IDamagable damagableTarget = nearbyObject.gameObject.GetComponent<IDamagable>();
+            if (damagableTarget != null)
             {
-                nearbyObject.gameObject.GetComponent<IDamagable>().TakeDamage(attackDamage);
+                damagableTarget.TakeDamage(attackDamage);
                 AttackEffects(nearbyObject.gameObject);
+                if(nearbyObject.gameObject.CompareTag(targetTag))
+                {
+                    m_uiController.SetHealthBarPercent(targetTag, damagableTarget.IcurrentHealth / damagableTarget.ImaxHealth);
+                }
             }
         }
     }
 
-    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, LayerMask enemyLayer, float normalAttackDamage)
+    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, string targetTag, LayerMask enemyLayer, float normalAttackDamage)
     {
         Debug.Log("Normal Attack");
-        Attack(normalAttackPoint, normalAttackRange, enemyLayer, normalAttackDamage);
+        Attack(normalAttackPoint, normalAttackRange, targetTag, enemyLayer, normalAttackDamage);
     }
 
-    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, LayerMask enemyLayer, float specialAttackDamage)
+    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, string targetTag, LayerMask enemyLayer, float specialAttackDamage)
     {
         Debug.Log("Special Attack");
-        Attack(specialAttackPoint, specialAttackRange, enemyLayer, specialAttackDamage);
+        Attack(specialAttackPoint, specialAttackRange, targetTag, enemyLayer, specialAttackDamage);
     }
 
     //Following Methods needed due to limitations with Unity's Animation Events. Normal/SpecialAttack() have to be wrapped in a method to to the number of parameters they need.
     //SetNormal/SpecialAttackBool() methods needed as Unity Animation events are unable to directly toggle bools.
     protected void NormalAttackAnimEvent()
     {
-        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_enemyLayer, m_normalAttackDamage);
+        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_targetTag, m_targetLayer, m_normalAttackDamage);
     }
 
     protected void SpecialAttackAnimEvent()
     {
-        SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_enemyLayer, m_specialAttackDamage);
+        SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_targetTag, m_targetLayer, m_specialAttackDamage);
     }
 
     protected void SetNormalAttackBool()
