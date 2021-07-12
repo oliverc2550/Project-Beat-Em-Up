@@ -203,11 +203,12 @@ MonoBehaviour:
   m_collider: {fileID: 1494901536624554728}
   m_rigidbody: {fileID: 1494901536624554729}
   m_spriteRenderer: {fileID: 1494901536624554735}
+  m_uiController: {fileID: 0}
   m_interactPoint: {fileID: 1494901536345791409}
   m_normalAttackPoint: {fileID: 1494901536345791409}
   m_specialAttackPoint: {fileID: 1494901536345791409}
   m_maxHealth: 50
-  m_movementSpeed: 0.03
+  m_movementSpeed: 3.5
   m_jumpForce: 25
   m_pickupRange: 1.25
   m_normalAttackRange: 1.25
@@ -217,9 +218,10 @@ MonoBehaviour:
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
-  m_enemyLayer:
+  m_targetTag: 
+  m_targetLayer:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 0
   m_collisionLayer:
     serializedVersion: 2
     m_Bits: 2048

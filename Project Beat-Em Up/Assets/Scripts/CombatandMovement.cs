@@ -21,6 +21,7 @@ using UnityEngine;
  * the collider[] Attack() method change from 06/07. Restored Attack() and moved SetNormalAttackBool(), SetSpecialAttackBool(), SetChargedAttackBool(), NormalAttackAnimEvent(), 
  * and SpecialAttackAnimEvent() from PlayerController so that these methods can be called by all inheriting classes via animation events. 
  * Added more variables to the virtual Start() method to allow them to also be easily called via inherited classes. Added Regions to help with readability.
+ * 8/07/21 - Thea - Minor change at the LookAt function as the enemies weren't scaled properly
  * 09/07/21 - Oliver - Added reference to the UIController Script. Slightly refactored the Attack() Method to reduce some duplicate code as well as add in functionality to update newly
  * created Healthbars. Added ranges to all of the attack related properties to assist with designer ease of use.
  */

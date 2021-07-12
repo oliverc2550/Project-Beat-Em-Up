@@ -65,7 +65,7 @@ public class Enemy : CombatandMovement
     {
         base.Move(direction);
 
-        m_agent.Move(direction * m_movementSpeed);
+        m_agent.Move(direction * m_movementSpeed*Time.deltaTime);
 
         LookAtDirection(direction.x);
     }

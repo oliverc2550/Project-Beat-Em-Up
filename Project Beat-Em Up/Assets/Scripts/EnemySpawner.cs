@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Changelog
+/*Inital Script created by Thea (7/07/21)
+ */
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Settings")]

@@ -30,20 +30,6 @@ public class EnemyThief : Enemy
         StealCharge(gameObject.GetComponent<PlayerController>());
     }
 
-    //Commented out for now so errors aren't thrown
-    //protected override Collider[] Attack(Transform attackPoint, float attackRange, LayerMask enemyLayer, float attackDamage)
-    //{
-    //    Collider[] colliders = base.Attack(attackPoint, attackRange, enemyLayer, attackDamage);
-    //    Debug.Log(colliders.Length);
-    //    if (colliders.Length > 0)
-    //    {
-    //        StealWeapon(colliders[0].GetComponent<CombatandMovement>());
-    //    }
-    //
-    //    return colliders;
-    //}
-
-
     private void StealCharge(PlayerController player)
     {
         player.m_currentCharge -= m_ChargeToStealOnHit;
