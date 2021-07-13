@@ -240,7 +240,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     //Mandatory functions, coming from the interface. If these functions are not added to this script, there will be an error. 
     //If these functions are not needed here anymore, they must be removed from the interface too
 
-    public void OnTakeDamage(float damage)
+    public virtual void OnTakeDamage(float damage)
     {
         //todo: some particles, sounds and animations
     }
@@ -252,7 +252,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         //todo: some particles, sounds and animations
     }
 
-
+    //THIS IS DEBUG, not a real function
     private void ondestroy()
     {
         Die();

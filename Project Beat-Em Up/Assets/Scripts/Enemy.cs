@@ -23,6 +23,12 @@ public class Enemy : CombatandMovement
 
     protected virtual void Update()
     {
+        //don't read the update while the stun animation is running
+        if (m_animator.GetCurrentAnimatorStateInfo(0).IsName("Stun"))
+        {
+            return;
+        }
+
         if (m_currentState == EnemyState.Idle)
         {
             m_animator.SetBool("Walking", false);
@@ -73,6 +79,12 @@ public class Enemy : CombatandMovement
     void SetTarget(Transform target)
     {
         m_target = target;
+    }
+
+    public override void OnTakeDamage(float damage)
+    {
+        base.OnTakeDamage(damage);
+        m_animator.SetTrigger("Stun");
     }
 
     protected void SetEnemyState(EnemyState state)

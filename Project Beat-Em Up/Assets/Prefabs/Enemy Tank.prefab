@@ -169,6 +169,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f298082bdeac8446b0778ef14e453e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_animator: {fileID: 2102965868339181093}
+  m_collider: {fileID: 2102965868339181094}
+  m_rigidbody: {fileID: 2102965868339181095}
+  m_spriteRenderer: {fileID: 2102965868339181090}
+  m_uiController: {fileID: 0}
+  m_interactPoint: {fileID: 2102965868858434919}
+  m_normalAttackPoint: {fileID: 2102965868858434919}
+  m_specialAttackPoint: {fileID: 2102965868858434919}
+  m_maxHealth: 0
+  m_movementSpeed: 0
+  m_jumpForce: 0
+  m_pickupRange: 1.25
+  m_normalAttackRange: 1.25
+  m_normalAttackDamage: 1
+  m_specialAttackRange: 0.75
+  m_specialAttackDamage: 2
+  m_pickupLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  m_targetTag: 
+  m_targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  m_collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  m_invulnerable: 0
+  m_damageModifier: 1
+  heldObject: {fileID: 0}
+  m_agent: {fileID: 2102965868339181089}
+  m_stoppingDistance: 1.5
+  m_chanceToUseAreaOfEffect: 30
+  m_aoeRange: 0
+  m_aoeDamage: 0
 --- !u!1 &2102965868858434912
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class EnemyThief : Enemy
 {
     [Header("Thief Settings")]
     [SerializeField][Range(0,50)] private float m_ChargeToStealOnHit = 10;
+    [SerializeField][Range(0,100)] private float m_ChanceToStealCharge = 30;
     [SerializeField] private float m_healthTresholdToRun = 20;
     protected override void Update()
     {
@@ -26,8 +27,11 @@ public class EnemyThief : Enemy
 
     protected override void AttackEffects(GameObject gameObject)
     {
-        Debug.Log(gameObject);
-        StealCharge(gameObject.GetComponent<PlayerController>());
+        //Debug.Log(gameObject);
+        if (Random.value < m_ChanceToStealCharge/100)
+        {
+            StealCharge(gameObject.GetComponent<PlayerController>());
+        }
     }
 
     private void StealCharge(PlayerController player)
