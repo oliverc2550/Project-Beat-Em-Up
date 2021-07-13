@@ -24,6 +24,7 @@ using UnityEngine;
  * 8/07/21 - Thea - Minor change at the LookAt function as the enemies weren't scaled properly
  * 09/07/21 - Oliver - Added reference to the UIController Script. Slightly refactored the Attack() Method to reduce some duplicate code as well as add in functionality to update newly
  * created Healthbars. Added ranges to all of the attack related properties to assist with designer ease of use.
+ * 13/07/21 - Oliver - Added in functionality for PickupController within the Interact() method. Added in m_invulnerable and m_damageModifier to work with PickupController.
  */
 
 public class CombatandMovement : MonoBehaviour, IDamagable
@@ -64,6 +65,8 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     protected bool m_normalAttackActive;
     protected bool m_specialAttackActive;
     protected bool m_isBlocking;
+    [HideInInspector] public bool m_invulnerable;
+    [HideInInspector] public float m_damageModifier = 1f;
 
     private Vector3 m_startScale;
 
@@ -74,6 +77,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     public float ImaxHealth { get; set; }
     public float IcurrentHealth { get; set; }
     public bool IisBlocking { get; set; }
+    public bool Iinvulnerable { get; set; }
 
     protected virtual void Start()
     {
@@ -84,6 +88,8 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         m_specialAttackActive = false;
         m_isBlocking = false;
         IisBlocking = m_isBlocking;
+        m_invulnerable = false;
+        Iinvulnerable = m_invulnerable;
         m_startScale = transform.localScale;
     }
     #region Movement Methods
@@ -124,6 +130,11 @@ public class CombatandMovement : MonoBehaviour, IDamagable
                 EquipItem(nearbyObject.gameObject);
                 holdingObj = true;
                 //Debug.Log(holdingObj);
+                PickupsController pickup = nearbyObject.gameObject.GetComponent<PickupsController>();
+                if(pickup != null)
+                {
+                    pickup.PickupEffects(gameObject);
+                }
             }
             else if (holdingObj == true)
             {
@@ -156,7 +167,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
 
     }
 
-    protected void Attack(Transform attackPoint, float attackRange, string targetTag, LayerMask targetLayer, float attackDamage)
+    protected void Attack(Transform attackPoint, float attackRange, string targetTag, LayerMask targetLayer, float attackDamage, float damageModifier)
     {
         Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, targetLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
@@ -167,7 +178,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             IDamagable damagableTarget = nearbyObject.gameObject.GetComponent<IDamagable>();
             if (damagableTarget != null)
             {
-                damagableTarget.TakeDamage(attackDamage);
+                damagableTarget.TakeDamage(attackDamage * damageModifier);
                 AttackEffects(nearbyObject.gameObject);
                 if(nearbyObject.gameObject.CompareTag(targetTag))
                 {
@@ -177,28 +188,28 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         }
     }
 
-    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, string targetTag, LayerMask enemyLayer, float normalAttackDamage)
+    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, string targetTag, LayerMask enemyLayer, float normalAttackDamage, float damageModifier)
     {
         Debug.Log("Normal Attack");
-        Attack(normalAttackPoint, normalAttackRange, targetTag, enemyLayer, normalAttackDamage);
+        Attack(normalAttackPoint, normalAttackRange, targetTag, enemyLayer, normalAttackDamage, damageModifier);
     }
 
-    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, string targetTag, LayerMask enemyLayer, float specialAttackDamage)
+    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, string targetTag, LayerMask enemyLayer, float specialAttackDamage, float damageModifier)
     {
         Debug.Log("Special Attack");
-        Attack(specialAttackPoint, specialAttackRange, targetTag, enemyLayer, specialAttackDamage);
+        Attack(specialAttackPoint, specialAttackRange, targetTag, enemyLayer, specialAttackDamage, damageModifier);
     }
 
     //Following Methods needed due to limitations with Unity's Animation Events. Normal/SpecialAttack() have to be wrapped in a method to to the number of parameters they need.
     //SetNormal/SpecialAttackBool() methods needed as Unity Animation events are unable to directly toggle bools.
     protected void NormalAttackAnimEvent()
     {
-        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_targetTag, m_targetLayer, m_normalAttackDamage);
+        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_targetTag, m_targetLayer, m_normalAttackDamage, m_damageModifier);
     }
 
     protected void SpecialAttackAnimEvent()
     {
-        SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_targetTag, m_targetLayer, m_specialAttackDamage);
+        SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_targetTag, m_targetLayer, m_specialAttackDamage, m_damageModifier);
     }
 
     protected void SetNormalAttackBool()

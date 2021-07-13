@@ -11,6 +11,7 @@ public class AttackHitDemo : MonoBehaviour, IDamagable
     public float ImaxHealth { get; set; }
     public float IcurrentHealth { get; set; }
     public bool IisBlocking { get; set; }
+    public bool Iinvulnerable { get; set; }
 
     // Start is called before the first frame update
     void Start()

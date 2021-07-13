@@ -6,6 +6,7 @@ using UnityEngine;
 /*Inital Script created by Thea (1/07/21)
  * 04/07/21 - Oliver - Changed health to maxHealth and added currentHealth and isBlocking. Changed DealDamage() to OnTakeDamage() for better outside readability.
  * 07/07/21 - Oliver - Added I to the start of all properties to help with readability and recognition that these are part of the interface.
+ * 13/07/21 - Oliver - Added in Iinvulnerable to be used in conjunction with Pickups Controller.
  */
 
 
@@ -18,6 +19,7 @@ public interface IDamagable
     float ImaxHealth { get; set; }
     float IcurrentHealth { get; set; }
     bool IisBlocking { get; set; }
+    bool Iinvulnerable { get; set; }
 
     void OnTakeDamage(float amount);
     void Die();

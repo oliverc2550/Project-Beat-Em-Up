@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 162221840}
   - component: {fileID: 162221839}
   - component: {fileID: 162221843}
+  - component: {fileID: 162221844}
   m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
@@ -386,6 +387,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &162221844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162221838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8b9118ff7b3d2439ab448e8ead7154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_healthPickupSprite: {fileID: 0}
+  m_chargePickupSprite: {fileID: 0}
+  m_scorePickupSprite: {fileID: 0}
+  m_damgeIncreaseSprite: {fileID: 0}
+  m_invulnerabilitySprite: {fileID: 0}
+  m_healthPickupAmout: 15
+  m_chargePickupAmout: 5
+  m_scorePickupAmout: 10
+  m_damgeIncreaseMultiplier: 2
 --- !u!1 &211719847
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291740726}
   m_LocalRotation: {x: -0.040797796, y: -0.0009019336, z: 0.00003512587, w: -0.999167}
-  m_LocalPosition: {x: -0.023244157, y: 2.3466964, z: -10.4589}
+  m_LocalPosition: {x: -0.023243919, y: 2.3466964, z: -10.4589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 607090428}
@@ -764,6 +786,8 @@ MonoBehaviour:
   m_collisionLayer:
     serializedVersion: 2
     m_Bits: 2048
+  m_invulnerable: 0
+  m_damageModifier: 0
   heldObject: {fileID: 0}
   m_playerInput: {fileID: 336539567}
   m_maxCharge: 75
@@ -2435,7 +2459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525868281}
   m_LocalRotation: {x: -0.040797796, y: -0.0009019336, z: 0.00003512587, w: -0.999167}
-  m_LocalPosition: {x: -0.020029878, y: 0.52484083, z: -11.993631}
+  m_LocalPosition: {x: -0.02002964, y: 0.52484083, z: -11.993631}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 667339229}
