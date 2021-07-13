@@ -5,33 +5,54 @@ using UnityEngine;
 //Changelog
 /*Inital Script created by Thea (7/07/21)
  */
+
+//how to use structs: https://www.tutorialsteacher.com/csharp/csharp-struct
+//how to serialize structs: https://forum.unity.com/threads/initialze-array-struct-variables-within-unity-editor.44473/
+[System.Serializable]
+public struct EnemyToSpawn
+{
+    public Enemy enemyPrefab;
+    public int enemyMaxCount;
+    [Tooltip("The minimum amount of seconds that will pass until the next enemy is spawned")]
+    public float minSpawnTime;
+    [Tooltip("The maximum amount of seconds that will pass until the next enemy is spawned")]
+    public float maxSpawnTime;
+    public List<Enemy> spawnedEnemies;
+}
+
+
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private Enemy[] m_enemyTypesToSummon;
-    [SerializeField] private float m_minSpawnTime = 0.3f;
-    [SerializeField] private float m_maxSpawnTime = 2f;
-    [SerializeField] private int m_maxEnemyCount = 10;
+
+    [SerializeField] EnemyToSpawn BasicEnemy;
+    [SerializeField] EnemyToSpawn ThiefEnemy;
+    [SerializeField] EnemyToSpawn SummonerEnemy;
+    [SerializeField] EnemyToSpawn TankEnemy;
     [SerializeField] private Transform m_leftSpawnPoint;
     [SerializeField] private Transform m_RightSpawnPoint;
 
-    public List<Enemy> spawnedEnemies = new List<Enemy>();
 
     private const float m_minZ = -6;
     private const float m_maxZ = 7;
 
     private void Start()
     {
-        StartCoroutine(Summoning());
+        StartCoroutine(Summoning(BasicEnemy));
+        StartCoroutine(Summoning(ThiefEnemy));
+        StartCoroutine(Summoning(SummonerEnemy));
+        StartCoroutine(Summoning(TankEnemy));
     }
 
 
     // https://answers.unity.com/questions/503932/how-to-cycle-coroutine-in-c-say-every-1-sec.html
-    IEnumerator Summoning()
+    IEnumerator Summoning(EnemyToSpawn enemyToSpawn)
     {
         while (true)
         {
-            if (spawnedEnemies.Count < m_maxEnemyCount)
+            yield return new WaitForSeconds(Random.Range(enemyToSpawn.minSpawnTime, enemyToSpawn.maxSpawnTime));
+
+            if (enemyToSpawn.spawnedEnemies.Count < enemyToSpawn.enemyMaxCount)
             {
                 float xPos;
                 if (Random.value < 0.5f)
@@ -44,16 +65,52 @@ public class EnemySpawner : MonoBehaviour
                 }
                 Vector3 position = new Vector3(xPos, 0, Random.Range(m_minZ, m_maxZ));
 
-                SummonEnemy(m_enemyTypesToSummon[Random.Range(0, m_enemyTypesToSummon.Length)], position);
+                SummonEnemy(enemyToSpawn, position);
 
+                Debug.Log("EnemySpawned: " + enemyToSpawn.enemyPrefab.name);
             }
-            yield return new WaitForSeconds(Random.Range(m_minSpawnTime, m_maxSpawnTime));
         }
     }
 
-    private void SummonEnemy(Enemy enemyPrefab, Vector3 position)
+    public void RemoveEnemy(Enemy enemy)
     {
-        Enemy enemy = Instantiate(enemyPrefab, position, Quaternion.identity);
-        spawnedEnemies.Add(enemy);
+        for (int i = 0; i < BasicEnemy.spawnedEnemies.Count; i++)
+        {
+            if (enemy == BasicEnemy.spawnedEnemies[i])
+            {
+                BasicEnemy.spawnedEnemies.Remove(enemy);
+                return;
+            }
+        }
+        for (int i = 0; i < ThiefEnemy.spawnedEnemies.Count; i++)
+        {
+            if (enemy == ThiefEnemy.spawnedEnemies[i])
+            {
+                ThiefEnemy.spawnedEnemies.Remove(enemy);
+                return;
+            }
+        }
+        for (int i = 0; i < SummonerEnemy.spawnedEnemies.Count; i++)
+        {
+            if (enemy == SummonerEnemy.spawnedEnemies[i])
+            {
+                SummonerEnemy.spawnedEnemies.Remove(enemy);
+                return;
+            }
+        }
+        for (int i = 0; i < TankEnemy.spawnedEnemies.Count; i++)
+        {
+            if (enemy == TankEnemy.spawnedEnemies[i])
+            {
+                TankEnemy.spawnedEnemies.Remove(enemy);
+                return;
+            }
+        }
+    }
+
+    private void SummonEnemy(EnemyToSpawn enemyToSpawn, Vector3 position)
+    {
+        Enemy enemy = Instantiate(enemyToSpawn.enemyPrefab, position, Quaternion.identity);
+        enemyToSpawn.spawnedEnemies.Add(enemy);
     }
 }

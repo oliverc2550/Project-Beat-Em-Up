@@ -131,7 +131,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
                 holdingObj = true;
                 //Debug.Log(holdingObj);
                 PickupsController pickup = nearbyObject.gameObject.GetComponent<PickupsController>();
-                if(pickup != null)
+                if (pickup != null)
                 {
                     pickup.PickupEffects(gameObject);
                 }
@@ -180,7 +180,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             {
                 damagableTarget.TakeDamage(attackDamage * damageModifier);
                 AttackEffects(nearbyObject.gameObject);
-                if(nearbyObject.gameObject.CompareTag(targetTag))
+                if (nearbyObject.gameObject.CompareTag(targetTag))
                 {
                     m_uiController.SetHealthBarPercent(targetTag, damagableTarget.IcurrentHealth / damagableTarget.ImaxHealth);
                 }
@@ -190,7 +190,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
 
     protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, string targetTag, LayerMask enemyLayer, float normalAttackDamage, float damageModifier)
     {
-        Debug.Log("Normal Attack");
+       
         Attack(normalAttackPoint, normalAttackRange, targetTag, enemyLayer, normalAttackDamage, damageModifier);
     }
 
@@ -252,10 +252,10 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         //todo: some particles, sounds and animations
     }
 
-    
-    //private void OnDestroy()
-    //{
-    //    Die();
-    //}
+
+    private void ondestroy()
+    {
+        Die();
+    }
     #endregion
 }

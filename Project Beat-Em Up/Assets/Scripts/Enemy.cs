@@ -82,7 +82,7 @@ public class Enemy : CombatandMovement
 
     public override void Die()
     {
-        FindObjectOfType<EnemySpawner>().spawnedEnemies.Remove(this);
+        FindObjectOfType<EnemySpawner>().RemoveEnemy(this);
 
         base.Die();
     }
