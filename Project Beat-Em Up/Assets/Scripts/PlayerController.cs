@@ -100,11 +100,11 @@ public class PlayerController : CombatandMovement
 
     public void OnDrawGizmosSelected()
     {
-        if (m_interactPoint == null)
+        if (m_normalAttackPoint == null)
         {
             return;
         }
-        Gizmos.DrawWireSphere(m_interactPoint.position, m_pickupRange);
+        Gizmos.DrawWireSphere(m_normalAttackPoint.position, m_normalAttackRange);
     }
 
     //Unity Input Systems Action Callbacks

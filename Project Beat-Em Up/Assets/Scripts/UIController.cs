@@ -29,6 +29,7 @@ public class UIController : MonoBehaviour
         if(targetTag == "Enemy")
         {
             SetPercentFill(enemyHealthBarBackground, enemyHealthBarForeground, percent);
+            //Get Enemy TextUI -> Set it to string name of enemy
         }
         if(targetTag == "Player")
         {
