@@ -8,9 +8,12 @@ public enum EnemyState { Idle, Chase, Run, Patrol }
 
 public class Enemy : CombatandMovement
 {
+    [SerializeField]private string m_EnemyName = "Enemy";
+    [SerializeField]private int m_scoreGainedOnDeath = 200;
     [SerializeField] NavMeshAgent m_agent;
     [SerializeField] private float m_stoppingDistance = 1.5f;
 
+    EnemyUI m_enemyUI;
     Transform m_target;
     EnemyState m_currentState;
 
@@ -19,6 +22,8 @@ public class Enemy : CombatandMovement
         base.Start();
         SetTarget(FindObjectOfType<PlayerController>().transform);
         SetEnemyState(EnemyState.Chase);
+        m_enemyUI = GetComponentInChildren<EnemyUI>();
+        m_enemyUI.SetEnemyNameUI(m_EnemyName);
     }
 
     protected virtual void Update()
@@ -84,7 +89,8 @@ public class Enemy : CombatandMovement
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
-        m_animator.SetTrigger("Stun");
+        //m_animator.SetTrigger("Stun");
+        m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
     }
 
     protected void SetEnemyState(EnemyState state)
@@ -95,7 +101,7 @@ public class Enemy : CombatandMovement
     public override void Die()
     {
         FindObjectOfType<EnemySpawner>().RemoveEnemy(this);
-
+        FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnDeath);
         base.Die();
     }
 }

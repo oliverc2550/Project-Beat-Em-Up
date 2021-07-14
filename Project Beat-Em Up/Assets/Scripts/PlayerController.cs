@@ -29,6 +29,8 @@ public class PlayerController : CombatandMovement
     private Vector2 m_input;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected PlayerInput m_playerInput;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected UIController m_uiController;
     [Header("Player Settings ")]
     [SerializeField] protected float m_maxCharge = 75f;
     [SerializeField] protected float minimumChargeLevel = 25f;

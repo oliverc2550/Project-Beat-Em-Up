@@ -27,7 +27,6 @@ public class EnemyThief : Enemy
 
     protected override void AttackEffects(GameObject gameObject)
     {
-        //Debug.Log(gameObject);
         if (Random.value < m_ChanceToStealCharge/100)
         {
             StealCharge(gameObject.GetComponent<PlayerController>());
