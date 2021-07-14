@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RainEffect_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 9621def03dc59274fb2dbbd7e99a96fe,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_553F926A:
+        m_Texture: {fileID: 2800000, guid: 10cc6f5b7dfbeb942bb870178e73b502, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_C6F18698:
+        m_Texture: {fileID: 2800000, guid: f469d83de742ad449bae5782c33611e4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: ee55f49dcba597541ae028bd181762ce, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normals:
+        m_Texture: {fileID: 2800000, guid: eb0bd3e5797870240828985e1ae87e5a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_352DACA3: 0.616
+    - Vector1_43FEA7B1: 16
+    - Vector1_5ACC2BDB: 1
+    - Vector1_8BBA545D: 1
+    - Vector1_9B4173BB: 0
+    - Vector1_B1BAA04B: 0.05
+    - Vector1_FA227C28: 12
+    - _Smoothness: 0.665
+    - _Tiling: 4
+    m_Colors:
+    - Vector2_B6A31DD2: {r: 4, g: 4, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Tint: {r: 1, g: 1, b: 1, a: 0}
