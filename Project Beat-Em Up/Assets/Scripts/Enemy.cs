@@ -89,7 +89,7 @@ public class Enemy : CombatandMovement
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
-        //m_animator.SetTrigger("Stun");
+        m_animator.SetTrigger("Stun");
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
     }
 

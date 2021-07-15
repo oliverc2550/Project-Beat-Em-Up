@@ -853,9 +853,9 @@ MonoBehaviour:
   m_jumpForce: 75
   m_pickupRange: 1.25
   m_normalAttackRange: 0.125
-  m_normalAttackDamage: 30
-  m_specialAttackRange: 0.75
-  m_specialAttackDamage: 2
+  m_normalAttackDamage: 50
+  m_specialAttackRange: 10
+  m_specialAttackDamage: 65
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -2525,28 +2525,28 @@ MonoBehaviour:
   BasicEnemy:
     enemyPrefab: {fileID: 5495421021842980918, guid: 612d23a5c983d8a4f9acead827e43636,
       type: 3}
-    enemyMaxCount: 3
+    enemyMaxCount: 1
     minSpawnTime: 3
     maxSpawnTime: 4
     spawnedEnemies: []
   ThiefEnemy:
     enemyPrefab: {fileID: 7262013986928258369, guid: 0feab71bf5b19ca4898f9d8cd1cd3582,
       type: 3}
-    enemyMaxCount: 3
+    enemyMaxCount: 1
     minSpawnTime: 4
     maxSpawnTime: 5
     spawnedEnemies: []
   SummonerEnemy:
     enemyPrefab: {fileID: 1494901536624554732, guid: eb78e34429852234b918f55bb640f281,
       type: 3}
-    enemyMaxCount: 3
+    enemyMaxCount: 0
     minSpawnTime: 5
     maxSpawnTime: 6
     spawnedEnemies: []
   TankEnemy:
     enemyPrefab: {fileID: 3886622432434536879, guid: 4e3d377efacd169409c94df9a2dfd633,
       type: 3}
-    enemyMaxCount: 3
+    enemyMaxCount: 0
     minSpawnTime: 6
     maxSpawnTime: 7
     spawnedEnemies: []
