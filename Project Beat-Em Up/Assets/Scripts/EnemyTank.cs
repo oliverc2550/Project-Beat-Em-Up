@@ -12,6 +12,8 @@ public class EnemyTank : Enemy
 
     protected override void AttackEffects(GameObject gameObject)
     {
+        base.AttackEffects(gameObject);
+
         if (Random.value < m_chanceToUseAreaOfEffect / 100)
         {
             //TODO: replace this with animation 

@@ -41,7 +41,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [SerializeField] protected SpriteRenderer m_spriteRenderer;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Transform m_interactPoint;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")] 
     [SerializeField] protected Transform m_normalAttackPoint;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Transform m_specialAttackPoint;
