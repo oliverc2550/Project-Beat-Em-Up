@@ -7,7 +7,7 @@ public enum BossAttacks { Summoning, Laser, Chanelling }
 
 public class EnemyBoss1 : Enemy
 {
-    [SerializeField] private Laser m_laserPrefab;
+   // [SerializeField] private Laser m_laserPrefab;
     [SerializeField] private Enemy m_enemyToSummonOnPhase1;
     [SerializeField] private Enemy m_enemyToSummonOnPhase2;
     [SerializeField] private int m_enemyCountToSummonOnPhase1 = 2;
@@ -30,7 +30,7 @@ public class EnemyBoss1 : Enemy
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
-
+        
         if (IcurrentHealth / ImaxHealth < 0.75f && !m_enemiesFromPhase1Summoned)
         {
             SummonEnemies(m_enemyToSummonOnPhase1, m_enemyCountToSummonOnPhase1);
@@ -39,6 +39,7 @@ public class EnemyBoss1 : Enemy
         else if (IcurrentHealth / ImaxHealth < 0.5f)
         {
             m_phase2Entered = true;
+            GetComponentInChildren<EnemyUI>().fillImage.color = new Color(0, 154, 255);
         }
 
         if (m_isChanneling)
@@ -101,7 +102,7 @@ public class EnemyBoss1 : Enemy
 
         else if (attackToPlay == (int)BossAttacks.Laser)
         {
-            Instantiate(m_laserPrefab, transform.position, Quaternion.identity);
+           // Instantiate(m_laserPrefab, transform.position, Quaternion.identity);
         }
 
         else if (attackToPlay == (int)BossAttacks.Chanelling)

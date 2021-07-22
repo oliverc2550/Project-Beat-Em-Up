@@ -40,7 +40,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         PauseMenuActive = false; //Sets the PauseMenuActive bool to false
-        PopupBox.SetActive(false); //Sets the PopupBox to inactive
+        //PopupBox.SetActive(false); //Sets the PopupBox to inactive
         _respawnMenuActive = false; //Sets the respawnMenuActive bool to false
     }
     //Update used to check for key input and to check player progress

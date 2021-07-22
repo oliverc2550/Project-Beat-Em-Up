@@ -204,11 +204,10 @@ MonoBehaviour:
   m_collider: {fileID: 9101316655266976782}
   m_rigidbody: {fileID: 9101316655266976783}
   m_spriteRenderer: {fileID: 9101316655266976781}
-  m_uiController: {fileID: 0}
   m_interactPoint: {fileID: 9101316655204151048}
   m_normalAttackPoint: {fileID: 9101316655204151048}
   m_specialAttackPoint: {fileID: 9101316655204151048}
-  m_maxHealth: 100
+  m_maxHealth: 10
   m_movementSpeed: 3.5
   m_jumpForce: 25
   m_pickupRange: 1.25
@@ -219,7 +218,6 @@ MonoBehaviour:
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
-  m_targetTag: Player
   m_targetLayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -229,6 +227,8 @@ MonoBehaviour:
   m_invulnerable: 0
   m_damageModifier: 1
   heldObject: {fileID: 0}
+  m_EnemyName: Enemy
+  m_scoreGainedOnDeath: 200
   m_agent: {fileID: 9101316655266976780}
   m_stoppingDistance: 1.5
 --- !u!1001 &5667739307277369850
@@ -348,6 +348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7516435467885347207, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: fillImage
+      value: 
+      objectReference: {fileID: 5926257201161252401}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d, type: 3}
 --- !u!224 &4789106499837490220 stripped
@@ -356,3 +361,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5667739307277369850}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5926257201161252401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2060838113304408011, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5667739307277369850}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

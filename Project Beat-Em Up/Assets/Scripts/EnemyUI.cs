@@ -8,7 +8,7 @@ public class EnemyUI : MonoBehaviour
 {
     [SerializeField] [Range(0.1f, 5f)] private float hideDelay = 1f;
     [SerializeField] private GameObject m_enemyUI;
-    [SerializeField] private Image m_fillImage;
+    [SerializeField] public Image fillImage;
     [SerializeField] private TextMeshProUGUI m_enemyName;
 
     private IEnumerator m_hideCoroutine = null;
@@ -23,7 +23,7 @@ public class EnemyUI : MonoBehaviour
     }
     public void SetHealthUI(float health, float maxHealth)
     {
-        m_fillImage.fillAmount = health / maxHealth;
+        fillImage.fillAmount = health / maxHealth;
 
         m_enemyUI.SetActive(true);
 

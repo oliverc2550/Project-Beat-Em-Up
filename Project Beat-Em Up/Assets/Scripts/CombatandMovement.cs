@@ -48,7 +48,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
 
 
     [Header("Settings")]
-    [SerializeField] [Range(50, 300)] protected float m_maxHealth;
+    [SerializeField] [Range(10, 300)] protected float m_maxHealth;
     [SerializeField] [Range(0, 7)] protected float m_movementSpeed;
     [SerializeField] [Range(25, 300)] protected float m_jumpForce;
     [SerializeField] [Range(0, 3)] protected float m_pickupRange = 1.25f;
