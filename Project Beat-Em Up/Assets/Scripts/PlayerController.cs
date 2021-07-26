@@ -50,7 +50,7 @@ public class PlayerController : CombatandMovement
 
     protected bool IsGrounded(ref bool isGrounded)
     {
-        if (Physics.BoxCast(m_collider.bounds.max, m_collider.bounds.extents, Vector3.down, transform.rotation, 1.2f, m_collisionLayer))
+        if (Physics.BoxCast(m_collider.bounds.max, m_collider.bounds.extents, Vector3.down, transform.rotation, 10.0f, m_collisionLayer))
         {
             return isGrounded = true;
         }
@@ -64,7 +64,7 @@ public class PlayerController : CombatandMovement
     {
         if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking == false)
         {
-            Vector3 movement = direction * Time.deltaTime * m_movementSpeed;
+            Vector3 movement = -direction * Time.deltaTime * m_movementSpeed;
 
             transform.position += movement;
         }
