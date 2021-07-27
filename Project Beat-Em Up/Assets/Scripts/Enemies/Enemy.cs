@@ -61,6 +61,25 @@ public class Enemy : CombatandMovement
         }
     }
 
+    //used by the enemy tank and the boss lv1
+    //anim event NOT ADDED TO ANIMATION YET
+    protected void UseAreaOfEffect(float aoeRange, float aoeDamage)
+    {
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, aoeRange, m_targetLayer);
+        foreach (Collider nearbyObject in colliders)
+        {
+            // Checking if the nearby objects have damageable interface. If they do, they receive damage.
+            IDamagable damagableTarget = nearbyObject.gameObject.GetComponent<IDamagable>();
+            if (damagableTarget != null)
+            {
+                damagableTarget.TakeDamage(aoeDamage);
+            }
+        }
+    }
+
+
+
     protected bool PlayerInRange()
     {
         float distance = Vector3.Distance(m_target.position, transform.position);

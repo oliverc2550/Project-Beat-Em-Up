@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hideDelay: 1
   m_enemyUI: {fileID: 1975361653961226501}
-  m_fillImage: {fileID: 2987573254995674705}
+  fillImage: {fileID: 2987573254995674705}
   m_enemyName: {fileID: 1181125577596644919}
 --- !u!1 &2455892480666129906
 GameObject:
@@ -312,11 +312,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7526567011169837237}
   - component: {fileID: 7526567011169837236}
-  - component: {fileID: 7526567011169837239}
   - component: {fileID: 7526567011169837238}
   - component: {fileID: 7526567011169837232}
   - component: {fileID: 7526567011169837235}
-  - component: {fileID: 3704731417982952273}
+  - component: {fileID: 1527508079}
+  - component: {fileID: 1724877116421483690}
   m_Layer: 10
   m_Name: Enemy Boss1
   m_TagString: Enemy
@@ -359,19 +359,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &7526567011169837239
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7526567011169837234}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7, y: 1.2, z: 0.2}
-  m_Center: {x: 0, y: 0.67, z: 0}
 --- !u!54 &7526567011169837238
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -460,7 +447,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3704731417982952273
+--- !u!136 &1527508079
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7526567011169837234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.383727
+  m_Height: 1.5451438
+  m_Direction: 1
+  m_Center: {x: -0.00637573, y: 0.6069237, z: 0}
+--- !u!114 &1724877116421483690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,18 +470,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7526567011169837234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29d3de4fbef82ea48ad9e1b5ef97cce0, type: 3}
+  m_Script: {fileID: 11500000, guid: d3f26e6a15043b143bda73d8bd036ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 7526567011169837236}
-  m_collider: {fileID: 7526567011169837239}
+  m_collider: {fileID: 1527508079}
   m_rigidbody: {fileID: 7526567011169837238}
   m_spriteRenderer: {fileID: 7526567011169837235}
   m_interactPoint: {fileID: 7526567011720164342}
   m_normalAttackPoint: {fileID: 7526567011720164342}
   m_specialAttackPoint: {fileID: 7526567011720164342}
-  m_maxHealth: 0
-  m_movementSpeed: 0
+  m_maxHealth: 77
+  m_movementSpeed: 0.4
   m_jumpForce: 0
   m_pickupRange: 1.25
   m_normalAttackRange: 1.25
@@ -503,15 +504,18 @@ MonoBehaviour:
   m_scoreGainedOnDeath: 200
   m_agent: {fileID: 7526567011169837232}
   m_stoppingDistance: 1.5
-  m_laserPrefab: {fileID: 0}
   m_enemyToSummonOnPhase1: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
     type: 3}
   m_enemyToSummonOnPhase2: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
     type: 3}
   m_enemyCountToSummonOnPhase1: 2
   m_enemyCountToSummonOnPhase2: 2
-  m_specialAttackHitCount: 3
-  m_damageAmountToCancelChannelling: 0
+  m_minSpecialAttackHitCount: 1
+  m_maxSpecialAttackHitCount: 5
+  m_aoeRange: 5
+  m_aoeDamage: 5
+  m_spikesTimerPrefab: {fileID: 5118575594556964627, guid: 70112ab844c19c14488c7888a152a939,
+    type: 3}
 --- !u!1 &7526567011720164337
 GameObject:
   m_ObjectHideFlags: 0
