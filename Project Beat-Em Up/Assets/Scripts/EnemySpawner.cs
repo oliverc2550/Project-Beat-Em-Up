@@ -12,7 +12,6 @@ using UnityEngine;
 public struct EnemyToSpawn
 {
     public Enemy enemyPrefab;
-    public int enemyMaxCount;
     [Tooltip("The minimum amount of seconds that will pass until the next enemy is spawned")]
     public float minSpawnTime;
     [Tooltip("The maximum amount of seconds that will pass until the next enemy is spawned")]
@@ -29,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] EnemyToSpawn ThiefEnemy;
     [SerializeField] EnemyToSpawn SummonerEnemy;
     [SerializeField] EnemyToSpawn TankEnemy;
+    [SerializeField] EnemyToSpawn BossEnemy;
     [SerializeField] private Transform m_leftSpawnPoint;
     [SerializeField] private Transform m_RightSpawnPoint;
 
@@ -36,39 +36,40 @@ public class EnemySpawner : MonoBehaviour
     private const float m_minZ = -6;
     private const float m_maxZ = 7;
 
-    private void Start()
+    public void StartSpawning(EnemySpawnData data)
     {
-        StartCoroutine(Summoning(BasicEnemy));
-        StartCoroutine(Summoning(ThiefEnemy));
-        StartCoroutine(Summoning(SummonerEnemy));
-        StartCoroutine(Summoning(TankEnemy));
+        StartCoroutine(Spawning(data.basicEnemiesToSpawnCount, data.spawnDirection, BasicEnemy));
+        StartCoroutine(Spawning(data.summonerEnemiesToSpawnCount, data.spawnDirection, SummonerEnemy));
+        StartCoroutine(Spawning(data.tankEnemiesToSpawnCount, data.spawnDirection, TankEnemy));
+        StartCoroutine(Spawning(data.thiefEnemiesToSpawnCount, data.spawnDirection, ThiefEnemy));
+        StartCoroutine(Spawning(data.bossEnemiesToSpawnCount, data.spawnDirection, BossEnemy));
     }
 
-
-    // https://answers.unity.com/questions/503932/how-to-cycle-coroutine-in-c-say-every-1-sec.html
-    IEnumerator Summoning(EnemyToSpawn enemyToSpawn)
+    IEnumerator Spawning(int enemyAmount, SpawnDirection direction, EnemyToSpawn enemyToSpawn)
     {
-        while (true)
+        int enemiesSpawned = 0; 
+
+        while (enemiesSpawned < enemyAmount)
         {
             yield return new WaitForSeconds(Random.Range(enemyToSpawn.minSpawnTime, enemyToSpawn.maxSpawnTime));
 
-            if (enemyToSpawn.spawnedEnemies.Count < enemyToSpawn.enemyMaxCount)
+            enemiesSpawned++;
+            float xPos;
+            if (direction == SpawnDirection.Left)
             {
-                float xPos;
-                if (Random.value < 0.5f)
-                {
-                    xPos = m_leftSpawnPoint.position.x;
-                }
-                else
-                {
-                    xPos = m_RightSpawnPoint.position.x;
-                }
-                Vector3 position = new Vector3(xPos, 0, Random.Range(m_minZ, m_maxZ));
-
-                SummonEnemy(enemyToSpawn, position);
-
-                Debug.Log("EnemySpawned: " + enemyToSpawn.enemyPrefab.name);
+                xPos = m_leftSpawnPoint.position.x;
             }
+            else
+            {
+                xPos = m_RightSpawnPoint.position.x;
+            }
+
+            Vector3 position = new Vector3(xPos, 0, Random.Range(m_minZ, m_maxZ));
+
+            SummonEnemy(enemyToSpawn, position);
+
+           /// Debug.Log("EnemySpawned: " + enemyToSpawn.enemyPrefab.name);
+        
         }
     }
 

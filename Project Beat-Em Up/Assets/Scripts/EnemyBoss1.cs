@@ -20,7 +20,7 @@ public class EnemyBoss1 : Enemy
 
     private int m_attackCount = 0;
     private int m_lastAttack = -1;
-    private float m_amountOfDamageTakenWhileChannelling = 0;
+    private float m_damageDoneByLaser = 0;
 
     private bool m_enemiesFromPhase1Summoned = false;
     private bool m_phase2Entered = false;
@@ -44,9 +44,9 @@ public class EnemyBoss1 : Enemy
 
         if (m_isChanneling)
         {
-            m_amountOfDamageTakenWhileChannelling += damage;
+            m_damageDoneByLaser += damage;
 
-            if (m_amountOfDamageTakenWhileChannelling > (float)m_damageAmountToCancelChannelling)
+            if (m_damageDoneByLaser > (float)m_damageAmountToCancelChannelling)
             {
                 //cancel channeling
             }
