@@ -38,6 +38,7 @@ public class PlayerController : CombatandMovement
     [SerializeField] protected float attackchargeDrain = 5f;
     [HideInInspector] public float m_currentCharge;
     private bool m_chargedAttackActive;
+    private float m_skinWidth = 0.1f;
     protected bool m_isGrounded;
 
     protected override void Start()
@@ -50,8 +51,9 @@ public class PlayerController : CombatandMovement
 
     protected bool IsGrounded(ref bool isGrounded)
     {
-        if (Physics.BoxCast(m_collider.bounds.max, m_collider.bounds.extents, Vector3.down, transform.rotation, 10.0f, m_collisionLayer))
+        if (Physics.BoxCast(m_collider.bounds.max, m_collider.bounds.extents, Vector3.down, transform.rotation, m_collider.bounds.extents.y + m_skinWidth, m_collisionLayer))
         {
+
             return isGrounded = true;
         }
         else
