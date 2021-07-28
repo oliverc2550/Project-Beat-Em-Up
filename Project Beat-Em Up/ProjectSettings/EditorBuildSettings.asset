@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo_BuildScenes/MainMenu.unity
     guid: c06d2906958e6ce4e9ee48a7304f7c28
   - enabled: 1
+    path: Assets/Scenes/Demo_BuildScenes/Level1Landfill.unity
+    guid: 8dc487728ba299b4ca7baed9908b0cbf
+  - enabled: 0
     path: Assets/Scenes/Demo_BuildScenes/Level1Test.unity
     guid: 0a207b6f09521034798735cd70918f68
   - enabled: 1

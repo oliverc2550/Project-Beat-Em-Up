@@ -8,7 +8,7 @@ public class GateOpener : MonoBehaviour
     private bool m_isClosing;
     private bool m_hasOpened;
     private bool m_hasClosed;
-    private Vector3 startingPos;
+    private static Vector3 startingPos;
 
     private void Start()
     {
