@@ -178,7 +178,7 @@ MonoBehaviour:
   m_normalAttackPoint: {fileID: 2102965868858434919}
   m_specialAttackPoint: {fileID: 2102965868858434919}
   m_maxHealth: 0
-  m_movementSpeed: 0
+  m_movementSpeed: 2.7
   m_jumpForce: 0
   m_pickupRange: 1.25
   m_normalAttackRange: 1.25

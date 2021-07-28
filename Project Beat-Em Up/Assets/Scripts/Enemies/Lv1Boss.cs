@@ -30,7 +30,7 @@ public class Lv1Boss : EnemyBoss
         {
             for (int i = 0; i < m_spikesTimerCount; i++)
             {
-                spikeTimers.Add(Instantiate(m_spikesTimerPrefab, new Vector3(transform.position.x+i, transform.position.y, transform.position.z), Quaternion.identity));
+                spikeTimers.Add(Instantiate(m_spikesTimerPrefab, transform.position, Quaternion.identity));
                 spikeTimers[i].allTimers = spikeTimers;
             }
 

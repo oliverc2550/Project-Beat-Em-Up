@@ -7,6 +7,7 @@ public class LevelTransit : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+        bl_SceneLoader.GetActiveLoader().LoadLevel("Level" + (SceneManager.GetActiveScene().buildIndex + 1) + "Test");
     }
 }

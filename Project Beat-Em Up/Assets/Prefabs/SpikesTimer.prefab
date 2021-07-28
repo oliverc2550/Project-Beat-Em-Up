@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5465727264695210149}
   - component: {fileID: 6009995174213344705}
   - component: {fileID: 5118575594556964627}
-  - component: {fileID: 5241716932115466320}
   m_Layer: 0
   m_Name: SpikesTimer
   m_TagString: Untagged
@@ -110,28 +109,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_timerText: {fileID: 4487113259467052796}
   m_maxSeconds: 5
-  m_horizontalThrowForce: 2
-  m_verticalThrowForce: 5
+  m_throwDuration: 1.5
   m_spikesPrefab: {fileID: 1349553830625927118, guid: e11b215fb2862e44e9fb7ca7fffc3d9e,
     type: 3}
+  m_minZposForSpikesTimer: -0.5
+  m_maxZposForSpikesTimer: -7
+  m_minXposForSpikesTimer: -4
+  m_maxXposForSpikesTimer: 4
   allTimers: []
-  rb: {fileID: 5241716932115466320}
---- !u!54 &5241716932115466320
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5861248377608483300}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1 &6828320584835576929
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,7 +32,6 @@ public class EnemyBoss : Enemy
     {
         base.Start();
 
-        PlayPickedAttack(1);
     }
 
     public override void OnTakeDamage(float damage)
@@ -105,6 +104,5 @@ public class EnemyBoss : Enemy
     }
     protected virtual void PlayPickedAttack(int attackToPlay)
     {
-        Debug.Log("shared");
     }
 }
