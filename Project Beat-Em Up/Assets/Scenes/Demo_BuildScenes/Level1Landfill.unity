@@ -9924,11 +9924,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483908230}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 77.87611, y: 14.643274, z: -6.97525}
+  m_LocalPosition: {x: 52.5, y: 14.643274, z: -6.97525}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1608717148}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &483908232
 MonoBehaviour:
@@ -15386,11 +15386,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802939047}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 156.7, y: 14.643274, z: -6.97525}
+  m_LocalPosition: {x: 118.8, y: 14.643274, z: -6.97525}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1608717148}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &802939049
 MonoBehaviour:
@@ -22945,70 +22945,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1283026633
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1283026634}
-  - component: {fileID: 1283026636}
-  - component: {fileID: 1283026635}
-  m_Layer: 0
-  m_Name: EnemyWaveTriger (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1283026634
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283026633}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -229.7, y: 14.643274, z: -6.97525}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 1608717148}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1283026635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283026633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba83967b8f549fd4586bac1add7f4af8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemySpawnData:
-    basicEnemiesToSpawnCount: 0
-    thiefEnemiesToSpawnCount: 0
-    summonerEnemiesToSpawnCount: 0
-    tankEnemiesToSpawnCount: 0
-    bossEnemiesToSpawnCount: 1
-    spawnDirection: 1
---- !u!65 &1283026636
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283026633}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.6247253, y: 15.921942, z: 44.308937}
-  m_Center: {x: 2.8123627, y: 6.350971, z: 0.55096054}
 --- !u!1 &1286098086
 GameObject:
   m_ObjectHideFlags: 0
@@ -28399,11 +28335,10 @@ Transform:
   m_LocalPosition: {x: 63.68389, y: -14.48258, z: -7.4807086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 483908231}
   - {fileID: 802939048}
+  - {fileID: 483908231}
   - {fileID: 2123681973}
   - {fileID: 1818786072}
-  - {fileID: 1283026634}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37180,7 +37115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123681972}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 60.7, y: 14.643274, z: -6.97525}
+  m_LocalPosition: {x: -2.9, y: 14.643274, z: -6.97525}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1608717148}

@@ -301,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -336,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -347,18 +347,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 2060838113304408011, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0.378
-      objectReference: {fileID: 0}
-    - target: {fileID: 2704512902981175213, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
-        type: 3}
-      propertyPath: m_text
-      value: 'Basic
-
-'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d, type: 3}

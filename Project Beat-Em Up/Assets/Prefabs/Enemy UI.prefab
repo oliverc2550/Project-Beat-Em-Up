@@ -112,8 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1e533a0347b4a47b7c4d501977c129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideDelay: 1
   m_enemyUI: {fileID: 3352239046354571423}
-  m_fillImage: {fileID: 2060838113304408011}
+  fillImage: {fileID: 2060838113304408011}
   m_enemyName: {fileID: 2704512902981175213}
 --- !u!1 &1727546487153998952
 GameObject:
@@ -291,7 +292,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemy Name
+  m_text: 'Basic
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -429,7 +432,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.322
+  m_FillAmount: 0.378
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
