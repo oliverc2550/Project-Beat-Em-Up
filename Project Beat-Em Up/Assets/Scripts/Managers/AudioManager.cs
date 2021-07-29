@@ -36,7 +36,8 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        Play("Theme"); //Play the theme song after the game starts
+        Play("BackgroundNoise"); //Play the theme song after the game starts
+        Play("ThemePlaceholder");
     }
     //Method used to play audio clip that corresponds to the string name passed in. Audio clip string name is set in the inspector.
     public void Play(string name)

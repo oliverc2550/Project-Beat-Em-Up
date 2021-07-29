@@ -21,7 +21,7 @@ public class GateOpener : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(m_hasOpened == false && m_hasOpened == false)
+        if(other.gameObject.CompareTag("Player") && m_hasOpened == false && m_hasOpened == false)
         {
             m_isOpening = true;
             m_hasOpened = true;
@@ -30,7 +30,7 @@ public class GateOpener : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(m_hasOpened == true && m_hasClosed == false)
+        if(other.gameObject.CompareTag("Player") && m_hasOpened == true && m_hasClosed == false)
         {
             m_isClosing = true;
             m_hasClosed = true;
@@ -41,11 +41,11 @@ public class GateOpener : MonoBehaviour
     {
         if(m_isOpening == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(startingPos.x, startingPos.y, startingPos.z - 10f), 1f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z - 10f), 1f * Time.deltaTime);
         }
         if(m_isClosing == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, startingPos, 1f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z + 10f), 1f * Time.deltaTime);
         }
     }
 }

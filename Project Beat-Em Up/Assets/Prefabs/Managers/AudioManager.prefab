@@ -44,10 +44,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sounds:
-  - Name: 
-    Clip: {fileID: 0}
-    Loop: 0
-    Volume: 0
-    Pitch: 0
+  - Name: ThemePlaceholder
+    Clip: {fileID: 8300000, guid: b1d904b0a1eee7e43b750773a317e28b, type: 3}
+    Loop: 1
+    Volume: 0.15
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: BackgroundNoise
+    Clip: {fileID: 8300000, guid: f1f266671e9df19469302bf24102cdf4, type: 3}
+    Loop: 1
+    Volume: 0.05
+    Pitch: 1
     SpatialBlend: 0
     Source: {fileID: 0}
