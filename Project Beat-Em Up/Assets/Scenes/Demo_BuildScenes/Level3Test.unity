@@ -598,7 +598,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291740726}
   m_LocalRotation: {x: -0.040797796, y: -0.0009019336, z: 0.00003512587, w: -0.999167}
-  m_LocalPosition: {x: -0.023243919, y: 2.3466964, z: -10.4589}
+  m_LocalPosition: {x: -0.023244157, y: 2.3466964, z: -10.4589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 119037143}
@@ -869,7 +869,7 @@ MonoBehaviour:
   m_damageModifier: 0
   heldObject: {fileID: 0}
   m_playerInput: {fileID: 336539567}
-  m_uiController: {fileID: 0}
+  m_uiController: {fileID: 2013823891}
   m_maxCharge: 75
   minimumChargeLevel: 25
   chargeGain: 2.5
@@ -2184,30 +2184,31 @@ MonoBehaviour:
   BasicEnemy:
     enemyPrefab: {fileID: 5495421021842980918, guid: 612d23a5c983d8a4f9acead827e43636,
       type: 3}
-    enemyMaxCount: 1
     minSpawnTime: 3
     maxSpawnTime: 4
     spawnedEnemies: []
   ThiefEnemy:
     enemyPrefab: {fileID: 7262013986928258369, guid: 0feab71bf5b19ca4898f9d8cd1cd3582,
       type: 3}
-    enemyMaxCount: 1
     minSpawnTime: 15
     maxSpawnTime: 20
     spawnedEnemies: []
   SummonerEnemy:
     enemyPrefab: {fileID: 1494901536624554732, guid: eb78e34429852234b918f55bb640f281,
       type: 3}
-    enemyMaxCount: 0
     minSpawnTime: 5
     maxSpawnTime: 6
     spawnedEnemies: []
   TankEnemy:
     enemyPrefab: {fileID: 3886622432434536879, guid: 4e3d377efacd169409c94df9a2dfd633,
       type: 3}
-    enemyMaxCount: 1
     minSpawnTime: 3
     maxSpawnTime: 5
+    spawnedEnemies: []
+  BossEnemy:
+    enemyPrefab: {fileID: 0}
+    minSpawnTime: 0
+    maxSpawnTime: 0
     spawnedEnemies: []
   m_leftSpawnPoint: {fileID: 119037143}
   m_RightSpawnPoint: {fileID: 323789661}
@@ -3313,6 +3314,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be0672103119dc54c868dcac3daabc6e, type: 3}
+--- !u!114 &2013823891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8838218878681857622, guid: be0672103119dc54c868dcac3daabc6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013823890}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d4f000e84063648976690a9ed6a2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2105775373
 GameObject:
   m_ObjectHideFlags: 0

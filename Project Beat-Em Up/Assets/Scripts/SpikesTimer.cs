@@ -50,6 +50,7 @@ public class SpikesTimer : MonoBehaviour
     private void OnTimerComplete()
     {
         allTimers.Remove(this);
+        Destroy(gameObject);
 
         if (allTimers.Count == 0)
         {

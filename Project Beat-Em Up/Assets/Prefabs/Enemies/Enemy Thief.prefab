@@ -40,10 +40,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7262013986928257722}
   - component: {fileID: 7262013986928257724}
-  - component: {fileID: 7262013986928257727}
   - component: {fileID: 7262013986928257726}
   - component: {fileID: 7262013986928258368}
   - component: {fileID: 7262013986928257725}
+  - component: {fileID: 3947052346462442082}
   - component: {fileID: 7262013986928258369}
   m_Layer: 10
   m_Name: Enemy Thief
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 7262013986928258371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.24, y: 0, z: -1}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 7262013985841797242}
   - {fileID: 1135133181849659790}
@@ -87,19 +87,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &7262013986928257727
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7262013986928258371}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7, y: 1.2, z: 0.2}
-  m_Center: {x: 0, y: 0.67, z: 0}
 --- !u!54 &7262013986928257726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -188,6 +175,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!136 &3947052346462442082
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7262013986928258371}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3802637
+  m_Height: 1.5146444
+  m_Direction: 1
+  m_Center: {x: 0.0027953386, y: 0.61334836, z: 0}
 --- !u!114 &7262013986928258369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,10 +202,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 7262013986928257724}
-  m_collider: {fileID: 7262013986928257727}
+  m_collider: {fileID: 3947052346462442082}
   m_rigidbody: {fileID: 7262013986928257726}
   m_spriteRenderer: {fileID: 7262013986928257725}
-  m_uiController: {fileID: 0}
   m_interactPoint: {fileID: 7262013985841797242}
   m_normalAttackPoint: {fileID: 7262013985841797242}
   m_specialAttackPoint: {fileID: 7262013985841797242}
@@ -219,7 +219,6 @@ MonoBehaviour:
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
-  m_targetTag: Player
   m_targetLayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -229,6 +228,8 @@ MonoBehaviour:
   m_invulnerable: 0
   m_damageModifier: 1
   heldObject: {fileID: 0}
+  m_EnemyName: Enemy
+  m_scoreGainedOnDeath: 200
   m_agent: {fileID: 7262013986928258368}
   m_stoppingDistance: 1.5
   m_ChargeToStealOnHit: 20
@@ -350,6 +351,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704512902981175213, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_text
+      value: Thief
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d, type: 3}

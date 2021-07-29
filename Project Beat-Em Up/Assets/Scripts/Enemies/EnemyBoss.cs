@@ -31,7 +31,7 @@ public class EnemyBoss : Enemy
     protected override void Start()
     {
         base.Start();
-
+        PlayPickedAttack(1);
     }
 
     public override void OnTakeDamage(float damage)

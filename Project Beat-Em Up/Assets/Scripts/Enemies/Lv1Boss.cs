@@ -28,6 +28,7 @@ public class Lv1Boss : EnemyBoss
 
         else if (attackToPlay == (int)BossAttacks.DeadlySpikes)
         {
+            Debug.Log("Attack is played");
             for (int i = 0; i < m_spikesTimerCount; i++)
             {
                 spikeTimers.Add(Instantiate(m_spikesTimerPrefab, transform.position, Quaternion.identity));

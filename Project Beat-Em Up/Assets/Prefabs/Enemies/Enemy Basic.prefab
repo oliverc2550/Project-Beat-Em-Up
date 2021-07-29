@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5495421021842980917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.36, y: 0, z: -4.47}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 5495421022395503473}
   - {fileID: 2093597603313925323}
@@ -174,7 +174,6 @@ MonoBehaviour:
   m_collider: {fileID: 5495421021842980912}
   m_rigidbody: {fileID: 5495421021842980913}
   m_spriteRenderer: {fileID: 5495421021842980916}
-  m_uiController: {fileID: 0}
   m_interactPoint: {fileID: 5495421022395503473}
   m_normalAttackPoint: {fileID: 5495421022395503473}
   m_specialAttackPoint: {fileID: 5495421022395503473}
@@ -189,7 +188,6 @@ MonoBehaviour:
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
-  m_targetTag: Player
   m_targetLayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -354,6 +352,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FillAmount
       value: 0.378
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704512902981175213, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_text
+      value: 'Basic
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d, type: 3}
