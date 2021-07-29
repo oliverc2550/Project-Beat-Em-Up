@@ -5913,7 +5913,7 @@ PrefabInstance:
     - target: {fileID: 8838218878681857619, guid: be0672103119dc54c868dcac3daabc6e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8838218878681857623, guid: be0672103119dc54c868dcac3daabc6e,
         type: 3}
@@ -21021,6 +21021,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379232431789662808, guid: b45b8b5035903bd468a8fa63be654b88,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6911124758560781166, guid: b45b8b5035903bd468a8fa63be654b88,
         type: 3}

@@ -168,7 +168,7 @@ public class UIController : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        bl_SceneLoader.GetActiveLoader().LoadLevel("MainMenu");
     }
     //Method to quit out of the game
     public void QuitGame()
