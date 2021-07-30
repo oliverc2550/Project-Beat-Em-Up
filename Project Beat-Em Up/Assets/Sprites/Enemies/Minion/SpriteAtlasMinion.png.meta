@@ -474,27 +474,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteAtlasMinion_18
-      rect:
-        serializedVersion: 2
-        x: 1312
-        y: 416
-        width: 336
-        height: 296
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5f74e2f466ad8690800000000000000
-      internalID: -7598234043802157221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SpriteAtlasMinion_19
       rect:
         serializedVersion: 2
