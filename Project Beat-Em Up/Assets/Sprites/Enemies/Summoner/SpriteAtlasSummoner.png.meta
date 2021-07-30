@@ -1,0 +1,1162 @@
+fileFormatVersion: 2
+guid: dd94e08f9f95c994d91b2f9f789ffea5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5455678912817741951
+    second: SpriteAtlasSummoner_0
+  - first:
+      213: -5168982644754138010
+    second: SpriteAtlasSummoner_1
+  - first:
+      213: -651630276018879005
+    second: SpriteAtlasSummoner_2
+  - first:
+      213: -2599248731905472311
+    second: SpriteAtlasSummoner_3
+  - first:
+      213: 6846972246741875178
+    second: SpriteAtlasSummoner_4
+  - first:
+      213: 284302762731851387
+    second: SpriteAtlasSummoner_5
+  - first:
+      213: 6588309542848093805
+    second: SpriteAtlasSummoner_6
+  - first:
+      213: 570383628282468848
+    second: SpriteAtlasSummoner_7
+  - first:
+      213: 3872286682352161537
+    second: SpriteAtlasSummoner_8
+  - first:
+      213: 7416169352934352385
+    second: SpriteAtlasSummoner_9
+  - first:
+      213: -1503390515474357617
+    second: SpriteAtlasSummoner_10
+  - first:
+      213: 8016541314079439844
+    second: SpriteAtlasSummoner_11
+  - first:
+      213: -6902960726892364588
+    second: SpriteAtlasSummoner_12
+  - first:
+      213: 414530965548616941
+    second: SpriteAtlasSummoner_13
+  - first:
+      213: 3447430097446338
+    second: SpriteAtlasSummoner_13
+  - first:
+      213: -1670953807150306142
+    second: SpriteAtlasSummoner_19
+  - first:
+      213: 7067387191506903277
+    second: SpriteAtlasSummoner_15
+  - first:
+      213: 8817941647360851029
+    second: SpriteAtlasSummoner_17
+  - first:
+      213: 885530471691501200
+    second: SpriteAtlasSummoner_18
+  - first:
+      213: -1284493152135634586
+    second: SpriteAtlasSummoner_19
+  - first:
+      213: 2542235523389403302
+    second: SpriteAtlasSummoner_19
+  - first:
+      213: 7330114704645078631
+    second: SpriteAtlasSummoner_16
+  - first:
+      213: 7172238678005923733
+    second: SpriteAtlasSummoner_17
+  - first:
+      213: -1821767419741510149
+    second: SpriteAtlasSummoner_23
+  - first:
+      213: -8102904499356475714
+    second: SpriteAtlasSummoner_18
+  - first:
+      213: 5060972388945941631
+    second: SpriteAtlasSummoner_12
+  - first:
+      213: -1300959699483856811
+    second: SpriteAtlasSummoner_39
+  - first:
+      213: -6704225987080616838
+    second: SpriteAtlasSummoner_40
+  - first:
+      213: 7911284998921613337
+    second: SpriteAtlasSummoner_41
+  - first:
+      213: -5763619969747487156
+    second: SpriteAtlasSummoner_42
+  - first:
+      213: 4730095492110839780
+    second: SpriteAtlasSummoner_43
+  - first:
+      213: 2296098536509631213
+    second: SpriteAtlasSummoner_44
+  - first:
+      213: -3875319036248661765
+    second: SpriteAtlasSummoner_45
+  - first:
+      213: -6153821981183972455
+    second: SpriteAtlasSummoner_46
+  - first:
+      213: 253457198270139825
+    second: SpriteAtlasSummoner_47
+  - first:
+      213: -3185051267320162238
+    second: SpriteAtlasSummoner_48
+  - first:
+      213: -4686509199791016384
+    second: SpriteAtlasSummoner_49
+  - first:
+      213: -5355079810275025775
+    second: SpriteAtlasSummoner_50
+  - first:
+      213: -4133776181439505017
+    second: SpriteAtlasSummoner_51
+  - first:
+      213: -2785116806475133488
+    second: SpriteAtlasSummoner_52
+  - first:
+      213: 8867785283030248315
+    second: SpriteAtlasSummoner_53
+  - first:
+      213: 693622971895657631
+    second: SpriteAtlasSummoner_54
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_0
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 4390
+        width: 347
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f704717d01776bb40800000000000000
+      internalID: 5455678912817741951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_1
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 4390
+        width: 347
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c3549cba51448b0800000000000000
+      internalID: -5168982644754138010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_2
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 4390
+        width: 347
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5410967b1f4f6f0800000000000000
+      internalID: -651630276018879005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_3
+      rect:
+        serializedVersion: 2
+        x: 3230
+        y: 4390
+        width: 338
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8c3ebbc0d9debd0800000000000000
+      internalID: -2599248731905472311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_4
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 4390
+        width: 339
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9f10a4bf4550f50800000000000000
+      internalID: 6846972246741875178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_5
+      rect:
+        serializedVersion: 2
+        x: 5150
+        y: 4390
+        width: 339
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e4b4d3bdb02f300800000000000000
+      internalID: 284302762731851387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_6
+      rect:
+        serializedVersion: 2
+        x: 6119
+        y: 4390
+        width: 346
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ed6c37f906e6b50800000000000000
+      internalID: 6588309542848093805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_7
+      rect:
+        serializedVersion: 2
+        x: 7079
+        y: 4390
+        width: 346
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9997d43e86ae700800000000000000
+      internalID: 570383628282468848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_8
+      rect:
+        serializedVersion: 2
+        x: 8039
+        y: 4390
+        width: 347
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103931aa8302db530800000000000000
+      internalID: 3872286682352161537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_9
+      rect:
+        serializedVersion: 2
+        x: 9014
+        y: 4390
+        width: 347
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1066ac3ebb68be660800000000000000
+      internalID: 7416169352934352385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_10
+      rect:
+        serializedVersion: 2
+        x: 9974
+        y: 4390
+        width: 347
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82a57e9a42e22be0800000000000000
+      internalID: -1503390515474357617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_11
+      rect:
+        serializedVersion: 2
+        x: 10934
+        y: 4390
+        width: 347
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebb2f80ad9704f60800000000000000
+      internalID: 8016541314079439844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3319
+        width: 298
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcbb17dac1c330a0800000000000000
+      internalID: -6902960726892364588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_13
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 3319
+        width: 330
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deccce587b5b0c500800000000000000
+      internalID: 414530965548616941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_15
+      rect:
+        serializedVersion: 2
+        x: 3287
+        y: 3326
+        width: 538
+        height: 827
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5a85e5b6f3c0000800000000000000
+      internalID: 3447430097446338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_25
+      rect:
+        serializedVersion: 2
+        x: 12888
+        y: 3319
+        width: 290
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac28b09d549fc8e0800000000000000
+      internalID: -1670953807150306142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_16
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 3326
+        width: 539
+        height: 819
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de02aefb437641260800000000000000
+      internalID: 7067387191506903277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_17
+      rect:
+        serializedVersion: 2
+        x: 5198
+        y: 3326
+        width: 563
+        height: 811
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cf015753f9f5a70800000000000000
+      internalID: 8817941647360851029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_18
+      rect:
+        serializedVersion: 2
+        x: 6175
+        y: 3326
+        width: 554
+        height: 819
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09eb4f2b5490a4c00800000000000000
+      internalID: 885530471691501200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_19
+      rect:
+        serializedVersion: 2
+        x: 7119
+        y: 3326
+        width: 562
+        height: 859
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661a88e98409c2ee0800000000000000
+      internalID: -1284493152135634586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_20
+      rect:
+        serializedVersion: 2
+        x: 8095
+        y: 3326
+        width: 554
+        height: 876
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0310b3db5d74320800000000000000
+      internalID: 2542235523389403302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_21
+      rect:
+        serializedVersion: 2
+        x: 9039
+        y: 3326
+        width: 570
+        height: 828
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ebc3dbc7cc9b560800000000000000
+      internalID: 7330114704645078631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_22
+      rect:
+        serializedVersion: 2
+        x: 10016
+        y: 3326
+        width: 554
+        height: 811
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f3cd6d319e88360800000000000000
+      internalID: 7172238678005923733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_23
+      rect:
+        serializedVersion: 2
+        x: 10959
+        y: 3326
+        width: 554
+        height: 828
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf56de21f28c7b6e0800000000000000
+      internalID: -1821767419741510149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_24
+      rect:
+        serializedVersion: 2
+        x: 11927
+        y: 3319
+        width: 523
+        height: 826
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe51f2f943bc8f80800000000000000
+      internalID: -8102904499356475714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_14
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 3326
+        width: 539
+        height: 788
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74de25d29f2c3640800000000000000
+      internalID: 5060972388945941631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_39
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 2295
+        width: 346
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5507a2dcb0012fde0800000000000000
+      internalID: -1300959699483856811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_40
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 2295
+        width: 346
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a740e1a3cfdc5f2a0800000000000000
+      internalID: -6704225987080616838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_41
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 2295
+        width: 347
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910799d6ac78acd60800000000000000
+      internalID: 7911284998921613337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_42
+      rect:
+        serializedVersion: 2
+        x: 3255
+        y: 2295
+        width: 347
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c467adaac228300b0800000000000000
+      internalID: -5763619969747487156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_43
+      rect:
+        serializedVersion: 2
+        x: 4215
+        y: 2295
+        width: 347
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef61f8f9cca4a140800000000000000
+      internalID: 4730095492110839780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_44
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1358
+        width: 620
+        height: 763
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea63f524716ddf10800000000000000
+      internalID: 2296098536509631213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_45
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1358
+        width: 315
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0e61d6ed9183ac0800000000000000
+      internalID: -3875319036248661765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_46
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 1366
+        width: 611
+        height: 771
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99be980338b399aa0800000000000000
+      internalID: -6153821981183972455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_47
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 1358
+        width: 644
+        height: 763
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd48ac9af5748300800000000000000
+      internalID: 253457198270139825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_48
+      rect:
+        serializedVersion: 2
+        x: 4311
+        y: 1358
+        width: 330
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24859fb5fbc6cc3d0800000000000000
+      internalID: -3185051267320162238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_49
+      rect:
+        serializedVersion: 2
+        x: 5111
+        y: 1366
+        width: 610
+        height: 779
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0463bd586bc26feb0800000000000000
+      internalID: -4686509199791016384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_50
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 327
+        width: 347
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cd0b4f84feea5b0800000000000000
+      internalID: -5355079810275025775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_51
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 327
+        width: 387
+        height: 786
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dd354f670e1a6c0800000000000000
+      internalID: -4133776181439505017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_52
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 327
+        width: 353
+        height: 827
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd441c45074959d0800000000000000
+      internalID: -2785116806475133488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_53
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 327
+        width: 330
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b647b3bb3b01b70800000000000000
+      internalID: 8867785283030248315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasSummoner_54
+      rect:
+        serializedVersion: 2
+        x: 4278
+        y: 327
+        width: 307
+        height: 842
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9434effa6e30a900800000000000000
+      internalID: 693622971895657631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: de7f3d67aebb5ac4f9b3f50528326c81, type: 3}
+      name: _Emission
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
