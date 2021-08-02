@@ -34,8 +34,6 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Animator m_animator;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
-    [SerializeField] protected Collider m_collider;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Rigidbody m_rigidbody;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected SpriteRenderer m_spriteRenderer;
@@ -67,6 +65,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [HideInInspector] public bool m_invulnerable;
     [HideInInspector] public float m_damageModifier = 1f;
 
+    private float m_normalAttackPointXpos;
     private Vector3 m_startScale;
 
     public GameObject heldObject;
@@ -90,6 +89,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         m_invulnerable = false;
         Iinvulnerable = m_invulnerable;
         m_startScale = transform.localScale;
+        m_normalAttackPointXpos = m_normalAttackPoint.localPosition.x;
     }
     #region Movement Methods
     protected virtual void Move(Vector3 direction)
@@ -101,12 +101,15 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     }
     protected void LookAtDirection(float direction)
     {
+
         //Vector3 CharacterScale = transform.localScale;
         //Debug.Log(CharacterScale);
         // if the direction is left
         if (direction < 0)
         {
             m_spriteRenderer.flipX = true;
+            m_normalAttackPoint.localPosition = new Vector3(-m_normalAttackPointXpos, m_normalAttackPoint.localPosition.y, m_normalAttackPoint.localPosition.z);
+
             //CharacterScale.x = -m_startScale.x;
             //transform.localScale = CharacterScale;
         }
@@ -114,6 +117,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         else if (direction > 0)
         {
             m_spriteRenderer.flipX = false;
+            m_normalAttackPoint.localPosition = new Vector3(m_normalAttackPointXpos, m_normalAttackPoint.localPosition.y, m_normalAttackPoint.localPosition.z);
             //CharacterScale.x = m_startScale.x;
             //transform.localScale = CharacterScale;
         }
@@ -245,6 +249,16 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         //todo: some particles, sounds and animations
     }
 
+    //Debug
+
+    public void OnDrawGizmosSelected()
+    {
+        if (m_normalAttackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(m_normalAttackPoint.position, m_normalAttackRange);
+    }
     public virtual void Die()
     {
         //debug:

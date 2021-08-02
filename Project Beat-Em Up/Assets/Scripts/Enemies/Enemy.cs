@@ -8,10 +8,12 @@ public enum EnemyState { Idle, Chase, Run, Patrol }
 
 public class Enemy : CombatandMovement
 {
-    [SerializeField]private string m_EnemyName = "Enemy";
-    [SerializeField]private int m_scoreGainedOnDeath = 200;
+    [SerializeField] protected CapsuleCollider m_collider;
     [SerializeField] NavMeshAgent m_agent;
-    [SerializeField] private float m_stoppingDistance = 1.5f;
+
+    [SerializeField] private string m_EnemyName;
+    [SerializeField] private int m_scoreGainedOnDeath = 200;
+    protected float m_stoppingDistance;
 
     EnemyUI m_enemyUI;
     Transform m_target;
@@ -24,6 +26,8 @@ public class Enemy : CombatandMovement
         SetEnemyState(EnemyState.Chase);
         m_enemyUI = GetComponentInChildren<EnemyUI>();
         m_enemyUI.SetEnemyNameUI(m_EnemyName);
+
+        m_stoppingDistance = m_collider.radius;
     }
 
     protected virtual void Update()
@@ -97,7 +101,7 @@ public class Enemy : CombatandMovement
 
         m_agent.Move(direction * m_movementSpeed*Time.deltaTime);
 
-        LookAtDirection(direction.x);
+        LookAtDirection(-direction.x);
     }
 
     void SetTarget(Transform target)
@@ -110,6 +114,7 @@ public class Enemy : CombatandMovement
         base.OnTakeDamage(damage);
         m_animator.SetTrigger("Stun");
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
+        Debug.Log("health: " + IcurrentHealth);
     }
 
     protected void SetEnemyState(EnemyState state)

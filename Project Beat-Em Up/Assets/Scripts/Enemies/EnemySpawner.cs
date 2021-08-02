@@ -33,8 +33,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform m_RightSpawnPoint;
 
 
-    private const float m_minZ = -6;
-    private const float m_maxZ = 7;
+    private const float m_minZ = -1.6f;
+    private const float m_maxZ = -11.5f;
 
     public void StartSpawning(EnemySpawnData data)
     {
@@ -68,7 +68,7 @@ public class EnemySpawner : MonoBehaviour
 
             SummonEnemy(enemyToSpawn, position);
 
-           /// Debug.Log("EnemySpawned: " + enemyToSpawn.enemyPrefab.name);
+            Debug.Log("EnemySpawned: " + enemyToSpawn.enemyPrefab.name + enemiesSpawned);
         
         }
     }

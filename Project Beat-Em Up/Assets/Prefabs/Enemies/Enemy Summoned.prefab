@@ -116,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9101316655204151049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.764, z: 0}
+  m_LocalPosition: {x: -2.84, y: 2.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9101316655266976776}
@@ -132,11 +132,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9101316655266976776}
   - component: {fileID: 9101316655266976777}
-  - component: {fileID: 9101316655266976782}
   - component: {fileID: 9101316655266976783}
   - component: {fileID: 9101316655266976780}
   - component: {fileID: 9101316655266976781}
   - component: {fileID: 6699325321448106667}
+  - component: {fileID: 574648680}
   m_Layer: 10
   m_Name: Enemy Summoned
   m_TagString: Enemy
@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9101316655266976771}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 9.43, y: 0, z: 4.2}
+  m_LocalPosition: {x: 9.43, y: 0.5, z: 4.2}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 9101316655204151048}
@@ -180,19 +180,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &9101316655266976782
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9101316655266976771}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7, y: 1.2, z: 0.2}
-  m_Center: {x: 0, y: 0.67, z: 0}
 --- !u!54 &9101316655266976783
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -218,7 +205,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 9101316655266976771}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.38
+  m_Radius: 2
   m_Speed: 0.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -227,7 +214,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.2
+  m_Height: 8
   m_BaseOffset: -0.05
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -276,7 +263,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.82, y: 0.6}
+  m_Size: {x: 3.36, y: 2.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -295,18 +282,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 9101316655266976777}
-  m_collider: {fileID: 9101316655266976782}
   m_rigidbody: {fileID: 9101316655266976783}
   m_spriteRenderer: {fileID: 9101316655266976781}
   m_interactPoint: {fileID: 9101316655204151048}
   m_normalAttackPoint: {fileID: 9101316655204151048}
   m_specialAttackPoint: {fileID: 9101316655204151048}
-  m_maxHealth: 10
+  m_maxHealth: 40
   m_movementSpeed: 3.5
   m_jumpForce: 25
   m_pickupRange: 1.25
   m_normalAttackRange: 1.25
-  m_normalAttackDamage: 1
+  m_normalAttackDamage: 5
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
   m_pickupLayer:
@@ -321,10 +307,24 @@ MonoBehaviour:
   m_invulnerable: 0
   m_damageModifier: 1
   heldObject: {fileID: 0}
+  m_collider: {fileID: 574648680}
+  m_agent: {fileID: 9101316655266976780}
   m_EnemyName: Enemy
   m_scoreGainedOnDeath: 200
-  m_agent: {fileID: 9101316655266976780}
-  m_stoppingDistance: 1.5
+--- !u!136 &574648680
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9101316655266976771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2
+  m_Height: 8.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 4, z: -0}
 --- !u!1001 &5667739307277369850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -370,12 +370,12 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.2129965
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.16935849
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -448,6 +448,16 @@ PrefabInstance:
       value: 'Summoned
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704512902981175213, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704512902981175213, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -479,6 +489,16 @@ PrefabInstance:
       propertyPath: fillImage
       value: 
       objectReference: {fileID: 5926257201161252401}
+    - target: {fileID: 9071237288512998726, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -0.22999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071237288512998726, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.615
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d, type: 3}
 --- !u!224 &4789106499837490220 stripped

@@ -26,9 +26,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : CombatandMovement
 {
+
     private Vector2 m_input;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected PlayerInput m_playerInput;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected Collider m_collider;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected UIController m_uiController;
     [Header("Player Settings ")]
@@ -99,16 +102,6 @@ public class PlayerController : CombatandMovement
     {
         Debug.Log("ChargedAttack");
         m_currentCharge -= m_maxCharge;
-    }
-    //Debug
-
-    public void OnDrawGizmosSelected()
-    {
-        if (m_normalAttackPoint == null)
-        {
-            return;
-        }
-        Gizmos.DrawWireSphere(m_normalAttackPoint.position, m_normalAttackRange);
     }
 
     //Unity Input Systems Action Callbacks

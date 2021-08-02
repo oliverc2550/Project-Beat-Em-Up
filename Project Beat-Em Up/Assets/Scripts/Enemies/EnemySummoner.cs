@@ -9,8 +9,15 @@ public class EnemySummoner : Enemy
     //[Header("Summoner Settings")]
 
     [SerializeField] private Enemy m_EnemyToSummon;
+    [SerializeField] float m_summoningRange;
 
     Enemy m_SummonedEnemy;
+
+    protected override void Start()
+    {
+        base.Start();
+        m_stoppingDistance = m_summoningRange;
+    }
 
     protected override void Move(Vector3 direction)
     {
@@ -22,6 +29,8 @@ public class EnemySummoner : Enemy
         {
             m_animator.SetBool("Walking", false);
         }
+
+        LookAtDirection(direction.x);
     }
 
     protected override void OnPlayerInRange()
