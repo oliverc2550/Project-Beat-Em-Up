@@ -1,0 +1,1162 @@
+fileFormatVersion: 2
+guid: 49a5b735b1d4cf145a51a6f4d2ea7517
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2151070607550683307
+    second: SpriteAtlasThief_0
+  - first:
+      213: 1047635129444998484
+    second: SpriteAtlasThief_1
+  - first:
+      213: 199587092337927419
+    second: SpriteAtlasThief_2
+  - first:
+      213: -1746750626359327180
+    second: SpriteAtlasThief_3
+  - first:
+      213: -8721883613311130282
+    second: SpriteAtlasThief_4
+  - first:
+      213: -7563059103286190643
+    second: SpriteAtlasThief_5
+  - first:
+      213: 1797109049990866024
+    second: SpriteAtlasThief_6
+  - first:
+      213: -4747728676931573066
+    second: SpriteAtlasThief_7
+  - first:
+      213: -5326094856662515301
+    second: SpriteAtlasThief_8
+  - first:
+      213: -256738322901378767
+    second: SpriteAtlasThief_9
+  - first:
+      213: -5831825600438070829
+    second: SpriteAtlasThief_10
+  - first:
+      213: -4368387877074301987
+    second: SpriteAtlasThief_11
+  - first:
+      213: 1644399409229640905
+    second: SpriteAtlasThief_12
+  - first:
+      213: -7092575437016233731
+    second: SpriteAtlasThief_13
+  - first:
+      213: -6381081263571107152
+    second: SpriteAtlasThief_13
+  - first:
+      213: 7431221531533896866
+    second: SpriteAtlasThief_19
+  - first:
+      213: -8030968341334559244
+    second: SpriteAtlasThief_15
+  - first:
+      213: -290872888731608305
+    second: SpriteAtlasThief_17
+  - first:
+      213: 6504438729985215157
+    second: SpriteAtlasThief_18
+  - first:
+      213: 1033063342778002053
+    second: SpriteAtlasThief_19
+  - first:
+      213: 3664373437130864673
+    second: SpriteAtlasThief_19
+  - first:
+      213: 3825644751737681934
+    second: SpriteAtlasThief_16
+  - first:
+      213: -189529327082972294
+    second: SpriteAtlasThief_17
+  - first:
+      213: -3224549636244760808
+    second: SpriteAtlasThief_23
+  - first:
+      213: -4816134747238706606
+    second: SpriteAtlasThief_18
+  - first:
+      213: -6844149832760981572
+    second: SpriteAtlasThief_12
+  - first:
+      213: 3911780841389355268
+    second: SpriteAtlasThief_39
+  - first:
+      213: 476512800682208556
+    second: SpriteAtlasThief_40
+  - first:
+      213: -5681674475540895605
+    second: SpriteAtlasThief_41
+  - first:
+      213: -6013378256108892791
+    second: SpriteAtlasThief_42
+  - first:
+      213: -7952284523082375890
+    second: SpriteAtlasThief_43
+  - first:
+      213: -803005460978568042
+    second: SpriteAtlasThief_44
+  - first:
+      213: 1533642304571500171
+    second: SpriteAtlasThief_45
+  - first:
+      213: 8555584944306317061
+    second: SpriteAtlasThief_46
+  - first:
+      213: 7165188117108834272
+    second: SpriteAtlasThief_47
+  - first:
+      213: 6979478612037872972
+    second: SpriteAtlasThief_48
+  - first:
+      213: -2446336725349321718
+    second: SpriteAtlasThief_49
+  - first:
+      213: 748886982033521720
+    second: SpriteAtlasThief_50
+  - first:
+      213: 7566764228948269328
+    second: SpriteAtlasThief_51
+  - first:
+      213: 9010684801873955249
+    second: SpriteAtlasThief_52
+  - first:
+      213: -9044449820240285505
+    second: SpriteAtlasThief_53
+  - first:
+      213: 140039263101312439
+    second: SpriteAtlasThief_54
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteAtlasThief_0
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 4390
+        width: 347
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5576826edacd522e0800000000000000
+      internalID: -2151070607550683307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_1
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 4390
+        width: 347
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d1ac08992f98e00800000000000000
+      internalID: 1047635129444998484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_2
+      rect:
+        serializedVersion: 2
+        x: 2278
+        y: 4390
+        width: 347
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf42e8c276315c200800000000000000
+      internalID: 199587092337927419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_3
+      rect:
+        serializedVersion: 2
+        x: 3230
+        y: 4390
+        width: 338
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43649ac5f8b42c7e0800000000000000
+      internalID: -1746750626359327180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_4
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 4390
+        width: 339
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6552a407015a5f680800000000000000
+      internalID: -8721883613311130282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_5
+      rect:
+        serializedVersion: 2
+        x: 5150
+        y: 4390
+        width: 339
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd975df0dd9a0790800000000000000
+      internalID: -7563059103286190643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_6
+      rect:
+        serializedVersion: 2
+        x: 6119
+        y: 4390
+        width: 346
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8646853d82d90f810800000000000000
+      internalID: 1797109049990866024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_7
+      rect:
+        serializedVersion: 2
+        x: 7079
+        y: 4390
+        width: 346
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6baee814cedac1eb0800000000000000
+      internalID: -4747728676931573066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_8
+      rect:
+        serializedVersion: 2
+        x: 8039
+        y: 4390
+        width: 347
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91889c52f8e516b0800000000000000
+      internalID: -5326094856662515301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_9
+      rect:
+        serializedVersion: 2
+        x: 9014
+        y: 4390
+        width: 347
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139db370bd1ef6cf0800000000000000
+      internalID: -256738322901378767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_10
+      rect:
+        serializedVersion: 2
+        x: 9974
+        y: 4390
+        width: 347
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d11cd5c381311fa0800000000000000
+      internalID: -5831825600438070829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_11
+      rect:
+        serializedVersion: 2
+        x: 10934
+        y: 4390
+        width: 347
+        height: 834
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb0dd9de5e5063c0800000000000000
+      internalID: -4368387877074301987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3319
+        width: 298
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4beffdc8412d610800000000000000
+      internalID: 1644399409229640905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_13
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 3319
+        width: 330
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df88cf5d73c129d90800000000000000
+      internalID: -7092575437016233731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_15
+      rect:
+        serializedVersion: 2
+        x: 3287
+        y: 3326
+        width: 538
+        height: 827
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b281f13668d177a0800000000000000
+      internalID: -6381081263571107152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_25
+      rect:
+        serializedVersion: 2
+        x: 12888
+        y: 3319
+        width: 290
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acef425c90012760800000000000000
+      internalID: 7431221531533896866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_16
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 3326
+        width: 539
+        height: 819
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5785ce7d44c8090800000000000000
+      internalID: -8030968341334559244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_17
+      rect:
+        serializedVersion: 2
+        x: 5198
+        y: 3326
+        width: 563
+        height: 837
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b5c5816ac96fbf0800000000000000
+      internalID: -290872888731608305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_18
+      rect:
+        serializedVersion: 2
+        x: 6175
+        y: 3331
+        width: 554
+        height: 819
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bacf0c1098644a50800000000000000
+      internalID: 6504438729985215157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_19
+      rect:
+        serializedVersion: 2
+        x: 7119
+        y: 3326
+        width: 562
+        height: 861
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aa2c803ad265e00800000000000000
+      internalID: 1033063342778002053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_20
+      rect:
+        serializedVersion: 2
+        x: 8095
+        y: 3326
+        width: 554
+        height: 878
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128ff84f9387ad230800000000000000
+      internalID: 3664373437130864673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_21
+      rect:
+        serializedVersion: 2
+        x: 9039
+        y: 3326
+        width: 570
+        height: 829
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e087920f1ab671530800000000000000
+      internalID: 3825644751737681934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_22
+      rect:
+        serializedVersion: 2
+        x: 10016
+        y: 3326
+        width: 555
+        height: 811
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b53b8c418ae5df0800000000000000
+      internalID: -189529327082972294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_23
+      rect:
+        serializedVersion: 2
+        x: 10959
+        y: 3331
+        width: 557
+        height: 825
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8171403b0391043d0800000000000000
+      internalID: -3224549636244760808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_24
+      rect:
+        serializedVersion: 2
+        x: 11927
+        y: 3319
+        width: 526
+        height: 826
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252db60e6f6a92db0800000000000000
+      internalID: -4816134747238706606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_14
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 3326
+        width: 539
+        height: 788
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb78bbc2df1b401a0800000000000000
+      internalID: -6844149832760981572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_39
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 2295
+        width: 346
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401f03223ff694630800000000000000
+      internalID: 3911780841389355268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_40
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 2295
+        width: 346
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2de6971ed9ec9600800000000000000
+      internalID: 476512800682208556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_41
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 2295
+        width: 347
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b882bf3da23a621b0800000000000000
+      internalID: -5681674475540895605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_42
+      rect:
+        serializedVersion: 2
+        x: 3255
+        y: 2295
+        width: 347
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d429816503c8ca0800000000000000
+      internalID: -6013378256108892791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_43
+      rect:
+        serializedVersion: 2
+        x: 4215
+        y: 2295
+        width: 347
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d96d8fb5fc3a190800000000000000
+      internalID: -7952284523082375890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_44
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1358
+        width: 620
+        height: 763
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6947ca9a9c62bd4f0800000000000000
+      internalID: -803005460978568042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_45
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1358
+        width: 315
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86ee78ec87984510800000000000000
+      internalID: 1533642304571500171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_46
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 1366
+        width: 611
+        height: 771
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507ee0b6d2b8bb670800000000000000
+      internalID: 8555584944306317061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_47
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 1358
+        width: 644
+        height: 763
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef3f1531acdf6360800000000000000
+      internalID: 7165188117108834272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_48
+      rect:
+        serializedVersion: 2
+        x: 4311
+        y: 1358
+        width: 330
+        height: 787
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d24fb91d61cd060800000000000000
+      internalID: 6979478612037872972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_49
+      rect:
+        serializedVersion: 2
+        x: 5111
+        y: 1366
+        width: 610
+        height: 779
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04bf84a5bddc0ed0800000000000000
+      internalID: -2446336725349321718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_50
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 327
+        width: 347
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cb50d0eb4946a00800000000000000
+      internalID: 748886982033521720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_51
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 327
+        width: 387
+        height: 786
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019189dc9fb820960800000000000000
+      internalID: 7566764228948269328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_52
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 327
+        width: 353
+        height: 827
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b945be26126c0d70800000000000000
+      internalID: 9010684801873955249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_53
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 327
+        width: 330
+        height: 850
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb07bbbdec8ab7280800000000000000
+      internalID: -9044449820240285505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasThief_54
+      rect:
+        serializedVersion: 2
+        x: 4278
+        y: 327
+        width: 307
+        height: 842
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdd2c3c7f481f100800000000000000
+      internalID: 140039263101312439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 758050d56240bda4d892a5c30b075578
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 896241ae3bd745d4ea2bade806707f61, type: 3}
+      name: _Emission
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
