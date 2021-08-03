@@ -65,14 +65,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2326028391054703822}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8678221613768041043}
   m_Father: {fileID: 7526567011169837237}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 1.5}
@@ -333,7 +333,7 @@ Transform:
   m_GameObject: {fileID: 7526567011169837234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.36, y: 0, z: -4.47}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children:
   - {fileID: 7526567011720164342}
   - {fileID: 4124707308758064204}
@@ -389,7 +389,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -457,10 +457,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.383727
-  m_Height: 1.5451438
+  m_Radius: 0.45
+  m_Height: 1.5451437
   m_Direction: 1
-  m_Center: {x: -0.00637573, y: 0.6069237, z: 0}
+  m_Center: {x: 0.011051724, y: 0.6069238, z: 0}
 --- !u!114 &1724877116421483690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,17 +474,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 7526567011169837236}
-  m_collider: {fileID: 1527508079}
   m_rigidbody: {fileID: 7526567011169837238}
   m_spriteRenderer: {fileID: 7526567011169837235}
   m_interactPoint: {fileID: 7526567011720164342}
   m_normalAttackPoint: {fileID: 7526567011720164342}
   m_specialAttackPoint: {fileID: 7526567011720164342}
-  m_maxHealth: 77
+  m_maxHealth: 39.7
   m_movementSpeed: 2.5
   m_jumpForce: 0
   m_pickupRange: 1.25
-  m_normalAttackRange: 1.25
+  m_normalAttackRange: 1
   m_normalAttackDamage: 1
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
@@ -493,17 +492,19 @@ MonoBehaviour:
     m_Bits: 0
   m_targetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   m_collisionLayer:
     serializedVersion: 2
     m_Bits: 0
   m_invulnerable: 0
   m_damageModifier: 1
   heldObject: {fileID: 0}
-  m_EnemyName: Enemy
-  m_scoreGainedOnDeath: 200
+  m_collider: {fileID: 1527508079}
   m_agent: {fileID: 7526567011169837232}
-  m_stoppingDistance: 1.5
+  m_EnemyName: 'Boss '
+  m_scoreGainedOnDeath: 200
+  m_stoppingDistance: 5
+  summoner: {fileID: 0}
   m_enemyToSummonOnPhase1: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
     type: 3}
   m_enemyToSummonOnPhase2: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
@@ -512,6 +513,7 @@ MonoBehaviour:
   m_enemyCountToSummonOnPhase2: 2
   m_minSpecialAttackHitCount: 1
   m_maxSpecialAttackHitCount: 5
+  summonedEnemies: []
   m_aoeRange: 5
   m_aoeDamage: 5
   m_spikesTimerPrefab: {fileID: 5118575594556964627, guid: 70112ab844c19c14488c7888a152a939,
@@ -540,7 +542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7526567011720164337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.764, z: 0}
+  m_LocalPosition: {x: 0.63, y: 0.764, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7526567011169837237}

@@ -231,11 +231,12 @@ MonoBehaviour:
   heldObject: {fileID: 0}
   m_collider: {fileID: 1367980713578889253}
   m_agent: {fileID: 1494901536624554734}
-  m_EnemyName: Enemy
+  m_EnemyName: Summoner
   m_scoreGainedOnDeath: 200
+  m_stoppingDistance: 7
+  summoner: {fileID: 0}
   m_EnemyToSummon: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
     type: 3}
-  m_summoningRange: 6
 --- !u!1 &1964449394778713345
 GameObject:
   m_ObjectHideFlags: 0

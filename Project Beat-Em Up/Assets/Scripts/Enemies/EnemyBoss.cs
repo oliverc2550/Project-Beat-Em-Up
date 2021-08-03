@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 
 
@@ -27,17 +28,18 @@ public class EnemyBoss : Enemy
     private bool m_phase2Entered = false;
     protected bool m_isChanneling = false;
 
+    public List<Enemy> summonedEnemies = new List<Enemy>();
+
 
     protected override void Start()
     {
         base.Start();
-        PlayPickedAttack(1);
     }
 
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
-        
+
         if (IcurrentHealth / ImaxHealth < 0.75f && !m_enemiesFromPhase1Summoned)
         {
             SummonEnemies(m_enemyToSummonOnPhase1, m_enemyCountToSummonOnPhase1);
@@ -47,12 +49,15 @@ public class EnemyBoss : Enemy
         {
             m_phase2Entered = true;
             GetComponentInChildren<EnemyUI>().fillImage.color = new Color(0, 154, 255);
+            transform.DOScale(new Vector3(4.5f,4.5f,4.5f), 2);
         }
     }
 
 
     protected override void AttackEffects(GameObject gameObject)
     {
+        Debug.Log("AttackEffects");
+
         base.AttackEffects(gameObject);
         if (m_phase2Entered)
         {
@@ -97,10 +102,19 @@ public class EnemyBoss : Enemy
 
     public void SummonEnemies(Enemy enemyToSummon, int amount)
     {
-            for (int i = 0; i < amount; i++)
-            {
-                Instantiate(enemyToSummon, transform.position, Quaternion.identity);
-            }
+        for (int i = 0; i < amount; i++)
+        {
+            float xPos;
+            float zPos;
+            xPos = UnityEngine.Random.value * i + transform.position.x;
+            zPos = UnityEngine.Random.value * i + transform.position.z;
+
+            Enemy enemy = Instantiate(enemyToSummon, new Vector3(xPos, transform.position.y, zPos), Quaternion.identity);
+
+            //Every time when an enemy is summoned, set the boss to be a sumoner
+            enemy.summoner = this;
+            summonedEnemies.Add(enemy);
+        }
     }
     protected virtual void PlayPickedAttack(int attackToPlay)
     {

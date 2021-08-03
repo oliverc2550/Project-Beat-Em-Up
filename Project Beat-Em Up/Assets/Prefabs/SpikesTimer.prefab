@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5861248377608483300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4233513100516791664}
   m_Father: {fileID: 0}
@@ -112,8 +112,8 @@ MonoBehaviour:
   m_throwDuration: 1.5
   m_spikesPrefab: {fileID: 1349553830625927118, guid: e11b215fb2862e44e9fb7ca7fffc3d9e,
     type: 3}
-  m_minZposForSpikesTimer: -0.5
-  m_maxZposForSpikesTimer: -7
+  m_minZposForSpikesTimer: -7
+  m_maxZposForSpikesTimer: -23
   m_minXposForSpikesTimer: -4
   m_maxXposForSpikesTimer: 4
   allTimers: []
@@ -143,14 +143,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6828320584835576929}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.521}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 194678481001239740}
   m_Father: {fileID: 502621230916809090}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.67}

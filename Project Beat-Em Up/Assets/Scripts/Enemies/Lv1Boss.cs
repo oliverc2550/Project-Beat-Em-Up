@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
 /*Inital Script created by Thea
  */
 
@@ -18,10 +20,13 @@ public class Lv1Boss : EnemyBoss
 
     protected override void PlayPickedAttack(int attackToPlay)
     {
+        Debug.Log("PlayPicked attack");
+
         base.PlayPickedAttack(attackToPlay);
 
         if (attackToPlay == (int)BossAttacks.Summoning)
         {
+            SetEnemyState(EnemyState.Idle);
             SummonEnemies(m_enemyToSummonOnPhase2, m_enemyCountToSummonOnPhase2);
             //becomes invulnerable while enemies are attacking
         }
@@ -44,7 +49,17 @@ public class Lv1Boss : EnemyBoss
         {
             //TODO: replace this with animation 
             m_animator.SetTrigger("Jump");
+            transform.DOShakeScale(1);
             UseAreaOfEffect(m_aoeRange, m_aoeDamage);
         }
     }
-}
+
+    public override void OnTakeDamage(float damage)
+    {
+        base.OnTakeDamage(damage);
+        if (m_currentState == EnemyState.Idle)
+        {
+            m_currentState = EnemyState.Chase;
+        }
+    }
+    }

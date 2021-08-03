@@ -287,12 +287,12 @@ MonoBehaviour:
   m_interactPoint: {fileID: 9101316655204151048}
   m_normalAttackPoint: {fileID: 9101316655204151048}
   m_specialAttackPoint: {fileID: 9101316655204151048}
-  m_maxHealth: 40
+  m_maxHealth: 10
   m_movementSpeed: 3.5
   m_jumpForce: 25
   m_pickupRange: 1.25
   m_normalAttackRange: 1.25
-  m_normalAttackDamage: 5
+  m_normalAttackDamage: 1
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
   m_pickupLayer:
@@ -309,8 +309,10 @@ MonoBehaviour:
   heldObject: {fileID: 0}
   m_collider: {fileID: 574648680}
   m_agent: {fileID: 9101316655266976780}
-  m_EnemyName: Enemy
+  m_EnemyName: Minion
   m_scoreGainedOnDeath: 200
+  m_stoppingDistance: 1.9
+  summoner: {fileID: 0}
 --- !u!136 &574648680
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -321,7 +323,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2
+  m_Radius: 1.8
   m_Height: 8.5
   m_Direction: 1
   m_Center: {x: 0, y: 4, z: -0}

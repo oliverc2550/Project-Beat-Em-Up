@@ -44,7 +44,7 @@ public class SpikesTimer : MonoBehaviour
         float zPos = Random.Range(m_minZposForSpikesTimer, m_maxZposForSpikesTimer);
         float xPos = Random.Range(m_minXposForSpikesTimer, m_maxXposForSpikesTimer);
 
-        transform.DOJump(new Vector3(transform.position.x  + xPos + direction.x, transform.position.y - 0.3f + 0.5f, zPos), 1, 1, m_throwDuration);
+        transform.DOJump(new Vector3(transform.position.x  + xPos + direction.x, transform.position.y + 0.5f, zPos), 1, 1, m_throwDuration);
     }
 
     private void OnTimerComplete()
@@ -54,8 +54,8 @@ public class SpikesTimer : MonoBehaviour
 
         if (allTimers.Count == 0)
         {
-            GameObject spikes = Instantiate(m_spikesPrefab, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
-            spikes.transform.DOMoveY(0f, 0.5f).onComplete = () =>
+            GameObject spikes = Instantiate(m_spikesPrefab, new Vector3(transform.position.x, transform.position.y-1, transform.position.z), Quaternion.identity);
+            spikes.transform.DOMoveY(1f, 0.5f).onComplete = () =>
             {
                 spikes.transform.DOMoveY(-1, 0.5f);
                 

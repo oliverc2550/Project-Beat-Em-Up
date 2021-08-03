@@ -13,11 +13,13 @@ public class Enemy : CombatandMovement
 
     [SerializeField] private string m_EnemyName;
     [SerializeField] private int m_scoreGainedOnDeath = 200;
-    protected float m_stoppingDistance;
+    [SerializeField] float m_stoppingDistance;
+
+    public EnemyBoss summoner;
 
     EnemyUI m_enemyUI;
     Transform m_target;
-    EnemyState m_currentState;
+    protected EnemyState m_currentState;
 
     protected override void Start()
     {
@@ -27,7 +29,6 @@ public class Enemy : CombatandMovement
         m_enemyUI = GetComponentInChildren<EnemyUI>();
         m_enemyUI.SetEnemyNameUI(m_EnemyName);
 
-        m_stoppingDistance = m_collider.radius;
     }
 
     protected virtual void Update()
@@ -127,6 +128,18 @@ public class Enemy : CombatandMovement
         FindObjectOfType<EnemySpawner>().RemoveEnemy(this);
         FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnDeath);
         base.Die();
+
+        //Every time when enemy dies it checks if it has summoner, if it has it sets the summoner's state to chase. For example when the boss summons an enemy, the boss
+        //becomes a summoner of this enemy so that when that enemy is killed, the boss is switching to a different state
+        if (summoner != null)
+        {
+            summoner.summonedEnemies.Remove(this);
+
+            if (summoner.summonedEnemies.Count == 0)
+            {
+                summoner.SetEnemyState(EnemyState.Chase);
+            }
+        }
     }
 }
 

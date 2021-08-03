@@ -25,7 +25,8 @@ using UnityEngine;
  * 09/07/21 - Oliver - Added reference to the UIController Script. Slightly refactored the Attack() Method to reduce some duplicate code as well as add in functionality to update newly
  * created Healthbars. Added ranges to all of the attack related properties to assist with designer ease of use.
  * 13/07/21 - Oliver - Added in functionality for PickupController within the Interact() method. Added in m_invulnerable and m_damageModifier to work with PickupController.
- * 14/07/21 Thea - Edited LookAtDirection to flip sprite renderer instead of changing the scale, as we don't use weapons anymore and it was flipping the enemy ui on top of them.
+ * 14/07/21 - Thea - Edited LookAtDirection to flip sprite renderer instead of changing the scale, as we don't use weapons anymore and it was flipping the enemy ui on top of them.
+ * 1/08/2 - Thea - Dynamically changing the position of the attack point when the sprite is flipped
  */
 
 public class CombatandMovement : MonoBehaviour, IDamagable

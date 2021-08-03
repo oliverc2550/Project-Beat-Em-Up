@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 2102965868339181093}
-  m_collider: {fileID: 4047494675808497159}
   m_rigidbody: {fileID: 2102965868339181095}
   m_spriteRenderer: {fileID: 2102965868339181090}
   m_interactPoint: {fileID: 2102965868858434919}
@@ -198,10 +197,12 @@ MonoBehaviour:
   m_invulnerable: 0
   m_damageModifier: 1
   heldObject: {fileID: 0}
-  m_EnemyName: Enemy
-  m_scoreGainedOnDeath: 200
+  m_collider: {fileID: 4047494675808497159}
   m_agent: {fileID: 2102965868339181089}
+  m_EnemyName: Tank
+  m_scoreGainedOnDeath: 200
   m_stoppingDistance: 1.5
+  summoner: {fileID: 0}
   m_chanceToUseAreaOfEffect: 30
   m_aoeRange: 0
   m_aoeDamage: 0
