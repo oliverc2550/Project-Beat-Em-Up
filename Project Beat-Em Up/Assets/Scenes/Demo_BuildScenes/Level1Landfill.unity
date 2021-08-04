@@ -20955,7 +20955,7 @@ PrefabInstance:
     - target: {fileID: 5379232431789662808, guid: b45b8b5035903bd468a8fa63be654b88,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6911124758560781166, guid: b45b8b5035903bd468a8fa63be654b88,
         type: 3}
@@ -23406,25 +23406,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 20, y: 4, z: 6}
   m_Center: {x: 0, y: 2, z: 1.5}
---- !u!114 &1336438933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336438930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba83967b8f549fd4586bac1add7f4af8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemySpawnData:
-    basicEnemiesToSpawnCount: 0
-    thiefEnemiesToSpawnCount: 0
-    summonerEnemiesToSpawnCount: 0
-    tankEnemiesToSpawnCount: 5
-    bossEnemiesToSpawnCount: 0
-    spawnDirection: 0
 --- !u!224 &1346819045 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22467092, guid: 92872a68508b8eb4fb1fbc562eca973a,
@@ -31991,7 +31972,7 @@ PrefabInstance:
     - target: {fileID: 7526567011169837234, guid: 7fe5415d0f24369439d55f1c5582959e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7526567011169837237, guid: 7fe5415d0f24369439d55f1c5582959e,
         type: 3}
@@ -38166,6 +38147,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 966030204255589209, guid: a14d50be7edbaec42a9a35d370e7c079,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2942073316582431483, guid: 627fe4e5a1010354c99676340dc83d6a,
+        type: 3}
     - target: {fileID: 966030204255589211, guid: a14d50be7edbaec42a9a35d370e7c079,
         type: 3}
       propertyPath: m_Name
@@ -38176,6 +38163,11 @@ PrefabInstance:
       propertyPath: m_uiController
       value: 
       objectReference: {fileID: 77011701}
+    - target: {fileID: 966030204255589214, guid: a14d50be7edbaec42a9a35d370e7c079,
+        type: 3}
+      propertyPath: m_movementSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 966030204255589221, guid: a14d50be7edbaec42a9a35d370e7c079,
         type: 3}
       propertyPath: m_Size.x
