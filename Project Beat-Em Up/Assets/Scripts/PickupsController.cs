@@ -7,7 +7,7 @@ using UnityEngine;
 /*Inital Script created by Oliver (13/07/21)
  */
 
-public enum PickupItems { HealthGain, ChargeGain, ScoreIncrease, DamageIncrease, Invulnerability }
+public enum PickupItems { HealthGain, ChargeGain, ScoreIncrease, Invulnerability }
 public class PickupsController : MonoBehaviour
 {
     private PickupItems m_pickupItems;
@@ -21,15 +21,12 @@ public class PickupsController : MonoBehaviour
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] private Sprite m_scorePickupSprite;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
-    [SerializeField] private Sprite m_damgeIncreaseSprite;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] private Sprite m_invulnerabilitySprite;
 
     [Header("Settings")]
     [Range(15, 65)] public float m_healthPickupAmout;
     [Range(5, 45)] public float m_chargePickupAmout;
     [Range(10, 150)] public float m_scorePickupAmout;
-    [Range(2, 4)] public float m_damgeIncreaseMultiplier;
 
     private PickupItems GetRandomItem()
     {
@@ -53,10 +50,6 @@ public class PickupsController : MonoBehaviour
                 m_spriteRenderer.sprite = m_scorePickupSprite;
                 break;
 
-            case PickupItems.DamageIncrease:
-                m_spriteRenderer.sprite = m_damgeIncreaseSprite;
-                break;
-
             case PickupItems.Invulnerability:
                 m_spriteRenderer.sprite = m_invulnerabilitySprite;
                 break;
@@ -78,10 +71,6 @@ public class PickupsController : MonoBehaviour
             case PickupItems.ScoreIncrease:
                 //Increase score amount
                 Debug.Log("Score increases by " + m_scorePickupAmout);
-                break;
-
-            case PickupItems.DamageIncrease:
-                gameObject.GetComponent<CombatandMovement>().m_damageModifier = 2f;
                 break;
 
             case PickupItems.Invulnerability:

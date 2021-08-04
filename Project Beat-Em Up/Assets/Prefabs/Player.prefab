@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966030203991592276}
   m_Layer: 0
-  m_Name: NormalAttackPoint
+  m_Name: MeleeAttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966030203991592277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.344, y: 6.107, z: 0}
+  m_LocalPosition: {x: 2.7, y: 6.107, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966030204255589208}
@@ -96,7 +96,6 @@ Transform:
   m_Children:
   - {fileID: 966030203843406427}
   - {fileID: 966030203991592276}
-  - {fileID: 966030205310703765}
   - {fileID: 966030204522857734}
   - {fileID: 3093017587084126925}
   - {fileID: 3093017588160463991}
@@ -142,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: -1422993187
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2579399847438272672, guid: 84ef44d7c3290974d9a590d011d06626,
+  m_Sprite: {fileID: 2942073316582431483, guid: 627fe4e5a1010354c99676340dc83d6a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -182,12 +181,12 @@ NavMeshObstacle:
   m_GameObject: {fileID: 966030204255589211}
   m_Enabled: 1
   serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.4, y: 4.25, z: 1.4}
+  m_Shape: 0
+  m_Extents: {x: 2, y: 4.25, z: 2}
   m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 4.15, z: 0}
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 4.2, z: 0}
   m_TimeToStationary: 0.5
 --- !u!65 &966030204255589221
 BoxCollider:
@@ -200,7 +199,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8, y: 8.5, z: 2.8}
+  m_Size: {x: 3, y: 8.5, z: 0.67}
   m_Center: {x: 0, y: 4.15, z: 0}
 --- !u!54 &966030204255589215
 Rigidbody:
@@ -235,14 +234,14 @@ MonoBehaviour:
   m_spriteRenderer: {fileID: 966030204255589209}
   m_interactPoint: {fileID: 966030203843406427}
   m_normalAttackPoint: {fileID: 966030203991592276}
-  m_specialAttackPoint: {fileID: 966030205310703765}
+  m_specialAttackPoint: {fileID: 966030203991592276}
   m_maxHealth: 100
-  m_movementSpeed: 6
+  m_movementSpeed: 7
   m_jumpForce: 75
   m_pickupRange: 1.25
-  m_normalAttackRange: 0.55
+  m_normalAttackRange: 1.5
   m_normalAttackDamage: 10
-  m_specialAttackRange: 0.65
+  m_specialAttackRange: 1.5
   m_specialAttackDamage: 17.5
   m_pickupLayer:
     serializedVersion: 2
@@ -259,6 +258,9 @@ MonoBehaviour:
   m_playerInput: {fileID: 966030204255589212}
   m_collider: {fileID: 966030204255589221}
   m_uiController: {fileID: 0}
+  m_chargedAttackPoint: {fileID: 966030204522857734}
+  m_chargedAttackRange: 1
+  m_chargedAttackDamage: 25
   m_maxCharge: 75
   minimumChargeLevel: 25
   chargeGain: 2.5
@@ -424,37 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966030204522857735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.595, y: 6.254, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 966030204255589208}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &966030205310703766
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 966030205310703765}
-  m_Layer: 0
-  m_Name: SpecialAttackPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &966030205310703765
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966030205310703766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.344, y: 6.107, z: 0}
+  m_LocalPosition: {x: 3.53, y: 6.526, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966030204255589208}
@@ -489,7 +461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966030204255589208}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &3093017587084126924
 Light:
@@ -581,7 +553,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966030204255589208}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &3093017588160463990
 Light:

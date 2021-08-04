@@ -31972,7 +31972,7 @@ PrefabInstance:
     - target: {fileID: 7526567011169837234, guid: 7fe5415d0f24369439d55f1c5582959e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7526567011169837237, guid: 7fe5415d0f24369439d55f1c5582959e,
         type: 3}
@@ -38147,12 +38147,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 966030204255589209, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2942073316582431483, guid: 627fe4e5a1010354c99676340dc83d6a,
-        type: 3}
     - target: {fileID: 966030204255589211, guid: a14d50be7edbaec42a9a35d370e7c079,
         type: 3}
       propertyPath: m_Name
@@ -38163,56 +38157,6 @@ PrefabInstance:
       propertyPath: m_uiController
       value: 
       objectReference: {fileID: 77011701}
-    - target: {fileID: 966030204255589214, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_movementSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 966030204255589221, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 966030204255589221, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684746404165231767, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Carve
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684746404165231767, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Shape
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684746404165231767, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 4.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684746404165231767, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Extents.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684746404165231767, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Extents.y
-      value: 4.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684746404165231767, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_Extents.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684746404165231767, guid: a14d50be7edbaec42a9a35d370e7c079,
-        type: 3}
-      propertyPath: m_CarveOnlyStationary
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a14d50be7edbaec42a9a35d370e7c079, type: 3}
 --- !u!1001 &3166600748440122140
@@ -38496,7 +38440,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_invulnerable: 0
-  m_damageModifier: 1
   heldObject: {fileID: 0}
   m_EnemyName: Enemy
   m_scoreGainedOnDeath: 200

@@ -56,7 +56,6 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [SerializeField] [Range(0, 10)] protected float m_specialAttackRange = 0.75f;
     [SerializeField] [Range(0, 65)] protected float m_specialAttackDamage = 2.0f;
     [SerializeField] protected LayerMask m_pickupLayer;
-    //[SerializeField] protected string m_targetTag;
     [SerializeField] protected LayerMask m_targetLayer;
     [SerializeField] protected LayerMask m_collisionLayer;
     protected bool m_holdingObj;
@@ -64,7 +63,6 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     protected bool m_specialAttackActive;
     protected bool m_isBlocking;
     [HideInInspector] public bool m_invulnerable;
-    [HideInInspector] public float m_damageModifier = 1f;
 
     private float m_normalAttackPointXpos;
     private Vector3 m_startScale;
@@ -173,17 +171,17 @@ public class CombatandMovement : MonoBehaviour, IDamagable
 
     }
 
-    protected void Attack(Transform attackPoint, float attackRange, /*string targetTag,*/ LayerMask targetLayer, float attackDamage, float damageModifier)
+    protected void Attack(Transform attackPoint, float attackRange, /*string targetTag,*/ LayerMask targetLayer, float attackDamage)
     {
         Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, targetLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
         {
-            Debug.Log("Dealt " + attackDamage + " to " + nearbyObject.gameObject);
             // Checking if the nearby objects have damageable interface. If they do, they receive damage.
             IDamagable damagableTarget = nearbyObject.gameObject.GetComponent<IDamagable>();
             if (damagableTarget != null)
             {
-                damagableTarget.TakeDamage(attackDamage * damageModifier);
+                damagableTarget.TakeDamage(attackDamage);
+                Debug.Log("Dealt " + attackDamage + " to " + damagableTarget);
                 AttackEffects(nearbyObject.gameObject);
                 if (targetLayer == LayerMask.GetMask("Player"))
                 {
@@ -193,28 +191,28 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         }
     }
 
-    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, /*string targetTag, */LayerMask enemyLayer, float normalAttackDamage, float damageModifier)
+    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, LayerMask enemyLayer, float normalAttackDamage)
     {
        
-        Attack(normalAttackPoint, normalAttackRange,/* targetTag,*/ enemyLayer, normalAttackDamage, damageModifier);
+        Attack(normalAttackPoint, normalAttackRange, enemyLayer, normalAttackDamage);
     }
 
-    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, /*string targetTag,*/ LayerMask enemyLayer, float specialAttackDamage, float damageModifier)
+    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, LayerMask enemyLayer, float specialAttackDamage)
     {
         Debug.Log("Special Attack");
-        Attack(specialAttackPoint, specialAttackRange,/* targetTag,*/ enemyLayer, specialAttackDamage, damageModifier);
+        Attack(specialAttackPoint, specialAttackRange, enemyLayer, specialAttackDamage);
     }
 
     //Following Methods needed due to limitations with Unity's Animation Events. Normal/SpecialAttack() have to be wrapped in a method to to the number of parameters they need.
     //SetNormal/SpecialAttackBool() methods needed as Unity Animation events are unable to directly toggle bools.
     protected void NormalAttackAnimEvent()
     {
-        NormalAttack(m_normalAttackPoint, m_normalAttackRange,/* m_targetTag,*/ m_targetLayer, m_normalAttackDamage, m_damageModifier);
+        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_targetLayer, m_normalAttackDamage);
     }
 
     protected void SpecialAttackAnimEvent()
     {
-        SpecialAttack(m_specialAttackPoint, m_specialAttackRange,/* m_targetTag,*/ m_targetLayer, m_specialAttackDamage, m_damageModifier);
+        SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_targetLayer, m_specialAttackDamage);
     }
 
     protected void SetNormalAttackBool()

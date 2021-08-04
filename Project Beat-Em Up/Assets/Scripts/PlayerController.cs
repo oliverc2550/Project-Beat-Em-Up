@@ -35,6 +35,10 @@ public class PlayerController : CombatandMovement
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected UIController m_uiController;
     [Header("Player Settings ")]
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected Transform m_chargedAttackPoint;
+    [SerializeField] [Range(0, 10)] protected float m_chargedAttackRange = 1.0f;
+    [SerializeField] [Range(0, 65)] protected float m_chargedAttackDamage = 25.0f;
     [SerializeField] protected float m_maxCharge = 75f;
     [SerializeField] protected float minimumChargeLevel = 25f;
     [SerializeField] protected float chargeGain = 0.5f;
@@ -87,20 +91,10 @@ public class PlayerController : CombatandMovement
         }
     }
 
-    protected override void AttackEffects(GameObject gameObject)
-    {
-        if(m_currentCharge >= minimumChargeLevel)
-        {
-            gameObject.GetComponent<IDamagable>().TakeDamage(5f);
-            m_currentCharge -= attackchargeDrain;
-            m_uiController.SetChargeMeterPercent(m_currentCharge / m_maxCharge);
-            Debug.Log(gameObject + " takes 5 shock damage");
-        }
-    }
-
     protected void ChargedAttack()
     {
         Debug.Log("ChargedAttack");
+        Attack(m_chargedAttackPoint, m_chargedAttackRange, m_targetLayer, m_chargedAttackDamage);
         m_currentCharge -= m_maxCharge;
     }
 
@@ -121,7 +115,7 @@ public class PlayerController : CombatandMovement
 
     public void OnNormalAttack(InputAction.CallbackContext value)
     {
-        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking != true)
         {
             m_animator.SetTrigger("NormalAttack");
         }
@@ -129,15 +123,17 @@ public class PlayerController : CombatandMovement
 
     public void OnSpecialAttack(InputAction.CallbackContext value)
     {
-        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking != true && m_currentCharge >= attackchargeDrain)
         {
             m_animator.SetTrigger("SpecialAttack");
+            m_currentCharge -= attackchargeDrain;
+            m_uiController.SetChargeMeterPercent(m_currentCharge / m_maxCharge);
         }
     }
 
     public void OnChargedAttack(InputAction.CallbackContext value)
     {
-        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_currentCharge >= m_maxCharge)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking != true && m_currentCharge >= m_maxCharge)
         {
             m_animator.SetTrigger("ChargedAttack");
         }
@@ -154,6 +150,7 @@ public class PlayerController : CombatandMovement
         }
         else if (m_isBlocking != true)
         {
+            Debug.Log("Not Blocking");
             m_animator.SetBool("Block", false);
         }
     }
