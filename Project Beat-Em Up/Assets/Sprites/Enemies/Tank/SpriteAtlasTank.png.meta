@@ -1,0 +1,1186 @@
+fileFormatVersion: 2
+guid: 270b2264c2fde0f439dd3855f395218a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1956781570723435619
+    second: SpriteAtlasTank_0
+  - first:
+      213: -3587958968540367293
+    second: SpriteAtlasTank_1
+  - first:
+      213: -188296695193419375
+    second: SpriteAtlasTank_2
+  - first:
+      213: 8298220912243479280
+    second: SpriteAtlasTank_3
+  - first:
+      213: 2508357627084561215
+    second: SpriteAtlasTank_4
+  - first:
+      213: 5176009267337341090
+    second: SpriteAtlasTank_5
+  - first:
+      213: -8891677127750180292
+    second: SpriteAtlasTank_6
+  - first:
+      213: 2559837859037513041
+    second: SpriteAtlasTank_7
+  - first:
+      213: -121284753902830412
+    second: SpriteAtlasTank_7
+  - first:
+      213: -1560246074909217008
+    second: SpriteAtlasTank_9
+  - first:
+      213: 2796267296151382347
+    second: SpriteAtlasTank_16
+  - first:
+      213: 5817904436119955963
+    second: SpriteAtlasTank_17
+  - first:
+      213: -2521587740163623707
+    second: SpriteAtlasTank_18
+  - first:
+      213: -5497147199138290736
+    second: SpriteAtlasTank_19
+  - first:
+      213: 5127185449989702623
+    second: SpriteAtlasTank_20
+  - first:
+      213: 6170790336827586784
+    second: SpriteAtlasTank_21
+  - first:
+      213: 3304470496999007863
+    second: SpriteAtlasTank_22
+  - first:
+      213: 1936345459065955784
+    second: SpriteAtlasTank_23
+  - first:
+      213: 3069086146272012100
+    second: SpriteAtlasTank_24
+  - first:
+      213: -2599728261011870307
+    second: SpriteAtlasTank_25
+  - first:
+      213: 335147417332179959
+    second: SpriteAtlasTank_26
+  - first:
+      213: 3206371082505342740
+    second: SpriteAtlasTank_27
+  - first:
+      213: -8749484193203110639
+    second: SpriteAtlasTank_28
+  - first:
+      213: -5360632394667674428
+    second: SpriteAtlasTank_29
+  - first:
+      213: 1421272359814851183
+    second: SpriteAtlasTank_30
+  - first:
+      213: -1659477530973294882
+    second: SpriteAtlasTank_31
+  - first:
+      213: 4690407420173036738
+    second: SpriteAtlasTank_32
+  - first:
+      213: 4579204598162619140
+    second: SpriteAtlasTank_33
+  - first:
+      213: 3562996516002303565
+    second: SpriteAtlasTank_34
+  - first:
+      213: 4825837690120209264
+    second: SpriteAtlasTank_35
+  - first:
+      213: -8415110236613639330
+    second: SpriteAtlasTank_36
+  - first:
+      213: 9020571852832305594
+    second: SpriteAtlasTank_37
+  - first:
+      213: -8814982820914404560
+    second: SpriteAtlasTank_38
+  - first:
+      213: -9038962090897104505
+    second: SpriteAtlasTank_39
+  - first:
+      213: -5799644570632808817
+    second: SpriteAtlasTank_40
+  - first:
+      213: -4147458576439870553
+    second: SpriteAtlasTank_41
+  - first:
+      213: 7843744128377286494
+    second: SpriteAtlasTank_42
+  - first:
+      213: 6678216629124330013
+    second: SpriteAtlasTank_43
+  - first:
+      213: -1574765236799407316
+    second: SpriteAtlasTank_44
+  - first:
+      213: 6814984014303367046
+    second: SpriteAtlasTank_45
+  - first:
+      213: -6728722271569297935
+    second: SpriteAtlasTank_46
+  - first:
+      213: -4132318305805617091
+    second: SpriteAtlasTank_47
+  - first:
+      213: -8103242185070666638
+    second: SpriteAtlasTank_48
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteAtlasTank_0
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 6293
+        width: 432
+        height: 913
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9baff5678d18d4e0800000000000000
+      internalID: -1956781570723435619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_1
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 6293
+        width: 741
+        height: 825
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3467973f352053ec0800000000000000
+      internalID: -3587958968540367293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_2
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 6293
+        width: 704
+        height: 926
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191cd924729036df0800000000000000
+      internalID: -188296695193419375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_3
+      rect:
+        serializedVersion: 2
+        x: 4003
+        y: 6293
+        width: 772
+        height: 933
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f29dfd24f3392370800000000000000
+      internalID: 8298220912243479280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_4
+      rect:
+        serializedVersion: 2
+        x: 5297
+        y: 6293
+        width: 766
+        height: 935
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b5404d8f97fc220800000000000000
+      internalID: 2508357627084561215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_5
+      rect:
+        serializedVersion: 2
+        x: 6579
+        y: 6293
+        width: 761
+        height: 935
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8a5c54101e4d740800000000000000
+      internalID: 5176009267337341090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_6
+      rect:
+        serializedVersion: 2
+        x: 7858
+        y: 6293
+        width: 746
+        height: 935
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c322cfe23ca6a9480800000000000000
+      internalID: -8891677127750180292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_7
+      rect:
+        serializedVersion: 2
+        x: 9139
+        y: 6292
+        width: 736
+        height: 939
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155078e58fe568320800000000000000
+      internalID: 2559837859037513041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_8
+      rect:
+        serializedVersion: 2
+        x: 10413
+        y: 6292
+        width: 705
+        height: 935
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc73fea82c115ef0800000000000000
+      internalID: -121284753902830412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_9
+      rect:
+        serializedVersion: 2
+        x: 11698
+        y: 6292
+        width: 702
+        height: 937
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fa6de1674e85ae0800000000000000
+      internalID: -1560246074909217008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_16
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 5235
+        width: 329
+        height: 918
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4925246a465ec620800000000000000
+      internalID: 2796267296151382347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_17
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 5235
+        width: 327
+        height: 918
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9691492495db050800000000000000
+      internalID: 5817904436119955963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_18
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 5234
+        width: 327
+        height: 917
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4319d6f45810dd0800000000000000
+      internalID: -2521587740163623707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_19
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 5235
+        width: 335
+        height: 918
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3245d5fb536b3b0800000000000000
+      internalID: -5497147199138290736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_20
+      rect:
+        serializedVersion: 2
+        x: 5431
+        y: 5234
+        width: 332
+        height: 921
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd30034700c672740800000000000000
+      internalID: 5127185449989702623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_21
+      rect:
+        serializedVersion: 2
+        x: 6714
+        y: 5234
+        width: 330
+        height: 922
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8750afd1d03a550800000000000000
+      internalID: 6170790336827586784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_22
+      rect:
+        serializedVersion: 2
+        x: 8006
+        y: 5234
+        width: 322
+        height: 921
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7766260c866dbdd20800000000000000
+      internalID: 3304470496999007863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_23
+      rect:
+        serializedVersion: 2
+        x: 9287
+        y: 5232
+        width: 328
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c521129fe74fda10800000000000000
+      internalID: 1936345459065955784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_24
+      rect:
+        serializedVersion: 2
+        x: 10569
+        y: 5234
+        width: 320
+        height: 923
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447ad9dd695979a20800000000000000
+      internalID: 3069086146272012100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_25
+      rect:
+        serializedVersion: 2
+        x: 11863
+        y: 5232
+        width: 315
+        height: 923
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9de7d9abe8ebebd0800000000000000
+      internalID: -2599728261011870307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_26
+      rect:
+        serializedVersion: 2
+        x: 13139
+        y: 5235
+        width: 319
+        height: 918
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f36975eccea6a400800000000000000
+      internalID: 335147417332179959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_27
+      rect:
+        serializedVersion: 2
+        x: 14427
+        y: 5232
+        width: 307
+        height: 921
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fc0dee2815f7c20800000000000000
+      internalID: 3206371082505342740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 4160
+        width: 523
+        height: 864
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11dbb38ab76939680800000000000000
+      internalID: -8749484193203110639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_29
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 4166
+        width: 435
+        height: 940
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4b1682d353b95b0800000000000000
+      internalID: -5360632394667674428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_30
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 4166
+        width: 435
+        height: 940
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a68d75eaf59b310800000000000000
+      internalID: 1421272359814851183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_31
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 4166
+        width: 435
+        height: 940
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede28955af958f8e0800000000000000
+      internalID: -1659477530973294882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_32
+      rect:
+        serializedVersion: 2
+        x: 5398
+        y: 4168
+        width: 435
+        height: 938
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc2543a2bca71140800000000000000
+      internalID: 4690407420173036738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_33
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 3113
+        width: 719
+        height: 868
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b7153025a9c8f30800000000000000
+      internalID: 4579204598162619140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_34
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 3115
+        width: 355
+        height: 855
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e8548247e427130800000000000000
+      internalID: 3562996516002303565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_35
+      rect:
+        serializedVersion: 2
+        x: 2768
+        y: 3115
+        width: 742
+        height: 858
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0738e4f8fc1d8f240800000000000000
+      internalID: 4825837690120209264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_36
+      rect:
+        serializedVersion: 2
+        x: 3951
+        y: 3113
+        width: 751
+        height: 844
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5304e033d5873b80800000000000000
+      internalID: -8415110236613639330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_37
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 3120
+        width: 392
+        height: 857
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1f4fe9e428f2d70800000000000000
+      internalID: 9020571852832305594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_38
+      rect:
+        serializedVersion: 2
+        x: 6617
+        y: 3122
+        width: 719
+        height: 846
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033e93204d3eaa580800000000000000
+      internalID: -8814982820914404560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_39
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 2146
+        width: 413
+        height: 920
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7812bd96ed72f8280800000000000000
+      internalID: -9038962090897104505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_40
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 2151
+        width: 402
+        height: 907
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8698e7adf5838fa0800000000000000
+      internalID: -5799644570632808817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_41
+      rect:
+        serializedVersion: 2
+        x: 2862
+        y: 2146
+        width: 400
+        height: 920
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab77ae16644176c0800000000000000
+      internalID: -4147458576439870553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_42
+      rect:
+        serializedVersion: 2
+        x: 4150
+        y: 2144
+        width: 408
+        height: 930
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5febf01ab39adc60800000000000000
+      internalID: 7843744128377286494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_43
+      rect:
+        serializedVersion: 2
+        x: 5465
+        y: 2148
+        width: 330
+        height: 920
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12ff0834aacdac50800000000000000
+      internalID: 6678216629124330013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_44
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1046
+        width: 720
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bffef4c5f452ae0800000000000000
+      internalID: -1574765236799407316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_45
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 1046
+        width: 606
+        height: 825
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f848a8adfa39e50800000000000000
+      internalID: 6814984014303367046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_46
+      rect:
+        serializedVersion: 2
+        x: 2849
+        y: 1046
+        width: 345
+        height: 915
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd3ada8eb6ce92a0800000000000000
+      internalID: -6728722271569297935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_47
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 118
+        width: 691
+        height: 924
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38bc93156e07a6c0800000000000000
+      internalID: -4132318305805617091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlasTank_48
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 115
+        width: 715
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c17ed5a208b8f80800000000000000
+      internalID: -8103242185070666638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0d5fd9cb35da195448d18c84d73af34f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 4c736b536db7aa24e944e342ef3a4ac3, type: 3}
+      name: _Emission
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
