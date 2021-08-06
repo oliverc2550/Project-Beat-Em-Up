@@ -33,8 +33,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_84CC422C: 0.00028
     - Vector1_AC4E1E7E: 0
     - _Opacity: 1
     m_Colors:
-    - Color_723CD87E: {r: 63.999992, g: 0.0000003814697, b: 0, a: 0}
+    - Color_723CD87E: {r: 25.656673, g: 0, b: 63.999992, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

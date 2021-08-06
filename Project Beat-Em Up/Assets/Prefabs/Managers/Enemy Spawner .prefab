@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2786702447250304282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2786702447250304285}
+  - component: {fileID: 2786702447250304284}
+  m_Layer: 0
+  m_Name: 'Enemy Spawner '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2786702447250304285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786702447250304282}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.69, y: -1.46, z: 3.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2786702447250304284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786702447250304282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be94232388c94314482337e993e6b4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BasicEnemy:
+    enemyPrefab: {fileID: 5495421021842980918, guid: 612d23a5c983d8a4f9acead827e43636,
+      type: 3}
+    minSpawnTime: 1
+    maxSpawnTime: 5
+    spawnedEnemies: []
+  ThiefEnemy:
+    enemyPrefab: {fileID: 7262013986928258369, guid: 0feab71bf5b19ca4898f9d8cd1cd3582,
+      type: 3}
+    minSpawnTime: 2
+    maxSpawnTime: 6
+    spawnedEnemies: []
+  SummonerEnemy:
+    enemyPrefab: {fileID: 1494901536624554732, guid: eb78e34429852234b918f55bb640f281,
+      type: 3}
+    minSpawnTime: 3
+    maxSpawnTime: 7
+    spawnedEnemies: []
+  TankEnemy:
+    enemyPrefab: {fileID: 3886622432434536879, guid: 4e3d377efacd169409c94df9a2dfd633,
+      type: 3}
+    minSpawnTime: 4
+    maxSpawnTime: 8
+    spawnedEnemies: []
+  BossEnemy:
+    enemyPrefab: {fileID: 1724877116421483690, guid: 7fe5415d0f24369439d55f1c5582959e,
+      type: 3}
+    minSpawnTime: 1
+    maxSpawnTime: 1
+    spawnedEnemies: []
+  m_leftSpawnPoint: {fileID: 0}
+  m_RightSpawnPoint: {fileID: 0}

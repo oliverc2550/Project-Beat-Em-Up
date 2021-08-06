@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 5455678912817741951, guid: dd94e08f9f95c994d91b2f9f789ffea5,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8509804}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -227,7 +227,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   m_invulnerable: 0
-  m_damageModifier: 1
   heldObject: {fileID: 0}
   m_collider: {fileID: 1367980713578889253}
   m_agent: {fileID: 1494901536624554734}
