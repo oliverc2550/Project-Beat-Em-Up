@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
+using Cinemachine;
 
 //Changelog
 /*Inital Script and movement logic created by Thea (date)
@@ -22,6 +24,7 @@ using UnityEngine.InputSystem;
  * 07/07/21 - Oliver - Moved SetNormalAttackBool(), SetSpecialAttackBool(), SetChargedAttackBool(), NormalAttackAnimEvent(), and SpecialAttackAnimEvent() to CombatandMovement 
  * so that these methods can be called by all inheriting classes via animation events.
  * 09/07/21 - Oliver - Added in the functionality to update the UI Charge Bar.
+ * 09/08/21 - Thea - Gain score and shake the camera when charged attack is used
  */
 
 public class PlayerController : CombatandMovement
@@ -31,12 +34,13 @@ public class PlayerController : CombatandMovement
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected PlayerInput m_playerInput;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] CinemachineVirtualCamera m_playerCamera;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Collider m_collider;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected UIController m_uiController;
     [Header("Player Settings ")]
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
-    [SerializeField] protected Transform m_chargedAttackPoint;
     [SerializeField] [Range(0, 10)] protected float m_chargedAttackRange = 1.0f;
     [SerializeField] [Range(0, 65)] protected float m_chargedAttackDamage = 25.0f;
     [SerializeField] protected float m_maxCharge = 75f;
@@ -94,8 +98,12 @@ public class PlayerController : CombatandMovement
     protected void ChargedAttack()
     {
         Debug.Log("ChargedAttack");
+
         Attack(m_chargedAttackPoint, m_chargedAttackRange, m_targetLayer, m_chargedAttackDamage);
         m_currentCharge -= m_maxCharge;
+
+        FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnChargedAttack);
+        m_playerCamera.transform.DOShakeRotation(1, 3);
     }
 
     //Unity Input Systems Action Callbacks

@@ -479,7 +479,7 @@ MonoBehaviour:
   m_interactPoint: {fileID: 7526567011720164342}
   m_normalAttackPoint: {fileID: 7526567011720164342}
   m_specialAttackPoint: {fileID: 7526567011720164342}
-  m_maxHealth: 39.7
+  m_maxHealth: 100
   m_movementSpeed: 2.5
   m_jumpForce: 0
   m_pickupRange: 1.25
@@ -487,6 +487,8 @@ MonoBehaviour:
   m_normalAttackDamage: 1
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
+  m_scoreGainedOnSpecialAttack: 0
+  m_scoreGainedOnChargedAttack: 0
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -497,12 +499,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_invulnerable: 0
-  m_damageModifier: 1
   heldObject: {fileID: 0}
   m_collider: {fileID: 1527508079}
   m_agent: {fileID: 7526567011169837232}
   m_EnemyName: 'Boss '
   m_scoreGainedOnDeath: 200
+  m_gainChargeOnEnemyDamaged: 5
   m_stoppingDistance: 5
   summoner: {fileID: 0}
   m_enemyToSummonOnPhase1: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
@@ -511,6 +513,7 @@ MonoBehaviour:
     type: 3}
   m_enemyCountToSummonOnPhase1: 2
   m_enemyCountToSummonOnPhase2: 2
+  m_gainedScoreOnBossEnteringPhase2: 50
   m_minSpecialAttackHitCount: 1
   m_maxSpecialAttackHitCount: 5
   summonedEnemies: []

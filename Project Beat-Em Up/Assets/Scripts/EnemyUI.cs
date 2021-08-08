@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Changelog
+/*Inital Script created by Thea
+ */
 public class EnemyUI : MonoBehaviour
 {
     [SerializeField] [Range(0.1f, 5f)] private float hideDelay = 1f;

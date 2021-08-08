@@ -26,7 +26,7 @@ using UnityEngine;
  * created Healthbars. Added ranges to all of the attack related properties to assist with designer ease of use.
  * 13/07/21 - Oliver - Added in functionality for PickupController within the Interact() method. Added in m_invulnerable and m_damageModifier to work with PickupController.
  * 14/07/21 - Thea - Edited LookAtDirection to flip sprite renderer instead of changing the scale, as we don't use weapons anymore and it was flipping the enemy ui on top of them.
- * 1/08/2 - Thea - Dynamically changing the position of the attack point when the sprite is flipped
+ * 1/08/2 - Thea - Dynamically changing the position of the attack point and the charge attack point when the sprite is flipped
  */
 
 public class CombatandMovement : MonoBehaviour, IDamagable
@@ -44,6 +44,8 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [SerializeField] protected Transform m_normalAttackPoint;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Transform m_specialAttackPoint;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected Transform m_chargedAttackPoint;
 
 
     [Header("Settings")]
@@ -55,6 +57,8 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [SerializeField] [Range(0, 50)] protected float m_normalAttackDamage = 1.0f;
     [SerializeField] [Range(0, 10)] protected float m_specialAttackRange = 0.75f;
     [SerializeField] [Range(0, 65)] protected float m_specialAttackDamage = 2.0f;
+    [SerializeField] int m_scoreGainedOnSpecialAttack;
+    [SerializeField] protected int m_scoreGainedOnChargedAttack;
     [SerializeField] protected LayerMask m_pickupLayer;
     [SerializeField] protected LayerMask m_targetLayer;
     [SerializeField] protected LayerMask m_collisionLayer;
@@ -65,6 +69,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [HideInInspector] public bool m_invulnerable;
 
     private float m_normalAttackPointXpos;
+    private float m_chargedAttackPointXpos;
     private Vector3 m_startScale;
 
     public GameObject heldObject;
@@ -89,6 +94,11 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         Iinvulnerable = m_invulnerable;
         m_startScale = transform.localScale;
         m_normalAttackPointXpos = m_normalAttackPoint.localPosition.x;
+
+        if (m_chargedAttackPoint != null)
+        {
+            m_chargedAttackPointXpos = m_chargedAttackPoint.localPosition.x;
+        }
     }
     #region Movement Methods
     protected virtual void Move(Vector3 direction)
@@ -109,6 +119,12 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             m_spriteRenderer.flipX = true;
             m_normalAttackPoint.localPosition = new Vector3(-m_normalAttackPointXpos, m_normalAttackPoint.localPosition.y, m_normalAttackPoint.localPosition.z);
 
+            if (m_chargedAttackPoint != null)
+            {
+                m_chargedAttackPoint.localPosition = new Vector3(-m_chargedAttackPointXpos, m_chargedAttackPoint.localPosition.y, m_chargedAttackPoint.localPosition.z);
+            }
+            
+
             //CharacterScale.x = -m_startScale.x;
             //transform.localScale = CharacterScale;
         }
@@ -117,6 +133,11 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         {
             m_spriteRenderer.flipX = false;
             m_normalAttackPoint.localPosition = new Vector3(m_normalAttackPointXpos, m_normalAttackPoint.localPosition.y, m_normalAttackPoint.localPosition.z);
+
+            if (m_chargedAttackPoint != null)
+            {
+                m_chargedAttackPoint.localPosition = new Vector3(m_chargedAttackPointXpos, m_chargedAttackPoint.localPosition.y, m_chargedAttackPoint.localPosition.z);
+            }
             //CharacterScale.x = m_startScale.x;
             //transform.localScale = CharacterScale;
         }
@@ -201,6 +222,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     {
         Debug.Log("Special Attack");
         Attack(specialAttackPoint, specialAttackRange, enemyLayer, specialAttackDamage);
+        FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnSpecialAttack);
     }
 
     //Following Methods needed due to limitations with Unity's Animation Events. Normal/SpecialAttack() have to be wrapped in a method to to the number of parameters they need.

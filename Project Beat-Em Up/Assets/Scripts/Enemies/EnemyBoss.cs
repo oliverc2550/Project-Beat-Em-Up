@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-
+//Changelog
+/*Inital Script created by Thea
+ */
 
 public class EnemyBoss : Enemy
 {
@@ -15,6 +17,7 @@ public class EnemyBoss : Enemy
     [SerializeField] protected Enemy m_enemyToSummonOnPhase2;
     [SerializeField] private int m_enemyCountToSummonOnPhase1 = 2;
     [SerializeField] protected int m_enemyCountToSummonOnPhase2 = 2;
+    [SerializeField]  int m_gainedScoreOnBossEnteringPhase2 = 50;
 
     [Tooltip("How many basic attacks will be done before the speacial attack is played.")]
     [SerializeField] private int m_minSpecialAttackHitCount = 1;
@@ -48,6 +51,7 @@ public class EnemyBoss : Enemy
         else if (IcurrentHealth / ImaxHealth < 0.5f)
         {
             m_phase2Entered = true;
+            FindObjectOfType<ScoreManager>().AddScore(m_gainedScoreOnBossEnteringPhase2);
             GetComponentInChildren<EnemyUI>().fillImage.color = new Color(0, 154, 255);
             transform.DOScale(new Vector3(4.5f,4.5f,4.5f), 2);
         }

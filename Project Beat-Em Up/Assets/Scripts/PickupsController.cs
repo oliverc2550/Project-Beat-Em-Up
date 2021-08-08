@@ -22,6 +22,7 @@ public class PickupsController : MonoBehaviour
     [SerializeField] private Sprite m_scorePickupSprite;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] private Sprite m_invulnerabilitySprite;
+    [SerializeField] int m_scoreGainedOnItemPicked = 50;
 
     [Header("Settings")]
     [Range(15, 65)] public float m_healthPickupAmout;
@@ -69,7 +70,7 @@ public class PickupsController : MonoBehaviour
                 break;
 
             case PickupItems.ScoreIncrease:
-                //Increase score amount
+                FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnItemPicked);
                 Debug.Log("Score increases by " + m_scorePickupAmout);
                 break;
 

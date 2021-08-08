@@ -184,6 +184,8 @@ MonoBehaviour:
   m_normalAttackDamage: 1
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
+  m_scoreGainedOnSpecialAttack: 0
+  m_scoreGainedOnChargedAttack: 0
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -194,12 +196,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_invulnerable: 0
-  m_damageModifier: 1
   heldObject: {fileID: 0}
   m_collider: {fileID: 5495421021842980912}
   m_agent: {fileID: 5495421021842980919}
   m_EnemyName: Basic Enemy
   m_scoreGainedOnDeath: 200
+  m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 1.5
   summoner: {fileID: 0}
 --- !u!1 &5495421022395503478

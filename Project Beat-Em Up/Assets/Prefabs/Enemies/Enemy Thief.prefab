@@ -216,6 +216,8 @@ MonoBehaviour:
   m_normalAttackDamage: 1
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
+  m_scoreGainedOnSpecialAttack: 0
+  m_scoreGainedOnChargedAttack: 0
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -226,12 +228,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_invulnerable: 0
-  m_damageModifier: 1
   heldObject: {fileID: 0}
   m_collider: {fileID: 3947052346462442082}
   m_agent: {fileID: 7262013986928258368}
   m_EnemyName: Thief
   m_scoreGainedOnDeath: 200
+  m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 1.5
   summoner: {fileID: 0}
   m_ChargeToStealOnHit: 20

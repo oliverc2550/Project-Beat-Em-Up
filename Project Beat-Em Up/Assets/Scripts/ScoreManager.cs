@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Changelog
+/*Inital Script created by Thea
+ */
 public class ScoreManager : MonoBehaviour
 {
     private int m_score = 0;

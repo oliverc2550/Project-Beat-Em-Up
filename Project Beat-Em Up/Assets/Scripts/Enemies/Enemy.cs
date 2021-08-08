@@ -13,6 +13,7 @@ public class Enemy : CombatandMovement
 
     [SerializeField] private string m_EnemyName;
     [SerializeField] private int m_scoreGainedOnDeath = 200;
+    [SerializeField] private int m_gainChargeOnEnemyDamaged = 1;
     [SerializeField] float m_stoppingDistance;
 
     public EnemyBoss summoner;
@@ -116,6 +117,7 @@ public class Enemy : CombatandMovement
         m_animator.SetTrigger("Stun");
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
         Debug.Log("health: " + IcurrentHealth);
+        FindObjectOfType<PlayerController>().m_currentCharge += m_gainChargeOnEnemyDamaged;
     }
 
     protected void SetEnemyState(EnemyState state)
