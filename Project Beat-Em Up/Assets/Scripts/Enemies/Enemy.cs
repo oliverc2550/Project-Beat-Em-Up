@@ -117,7 +117,6 @@ public class Enemy : CombatandMovement
         m_animator.SetTrigger("Stun");
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
         Debug.Log("health: " + IcurrentHealth);
-        FindObjectOfType<PlayerController>().m_currentCharge += m_gainChargeOnEnemyDamaged;
     }
 
     protected void SetEnemyState(EnemyState state)
@@ -136,6 +135,7 @@ public class Enemy : CombatandMovement
         if (summoner != null)
         {
             summoner.summonedEnemies.Remove(this);
+            FindObjectOfType<PlayerController>().m_currentCharge += m_gainChargeOnEnemyDamaged;
 
             if (summoner.summonedEnemies.Count == 0)
             {

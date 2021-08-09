@@ -36,7 +36,7 @@ public class GateOpener : MonoBehaviour
             m_isOpening = true;
             m_hasOpened = true;
 
-            m_playerCamera.transform.DOShakeRotation(m_cameraShakeDuration, 0.5f);
+            m_playerCamera.transform.DOShakeRotation(m_cameraShakeDuration, 0.3f);
             
         }
     }
