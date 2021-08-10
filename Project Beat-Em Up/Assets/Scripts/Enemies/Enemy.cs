@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 
 // Changelog
@@ -15,8 +16,11 @@ public class Enemy : CombatandMovement
     [SerializeField] private int m_scoreGainedOnDeath = 200;
     [SerializeField] private int m_gainChargeOnEnemyDamaged = 1;
     [SerializeField] float m_stoppingDistance;
+    [SerializeField] int m_stunCooldown = 3;
+    bool m_canBeStunned = true;
 
     public EnemyBoss summoner;
+
 
     EnemyUI m_enemyUI;
     Transform m_target;
@@ -111,12 +115,26 @@ public class Enemy : CombatandMovement
         m_target = target;
     }
 
+    IEnumerator StunCooldown()
+    {
+        m_canBeStunned = false;
+        yield return new WaitForSeconds(m_stunCooldown);
+        m_canBeStunned = true;
+    }
+
     public override void OnTakeDamage(float damage)
     {
-        base.OnTakeDamage(damage);
-        m_animator.SetTrigger("Stun");
+        base.OnTakeDamage(damage); 
+        
+        if (!m_animator.GetCurrentAnimatorStateInfo(0).IsName("Stun") && m_canBeStunned)
+        {
+            m_animator.SetTrigger("Stun");
+            StartCoroutine(StunCooldown());
+            Debug.Log("stunned");
+        }
+
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
-        Debug.Log("health: " + IcurrentHealth);
+       // Debug.Log("health: " + IcurrentHealth);
     }
 
     protected void SetEnemyState(EnemyState state)

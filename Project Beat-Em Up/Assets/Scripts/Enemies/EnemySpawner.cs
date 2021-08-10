@@ -32,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform m_leftSpawnPoint;
     [SerializeField] private Transform m_RightSpawnPoint;
 
+    public int enemyCount = 0;
 
     private const float m_minZ = -1.6f;
     private const float m_maxZ = -11.5f;
@@ -75,6 +76,8 @@ public class EnemySpawner : MonoBehaviour
 
     public void RemoveEnemy(Enemy enemy)
     {
+        enemyCount--;
+
         for (int i = 0; i < BasicEnemy.spawnedEnemies.Count; i++)
         {
             if (enemy == BasicEnemy.spawnedEnemies[i])
@@ -113,5 +116,6 @@ public class EnemySpawner : MonoBehaviour
     {
         Enemy enemy = Instantiate(enemyToSpawn.enemyPrefab, position, Quaternion.identity);
         enemyToSpawn.spawnedEnemies.Add(enemy);
+        enemyCount++;
     }
 }

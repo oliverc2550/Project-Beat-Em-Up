@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1745072789653929350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689245525527198331}
+  - component: {fileID: 6527615812411605158}
+  - component: {fileID: 4456238077990907272}
+  - component: {fileID: 1038697677290704907}
+  m_Layer: 10
+  m_Name: Projectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689245525527198331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745072789653929350}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.73, y: 1.6, z: 0}
+  m_LocalScale: {x: 2.9698563, y: 2.107776, z: 2.107776}
+  m_Children: []
+  m_Father: {fileID: 2102965868339181092}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!33 &6527615812411605158
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745072789653929350}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!136 &4456238077990907272
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745072789653929350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1038697677290704907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745072789653929350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3509c159fbc01764b985043aa13b2156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_damageToDeal: 10
 --- !u!1 &2102965868339181091
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,6 +103,7 @@ Transform:
   m_Children:
   - {fileID: 2102965868858434919}
   - {fileID: 7369923923477765268}
+  - {fileID: 1689245525527198331}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -178,7 +247,8 @@ MonoBehaviour:
   m_interactPoint: {fileID: 2102965868858434919}
   m_normalAttackPoint: {fileID: 2102965868858434919}
   m_specialAttackPoint: {fileID: 2102965868858434919}
-  m_maxHealth: 0
+  m_chargedAttackPoint: {fileID: 0}
+  m_maxHealth: 141
   m_movementSpeed: 2.7
   m_jumpForce: 0
   m_pickupRange: 1.25
@@ -186,8 +256,8 @@ MonoBehaviour:
   m_normalAttackDamage: 1
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
-  m_scoreGainedOnSpecialAttack: 0
-  m_scoreGainedOnChargedAttack: 0
+  m_scoreGainedOnSpecialAttack: 10
+  m_scoreGainedOnChargedAttack: 10
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -204,11 +274,10 @@ MonoBehaviour:
   m_EnemyName: Tank
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
-  m_stoppingDistance: 1.5
+  m_stoppingDistance: 4
+  m_stunCooldown: 3
   summoner: {fileID: 0}
-  m_chanceToUseAreaOfEffect: 30
-  m_aoeRange: 0
-  m_aoeDamage: 0
+  m_chanceToThrowProjectile: 30
 --- !u!1 &2102965868858434912
 GameObject:
   m_ObjectHideFlags: 0

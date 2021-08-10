@@ -6,38 +6,38 @@ using Cinemachine;
 
 //Changelog
 /*Inital Script created by Oliver
- * 9.08.2021 - Thea - Shake the camera while the gate is opening
+ * 8.08.2021 - Thea - Shake the camera while the gate is opening
+ * 10.08.2021 - Thea - Opening the gate with DoTween and only if all the enemies from the previous combat area are defeated
  */
 
 public class GateOpener : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera m_playerCamera;
-    [SerializeField] int m_cameraShakeDuration = 10;
+    [SerializeField] int m_gateMovementDuration = 10;
 
-    private bool m_isOpening;
-    private bool m_isClosing;
     private bool m_hasOpened;
     private bool m_hasClosed;
-    private static Vector3 startingPos;
+    private float m_startingPosZ;
+    private float m_endPosZ;
 
     private void Start()
     {
-        m_isOpening = false;
-        m_isClosing = false;
         m_hasOpened = false;
         m_hasClosed = false;
-        startingPos = transform.position;
+        m_startingPosZ = transform.position.z;
+        m_endPosZ = transform.position.z-10;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player") && m_hasOpened == false && m_hasOpened == false)
-        {
-            m_isOpening = true;
-            m_hasOpened = true;
+        int enemyCount = FindObjectOfType<EnemySpawner>().enemyCount;
 
-            m_playerCamera.transform.DOShakeRotation(m_cameraShakeDuration, 0.3f);
-            
+        if(other.gameObject.CompareTag("Player") && m_hasOpened == false && enemyCount == 0)
+        {
+            m_playerCamera.transform.DOShakeRotation(m_gateMovementDuration, 0.3f);
+            transform.DOMoveZ(m_endPosZ, m_gateMovementDuration);
+
+            m_hasOpened = true;
         }
     }
 
@@ -45,26 +45,8 @@ public class GateOpener : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player") && m_hasOpened == true && m_hasClosed == false)
         {
-            m_isClosing = true;
+            transform.DOMoveZ(m_startingPosZ, m_gateMovementDuration);
             m_hasClosed = true;
-        }
-    }
-
-    private void Update()
-    {
-        Debug.Log("zPos1: " + transform.position.z);
-        if (m_isOpening == true)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z - 10f), 1f * Time.deltaTime);
-
-            Debug.Log("zPos2: " + transform.position.z);
-        }
-        if(m_isClosing == true)
-        {
-            m_isOpening = false;
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y,startingPos.z), 1f * Time.deltaTime);
-
-            Debug.Log("zPos3: " + transform.position.z);
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SpawnDirection { Left, Right}
+public enum SpawnDirection {Left, Right}
 
 
 [System.Serializable]
