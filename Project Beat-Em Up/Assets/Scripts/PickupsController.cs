@@ -12,16 +12,17 @@ public class PickupsController : MonoBehaviour
 {
     private PickupItems m_pickupItems;
     private SpriteRenderer m_spriteRenderer;
+    private Animator m_animator;
 
     [Header("References (DO NOT EDIT)")]
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
-    [SerializeField] private Sprite m_healthPickupSprite;
+    [SerializeField] private Material m_healthPickupMat;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
-    [SerializeField] private Sprite m_chargePickupSprite;
+    [SerializeField] private Material m_chargePickupMat;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
-    [SerializeField] private Sprite m_scorePickupSprite;
+    [SerializeField] private Material m_scorePickupMat;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
-    [SerializeField] private Sprite m_invulnerabilitySprite;
+    [SerializeField] private Material m_invulnerabilityMat;
     [SerializeField] int m_scoreGainedOnItemPicked = 50;
 
     [Header("Settings")]
@@ -40,19 +41,23 @@ public class PickupsController : MonoBehaviour
         switch (m_pickupItems)
         {
             case PickupItems.HealthGain:
-                m_spriteRenderer.sprite = m_healthPickupSprite;
+                m_spriteRenderer.material = m_healthPickupMat;
+                m_animator.SetBool("Health", true);
                 break;
 
             case PickupItems.ChargeGain:
-                m_spriteRenderer.sprite = m_chargePickupSprite;
+                m_spriteRenderer.material = m_chargePickupMat;
+                m_animator.SetBool("Charge", true);
                 break;
 
             case PickupItems.ScoreIncrease:
-                m_spriteRenderer.sprite = m_scorePickupSprite;
+                m_spriteRenderer.material = m_scorePickupMat;
+                m_animator.SetBool("Score", true);
                 break;
 
             case PickupItems.Invulnerability:
-                m_spriteRenderer.sprite = m_invulnerabilitySprite;
+                m_spriteRenderer.material = m_invulnerabilityMat;
+                m_animator.SetBool("Invulnerable", true);
                 break;
         }
     }

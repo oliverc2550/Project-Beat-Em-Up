@@ -1,0 +1,1498 @@
+fileFormatVersion: 2
+guid: 0d863d6d9a0d85a4088e094d7a37860b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2754933261802618730
+    second: PowerupSpriteAtlas_0
+  - first:
+      213: 3526581175396907804
+    second: PowerupSpriteAtlas_7
+  - first:
+      213: 1753627198521427185
+    second: PowerupSpriteAtlas_8
+  - first:
+      213: 5602693784169950755
+    second: PowerupSpriteAtlas_9
+  - first:
+      213: 7046932014385897518
+    second: PowerupSpriteAtlas_2
+  - first:
+      213: 3513493413828171524
+    second: PowerupSpriteAtlas_1
+  - first:
+      213: -8091337856966004327
+    second: PowerupSpriteAtlas_3
+  - first:
+      213: -4700607805793453890
+    second: PowerupSpriteAtlas_4
+  - first:
+      213: -6621865316814015441
+    second: PowerupSpriteAtlas_5
+  - first:
+      213: -5583027994958677660
+    second: PowerupSpriteAtlas_6
+  - first:
+      213: -5258461036283016081
+    second: PowerupSpriteAtlas_10
+  - first:
+      213: 8604730390096155383
+    second: PowerupSpriteAtlas_11
+  - first:
+      213: 6519510418838703827
+    second: PowerupSpriteAtlas_12
+  - first:
+      213: 5365887083449253953
+    second: PowerupSpriteAtlas_13
+  - first:
+      213: -2241121186932475177
+    second: PowerupSpriteAtlas_14
+  - first:
+      213: 8617958541714689246
+    second: PowerupSpriteAtlas_21
+  - first:
+      213: 1937651587940234498
+    second: PowerupSpriteAtlas_22
+  - first:
+      213: 3468760029301464417
+    second: PowerupSpriteAtlas_23
+  - first:
+      213: -2457337280250635889
+    second: PowerupSpriteAtlas_16
+  - first:
+      213: 6468710367269252003
+    second: PowerupSpriteAtlas_15
+  - first:
+      213: 7559064252161152538
+    second: PowerupSpriteAtlas_17
+  - first:
+      213: 2348364090781280668
+    second: PowerupSpriteAtlas_18
+  - first:
+      213: 3076321165094036738
+    second: PowerupSpriteAtlas_19
+  - first:
+      213: 5513255405753207412
+    second: PowerupSpriteAtlas_24
+  - first:
+      213: 5441234183018245980
+    second: PowerupSpriteAtlas_25
+  - first:
+      213: 6511346519956549826
+    second: PowerupSpriteAtlas_26
+  - first:
+      213: 6610001753841131286
+    second: PowerupSpriteAtlas_20
+  - first:
+      213: 2718456447613473840
+    second: PowerupSpriteAtlas_27
+  - first:
+      213: 6102802354482573920
+    second: PowerupSpriteAtlas_28
+  - first:
+      213: 7149553413333192999
+    second: PowerupSpriteAtlas_35
+  - first:
+      213: -5674360835406024036
+    second: PowerupSpriteAtlas_36
+  - first:
+      213: 2908732974942531758
+    second: PowerupSpriteAtlas_37
+  - first:
+      213: -943501176850883791
+    second: PowerupSpriteAtlas_30
+  - first:
+      213: 5370044212403047512
+    second: PowerupSpriteAtlas_29
+  - first:
+      213: -1274244928611925500
+    second: PowerupSpriteAtlas_31
+  - first:
+      213: 6994576532510890823
+    second: PowerupSpriteAtlas_32
+  - first:
+      213: 428966504184060722
+    second: PowerupSpriteAtlas_33
+  - first:
+      213: 7956772854639470233
+    second: PowerupSpriteAtlas_38
+  - first:
+      213: -3165101077071254617
+    second: PowerupSpriteAtlas_39
+  - first:
+      213: -6192262292024847272
+    second: PowerupSpriteAtlas_40
+  - first:
+      213: 6009327017441045662
+    second: PowerupSpriteAtlas_34
+  - first:
+      213: 7309506437936755965
+    second: PowerupSpriteAtlas_41
+  - first:
+      213: -6933561599997721968
+    second: PowerupSpriteAtlas_42
+  - first:
+      213: 293083347971937991
+    second: PowerupSpriteAtlas_49
+  - first:
+      213: -9135399780932896732
+    second: PowerupSpriteAtlas_50
+  - first:
+      213: 2189435938712961166
+    second: PowerupSpriteAtlas_51
+  - first:
+      213: 6598913900581419705
+    second: PowerupSpriteAtlas_44
+  - first:
+      213: -7160697916603421210
+    second: PowerupSpriteAtlas_43
+  - first:
+      213: 3498168934551101139
+    second: PowerupSpriteAtlas_45
+  - first:
+      213: 6874890522249479728
+    second: PowerupSpriteAtlas_46
+  - first:
+      213: -211121758742712637
+    second: PowerupSpriteAtlas_47
+  - first:
+      213: -7616452697386920356
+    second: PowerupSpriteAtlas_52
+  - first:
+      213: 4755191310027388987
+    second: PowerupSpriteAtlas_53
+  - first:
+      213: -2379580453534226956
+    second: PowerupSpriteAtlas_54
+  - first:
+      213: -6065236330353300349
+    second: PowerupSpriteAtlas_48
+  - first:
+      213: 6033980837495033889
+    second: PowerupSpriteAtlas_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 2116
+        width: 297
+        height: 316
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f37a1943d7b3620800000000000000
+      internalID: 2754933261802618730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 7936
+        y: 2083
+        width: 246
+        height: 366
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1bbc17f4eee0f030800000000000000
+      internalID: 3526581175396907804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 9058
+        y: 2091
+        width: 243
+        height: 349
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4455c55a2265810800000000000000
+      internalID: 1753627198521427185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 10176
+        y: 2091
+        width: 251
+        height: 349
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e2db6ff44c0cd40800000000000000
+      internalID: 5602693784169950755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 2125
+        width: 310
+        height: 277
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20acc1b45bbbc160800000000000000
+      internalID: 7046932014385897518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 2123
+        width: 304
+        height: 282
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40717e305af62c030800000000000000
+      internalID: 3513493413828171524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 3433
+        y: 2123
+        width: 300
+        height: 273
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991feddb61bc5bf80800000000000000
+      internalID: -8091337856966004327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 4579
+        y: 2112
+        width: 242
+        height: 273
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8b0430b1614ceb0800000000000000
+      internalID: -4700607805793453890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 5699
+        y: 2107
+        width: 243
+        height: 269
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2432d814986a14a0800000000000000
+      internalID: -6621865316814015441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 6815
+        y: 2098
+        width: 249
+        height: 271
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4693d656e991582b0800000000000000
+      internalID: -5583027994958677660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 11295
+        y: 2089
+        width: 255
+        height: 351
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c4e1b4c813607b0800000000000000
+      internalID: -5258461036283016081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 12416
+        y: 2113
+        width: 246
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f290b133b42a6770800000000000000
+      internalID: 8604730390096155383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 13535
+        y: 2107
+        width: 248
+        height: 294
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dec6502f24f97a50800000000000000
+      internalID: 6519510418838703827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 14655
+        y: 2100
+        width: 248
+        height: 270
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14089d96fd5777a40800000000000000
+      internalID: 5365887083449253953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1452
+        width: 302
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dab94a8720f5e0e0800000000000000
+      internalID: -2241121186932475177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 7912
+        y: 1411
+        width: 234
+        height: 367
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc82ff32a3299770800000000000000
+      internalID: 8617958541714689246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 9041
+        y: 1419
+        width: 217
+        height: 352
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20536a56adbe3ea10800000000000000
+      internalID: 1937651587940234498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 10168
+        y: 1419
+        width: 210
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d569d4ed2832030800000000000000
+      internalID: 3468760029301464417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 1468
+        width: 308
+        height: 277
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89165d53c8c5edd0800000000000000
+      internalID: -2457337280250635889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1461
+        width: 308
+        height: 275
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab68fb6ec975c950800000000000000
+      internalID: 6468710367269252003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 3427
+        y: 1462
+        width: 298
+        height: 276
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a165b6043e037e860800000000000000
+      internalID: 7559064252161152538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 4628
+        y: 1453
+        width: 118
+        height: 279
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c992d4ac2b0179020800000000000000
+      internalID: 2348364090781280668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 5746
+        y: 1445
+        width: 119
+        height: 277
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2052274fcc941ba20800000000000000
+      internalID: 3076321165094036738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 11292
+        y: 1419
+        width: 206
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a0cefb494038c40800000000000000
+      internalID: 5513255405753207412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 12421
+        y: 1452
+        width: 186
+        height: 317
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fe38a19a5238b40800000000000000
+      internalID: 5441234183018245980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 13585
+        y: 1442
+        width: 124
+        height: 286
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c07c7b4923fc5a50800000000000000
+      internalID: 6511346519956549826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 6866
+        y: 1436
+        width: 119
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61fd866e2917bbb50800000000000000
+      internalID: 6610001753841131286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 14708
+        y: 1436
+        width: 116
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0341f517cb5e9b520800000000000000
+      internalID: 2718456447613473840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 771
+        width: 305
+        height: 310
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062f959486281b450800000000000000
+      internalID: 6102802354482573920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 7928
+        y: 732
+        width: 245
+        height: 363
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721186013f0583360800000000000000
+      internalID: 7149553413333192999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 9047
+        y: 740
+        width: 238
+        height: 347
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c923c3e52ee9041b0800000000000000
+      internalID: -5674360835406024036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_37
+      rect:
+        serializedVersion: 2
+        x: 10167
+        y: 741
+        width: 238
+        height: 347
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea03ae5ca35ed5820800000000000000
+      internalID: 2908732974942531758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 2283
+        y: 789
+        width: 304
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bd3a4bda208e2f0800000000000000
+      internalID: -943501176850883791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_29
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 779
+        width: 309
+        height: 279
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c0d6c62ca368a40800000000000000
+      internalID: 5370044212403047512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_31
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 779
+        width: 300
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4024e391df8f05ee0800000000000000
+      internalID: -1274244928611925500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 4570
+        y: 773
+        width: 206
+        height: 279
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b58962c4ab11160800000000000000
+      internalID: 6994576532510890823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 5688
+        y: 765
+        width: 205
+        height: 279
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b9e6643cef3f500800000000000000
+      internalID: 428966504184060722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_38
+      rect:
+        serializedVersion: 2
+        x: 11286
+        y: 742
+        width: 239
+        height: 344
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996a14721c22c6e60800000000000000
+      internalID: 7956772854639470233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_39
+      rect:
+        serializedVersion: 2
+        x: 12408
+        y: 771
+        width: 238
+        height: 315
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab26fef65d4314d0800000000000000
+      internalID: -3165101077071254617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_40
+      rect:
+        serializedVersion: 2
+        x: 13530
+        y: 765
+        width: 206
+        height: 283
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85410dfd04aa01aa0800000000000000
+      internalID: -6192262292024847272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 6809
+        y: 756
+        width: 205
+        height: 276
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c2bb5651b656350800000000000000
+      internalID: 6009327017441045662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_41
+      rect:
+        serializedVersion: 2
+        x: 14651
+        y: 755
+        width: 202
+        height: 276
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4b6acb065907560800000000000000
+      internalID: 7309506437936755965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_42
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 83
+        width: 300
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092c8dbd57a07cf90800000000000000
+      internalID: -6933561599997721968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_49
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 45
+        width: 243
+        height: 361
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6137d80cd311400800000000000000
+      internalID: 293083347971937991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_50
+      rect:
+        serializedVersion: 2
+        x: 9040
+        y: 52
+        width: 237
+        height: 347
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4283058fc4a883180800000000000000
+      internalID: -9135399780932896732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_51
+      rect:
+        serializedVersion: 2
+        x: 10160
+        y: 52
+        width: 228
+        height: 346
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80c579d260726e10800000000000000
+      internalID: 2189435938712961166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_44
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 101
+        width: 307
+        height: 276
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bafa83ea3d049b50800000000000000
+      internalID: 6598913900581419705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_43
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 91
+        width: 308
+        height: 275
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed29f01f2710ac90800000000000000
+      internalID: -7160697916603421210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_45
+      rect:
+        serializedVersion: 2
+        x: 3396
+        y: 95
+        width: 297
+        height: 275
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de9934ac1efb8030800000000000000
+      internalID: 3498168934551101139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_46
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 85
+        width: 206
+        height: 276
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03641685184886f50800000000000000
+      internalID: 6874890522249479728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_47
+      rect:
+        serializedVersion: 2
+        x: 5681
+        y: 76
+        width: 205
+        height: 279
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cee8c501e1f11df0800000000000000
+      internalID: -211121758742712637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_52
+      rect:
+        serializedVersion: 2
+        x: 11281
+        y: 54
+        width: 225
+        height: 344
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56dfab10acec4690800000000000000
+      internalID: -7616452697386920356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_53
+      rect:
+        serializedVersion: 2
+        x: 12401
+        y: 85
+        width: 218
+        height: 311
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38f4396d45ddf140800000000000000
+      internalID: 4755191310027388987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_54
+      rect:
+        serializedVersion: 2
+        x: 13520
+        y: 76
+        width: 207
+        height: 283
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f521a06f280afed0800000000000000
+      internalID: -2379580453534226956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_48
+      rect:
+        serializedVersion: 2
+        x: 6801
+        y: 66
+        width: 205
+        height: 277
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c6f7a41b3f3dba0800000000000000
+      internalID: -6065236330353300349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerupSpriteAtlas_55
+      rect:
+        serializedVersion: 2
+        x: 14639
+        y: 67
+        width: 207
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120d7603a910db350800000000000000
+      internalID: 6033980837495033889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c0f616b3658712f41908ebe0c8e8c749
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: af90196d55b91904cb84e8b49b573802, type: 3}
+      name: _Emission
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
