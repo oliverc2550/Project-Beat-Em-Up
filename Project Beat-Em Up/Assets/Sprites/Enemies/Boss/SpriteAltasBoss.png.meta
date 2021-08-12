@@ -1,12 +1,192 @@
 fileFormatVersion: 2
 guid: 0806ae4b271446145afeb0ac2294529d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6220707378818204398
+    second: SpriteAltasBoss_0
+  - first:
+      213: 8450899916757275157
+    second: SpriteAltasBoss_1
+  - first:
+      213: -2598018478730190374
+    second: SpriteAltasBoss_2
+  - first:
+      213: -8891185296588692894
+    second: SpriteAltasBoss_3
+  - first:
+      213: -991953746541289369
+    second: SpriteAltasBoss_4
+  - first:
+      213: -4082988418599309645
+    second: SpriteAltasBoss_5
+  - first:
+      213: 5119688128195082097
+    second: SpriteAltasBoss_6
+  - first:
+      213: -3915612213240475525
+    second: SpriteAltasBoss_7
+  - first:
+      213: 7962585778071740005
+    second: SpriteAltasBoss_8
+  - first:
+      213: -6754115442682949110
+    second: SpriteAltasBoss_9
+  - first:
+      213: 7677098056002972785
+    second: SpriteAltasBoss_10
+  - first:
+      213: -4898126381185014689
+    second: SpriteAltasBoss_11
+  - first:
+      213: -7773344877232847722
+    second: SpriteAltasBoss_13
+  - first:
+      213: 8936270967710228697
+    second: SpriteAltasBoss_13
+  - first:
+      213: -6858174183927644884
+    second: SpriteAltasBoss_12
+  - first:
+      213: 6360694838325638691
+    second: SpriteAltasBoss_14
+  - first:
+      213: -8127623737720768867
+    second: SpriteAltasBoss_15
+  - first:
+      213: 834122933485446562
+    second: SpriteAltasBoss_17
+  - first:
+      213: -5585941981144318933
+    second: SpriteAltasBoss_16
+  - first:
+      213: -5126946175499728134
+    second: SpriteAltasBoss_17
+  - first:
+      213: -7308494231847188952
+    second: SpriteAltasBoss_18
+  - first:
+      213: 8776791858160008420
+    second: SpriteAltasBoss_19
+  - first:
+      213: 7919546821026867164
+    second: SpriteAltasBoss_22
+  - first:
+      213: -8898699779018594595
+    second: SpriteAltasBoss_20
+  - first:
+      213: -594096540625630276
+    second: SpriteAltasBoss_24
+  - first:
+      213: -1138375585363361772
+    second: SpriteAltasBoss_21
+  - first:
+      213: -3769212065113062257
+    second: SpriteAltasBoss_26
+  - first:
+      213: 1529589239856256766
+    second: SpriteAltasBoss_22
+  - first:
+      213: -3665255831641599196
+    second: SpriteAltasBoss_28
+  - first:
+      213: -9071366500299477063
+    second: SpriteAltasBoss_29
+  - first:
+      213: 1586834988039185802
+    second: SpriteAltasBoss_30
+  - first:
+      213: -6214420184618255898
+    second: SpriteAltasBoss_31
+  - first:
+      213: -6925110890729773968
+    second: SpriteAltasBoss_32
+  - first:
+      213: 1242609427460211972
+    second: SpriteAltasBoss_23
+  - first:
+      213: 8718779029876268205
+    second: SpriteAltasBoss_24
+  - first:
+      213: -4835302421989254489
+    second: SpriteAltasBoss_25
+  - first:
+      213: -6513431604315398091
+    second: SpriteAltasBoss_26
+  - first:
+      213: -8444867815700181502
+    second: SpriteAltasBoss_27
+  - first:
+      213: 6311407889033454388
+    second: SpriteAltasBoss_33
+  - first:
+      213: -5749574869157885866
+    second: SpriteAltasBoss_32
+  - first:
+      213: -1235996768469707598
+    second: SpriteAltasBoss_28
+  - first:
+      213: -218141034311565866
+    second: SpriteAltasBoss_29
+  - first:
+      213: 529444243072525712
+    second: SpriteAltasBoss_30
+  - first:
+      213: -3282715082233247995
+    second: SpriteAltasBoss_31
+  - first:
+      213: 5905411894841195351
+    second: SpriteAltasBoss_34
+  - first:
+      213: 188891578307080
+    second: SpriteAltasBoss_35
+  - first:
+      213: 3091913508194957020
+    second: SpriteAltasBoss_46
+  - first:
+      213: -3985693510812316834
+    second: SpriteAltasBoss_36
+  - first:
+      213: 856046554144875548
+    second: SpriteAltasBoss_48
+  - first:
+      213: 7207456974030060101
+    second: SpriteAltasBoss_37
+  - first:
+      213: -7118892828735247270
+    second: SpriteAltasBoss_50
+  - first:
+      213: -7723396863620870857
+    second: SpriteAltasBoss_51
+  - first:
+      213: -5224994456404202394
+    second: SpriteAltasBoss_52
+  - first:
+      213: -1026088094978244650
+    second: SpriteAltasBoss_53
+  - first:
+      213: -5185331071973746751
+    second: SpriteAltasBoss_54
+  - first:
+      213: -8382860361985469331
+    second: SpriteAltasBoss_55
+  - first:
+      213: -2051506137971180955
+    second: SpriteAltasBoss_43
+  - first:
+      213: -6676062136661034821
+    second: SpriteAltasBoss_57
+  - first:
+      213: -1889214210245097042
+    second: SpriteAltasBoss_58
+  - first:
+      213: -3357520425253015445
+    second: SpriteAltasBoss_59
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,16 +211,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: 2
     mipBias: -100
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
-  nPOTScale: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +229,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -64,7 +244,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -76,7 +256,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,19 +299,1293 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteAltasBoss_0
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 6916
+        width: 324
+        height: 925
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21db3e1099b9ba9a0800000000000000
+      internalID: -6220707378818204398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_1
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 6916
+        width: 324
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51212b213b0a74570800000000000000
+      internalID: 8450899916757275157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_2
+      rect:
+        serializedVersion: 2
+        x: 2729
+        y: 6916
+        width: 324
+        height: 925
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1e26f55fbf1fbd0800000000000000
+      internalID: -2598018478730190374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_3
+      rect:
+        serializedVersion: 2
+        x: 3873
+        y: 6916
+        width: 324
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262a7ac841a2c9480800000000000000
+      internalID: -8891185296588692894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_4
+      rect:
+        serializedVersion: 2
+        x: 5032
+        y: 6916
+        width: 324
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760e9c7b25fdb32f0800000000000000
+      internalID: -991953746541289369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_5
+      rect:
+        serializedVersion: 2
+        x: 6191
+        y: 6916
+        width: 326
+        height: 925
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3beaa577aaf4657c0800000000000000
+      internalID: -4082988418599309645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_6
+      rect:
+        serializedVersion: 2
+        x: 7368
+        y: 6918
+        width: 317
+        height: 925
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1773ad13a39cc0740800000000000000
+      internalID: 5119688128195082097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_7
+      rect:
+        serializedVersion: 2
+        x: 8525
+        y: 6916
+        width: 318
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70de971073f8a9c0800000000000000
+      internalID: -3915612213240475525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_8
+      rect:
+        serializedVersion: 2
+        x: 9687
+        y: 6916
+        width: 316
+        height: 925
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e1b8bd399c08e60800000000000000
+      internalID: 7962585778071740005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_9
+      rect:
+        serializedVersion: 2
+        x: 10854
+        y: 6916
+        width: 317
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0217ea2acf8442a0800000000000000
+      internalID: -6754115442682949110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_10
+      rect:
+        serializedVersion: 2
+        x: 12017
+        y: 6916
+        width: 316
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c26e5c1088a8a60800000000000000
+      internalID: 7677098056002972785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_11
+      rect:
+        serializedVersion: 2
+        x: 13176
+        y: 6916
+        width: 318
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f546f78f10c560cb0800000000000000
+      internalID: -4898126381185014689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_13
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 5758
+        width: 623
+        height: 945
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6940fe3e4088f1490800000000000000
+      internalID: -7773344877232847722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_12
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 5749
+        width: 318
+        height: 930
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d021074913040c70800000000000000
+      internalID: 8936270967710228697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_14
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 5758
+        width: 617
+        height: 933
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2dfc377aeed2d0a0800000000000000
+      internalID: -6858174183927644884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_15
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 5758
+        width: 621
+        height: 911
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3267f0b414ab54850800000000000000
+      internalID: 6360694838325638691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_16
+      rect:
+        serializedVersion: 2
+        x: 4792
+        y: 5758
+        width: 614
+        height: 913
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96fe15c541e43f80800000000000000
+      internalID: -8127623737720768867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_17
+      rect:
+        serializedVersion: 2
+        x: 5961
+        y: 5758
+        width: 614
+        height: 911
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5286d7366639b00800000000000000
+      internalID: 834122933485446562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_18
+      rect:
+        serializedVersion: 2
+        x: 7113
+        y: 5758
+        width: 661
+        height: 913
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c73fd1d5fba72b0800000000000000
+      internalID: -5585941981144318933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_19
+      rect:
+        serializedVersion: 2
+        x: 8280
+        y: 5758
+        width: 660
+        height: 911
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa8acafd9d69d8b0800000000000000
+      internalID: -5126946175499728134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_20
+      rect:
+        serializedVersion: 2
+        x: 9433
+        y: 5758
+        width: 660
+        height: 911
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826c1cbd733039a90800000000000000
+      internalID: -7308494231847188952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_21
+      rect:
+        serializedVersion: 2
+        x: 10602
+        y: 5758
+        width: 617
+        height: 911
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecfa2d81bd6dc970800000000000000
+      internalID: 8776791858160008420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_22
+      rect:
+        serializedVersion: 2
+        x: 11777
+        y: 5749
+        width: 316
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd76169cfd1e7ed60800000000000000
+      internalID: 7919546821026867164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_23
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 4601
+        width: 485
+        height: 446
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6efb4c2b7718480800000000000000
+      internalID: -8898699779018594595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_24
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 4601
+        width: 487
+        height: 446
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb88bd085851c7f0800000000000000
+      internalID: -594096540625630276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_25
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 4601
+        width: 486
+        height: 446
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410807dbf6da330f0800000000000000
+      internalID: -1138375585363361772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_26
+      rect:
+        serializedVersion: 2
+        x: 3755
+        y: 4601
+        width: 487
+        height: 446
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84c1dfc89111bbc0800000000000000
+      internalID: -3769212065113062257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_27
+      rect:
+        serializedVersion: 2
+        x: 4914
+        y: 4603
+        width: 460
+        height: 590
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef654ed3f413a3510800000000000000
+      internalID: 1529589239856256766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_28
+      rect:
+        serializedVersion: 2
+        x: 6098
+        y: 4616
+        width: 381
+        height: 989
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423d2109d35622dc0800000000000000
+      internalID: -3665255831641599196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_29
+      rect:
+        serializedVersion: 2
+        x: 7222
+        y: 4609
+        width: 436
+        height: 951
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf654aea380c1280800000000000000
+      internalID: -9071366500299477063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_30
+      rect:
+        serializedVersion: 2
+        x: 8378
+        y: 4609
+        width: 430
+        height: 951
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85ac33a302950610800000000000000
+      internalID: 1586834988039185802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_31
+      rect:
+        serializedVersion: 2
+        x: 9546
+        y: 4609
+        width: 431
+        height: 951
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9bfca74c1f1c9a0800000000000000
+      internalID: -6214420184618255898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_32
+      rect:
+        serializedVersion: 2
+        x: 10744
+        y: 4616
+        width: 370
+        height: 913
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074ecdfe55015ef90800000000000000
+      internalID: -6925110890729773968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_33
+      rect:
+        serializedVersion: 2
+        x: 11963
+        y: 4616
+        width: 316
+        height: 922
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405415ec0b2ae3110800000000000000
+      internalID: 1242609427460211972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_34
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 3396
+        width: 341
+        height: 929
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac56e665535ff870800000000000000
+      internalID: 8718779029876268205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_35
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 3398
+        width: 386
+        height: 938
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa9eb3d01e85ecb0800000000000000
+      internalID: -4835302421989254489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_36
+      rect:
+        serializedVersion: 2
+        x: 2567
+        y: 3387
+        width: 467
+        height: 961
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5306afb2774ab95a0800000000000000
+      internalID: -6513431604315398091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_37
+      rect:
+        serializedVersion: 2
+        x: 3719
+        y: 3387
+        width: 469
+        height: 961
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ecf06e67dcdca80800000000000000
+      internalID: -8444867815700181502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_43
+      rect:
+        serializedVersion: 2
+        x: 10764
+        y: 3398
+        width: 414
+        height: 914
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433ef6a2900a69750800000000000000
+      internalID: 6311407889033454388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_42
+      rect:
+        serializedVersion: 2
+        x: 9516
+        y: 3387
+        width: 623
+        height: 747
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658c45a7e186530b0800000000000000
+      internalID: -5749574869157885866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_38
+      rect:
+        serializedVersion: 2
+        x: 4645
+        y: 3380
+        width: 1070
+        height: 814
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b415d7dc7bd8dee0800000000000000
+      internalID: -1235996768469707598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_39
+      rect:
+        serializedVersion: 2
+        x: 5829
+        y: 3380
+        width: 1014
+        height: 814
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd3ce292e109fcf0800000000000000
+      internalID: -218141034311565866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_40
+      rect:
+        serializedVersion: 2
+        x: 7031
+        y: 3380
+        width: 946
+        height: 812
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095a6b4ebb6f85700800000000000000
+      internalID: 529444243072525712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_41
+      rect:
+        serializedVersion: 2
+        x: 8265
+        y: 3380
+        width: 763
+        height: 506
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5078ba876047172d0800000000000000
+      internalID: -3282715082233247995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_44
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 2285
+        width: 511
+        height: 855
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b306484dc34f150800000000000000
+      internalID: 5905411894841195351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_45
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 2285
+        width: 443
+        height: 938
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8021d6fbbcba00000800000000000000
+      internalID: 188891578307080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_46
+      rect:
+        serializedVersion: 2
+        x: 2625
+        y: 2285
+        width: 434
+        height: 938
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6313c34fea8ea20800000000000000
+      internalID: 3091913508194957020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_47
+      rect:
+        serializedVersion: 2
+        x: 3785
+        y: 2285
+        width: 434
+        height: 938
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bc3787ed8ffa8c0800000000000000
+      internalID: -3985693510812316834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_48
+      rect:
+        serializedVersion: 2
+        x: 4944
+        y: 2285
+        width: 436
+        height: 938
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14a0033ec941eb00800000000000000
+      internalID: 856046554144875548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_49
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1130
+        width: 416
+        height: 920
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a39fe5ee7060460800000000000000
+      internalID: 7207456974030060101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_50
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1130
+        width: 402
+        height: 914
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ce82590bc943d90800000000000000
+      internalID: -7118892828735247270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_51
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 1130
+        width: 386
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d038c097bf0d490800000000000000
+      internalID: -7723396863620870857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_52
+      rect:
+        serializedVersion: 2
+        x: 3816
+        y: 1130
+        width: 387
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c64a0a9371d77b0800000000000000
+      internalID: -5224994456404202394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_53
+      rect:
+        serializedVersion: 2
+        x: 5008
+        y: 1130
+        width: 318
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df7096605a92c1f0800000000000000
+      internalID: -1026088094978244650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_54
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 80
+        width: 717
+        height: 866
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c79534fcd00a08b0800000000000000
+      internalID: -5185331071973746751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_55
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 79
+        width: 400
+        height: 854
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6457224ae81aab80800000000000000
+      internalID: -8382860361985469331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_56
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 79
+        width: 724
+        height: 855
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ab1bf69069783e0800000000000000
+      internalID: -2051506137971180955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_57
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 79
+        width: 733
+        height: 840
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb832e5abdcd953a0800000000000000
+      internalID: -6676062136661034821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_58
+      rect:
+        serializedVersion: 2
+        x: 5102
+        y: 87
+        width: 409
+        height: 847
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea988bd6fa928c5e0800000000000000
+      internalID: -1889214210245097042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAltasBoss_59
+      rect:
+        serializedVersion: 2
+        x: 6074
+        y: 86
+        width: 712
+        height: 851
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60fcae46f0b761d0800000000000000
+      internalID: -3357520425253015445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7912df87de70f2d4597ec6b6f61cf821
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 4048b713dc148974aa273248948d85ad, type: 3}
+      name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

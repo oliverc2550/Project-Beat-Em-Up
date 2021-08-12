@@ -26,6 +26,7 @@ public class Lv1Boss : EnemyBoss
 
         if (attackToPlay == (int)BossAttacks.Summoning)
         {
+            m_animator.SetTrigger("Summon");
             SetEnemyState(EnemyState.Idle);
             SummonEnemies(m_enemyToSummonOnPhase2, m_enemyCountToSummonOnPhase2);
             //becomes invulnerable while enemies are attacking
@@ -33,6 +34,7 @@ public class Lv1Boss : EnemyBoss
 
         else if (attackToPlay == (int)BossAttacks.DeadlySpikes)
         {
+            m_animator.SetTrigger("Throw");
             Debug.Log("Attack is played");
             for (int i = 0; i < m_spikesTimerCount; i++)
             {
@@ -48,7 +50,7 @@ public class Lv1Boss : EnemyBoss
         else if (attackToPlay == (int)BossAttacks.HitWithAOE)
         {
             //TODO: replace this with animation 
-            m_animator.SetTrigger("Jump");
+            m_animator.SetTrigger("Attack");
             transform.DOShakeScale(1);
             UseAreaOfEffect(m_aoeRange, m_aoeDamage);
         }
