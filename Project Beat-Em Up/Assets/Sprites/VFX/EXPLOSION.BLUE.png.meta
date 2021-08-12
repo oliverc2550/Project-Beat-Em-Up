@@ -1,7 +1,40 @@
 fileFormatVersion: 2
 guid: 263f66b1c997660468b68a630bc339a2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7437146688116330997
+    second: EXPLOSION.BLUE_3
+  - first:
+      213: -7305275618598209346
+    second: EXPLOSION.BLUE_4
+  - first:
+      213: -8287859801313347819
+    second: EXPLOSION.BLUE_5
+  - first:
+      213: 4909169412297866968
+    second: EXPLOSION.BLUE_3
+  - first:
+      213: 2546798586975400134
+    second: EXPLOSION.BLUE_6
+  - first:
+      213: 1769654067841363368
+    second: EXPLOSION.BLUE_1
+  - first:
+      213: -8360644382285007240
+    second: EXPLOSION.BLUE_2
+  - first:
+      213: 7786617642946301010
+    second: EXPLOSION.BLUE_4
+  - first:
+      213: 4205326406448849513
+    second: EXPLOSION.BLUE_5
+  - first:
+      213: -6043244078285157243
+    second: EXPLOSION.BLUE_0
+  - first:
+      213: -7078695538006090257
+    second: EXPLOSION.BLUE_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -36,7 +69,7 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -133,11 +166,242 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_3
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 151
+        width: 1236
+        height: 874
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e6a58ad72f9c890800000000000000
+      internalID: -7437146688116330997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_4
+      rect:
+        serializedVersion: 2
+        x: 5595
+        y: 159
+        width: 1296
+        height: 875
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8b127a7827e9a90800000000000000
+      internalID: -7305275618598209346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_5
+      rect:
+        serializedVersion: 2
+        x: 7161
+        y: 151
+        width: 1312
+        height: 877
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5177a72fb6b9bfc80800000000000000
+      internalID: -8287859801313347819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_6
+      rect:
+        serializedVersion: 2
+        x: 8729
+        y: 151
+        width: 1313
+        height: 876
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de3a32129fd02440800000000000000
+      internalID: 4909169412297866968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_9
+      rect:
+        serializedVersion: 2
+        x: 13500
+        y: 207
+        width: 1182
+        height: 692
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0b22342db085320800000000000000
+      internalID: 2546798586975400134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_1
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 167
+        width: 830
+        height: 459
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad6209aff21f8810800000000000000
+      internalID: 1769654067841363368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_2
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 135
+        width: 954
+        height: 602
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876798c1b3609fb80800000000000000
+      internalID: -8360644382285007240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_7
+      rect:
+        serializedVersion: 2
+        x: 10307
+        y: 174
+        width: 1296
+        height: 829
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c8a91bd7f9f0c60800000000000000
+      internalID: 7786617642946301010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_8
+      rect:
+        serializedVersion: 2
+        x: 11874
+        y: 173
+        width: 1296
+        height: 830
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96224fcf5125c5a30800000000000000
+      internalID: 4205326406448849513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 199
+        width: 372
+        height: 316
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c84de7785122ca0800000000000000
+      internalID: -6043244078285157243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EXPLOSION.BLUE_10
+      rect:
+        serializedVersion: 2
+        x: 15060
+        y: 252
+        width: 1212
+        height: 664
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed1108a9eb63cd90800000000000000
+      internalID: -7078695538006090257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cc68754191da1c94ba865dc14bfb2e75
+    spriteID: efec879bf975dbc439249a8077d63ca8
     internalID: 0
     vertices: []
     indices: 

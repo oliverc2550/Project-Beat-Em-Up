@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 6dfd6153d200a7b45864d7e461d40e10
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -41189428030194066
+    second: NPC.BLUE_0
+  - first:
+      213: 5612029387254336540
+    second: NPC.BLUE_1
+  - first:
+      213: -7641513506738120450
+    second: NPC.BLUE_2
+  - first:
+      213: 4902583663245563148
+    second: NPC.BLUE_3
+  - first:
+      213: -7663287014652851428
+    second: NPC.BLUE_4
+  - first:
+      213: 6383334617340618059
+    second: NPC.BLUE_5
+  - first:
+      213: 5388232277634701512
+    second: NPC.BLUE_6
+  - first:
+      213: 3171024766577698890
+    second: NPC.BLUE_7
+  - first:
+      213: 1293509561752517970
+    second: NPC.BLUE_8
+  - first:
+      213: -195465067717452950
+    second: NPC.BLUE_9
+  - first:
+      213: -1814709534880682886
+    second: NPC.BLUE_10
+  - first:
+      213: 1279546662650221740
+    second: NPC.BLUE_11
+  - first:
+      213: 318667471447936877
+    second: NPC.BLUE_12
+  - first:
+      213: 7233927544325254630
+    second: NPC.BLUE_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +74,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: 1
+    aniso: 2
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -133,17 +175,313 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NPC.BLUE_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1950
+        width: 451
+        height: 732
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e32c5fe6aad6ff0800000000000000
+      internalID: -41189428030194066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_1
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 1942
+        width: 451
+        height: 732
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c09507efee1ed40800000000000000
+      internalID: 5612029387254336540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_2
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 1942
+        width: 451
+        height: 724
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8568cb3f3e3f590800000000000000
+      internalID: -7641513506738120450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_3
+      rect:
+        serializedVersion: 2
+        x: 5570
+        y: 1934
+        width: 451
+        height: 732
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c059261edd9790440800000000000000
+      internalID: 4902583663245563148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_4
+      rect:
+        serializedVersion: 2
+        x: 7593
+        y: 1934
+        width: 451
+        height: 724
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1bc0cfdf0986a590800000000000000
+      internalID: -7663287014652851428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_5
+      rect:
+        serializedVersion: 2
+        x: 9618
+        y: 1950
+        width: 451
+        height: 708
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45aa0d9309269850800000000000000
+      internalID: 6383334617340618059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_6
+      rect:
+        serializedVersion: 2
+        x: 11641
+        y: 1950
+        width: 451
+        height: 708
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8d5bb55b8d6ca40800000000000000
+      internalID: 5388232277634701512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_7
+      rect:
+        serializedVersion: 2
+        x: 13666
+        y: 1950
+        width: 451
+        height: 708
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4864d1793eb10c20800000000000000
+      internalID: 3171024766577698890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_8
+      rect:
+        serializedVersion: 2
+        x: 15688
+        y: 1950
+        width: 452
+        height: 708
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d74d5d71873f110800000000000000
+      internalID: 1293509561752517970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 366
+        width: 451
+        height: 707
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b14b87e81994df0800000000000000
+      internalID: -195465067717452950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_10
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 382
+        width: 451
+        height: 699
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c2ce2fa4bd0d6e0800000000000000
+      internalID: -1814709534880682886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_11
+      rect:
+        serializedVersion: 2
+        x: 3553
+        y: 335
+        width: 483
+        height: 690
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca49dcc09ecd1c110800000000000000
+      internalID: 1279546662650221740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_12
+      rect:
+        serializedVersion: 2
+        x: 5673
+        y: 230
+        width: 499
+        height: 692
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f402d70622c6400800000000000000
+      internalID: 318667471447936877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.BLUE_13
+      rect:
+        serializedVersion: 2
+        x: 7866
+        y: 103
+        width: 483
+        height: 691
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edab6a46c2146460800000000000000
+      internalID: 7233927544325254630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bbbe5c012765d8348ada88c960dfa3a1
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: ece6c9be912e6f2489c595db25cd1fd4, type: 3}
+      name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

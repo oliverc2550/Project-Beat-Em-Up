@@ -1,12 +1,54 @@
 fileFormatVersion: 2
 guid: ec932f4edbfa7684a880fa256f085c01
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2847110801255895801
+    second: NPC.RED_0
+  - first:
+      213: 5889402308024541916
+    second: NPC.RED_1
+  - first:
+      213: 4618011795023528693
+    second: NPC.RED_2
+  - first:
+      213: 8588111432892437396
+    second: NPC.RED_3
+  - first:
+      213: -2808698672116886172
+    second: NPC.RED_4
+  - first:
+      213: 1135826215000808777
+    second: NPC.RED_5
+  - first:
+      213: 2974282827914426377
+    second: NPC.RED_6
+  - first:
+      213: 7663758009854375219
+    second: NPC.RED_7
+  - first:
+      213: -6245825747451051685
+    second: NPC.RED_8
+  - first:
+      213: 2934130236411885349
+    second: NPC.RED_9
+  - first:
+      213: -5105414807049655263
+    second: NPC.RED_10
+  - first:
+      213: -7994824757149844941
+    second: NPC.RED_11
+  - first:
+      213: 572190993454135828
+    second: NPC.RED_12
+  - first:
+      213: 6116920483441032342
+    second: NPC.RED_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,16 +73,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: 2
     mipBias: -100
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +91,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -64,7 +106,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -76,7 +118,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,19 +161,327 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NPC.RED_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1955
+        width: 395
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70de6f69fc70d78d0800000000000000
+      internalID: -2847110801255895801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_1
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1947
+        width: 395
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd22b2d123c5bb150800000000000000
+      internalID: 5889402308024541916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_2
+      rect:
+        serializedVersion: 2
+        x: 3548
+        y: 1947
+        width: 386
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f201f2a249761040800000000000000
+      internalID: 4618011795023528693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_3
+      rect:
+        serializedVersion: 2
+        x: 5571
+        y: 1939
+        width: 389
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4935601b8d91f2770800000000000000
+      internalID: 8588111432892437396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_4
+      rect:
+        serializedVersion: 2
+        x: 7596
+        y: 1939
+        width: 387
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4659c57507f7509d0800000000000000
+      internalID: -2808698672116886172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_5
+      rect:
+        serializedVersion: 2
+        x: 9620
+        y: 1955
+        width: 386
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d13b7bce343cf00800000000000000
+      internalID: 1135826215000808777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_6
+      rect:
+        serializedVersion: 2
+        x: 11643
+        y: 1955
+        width: 388
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908326b3976c64920800000000000000
+      internalID: 2974282827914426377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_7
+      rect:
+        serializedVersion: 2
+        x: 13668
+        y: 1955
+        width: 395
+        height: 627
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335bced3e432b5a60800000000000000
+      internalID: 7663758009854375219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_8
+      rect:
+        serializedVersion: 2
+        x: 15692
+        y: 1955
+        width: 394
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b510132139e5259a0800000000000000
+      internalID: -6245825747451051685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_9
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 387
+        width: 388
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527301287ef18b820800000000000000
+      internalID: 2934130236411885349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_10
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 402
+        width: 394
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c29ca584ce529b0800000000000000
+      internalID: -5105414807049655263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_11
+      rect:
+        serializedVersion: 2
+        x: 3532
+        y: 394
+        width: 394
+        height: 628
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ab594ed3dac0190800000000000000
+      internalID: -7994824757149844941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_12
+      rect:
+        serializedVersion: 2
+        x: 5451
+        y: 314
+        width: 388
+        height: 627
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41af28c4da4d0f700800000000000000
+      internalID: 572190993454135828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.RED_13
+      rect:
+        serializedVersion: 2
+        x: 7291
+        y: 227
+        width: 396
+        height: 627
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c30d655caa3e450800000000000000
+      internalID: 6116920483441032342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8f6a859b63046d048a1416c40f91db1d
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 4f72484ac9fc1b64ea9dded3f559ac30, type: 3}
+      name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

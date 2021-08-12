@@ -1,12 +1,54 @@
 fileFormatVersion: 2
 guid: 819b016062f03d4449d1a3d3e08de720
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7707457761173582832
+    second: NPC.YELLOW_0
+  - first:
+      213: 4219599791707876407
+    second: NPC.YELLOW_1
+  - first:
+      213: 3682721653948028671
+    second: NPC.YELLOW_2
+  - first:
+      213: 4041387335647943140
+    second: NPC.YELLOW_3
+  - first:
+      213: 7059197574567532778
+    second: NPC.YELLOW_4
+  - first:
+      213: -345790345184722309
+    second: NPC.YELLOW_5
+  - first:
+      213: 1602020073951158399
+    second: NPC.YELLOW_6
+  - first:
+      213: -2190719391179801715
+    second: NPC.YELLOW_7
+  - first:
+      213: -6698303083168860432
+    second: NPC.YELLOW_8
+  - first:
+      213: -3917711986866876461
+    second: NPC.YELLOW_9
+  - first:
+      213: 4431434115140355637
+    second: NPC.YELLOW_10
+  - first:
+      213: -4973361906849594517
+    second: NPC.YELLOW_11
+  - first:
+      213: -7303407865748408666
+    second: NPC.YELLOW_12
+  - first:
+      213: -6674751087218733581
+    second: NPC.YELLOW_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,16 +73,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: 2
     mipBias: -100
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
-  nPOTScale: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +91,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -64,7 +106,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -76,7 +118,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,19 +161,327 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NPC.YELLOW_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1939
+        width: 395
+        height: 634
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ccbe7800c990590800000000000000
+      internalID: -7707457761173582832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_1
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 1931
+        width: 395
+        height: 634
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c6f0777a70f8a30800000000000000
+      internalID: 4219599791707876407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_2
+      rect:
+        serializedVersion: 2
+        x: 3574
+        y: 1931
+        width: 387
+        height: 634
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6163615d7ab1330800000000000000
+      internalID: 3682721653948028671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_3
+      rect:
+        serializedVersion: 2
+        x: 5598
+        y: 1923
+        width: 387
+        height: 634
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9de0d9e54e51830800000000000000
+      internalID: 4041387335647943140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_4
+      rect:
+        serializedVersion: 2
+        x: 7622
+        y: 1923
+        width: 387
+        height: 634
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae89567face47f160800000000000000
+      internalID: 7059197574567532778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_5
+      rect:
+        serializedVersion: 2
+        x: 9646
+        y: 1939
+        width: 387
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72418c5381833bf0800000000000000
+      internalID: -345790345184722309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_6
+      rect:
+        serializedVersion: 2
+        x: 11670
+        y: 1939
+        width: 387
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7067e6f4c48b3610800000000000000
+      internalID: 1602020073951158399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_7
+      rect:
+        serializedVersion: 2
+        x: 13694
+        y: 1939
+        width: 395
+        height: 626
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bfa2612500991e0800000000000000
+      internalID: -2190719391179801715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_8
+      rect:
+        serializedVersion: 2
+        x: 15718
+        y: 1939
+        width: 395
+        height: 634
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6f0d1c5d8da03a0800000000000000
+      internalID: -6698303083168860432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_9
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 338
+        width: 387
+        height: 636
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df828274bd71a9c0800000000000000
+      internalID: -3917711986866876461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_10
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 353
+        width: 395
+        height: 636
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5360d7659dd9f7d30800000000000000
+      internalID: 4431434115140355637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_11
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 346
+        width: 395
+        height: 628
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6345ca12b11bfab0800000000000000
+      internalID: -4973361906849594517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_12
+      rect:
+        serializedVersion: 2
+        x: 5462
+        y: 267
+        width: 387
+        height: 626
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6b540cd3515aa90800000000000000
+      internalID: -7303407865748408666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC.YELLOW_13
+      rect:
+        serializedVersion: 2
+        x: 7302
+        y: 178
+        width: 395
+        height: 628
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdcc2220458e53a0800000000000000
+      internalID: -6674751087218733581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a569b16e30eafbc4d99e6aface3c7f04
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: ed0ba06aed4446b4f98b15e5822d3e36, type: 3}
+      name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

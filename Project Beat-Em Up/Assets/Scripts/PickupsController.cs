@@ -23,12 +23,11 @@ public class PickupsController : MonoBehaviour
     [SerializeField] private Material m_scorePickupMat;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] private Material m_invulnerabilityMat;
-    [SerializeField] int m_scoreGainedOnItemPicked = 50;
 
     [Header("Settings")]
     [Range(15, 65)] public float m_healthPickupAmout;
     [Range(5, 45)] public float m_chargePickupAmout;
-    [Range(10, 150)] public float m_scorePickupAmout;
+    [Range(10, 150)] public int m_scoreGainedOnItemPicked;
 
     private PickupItems GetRandomItem()
     {
@@ -76,7 +75,7 @@ public class PickupsController : MonoBehaviour
 
             case PickupItems.ScoreIncrease:
                 FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnItemPicked);
-                Debug.Log("Score increases by " + m_scorePickupAmout);
+                Debug.Log("Score increases by " + m_scoreGainedOnItemPicked);
                 break;
 
             case PickupItems.Invulnerability:
