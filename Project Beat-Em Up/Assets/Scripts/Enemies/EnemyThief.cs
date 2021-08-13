@@ -10,36 +10,60 @@ public class EnemyThief : Enemy
     [SerializeField][Range(0,50)] private float m_ChargeToStealOnHit = 10;
     [SerializeField][Range(0,100)] private float m_ChanceToStealCharge = 30;
     [SerializeField] private float m_healthTresholdToRun = 20;
+    PlayerController m_playerController;
+    private bool m_chargeStollen = false;
+
+
+    protected override void Start()
+    {
+        base.Start();
+        m_playerController = FindObjectOfType<PlayerController>();
+    }
+
     protected override void Update()
     {
         base.Update();
 
         if (IcurrentHealth <= m_healthTresholdToRun)
         {
-            StartRunning();
+            SetEnemyState(EnemyState.Run);
+        }
+        if (m_playerController.currentCharge > m_playerController.maxCharge/2 && m_currentState == EnemyState.Patrol)
+        {
+            SetEnemyState(EnemyState.Chase);
+            m_chargeStollen = false;
         }
     }
 
-    private void StartRunning()
+    protected override void OnPlayerInRange()
     {
-        SetEnemyState(EnemyState.Run);
+        base.OnPlayerInRange();
+
+        if (m_chargeStollen)
+        {
+            SetEnemyState(EnemyState.Patrol);
+        }
     }
 
+    //anim event
     protected override void AttackEffects(GameObject gameObject)
     {
-        if (Random.value < m_ChanceToStealCharge/100)
+        PlayerController player = gameObject.GetComponent<PlayerController>();
+
+        if (Random.value < m_ChanceToStealCharge / 100 && !m_chargeStollen)
         {
-            StealCharge(gameObject.GetComponent<PlayerController>());
+            StealCharge(player);
+            m_chargeStollen = true;
         }
     }
 
     private void StealCharge(PlayerController player)
     {
-        player.m_currentCharge -= m_ChargeToStealOnHit;
-        if (player.m_currentCharge < 0)
+        player.currentCharge -= m_ChargeToStealOnHit;
+        if (player.currentCharge < 0)
         {
-            player.m_currentCharge = 0;
+            player.currentCharge = 0;
         }
-        Debug.Log("Player's charge is stolen by " + m_ChargeToStealOnHit + ". New charge is: " + player.m_currentCharge);
+        Debug.Log("Player's charge is stolen by " + m_ChargeToStealOnHit + ". New charge is: " + player.currentCharge);
     }
 }

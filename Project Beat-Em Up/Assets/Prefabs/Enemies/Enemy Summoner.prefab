@@ -113,7 +113,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1494901536624554733}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.75
+  m_Radius: 2
   m_Speed: 0.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -209,8 +209,9 @@ MonoBehaviour:
   m_interactPoint: {fileID: 1494901536345791409}
   m_normalAttackPoint: {fileID: 1494901536345791409}
   m_specialAttackPoint: {fileID: 1494901536345791409}
+  m_chargedAttackPoint: {fileID: 0}
   m_maxHealth: 50
-  m_movementSpeed: 3.5
+  m_movementSpeed: 3
   m_jumpForce: 25
   m_pickupRange: 1.25
   m_normalAttackRange: 1.25
@@ -236,6 +237,7 @@ MonoBehaviour:
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 5
   m_stoppingDistance: 7
+  m_stunCooldown: 3
   summoner: {fileID: 0}
   m_EnemyToSummon: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
     type: 3}

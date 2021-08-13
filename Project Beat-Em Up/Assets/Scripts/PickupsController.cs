@@ -70,7 +70,7 @@ public class PickupsController : MonoBehaviour
                 break;
 
             case PickupItems.ChargeGain:
-                gameObject.GetComponent<PlayerController>().m_currentCharge += m_chargePickupAmout;
+                gameObject.GetComponent<PlayerController>().currentCharge += m_chargePickupAmout;
                 break;
 
             case PickupItems.ScoreIncrease:

@@ -289,7 +289,7 @@ MonoBehaviour:
   m_specialAttackPoint: {fileID: 9101316655204151048}
   m_chargedAttackPoint: {fileID: 0}
   m_maxHealth: 10
-  m_movementSpeed: 3.5
+  m_movementSpeed: 4
   m_jumpForce: 25
   m_pickupRange: 1.25
   m_normalAttackRange: 1.25
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EnemyName: Minion
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 1
-  m_stoppingDistance: 3
+  m_stoppingDistance: 2.5
   m_stunCooldown: 3
   summoner: {fileID: 0}
 --- !u!136 &574648680

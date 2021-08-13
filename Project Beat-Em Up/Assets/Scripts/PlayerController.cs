@@ -43,11 +43,11 @@ public class PlayerController : CombatandMovement
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] [Range(0, 10)] protected float m_chargedAttackRange = 1.0f;
     [SerializeField] [Range(0, 65)] protected float m_chargedAttackDamage = 25.0f;
-    [SerializeField] protected float m_maxCharge = 75f;
     [SerializeField] protected float minimumChargeLevel = 25f;
     [SerializeField] protected float chargeGain = 0.5f;
     [SerializeField] protected float attackchargeDrain = 5f;
-    [HideInInspector] public float m_currentCharge;
+    [SerializeField] public float maxCharge = 75f;
+    [HideInInspector] public float currentCharge;
     private bool m_chargedAttackActive;
     private float m_skinWidth = 0.1f;
     protected bool m_isGrounded;
@@ -55,7 +55,7 @@ public class PlayerController : CombatandMovement
     protected override void Start()
     {
         base.Start();
-        m_currentCharge = 0;
+        currentCharge = 0;
         m_chargedAttackActive = false;
         m_isGrounded = true;
     }
@@ -100,7 +100,7 @@ public class PlayerController : CombatandMovement
         Debug.Log("ChargedAttack");
 
         Attack(m_chargedAttackPoint, m_chargedAttackRange, m_targetLayer, m_chargedAttackDamage);
-        m_currentCharge -= m_maxCharge;
+        currentCharge -= maxCharge;
 
         FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnChargedAttack);
         m_playerCamera.transform.DOShakeRotation(1, 3);
@@ -131,17 +131,17 @@ public class PlayerController : CombatandMovement
 
     public void OnSpecialAttack(InputAction.CallbackContext value)
     {
-        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking != true && m_currentCharge >= attackchargeDrain)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking != true && currentCharge >= attackchargeDrain)
         {
             m_animator.SetTrigger("SpecialAttack");
-            m_currentCharge -= attackchargeDrain;
-            m_uiController.SetChargeMeterPercent(m_currentCharge / m_maxCharge);
+            currentCharge -= attackchargeDrain;
+            m_uiController.SetChargeMeterPercent(currentCharge / maxCharge);
         }
     }
 
     public void OnChargedAttack(InputAction.CallbackContext value)
     {
-        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking != true && m_currentCharge >= m_maxCharge)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking != true && currentCharge >= maxCharge)
         {
             m_animator.SetTrigger("ChargedAttack");
         }
@@ -175,11 +175,11 @@ public class PlayerController : CombatandMovement
     {
         Move(new Vector3(m_input.x, 0, m_input.y));
         m_animator.SetBool("Grounded", m_isGrounded);
-        if(m_currentCharge <= m_maxCharge)
+        if(currentCharge <= maxCharge)
         {
-            m_currentCharge += chargeGain * Time.deltaTime;
+            currentCharge += chargeGain * Time.deltaTime;
         }
-        m_uiController.SetChargeMeterPercent(m_currentCharge / m_maxCharge);
+        m_uiController.SetChargeMeterPercent(currentCharge / maxCharge);
     }
 
     private void FixedUpdate()

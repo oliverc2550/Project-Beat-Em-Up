@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class TankProjectile : MonoBehaviour
 {
-    [SerializeField] int m_damageToDeal = 10;
+    public float damageToDeal;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<IDamagable>().TakeDamage(m_damageToDeal);
+            other.GetComponent<IDamagable>().TakeDamage(damageToDeal);
             Debug.Log(other.name + ": " + other.GetComponent<IDamagable>().IcurrentHealth);
         }
     }

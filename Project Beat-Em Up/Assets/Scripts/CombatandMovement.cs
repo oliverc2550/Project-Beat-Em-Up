@@ -68,7 +68,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     protected bool m_isBlocking;
     [HideInInspector] public bool m_invulnerable;
 
-    private float m_normalAttackPointXscale;
+    private float m_normalAttackPointXpos;
     private float m_chargedAttackPointXpos;
     private Vector3 m_startScale;
 
@@ -93,7 +93,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         m_invulnerable = false;
         Iinvulnerable = m_invulnerable;
         m_startScale = transform.localScale;
-        m_normalAttackPointXscale = m_normalAttackPoint.localScale.x;
+        m_normalAttackPointXpos = m_normalAttackPoint.localPosition.x;
 
         if (m_chargedAttackPoint != null)
         {
@@ -117,7 +117,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         if (direction < 0)
         {
             m_spriteRenderer.flipX = true;
-            m_normalAttackPoint.localScale = new Vector3(-m_normalAttackPointXscale, m_normalAttackPoint.localScale.y, m_normalAttackPoint.localScale.z);
+            m_normalAttackPoint.localPosition = new Vector3(-m_normalAttackPointXpos, m_normalAttackPoint.localPosition.y, m_normalAttackPoint.localPosition.z);
 
             if (m_chargedAttackPoint != null)
             {
@@ -132,7 +132,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         else if (direction > 0)
         {
             m_spriteRenderer.flipX = false;
-            m_normalAttackPoint.localScale = new Vector3(m_normalAttackPointXscale, m_normalAttackPoint.localScale.y, m_normalAttackPoint.localScale.z);
+            m_normalAttackPoint.localPosition = new Vector3(m_normalAttackPointXpos, m_normalAttackPoint.localPosition.y, m_normalAttackPoint.localPosition.z);
 
             if (m_chargedAttackPoint != null)
             {

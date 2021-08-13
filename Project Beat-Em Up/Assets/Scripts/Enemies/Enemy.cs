@@ -15,11 +15,18 @@ public class Enemy : CombatandMovement
     [SerializeField] private string m_EnemyName;
     [SerializeField] private int m_scoreGainedOnDeath = 200;
     [SerializeField] private int m_gainChargeOnEnemyDamaged = 1;
-    [SerializeField] float m_stoppingDistance;
+    [SerializeField] protected float m_stoppingDistance;
+    [SerializeField] [Range(0, 10)] float m_patrollingDistanceX;
     [SerializeField] int m_stunCooldown = 3;
-    bool m_canBeStunned = true;
+    [SerializeField] int m_PatrolWaitTime = 3;
+    [SerializeField] bool m_petrolsOnStart;
 
+    float m_startXPos;
+
+    bool m_canBeStunned = true;
+    protected string m_attackAnimation;
     public EnemyBoss summoner;
+    Vector3 m_currentDirection;
 
 
     EnemyUI m_enemyUI;
@@ -30,10 +37,20 @@ public class Enemy : CombatandMovement
     {
         base.Start();
         SetTarget(FindObjectOfType<PlayerController>().transform);
-        SetEnemyState(EnemyState.Chase);
         m_enemyUI = GetComponentInChildren<EnemyUI>();
         m_enemyUI.SetEnemyNameUI(m_EnemyName);
+        m_attackAnimation = "Attack";
+        m_startXPos = transform.position.x;
+        m_currentDirection = Vector3.right;
 
+        if (m_petrolsOnStart)
+        {
+            SetEnemyState(EnemyState.Patrol);
+        }
+        else
+        {
+            SetEnemyState(EnemyState.Chase);
+        }
     }
 
     protected virtual void Update()
@@ -50,7 +67,7 @@ public class Enemy : CombatandMovement
         }
 
         //https://answers.unity.com/questions/362629/how-can-i-check-if-an-animation-is-being-played-or.html
-        else if (m_currentState == EnemyState.Chase && !m_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        else if (m_currentState == EnemyState.Chase && !m_animator.GetCurrentAnimatorStateInfo(0).IsName(m_attackAnimation))
         {
             m_animator.SetBool("Walking", true);
 
@@ -66,29 +83,56 @@ public class Enemy : CombatandMovement
         {
             //run animation
             m_animator.SetBool("Walking", true);
-            Vector3 direction = -(m_target.position - transform.position).normalized;
-            Move(direction);
+            m_currentDirection = -(m_target.position - transform.position).normalized;
+            Move(m_currentDirection);
         }
-    }
-
-    //used by the enemy tank and the boss lv1
-    //anim event NOT ADDED TO ANIMATION YET
-    protected void UseAreaOfEffect(float aoeRange, float aoeDamage)
-    {
-
-        Collider[] colliders = Physics.OverlapSphere(transform.position, aoeRange, m_targetLayer);
-        foreach (Collider nearbyObject in colliders)
+        else if (m_currentState == EnemyState.Patrol)
         {
-            // Checking if the nearby objects have damageable interface. If they do, they receive damage.
-            IDamagable damagableTarget = nearbyObject.gameObject.GetComponent<IDamagable>();
-            if (damagableTarget != null)
+            m_animator.SetBool("Walking", true);
+
+            Move(m_currentDirection);
+
+            Vector3 targetPos;
+
+            if (m_currentDirection == Vector3.right)
             {
-                damagableTarget.TakeDamage(aoeDamage);
+                targetPos = new Vector3(m_startXPos + m_patrollingDistanceX, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                targetPos = new Vector3(m_startXPos - m_patrollingDistanceX, transform.position.y, transform.position.z);
+            }
+
+            float distance = Vector3.Distance(transform.position, targetPos);
+            Debug.Log("D " + distance);
+            if (distance < 0.5f)
+            {
+                StartCoroutine(WaitBeforeChangingDirection());
             }
         }
     }
+    IEnumerator WaitBeforeChangingDirection()
+    {
+        SetEnemyState(EnemyState.Idle);
 
+        yield return new WaitForSeconds(m_PatrolWaitTime);
 
+        ChangeDirection();
+        SetEnemyState(EnemyState.Patrol);
+    }
+
+    void ChangeDirection()
+    {
+
+        if (m_currentDirection == Vector3.right)
+        {
+            m_currentDirection = Vector3.left;
+        }
+        else
+        {
+            m_currentDirection = Vector3.right;
+        }
+    }
 
     protected bool PlayerInRange()
     {
@@ -105,7 +149,7 @@ public class Enemy : CombatandMovement
     {
         base.Move(direction);
 
-        m_agent.Move(direction * m_movementSpeed*Time.deltaTime);
+        m_agent.Move(direction * m_movementSpeed * Time.deltaTime);
 
         LookAtDirection(-direction.x);
     }
@@ -124,8 +168,8 @@ public class Enemy : CombatandMovement
 
     public override void OnTakeDamage(float damage)
     {
-        base.OnTakeDamage(damage); 
-        
+        base.OnTakeDamage(damage);
+
         if (!m_animator.GetCurrentAnimatorStateInfo(0).IsName("Stun") && m_canBeStunned)
         {
             m_animator.SetTrigger("Stun");
@@ -133,8 +177,13 @@ public class Enemy : CombatandMovement
             Debug.Log("stunned");
         }
 
+        if (m_currentState == EnemyState.Patrol || m_currentState == EnemyState.Idle)
+        {
+            m_currentState = EnemyState.Chase;
+        }
+
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
-       // Debug.Log("health: " + IcurrentHealth);
+        // Debug.Log("health: " + IcurrentHealth);
     }
 
     protected void SetEnemyState(EnemyState state)
@@ -153,7 +202,7 @@ public class Enemy : CombatandMovement
         if (summoner != null)
         {
             summoner.summonedEnemies.Remove(this);
-            FindObjectOfType<PlayerController>().m_currentCharge += m_gainChargeOnEnemyDamaged;
+            FindObjectOfType<PlayerController>().currentCharge += m_gainChargeOnEnemyDamaged;
 
             if (summoner.summonedEnemies.Count == 0)
             {

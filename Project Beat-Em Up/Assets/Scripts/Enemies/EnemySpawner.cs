@@ -34,8 +34,11 @@ public class EnemySpawner : MonoBehaviour
 
     public int enemyCount = 0;
 
-    private const float m_minZ = -1.6f;
-    private const float m_maxZ = -11.5f;
+    [Header("WARNING: Avoid Editing")]
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer + TESTING.")]
+    public float m_minZ = -1.6f;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer + TESTING.")]
+    public float m_maxZ = -11.5f;
 
     public void StartSpawning(EnemySpawnData data)
     {

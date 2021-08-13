@@ -151,7 +151,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2102965868339181091}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.38
+  m_Radius: 2
   m_Speed: 0.05
   m_Acceleration: 8
   avoidancePriority: 50
@@ -160,7 +160,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.2
+  m_Height: 9
   m_BaseOffset: -0.05
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -225,10 +225,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.38847053
-  m_Height: 1.5065098
+  m_Radius: 2
+  m_Height: 9.5
   m_Direction: 1
-  m_Center: {x: -0.019731998, y: 0.58304834, z: 0}
+  m_Center: {x: 0.05, y: 4.5, z: 0}
 --- !u!114 &3886622432434536879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,11 +245,11 @@ MonoBehaviour:
   m_rigidbody: {fileID: 2102965868339181095}
   m_spriteRenderer: {fileID: 2102965868339181090}
   m_interactPoint: {fileID: 2102965868858434919}
-  m_normalAttackPoint: {fileID: 2102965868858434919}
+  m_normalAttackPoint: {fileID: 1689245525527198331}
   m_specialAttackPoint: {fileID: 2102965868858434919}
   m_chargedAttackPoint: {fileID: 0}
   m_maxHealth: 141
-  m_movementSpeed: 2.7
+  m_movementSpeed: 2.5
   m_jumpForce: 0
   m_pickupRange: 1.25
   m_normalAttackRange: 1.25
@@ -274,7 +274,10 @@ MonoBehaviour:
   m_EnemyName: Tank
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
-  m_stoppingDistance: 4
+  m_stoppingDistance: 4.5
+  m_minPatrollingDistanceZ: 0
+  m_maxPatrollingDistanceZ: 0
+  m_patrollingDistanceX: 0
   m_stunCooldown: 3
   summoner: {fileID: 0}
   m_chanceToThrowProjectile: 30
@@ -302,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102965868858434912}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.764, z: 0}
+  m_LocalPosition: {x: -2.79, y: 6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2102965868339181092}
@@ -353,12 +356,12 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.2129965
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.16935849
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -403,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -431,6 +434,26 @@ PrefabInstance:
       value: 'Tank
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704512902981175213, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704512902981175213, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071237288512998726, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -0.22999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071237288512998726, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.615
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d, type: 3}
