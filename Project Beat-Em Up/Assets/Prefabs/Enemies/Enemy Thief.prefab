@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7262013986928257722
 Transform:
   m_ObjectHideFlags: 0
@@ -236,7 +236,10 @@ MonoBehaviour:
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 2
+  m_patrollingDistanceX: 0
   m_stunCooldown: 3
+  m_PatrolWaitTime: 3
+  m_petrolsOnStart: 0
   summoner: {fileID: 0}
   m_ChargeToStealOnHit: 20
   m_ChanceToStealCharge: 30
