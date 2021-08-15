@@ -45,13 +45,14 @@ GameObject:
   - component: {fileID: 1494901536624554735}
   - component: {fileID: 1367980713578889253}
   - component: {fileID: 1494901536624554732}
+  - component: {fileID: 1421602035}
   m_Layer: 10
   m_Name: Enemy Summoner
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1494901536624554730
 Transform:
   m_ObjectHideFlags: 0
@@ -233,14 +234,76 @@ MonoBehaviour:
   heldObject: {fileID: 0}
   m_collider: {fileID: 1367980713578889253}
   m_agent: {fileID: 1494901536624554734}
+  m_enemyNonAttackingMaterial: {fileID: 2100000, guid: 5b04788a53af62545a1748f84d29e5a6,
+    type: 2}
+  m_enemyAttackingMaterial: {fileID: 2100000, guid: 5b04788a53af62545a1748f84d29e5a6,
+    type: 2}
   m_EnemyName: Summoner
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 5
   m_stoppingDistance: 7
+  m_patrollingDistanceX: 0
   m_stunCooldown: 3
+  m_PatrolWaitTime: 3
+  m_petrolsOnStart: 0
+  m_idleOnStart: 0
   summoner: {fileID: 0}
   m_EnemyToSummon: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
     type: 3}
+--- !u!114 &1421602035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494901536624554733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b544d0c9f8bac4f9a37842e7a81a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_animator: {fileID: 0}
+  m_rigidbody: {fileID: 0}
+  m_spriteRenderer: {fileID: 0}
+  m_interactPoint: {fileID: 0}
+  m_normalAttackPoint: {fileID: 0}
+  m_specialAttackPoint: {fileID: 0}
+  m_chargedAttackPoint: {fileID: 0}
+  m_maxHealth: 0
+  m_movementSpeed: 0
+  m_jumpForce: 0
+  m_pickupRange: 1.25
+  m_normalAttackRange: 1.25
+  m_normalAttackDamage: 1
+  m_specialAttackRange: 0.75
+  m_specialAttackDamage: 2
+  m_scoreGainedOnSpecialAttack: 0
+  m_scoreGainedOnChargedAttack: 0
+  m_pickupLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  m_targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  m_collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  m_invulnerable: 0
+  heldObject: {fileID: 0}
+  m_collider: {fileID: 0}
+  m_agent: {fileID: 0}
+  m_enemyNonAttackingMaterial: {fileID: 0}
+  m_enemyAttackingMaterial: {fileID: 0}
+  m_EnemyName: 
+  m_scoreGainedOnDeath: 200
+  m_gainChargeOnEnemyDamaged: 1
+  m_stoppingDistance: 0
+  m_patrollingDistanceX: 0
+  m_stunCooldown: 3
+  m_PatrolWaitTime: 3
+  m_petrolsOnStart: 0
+  m_idleOnStart: 0
+  summoner: {fileID: 0}
 --- !u!1 &1964449394778713345
 GameObject:
   m_ObjectHideFlags: 0

@@ -257,7 +257,7 @@ SpriteRenderer:
   m_SortingLayerID: -1422993187
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2054821857615637726, guid: d4f37c8025b2cef4c882caa1b0cdc025,
+  m_Sprite: {fileID: -5343107611128160977, guid: d4f37c8025b2cef4c882caa1b0cdc025,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_normalAttackPoint: {fileID: 9101316655204151048}
   m_specialAttackPoint: {fileID: 9101316655204151048}
   m_chargedAttackPoint: {fileID: 0}
-  m_maxHealth: 10
+  m_maxHealth: 42
   m_movementSpeed: 4
   m_jumpForce: 25
   m_pickupRange: 1.25
@@ -311,11 +311,19 @@ MonoBehaviour:
   heldObject: {fileID: 0}
   m_collider: {fileID: 574648680}
   m_agent: {fileID: 9101316655266976780}
+  m_enemyNonAttackingMaterial: {fileID: 2100000, guid: a09d912cbde6be34cbd335e005b67bdb,
+    type: 2}
+  m_enemyAttackingMaterial: {fileID: 2100000, guid: 5b04788a53af62545a1748f84d29e5a6,
+    type: 2}
   m_EnemyName: Minion
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 1
   m_stoppingDistance: 2.5
+  m_patrollingDistanceX: 4.37
   m_stunCooldown: 3
+  m_PatrolWaitTime: 3
+  m_petrolsOnStart: 1
+  m_idleOnStart: 0
   summoner: {fileID: 0}
 --- !u!136 &574648680
 CapsuleCollider:

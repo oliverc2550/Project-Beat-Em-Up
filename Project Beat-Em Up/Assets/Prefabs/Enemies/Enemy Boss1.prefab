@@ -65,14 +65,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2326028391054703822}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8678221613768041043}
   m_Father: {fileID: 7526567011169837237}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 10}
@@ -323,7 +323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7526567011169837237
 Transform:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ Transform:
   m_GameObject: {fileID: 7526567011169837234}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -3.36, y: 0, z: -4.47}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
   m_Children:
   - {fileID: 7526567011720164342}
   - {fileID: 4124707308758064204}
@@ -505,11 +505,19 @@ MonoBehaviour:
   heldObject: {fileID: 0}
   m_collider: {fileID: 1527508079}
   m_agent: {fileID: 7526567011169837232}
+  m_enemyNonAttackingMaterial: {fileID: 2100000, guid: cd933da2f1f0f634bb534d694b5a3fff,
+    type: 2}
+  m_enemyAttackingMaterial: {fileID: 2100000, guid: cd933da2f1f0f634bb534d694b5a3fff,
+    type: 2}
   m_EnemyName: 'Boss '
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 5
   m_stoppingDistance: 5
+  m_patrollingDistanceX: 0
   m_stunCooldown: 3
+  m_PatrolWaitTime: 3
+  m_petrolsOnStart: 0
+  m_idleOnStart: 0
   summoner: {fileID: 0}
   m_enemyToSummonOnPhase1: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
     type: 3}
@@ -518,8 +526,9 @@ MonoBehaviour:
   m_enemyCountToSummonOnPhase1: 2
   m_enemyCountToSummonOnPhase2: 2
   m_gainedScoreOnBossEnteringPhase2: 50
+  m_scaleBossOnPhase2: {x: 0.6, y: 0.6, z: 0.6}
   m_minSpecialAttackHitCount: 1
-  m_maxSpecialAttackHitCount: 5
+  m_maxSpecialAttackHitCount: 4
   summonedEnemies: []
   m_aoeRange: 5
   m_aoeDamage: 5
@@ -549,7 +558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7526567011720164337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.79, y: 6.5, z: 0}
+  m_LocalPosition: {x: 2.79, y: 6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7526567011169837237}

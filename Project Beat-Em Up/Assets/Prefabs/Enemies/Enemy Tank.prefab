@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3509c159fbc01764b985043aa13b2156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_damageToDeal: 10
+  damageToDeal: 0
 --- !u!1 &2102965868339181091
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_movementSpeed: 2.5
   m_jumpForce: 0
   m_pickupRange: 1.25
-  m_normalAttackRange: 1.25
+  m_normalAttackRange: 2
   m_normalAttackDamage: 1
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
@@ -271,16 +271,21 @@ MonoBehaviour:
   heldObject: {fileID: 0}
   m_collider: {fileID: 4047494675808497159}
   m_agent: {fileID: 2102965868339181089}
+  m_enemyNonAttackingMaterial: {fileID: 2100000, guid: 9c6ce319c16ae1c4480df7e9f26596ed,
+    type: 2}
+  m_enemyAttackingMaterial: {fileID: 2100000, guid: 9c6ce319c16ae1c4480df7e9f26596ed,
+    type: 2}
   m_EnemyName: Tank
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
-  m_stoppingDistance: 4.5
-  m_minPatrollingDistanceZ: 0
-  m_maxPatrollingDistanceZ: 0
+  m_stoppingDistance: 5
   m_patrollingDistanceX: 0
   m_stunCooldown: 3
+  m_PatrolWaitTime: 3
+  m_petrolsOnStart: 0
+  m_idleOnStart: 1
   summoner: {fileID: 0}
-  m_chanceToThrowProjectile: 30
+  m_chanceToThrowProjectile: 19
 --- !u!1 &2102965868858434912
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +386,7 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -391,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -416,7 +421,7 @@ PrefabInstance:
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 923669078661051862, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using Cinemachine;
+using UnityEngine.Events;
 
 //Changelog
 /*Inital Script and movement logic created by Thea (date)
@@ -25,6 +26,7 @@ using Cinemachine;
  * so that these methods can be called by all inheriting classes via animation events.
  * 09/07/21 - Oliver - Added in the functionality to update the UI Charge Bar.
  * 09/08/21 - Thea - Gain score and shake the camera when charged attack is used
+ * 15/08/21 - Thea - onNormalAttack event created in order to know when the player is going to attack and so that evemies can block it.
  */
 
 public class PlayerController : CombatandMovement
@@ -51,6 +53,8 @@ public class PlayerController : CombatandMovement
     private bool m_chargedAttackActive;
     private float m_skinWidth = 0.1f;
     protected bool m_isGrounded;
+
+    public UnityEvent onNormalAttackEvent;
 
     protected override void Start()
     {
@@ -125,6 +129,7 @@ public class PlayerController : CombatandMovement
     {
         if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking != true)
         {
+            onNormalAttackEvent.Invoke();
             m_animator.SetTrigger("NormalAttack");
         }
     }

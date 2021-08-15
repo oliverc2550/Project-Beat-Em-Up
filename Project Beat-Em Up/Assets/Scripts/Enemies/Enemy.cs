@@ -11,6 +11,8 @@ public class Enemy : CombatandMovement
 {
     [SerializeField] protected CapsuleCollider m_collider;
     [SerializeField] NavMeshAgent m_agent;
+    [SerializeField] Material m_enemyNonAttackingMaterial;
+    [SerializeField] Material m_enemyAttackingMaterial;
 
     [SerializeField] private string m_EnemyName;
     [SerializeField] private int m_scoreGainedOnDeath = 200;
@@ -20,10 +22,12 @@ public class Enemy : CombatandMovement
     [SerializeField] int m_stunCooldown = 3;
     [SerializeField] int m_PatrolWaitTime = 3;
     [SerializeField] bool m_petrolsOnStart;
+    [SerializeField] bool m_idleOnStart;
 
     float m_startXPos;
 
     bool m_canBeStunned = true;
+    protected bool m_alreadyAttackedOnce = false;
     protected string m_attackAnimation;
     public EnemyBoss summoner;
     Vector3 m_currentDirection;
@@ -47,6 +51,10 @@ public class Enemy : CombatandMovement
         {
             SetEnemyState(EnemyState.Patrol);
         }
+        else if (m_idleOnStart)
+        {
+            SetEnemyState(EnemyState.Idle);
+        }
         else
         {
             SetEnemyState(EnemyState.Chase);
@@ -55,6 +63,7 @@ public class Enemy : CombatandMovement
 
     protected virtual void Update()
     {
+        Debug.Log("EnemyState: " + m_currentState);
         //don't read the update while the stun animation is running
         if (m_animator.GetCurrentAnimatorStateInfo(0).IsName("Stun"))
         {
@@ -64,13 +73,14 @@ public class Enemy : CombatandMovement
         if (m_currentState == EnemyState.Idle)
         {
             m_animator.SetBool("Walking", false);
+            m_spriteRenderer.material = m_enemyNonAttackingMaterial;
         }
 
         //https://answers.unity.com/questions/362629/how-can-i-check-if-an-animation-is-being-played-or.html
         else if (m_currentState == EnemyState.Chase && !m_animator.GetCurrentAnimatorStateInfo(0).IsName(m_attackAnimation))
         {
             m_animator.SetBool("Walking", true);
-
+            m_spriteRenderer.material = m_enemyAttackingMaterial;
             Vector3 direction = (m_target.position - transform.position).normalized;
             Move(direction);
 
@@ -81,13 +91,15 @@ public class Enemy : CombatandMovement
         }
         else if (m_currentState == EnemyState.Run)
         {
-            //run animation
             m_animator.SetBool("Walking", true);
             m_currentDirection = -(m_target.position - transform.position).normalized;
             Move(m_currentDirection);
+
+            m_spriteRenderer.material = m_enemyAttackingMaterial;
         }
         else if (m_currentState == EnemyState.Patrol)
         {
+            m_spriteRenderer.material = m_enemyNonAttackingMaterial;
             m_animator.SetBool("Walking", true);
 
             Move(m_currentDirection);
@@ -138,20 +150,26 @@ public class Enemy : CombatandMovement
     {
         float distance = Vector3.Distance(m_target.position, transform.position);
         return distance < m_stoppingDistance;
+        Debug.Log("Distance: " + distance);
+        Debug.Log("S Distance: " + m_stoppingDistance);
     }
 
     protected virtual void OnPlayerInRange()
     {
-        m_animator.SetTrigger("Attack");
+        m_animator.SetTrigger(m_attackAnimation);
+        m_alreadyAttackedOnce = true;
     }
 
     protected override void Move(Vector3 direction)
     {
-        base.Move(direction);
+        if (m_isBlocking == false)
+        {
+            base.Move(direction);
 
-        m_agent.Move(direction * m_movementSpeed * Time.deltaTime);
+            m_agent.Move(direction * m_movementSpeed * Time.deltaTime);
 
-        LookAtDirection(-direction.x);
+            LookAtDirection(-direction.x);
+        }
     }
 
     void SetTarget(Transform target)
@@ -209,6 +227,8 @@ public class Enemy : CombatandMovement
                 summoner.SetEnemyState(EnemyState.Chase);
             }
         }
+
+        Destroy(gameObject);
     }
 }
 

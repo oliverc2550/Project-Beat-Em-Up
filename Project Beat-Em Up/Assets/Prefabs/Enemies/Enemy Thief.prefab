@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7262013985841797245}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.79, y: 6.5, z: 0}
+  m_LocalPosition: {x: 2.79, y: 6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7262013986928257722}
@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7262013986928257722
 Transform:
   m_ObjectHideFlags: 0
@@ -232,17 +232,22 @@ MonoBehaviour:
   heldObject: {fileID: 0}
   m_collider: {fileID: 3947052346462442082}
   m_agent: {fileID: 7262013986928258368}
+  m_enemyNonAttackingMaterial: {fileID: 2100000, guid: b858762d0617f7647bc74b6c3a66a912,
+    type: 2}
+  m_enemyAttackingMaterial: {fileID: 2100000, guid: b858762d0617f7647bc74b6c3a66a912,
+    type: 2}
   m_EnemyName: Thief
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 2
-  m_patrollingDistanceX: 0
+  m_patrollingDistanceX: 5
   m_stunCooldown: 3
   m_PatrolWaitTime: 3
   m_petrolsOnStart: 0
+  m_idleOnStart: 0
   summoner: {fileID: 0}
   m_ChargeToStealOnHit: 20
-  m_ChanceToStealCharge: 30
+  m_ChanceToStealCharge: 100
   m_healthTresholdToRun: 20
 --- !u!1001 &221034544557644888
 PrefabInstance:

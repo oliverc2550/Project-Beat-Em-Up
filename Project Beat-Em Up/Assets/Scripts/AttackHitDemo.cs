@@ -34,7 +34,7 @@ public class AttackHitDemo : MonoBehaviour, IDamagable
     public void Die()
     {
         //debug:
-        Destroy(gameObject);
+        gameObject.SetActive(false);
         //todo: some particles, sounds and animations
     }
 }

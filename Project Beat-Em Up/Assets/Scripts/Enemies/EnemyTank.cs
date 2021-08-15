@@ -7,24 +7,24 @@ public class EnemyTank : Enemy
     [Header("Tank Settings")]
     [SerializeField] [Range(0, 100)] private float m_chanceToThrowProjectile = 30;
 
-    //protected override void AttackEffects(GameObject gameObject)
-    //{
-    //    base.AttackEffects(gameObject);
-
-    //    if (Random.value < m_chanceToThrowProjectile / 100)
-    //    {
-    //        //TODO: replace this with animation 
-    //        m_animator.SetTrigger("Jump");
-    //        Debug.Log("DEBUG");
-    //    }
-    //}
     protected override void Start()
     {
+      //  FindObjectOfType<PlayerController>().onNormalAttackEvent.AddListener();
         base.Start();
         GetComponentInChildren<TankProjectile>().damageToDeal = m_normalAttackDamage;
         m_attackAnimation = "LeftAttack";
     }
 
+    public override void OnTakeDamage(float damage)
+    {
+        int chance = 50;
+
+        if (Random.value < chance)
+        {
+            base.OnTakeDamage(damage);
+        }
+
+    }
 
     protected override void OnPlayerInRange()
     {

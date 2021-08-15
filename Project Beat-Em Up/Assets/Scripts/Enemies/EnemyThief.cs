@@ -32,16 +32,20 @@ public class EnemyThief : Enemy
         {
             SetEnemyState(EnemyState.Chase);
             m_chargeStollen = false;
+            m_alreadyAttackedOnce = false;
         }
     }
 
     protected override void OnPlayerInRange()
     {
-        base.OnPlayerInRange();
-
         if (m_chargeStollen)
         {
             SetEnemyState(EnemyState.Patrol);
+        }
+        else if (!m_alreadyAttackedOnce)
+        {
+            base.OnPlayerInRange();
+            m_alreadyAttackedOnce = false;
         }
     }
 
