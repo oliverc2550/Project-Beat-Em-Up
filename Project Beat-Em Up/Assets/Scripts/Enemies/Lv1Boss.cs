@@ -12,11 +12,15 @@ public class Lv1Boss : EnemyBoss
     [SerializeField] public float m_aoeRange;
     [SerializeField] private float m_aoeDamage;
     [SerializeField] private SpikesTimer m_spikesTimerPrefab;
-    private List<SpikesTimer> spikeTimers = new List<SpikesTimer>();
+    public List<SpikesTimer> aliveTimers = new List<SpikesTimer>();
 
     private const int m_spikesTimerCount = 3;
 
-
+    protected override void Start()
+    {
+        base.Start();
+        PlayPickedAttack(1);
+    }
 
     protected override void PlayPickedAttack(int attackToPlay)
     {
@@ -58,13 +62,15 @@ public class Lv1Boss : EnemyBoss
     {
         for (int i = 0; i < m_spikesTimerCount; i++)
         {
-            spikeTimers.Add(Instantiate(m_spikesTimerPrefab, transform.position, Quaternion.identity));
-            spikeTimers[i].allTimers = spikeTimers;
+            SpikesTimer spikesTimer = Instantiate(m_spikesTimerPrefab, transform.position, Quaternion.identity);
+            aliveTimers.Add(spikesTimer);
+            spikesTimer.enemyBoss = this;
+            //aliveTimers[i].destroyedBoxesByTimer = aliveTimers;
         }
 
-        spikeTimers[0].ThrowSpikesTimer(Vector3.left);
-        spikeTimers[1].ThrowSpikesTimer(Vector3.right);
-        spikeTimers[2].ThrowSpikesTimer(Vector3.zero);
+        aliveTimers[0].ThrowSpikesTimer(Vector3.left);
+        aliveTimers[1].ThrowSpikesTimer(Vector3.right);
+        aliveTimers[2].ThrowSpikesTimer(Vector3.zero);
     }
 
     //anim event 

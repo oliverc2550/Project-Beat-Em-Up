@@ -89,7 +89,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2102965868339181092
 Transform:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_normalAttackPoint: {fileID: 1689245525527198331}
   m_specialAttackPoint: {fileID: 2102965868858434919}
   m_chargedAttackPoint: {fileID: 0}
-  m_maxHealth: 141
+  m_maxHealth: 201
   m_movementSpeed: 2.5
   m_jumpForce: 0
   m_pickupRange: 1.25
@@ -285,7 +285,8 @@ MonoBehaviour:
   m_petrolsOnStart: 0
   m_idleOnStart: 1
   summoner: {fileID: 0}
-  m_chanceToThrowProjectile: 19
+  m_chanceToBlock: 49
+  m_blockDuration: 1
 --- !u!1 &2102965868858434912
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 733935093093102708}
   - component: {fileID: 3855385946626831713}
   - component: {fileID: 997533249873515694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7222003873236223794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: O_S_Rubbish-0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 502621230916809090}
   - component: {fileID: 6009995174213344705}
   - component: {fileID: 5118575594556964627}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpikesTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,8 +155,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 5.9377785, z: 1}
+  m_Center: {x: 0, y: 2.4688892, z: 0}
 --- !u!114 &5118575594556964627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_timerText: {fileID: 4487113259467052796}
-  m_maxSeconds: 5
+  m_maxSeconds: 10
   m_throwDuration: 1.5
   m_spikesPrefab: {fileID: 5920684299008042310, guid: 4715d732a3a19194bb6622dc9c46d74d,
     type: 3}
@@ -178,7 +178,8 @@ MonoBehaviour:
   m_maxZposForSpikesTimer: -23
   m_minXposForSpikesTimer: -4
   m_maxXposForSpikesTimer: 4
-  allTimers: []
+  destroyedBoxesByTimer: []
+  destroyedBoxesByPlayer: []
 --- !u!1 &6828320584835576929
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +192,7 @@ GameObject:
   - component: {fileID: 6506135402259670841}
   - component: {fileID: 5878061836917568207}
   - component: {fileID: 7241330587940098644}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +290,7 @@ GameObject:
   - component: {fileID: 194678481001239740}
   - component: {fileID: 2151333116079309149}
   - component: {fileID: 4487113259467052796}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

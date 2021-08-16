@@ -14,7 +14,7 @@ public static class DamagableExtension
     {
         if(idamagable.IisBlocking == true)
         {
-            idamagable.IcurrentHealth -= (damage / 2);
+            idamagable.IcurrentHealth += (damage / 2);
         }
         if (idamagable.Iinvulnerable == true)
         {

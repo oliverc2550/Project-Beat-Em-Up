@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankProjectile : MonoBehaviour
+public class ObjectToDealDamageOnTrigger : MonoBehaviour
 {
     public float damageToDeal;
 

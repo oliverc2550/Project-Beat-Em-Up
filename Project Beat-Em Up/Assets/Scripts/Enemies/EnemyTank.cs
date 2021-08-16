@@ -5,14 +5,16 @@ using UnityEngine;
 public class EnemyTank : Enemy
 {
     [Header("Tank Settings")]
-    [SerializeField] [Range(0, 100)] private float m_chanceToThrowProjectile = 30;
-
+    [SerializeField] [Range(0, 100)] private int m_chanceToBlock = 100;
+    [SerializeField] float m_blockDuration = 1;
+    int m_lastMovementSpeed;
     protected override void Start()
     {
       //  FindObjectOfType<PlayerController>().onNormalAttackEvent.AddListener();
         base.Start();
-        GetComponentInChildren<TankProjectile>().damageToDeal = m_normalAttackDamage;
+        GetComponentInChildren<ObjectToDealDamageOnTrigger>().damageToDeal = m_normalAttackDamage;
         m_attackAnimation = "LeftAttack";
+        m_movementSpeed = m_lastMovementSpeed;
     }
 
     public override void OnTakeDamage(float damage)
@@ -24,6 +26,47 @@ public class EnemyTank : Enemy
             base.OnTakeDamage(damage);
         }
 
+    }
+
+    private void OnEnable()
+    {
+        FindObjectOfType<PlayerController>().onNormalAttackEvent.AddListener(BlockByChance);
+    }
+
+    private void OnDisable()
+    {
+        PlayerController playerController = FindObjectOfType<PlayerController>();
+
+        if (playerController != null)
+        {
+            playerController.onNormalAttackEvent.RemoveListener(BlockByChance);
+        }
+
+    }
+
+    void BlockByChance()
+    {
+        float blockChance = (float)m_chanceToBlock / 100;
+
+        if (Random.value < blockChance)
+        {
+            Debug.Log("Blocking");
+            m_animator.SetBool("isBlocking", true);
+            m_movementSpeed = 0;
+            IisBlocking = true;
+
+            StartCoroutine(OnBlocking());
+        }
+    }
+
+    IEnumerator OnBlocking()
+    {
+        yield return new WaitForSeconds(m_blockDuration);
+
+        Debug.Log("NOT Blocking");
+        IisBlocking = false;
+        m_animator.SetBool("isBlocking", false);
+        m_movementSpeed = m_lastMovementSpeed;
     }
 
     protected override void OnPlayerInRange()

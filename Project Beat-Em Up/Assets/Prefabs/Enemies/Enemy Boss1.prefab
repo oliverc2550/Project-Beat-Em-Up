@@ -323,7 +323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7526567011169837237
 Transform:
   m_ObjectHideFlags: 0
@@ -534,6 +534,7 @@ MonoBehaviour:
   m_aoeDamage: 5
   m_spikesTimerPrefab: {fileID: 5118575594556964627, guid: 70112ab844c19c14488c7888a152a939,
     type: 3}
+  aliveTimers: []
 --- !u!1 &7526567011720164337
 GameObject:
   m_ObjectHideFlags: 0

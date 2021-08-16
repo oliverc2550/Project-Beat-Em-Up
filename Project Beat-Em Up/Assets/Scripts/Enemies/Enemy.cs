@@ -63,7 +63,7 @@ public class Enemy : CombatandMovement
 
     protected virtual void Update()
     {
-        Debug.Log("EnemyState: " + m_currentState);
+
         //don't read the update while the stun animation is running
         if (m_animator.GetCurrentAnimatorStateInfo(0).IsName("Stun"))
         {
@@ -116,7 +116,6 @@ public class Enemy : CombatandMovement
             }
 
             float distance = Vector3.Distance(transform.position, targetPos);
-            Debug.Log("D " + distance);
             if (distance < 0.5f)
             {
                 StartCoroutine(WaitBeforeChangingDirection());
@@ -150,8 +149,6 @@ public class Enemy : CombatandMovement
     {
         float distance = Vector3.Distance(m_target.position, transform.position);
         return distance < m_stoppingDistance;
-        Debug.Log("Distance: " + distance);
-        Debug.Log("S Distance: " + m_stoppingDistance);
     }
 
     protected virtual void OnPlayerInRange()
@@ -201,7 +198,7 @@ public class Enemy : CombatandMovement
         }
 
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
-        // Debug.Log("health: " + IcurrentHealth);
+        Debug.Log("health: " + IcurrentHealth);
     }
 
     protected void SetEnemyState(EnemyState state)

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class SpikesTimer : MonoBehaviour
+public class SpikesTimer : MonoBehaviour, IDamagable
 {
     [SerializeField] private TextMeshProUGUI m_timerText;
     [SerializeField] private int m_maxSeconds;
@@ -14,13 +14,21 @@ public class SpikesTimer : MonoBehaviour
     [SerializeField] private float m_maxZposForSpikesTimer;
     [SerializeField] private float m_minXposForSpikesTimer;
     [SerializeField] private float m_maxXposForSpikesTimer;
+    [SerializeField] private float m_spikesYPosition;
 
-    public List<SpikesTimer> allTimers;
+    public Lv1Boss enemyBoss;
 
+    public float ImaxHealth { get; set; }
+    public float IcurrentHealth { get; set; }
+    public bool IisBlocking { get; set; }
+    public bool Iinvulnerable { get; set; }
 
     void Start()
     {
         StartCoroutine(Timer());
+
+        ImaxHealth = 1;
+        IcurrentHealth = ImaxHealth;
     }
 
     IEnumerator Timer()
@@ -49,17 +57,35 @@ public class SpikesTimer : MonoBehaviour
 
     private void OnTimerComplete()
     {
-        allTimers.Remove(this);
-        Destroy(gameObject);
+        enemyBoss.aliveTimers.Remove(this);
 
-        if (allTimers.Count == 0)
+        if (enemyBoss.aliveTimers.Count <= 0)
         {
-            GameObject spikes = Instantiate(m_spikesPrefab, new Vector3(transform.position.x, transform.position.y-1, transform.position.z), Quaternion.identity);
-            spikes.transform.DOMoveY(1f, 0.5f).onComplete = () =>
+            GameObject spikes = Instantiate(m_spikesPrefab, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
+            spikes.transform.DOMoveY(m_spikesYPosition, 0.5f).onComplete = () =>
             {
-                spikes.transform.DOMoveY(-1, 0.5f);
-                
+                spikes.transform.DOMoveY(-2.5f, 0.5f).onComplete = () => { Destroy(spikes); };
             };
         }
+        Destroy(gameObject);
+
+    }
+
+    public void OnTakeDamage(float amount)
+    {
+        IcurrentHealth -= amount;
+
+        if (IcurrentHealth <= 0)
+        {
+            IcurrentHealth = 0;
+            Die();
+        };
+    }
+
+    public void Die()
+    {
+        enemyBoss.aliveTimers.Remove(this);
+
+        Destroy(gameObject);
     }
 }
