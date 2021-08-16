@@ -53,11 +53,14 @@ public class PlayerController : CombatandMovement
     private bool m_chargedAttackActive;
     private float m_skinWidth = 0.1f;
     protected bool m_isGrounded;
+    [HideInInspector] public bool m_isBossCamEnabled;
 
     public UnityEvent onNormalAttackEvent;
 
     protected override void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         base.Start();
         currentCharge = 0;
         m_chargedAttackActive = false;
@@ -79,7 +82,7 @@ public class PlayerController : CombatandMovement
 
     protected override void Move(Vector3 direction)
     {
-        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking == false)
+        if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking == false && m_isBossCamEnabled == false)
         {
             Vector3 movement = -direction * Time.deltaTime * m_movementSpeed;
 

@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
     //Method to load the main game level from the main menu
     public void PlayGame()
     {
-        bl_SceneLoader.GetActiveLoader().LoadLevel("Level1Landfill");
+        bl_SceneLoader.GetActiveLoader().LoadLevel("Level1");
     }
     //Method to return to the main menu From any scene
     public void ReturnToMenu()

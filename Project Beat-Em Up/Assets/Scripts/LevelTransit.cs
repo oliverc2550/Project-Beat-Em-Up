@@ -10,7 +10,7 @@ public class LevelTransit : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         if (other.gameObject.CompareTag("Player"))
         {
-            bl_SceneLoader.GetActiveLoader().LoadLevel("Level" + (SceneManager.GetActiveScene().buildIndex + 1) + "Test");
+            bl_SceneLoader.GetActiveLoader().LoadLevel("EndScene");
         }
     }
 }

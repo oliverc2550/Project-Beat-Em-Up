@@ -18,11 +18,6 @@ public class UIController : MonoBehaviour
     [SerializeField] private Image playerHealthBarForeground;
     [SerializeField] private Image playerChargeMeterBackground;
     [SerializeField] private Image playerChargeMeterForeground;
-    //[SerializeField] private Image enemyHealthBarBackground;
-    //[SerializeField] private Image enemyHealthBarForeground;
-    //Imported Fields
-    //public CameraManager CameraManager;
-    //public HealthBar PlayerHealthBar;
     public Text ObjectiveDescription;
     public Text FireModeDescription;
     public GameObject PopupBox;
@@ -31,7 +26,6 @@ public class UIController : MonoBehaviour
     public GameObject RespawnMenu;
     [HideInInspector] public bool PauseMenuActive;
     [SerializeField] private GameObject _pickupNotification;
-    //[SerializeField] private PlayerInventory _inventory;
     private bool _respawnMenuActive;
 
     [SerializeField] private TextMeshProUGUI m_scoreText;
@@ -40,7 +34,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         PauseMenuActive = false; //Sets the PauseMenuActive bool to false
-        //PopupBox.SetActive(false); //Sets the PopupBox to inactive
+        PopupBox.SetActive(false); //Sets the PopupBox to inactive
         _respawnMenuActive = false; //Sets the respawnMenuActive bool to false
     }
     //Update used to check for key input and to check player progress
@@ -51,10 +45,6 @@ public class UIController : MonoBehaviour
         {
             PopupBox.SetActive(false);
         }
-        //if (_inventory.CurrentComponents == 5) //Check to see if the player has collect all the needed components
-        //{
-        //    UpdateObjectiveText("Return to your ship to install the remaining components"); //Update objective text if they have
-        //}
     }
 
     private void SetPercentFill(Image background, Image foreground, float percent)
@@ -66,14 +56,6 @@ public class UIController : MonoBehaviour
 
     public void SetPlayerHealthBarPercent(float percent)
     {
-        //if(targetTag == "Enemy")
-        //{
-        //    SetPercentFill(enemyHealthBarBackground, enemyHealthBarForeground, percent);
-        //    //Get Enemy TextUI -> Set it to string name of enemy
-        //}
-        //if (targetTag == "Player")
-        //{
-        //}
         SetPercentFill(playerHealthBarBackground, playerHealthBarForeground, percent);
     }
 
@@ -138,8 +120,6 @@ public class UIController : MonoBehaviour
         {
             PopupBox.SetActive(false);  //Deactivate it if it is
         }
-        //PlayerHealthBar.gameObject.SetActive(false); //Disables the player health bar
-        //CameraManager.EnableKillCam(); //Changes the camera to the "kill cam"
         RespawnMenu.SetActive(true); //Sets the respawn menu to active
         Cursor.visible = true; //Enable the cusor so that the player can interact with the menu
         Cursor.lockState = CursorLockMode.None;
@@ -154,14 +134,13 @@ public class UIController : MonoBehaviour
         PauseMenuActive = false; //Sets the PauseMenuActive bool to false
     }
     //Method to Respawn after dying
-    public void Respawn()
+    public void RestartLevel()
     {
-        RespawnMenu.SetActive(false);
-        //CameraManager.DisableKillCam();
-        //PlayerHealthBar.gameObject.SetActive(true);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        _respawnMenuActive = false;
+        bl_SceneLoader.GetActiveLoader().LoadLevel("Level1");
+        //RespawnMenu.SetActive(false);
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //_respawnMenuActive = false;
     }
     //Method to return to the main menu
     public void ReturnToMenu()
