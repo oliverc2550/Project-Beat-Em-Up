@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,7 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
+    [SerializeField] protected PlayerInput m_playerInput;
     [SerializeField] private Image playerHealthBarBackground;
     [SerializeField] private Image playerHealthBarForeground;
     [SerializeField] private Image playerChargeMeterBackground;
@@ -40,11 +42,10 @@ public class UIController : MonoBehaviour
     //Update used to check for key input and to check player progress
     private void Update()
     {
-        Pause();
-        if (Input.GetKeyDown(KeyCode.Return) && PopupBox.activeSelf == true)
-        {
-            PopupBox.SetActive(false);
-        }
+        //if (Input.GetKeyDown(KeyCode.Return) && PopupBox.activeSelf == true)
+        //{
+        //    PopupBox.SetActive(false);
+        //}
     }
 
     private void SetPercentFill(Image background, Image foreground, float percent)
@@ -93,10 +94,11 @@ public class UIController : MonoBehaviour
         PopupBox.SetActive(true); //Activates the popup box
     }
     //Method to enable the Pause menu
-    public void Pause()
+    public void OnPause(InputAction.CallbackContext value)
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && PauseMenu.activeSelf != true && _respawnMenuActive != true) //Check Key input and to see if the pause menu is already active and if the respawn menu is active
+        if (value.started && PauseMenu.activeSelf != true && _respawnMenuActive != true) //Check Key input and to see if the pause menu is already active and if the respawn menu is active
         {
+            m_playerInput.DeactivateInput();
             if (PopupBox.activeSelf == true) //Check to see if the Popup box is active
             {
                 PopupBox.SetActive(false); //Deactivate it if it is
@@ -107,7 +109,7 @@ public class UIController : MonoBehaviour
             Cursor.visible = true; //Enable the cusor so that the player can interact with the menu
             Cursor.lockState = CursorLockMode.None;
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && PauseMenu.activeSelf == true && _respawnMenuActive != true) //Check Key input and to see if the pause menu is already active and if the respawn menu is active
+        else if (value.started && PauseMenu.activeSelf == true && _respawnMenuActive != true) //Check Key input and to see if the pause menu is already active and if the respawn menu is active
         {
             Resume(); //Resume the game
         }
@@ -127,6 +129,7 @@ public class UIController : MonoBehaviour
     //Method to resume the game from the pause menu
     public void Resume()
     {
+        m_playerInput.ActivateInput();
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
         Cursor.visible = false;

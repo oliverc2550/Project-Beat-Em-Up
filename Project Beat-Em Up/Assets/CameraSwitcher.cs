@@ -21,8 +21,11 @@ public class CameraSwitcher : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        m_bossCameraEnabled = true;
-        m_playerController.m_isBossCamEnabled = true;
+        if (other.gameObject.CompareTag("Player") && m_hasActivated == false)
+        {
+            m_bossCameraEnabled = true;
+            m_playerController.m_isBossCamEnabled = true;
+        }
     }
 
     private void EnableBossCam()
