@@ -65,5 +65,13 @@ MonoBehaviour:
     LoadingType: 0
     FakeLoadingTime: 2
     Backgrounds: []
+  - SceneName: Level1
+    SceneAsset: {fileID: 102900000, guid: 13eb17fc9b9802a4699e63f3ad12bb8a, type: 3}
+    DisplayName: Level1
+    Description: 
+    SkipType: 3
+    LoadingType: 0
+    FakeLoadingTime: 2
+    Backgrounds: []
   tipsList:
   - Level is loading

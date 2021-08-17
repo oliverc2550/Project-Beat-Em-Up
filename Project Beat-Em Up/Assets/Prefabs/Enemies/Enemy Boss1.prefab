@@ -504,12 +504,14 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 1527508079}
+  m_powerUpObject: {fileID: 0}
   m_agent: {fileID: 7526567011169837232}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: cd933da2f1f0f634bb534d694b5a3fff,
     type: 2}
   m_enemyAttackingMaterial: {fileID: 2100000, guid: cd933da2f1f0f634bb534d694b5a3fff,
     type: 2}
   m_EnemyName: 'Boss '
+  m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 5
   m_stoppingDistance: 5

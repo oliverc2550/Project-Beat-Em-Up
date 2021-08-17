@@ -176,6 +176,7 @@ MonoBehaviour:
   m_interactPoint: {fileID: 5495421022395503473}
   m_normalAttackPoint: {fileID: 5495421022395503473}
   m_specialAttackPoint: {fileID: 5495421022395503473}
+  m_chargedAttackPoint: {fileID: 0}
   m_maxHealth: 100
   m_movementSpeed: 3.5
   m_jumpForce: 100
@@ -198,11 +199,20 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 5495421021842980912}
+  m_powerUpObject: {fileID: 0}
   m_agent: {fileID: 5495421021842980919}
+  m_enemyNonAttackingMaterial: {fileID: 0}
+  m_enemyAttackingMaterial: {fileID: 0}
   m_EnemyName: Basic Enemy
+  m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 1.5
+  m_patrollingDistanceX: 0
+  m_stunCooldown: 3
+  m_PatrolWaitTime: 3
+  m_petrolsOnStart: 0
+  m_idleOnStart: 0
   summoner: {fileID: 0}
 --- !u!1 &5495421022395503478
 GameObject:

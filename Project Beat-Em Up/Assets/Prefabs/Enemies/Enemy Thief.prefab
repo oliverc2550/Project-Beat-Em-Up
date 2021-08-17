@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7262013986928257722
 Transform:
   m_ObjectHideFlags: 0
@@ -231,12 +231,14 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 3947052346462442082}
+  m_powerUpObject: {fileID: 0}
   m_agent: {fileID: 7262013986928258368}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: b858762d0617f7647bc74b6c3a66a912,
     type: 2}
   m_enemyAttackingMaterial: {fileID: 2100000, guid: b858762d0617f7647bc74b6c3a66a912,
     type: 2}
   m_EnemyName: Thief
+  m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 2

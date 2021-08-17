@@ -178,8 +178,8 @@ MonoBehaviour:
   m_maxZposForSpikesTimer: -23
   m_minXposForSpikesTimer: -4
   m_maxXposForSpikesTimer: 4
-  destroyedBoxesByTimer: []
-  destroyedBoxesByPlayer: []
+  m_spikesYPosition: 0
+  enemyBoss: {fileID: 0}
 --- !u!1 &6828320584835576929
 GameObject:
   m_ObjectHideFlags: 0

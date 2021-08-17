@@ -89,7 +89,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2102965868339181092
 Transform:
   m_ObjectHideFlags: 0
@@ -270,12 +270,14 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 4047494675808497159}
+  m_powerUpObject: {fileID: 0}
   m_agent: {fileID: 2102965868339181089}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: 9c6ce319c16ae1c4480df7e9f26596ed,
     type: 2}
   m_enemyAttackingMaterial: {fileID: 2100000, guid: 9c6ce319c16ae1c4480df7e9f26596ed,
     type: 2}
   m_EnemyName: Tank
+  m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 5

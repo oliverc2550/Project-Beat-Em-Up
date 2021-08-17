@@ -7,14 +7,14 @@ public class EnemyTank : Enemy
     [Header("Tank Settings")]
     [SerializeField] [Range(0, 100)] private int m_chanceToBlock = 100;
     [SerializeField] float m_blockDuration = 1;
-    int m_lastMovementSpeed;
+    float m_lastMovementSpeed;
     protected override void Start()
     {
       //  FindObjectOfType<PlayerController>().onNormalAttackEvent.AddListener();
         base.Start();
         GetComponentInChildren<ObjectToDealDamageOnTrigger>().damageToDeal = m_normalAttackDamage;
         m_attackAnimation = "LeftAttack";
-        m_movementSpeed = m_lastMovementSpeed;
+        m_lastMovementSpeed = m_movementSpeed;
     }
 
     public override void OnTakeDamage(float damage)

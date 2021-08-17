@@ -52,7 +52,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1494901536624554730
 Transform:
   m_ObjectHideFlags: 0
@@ -233,12 +233,14 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 1367980713578889253}
+  m_powerUpObject: {fileID: 0}
   m_agent: {fileID: 1494901536624554734}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: 5b04788a53af62545a1748f84d29e5a6,
     type: 2}
   m_enemyAttackingMaterial: {fileID: 2100000, guid: 5b04788a53af62545a1748f84d29e5a6,
     type: 2}
   m_EnemyName: Summoner
+  m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 5
   m_stoppingDistance: 7
@@ -291,10 +293,12 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 0}
+  m_powerUpObject: {fileID: 0}
   m_agent: {fileID: 0}
   m_enemyNonAttackingMaterial: {fileID: 0}
   m_enemyAttackingMaterial: {fileID: 0}
   m_EnemyName: 
+  m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 1
   m_stoppingDistance: 0
