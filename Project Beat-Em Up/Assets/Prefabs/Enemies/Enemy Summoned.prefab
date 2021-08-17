@@ -310,19 +310,21 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 574648680}
+  m_powerUpObject: {fileID: 0}
   m_agent: {fileID: 9101316655266976780}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: a09d912cbde6be34cbd335e005b67bdb,
     type: 2}
   m_enemyAttackingMaterial: {fileID: 2100000, guid: 5b04788a53af62545a1748f84d29e5a6,
     type: 2}
   m_EnemyName: Minion
+  m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 1
   m_stoppingDistance: 2.5
   m_patrollingDistanceX: 4.37
   m_stunCooldown: 3
   m_PatrolWaitTime: 3
-  m_petrolsOnStart: 1
+  m_petrolsOnStart: 0
   m_idleOnStart: 0
   summoner: {fileID: 0}
 --- !u!136 &574648680

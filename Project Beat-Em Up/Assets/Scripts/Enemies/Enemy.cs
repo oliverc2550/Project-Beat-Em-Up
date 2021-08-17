@@ -10,11 +10,13 @@ public enum EnemyState { Idle, Chase, Run, Patrol }
 public class Enemy : CombatandMovement
 {
     [SerializeField] protected CapsuleCollider m_collider;
+    [SerializeField] GameObject m_powerUpObject;
     [SerializeField] NavMeshAgent m_agent;
     [SerializeField] Material m_enemyNonAttackingMaterial;
     [SerializeField] Material m_enemyAttackingMaterial;
 
     [SerializeField] private string m_EnemyName;
+    [SerializeField] [Range(0, 100)] int m_chanceToDropPowerUp;
     [SerializeField] private int m_scoreGainedOnDeath = 200;
     [SerializeField] private int m_gainChargeOnEnemyDamaged = 1;
     [SerializeField] protected float m_stoppingDistance;
@@ -208,6 +210,14 @@ public class Enemy : CombatandMovement
 
     public override void Die()
     {
+        float chance = (float)m_chanceToDropPowerUp / 100; 
+        if (Random.value < chance)
+        {
+            Instantiate(m_powerUpObject);
+        }
+
+
+
         FindObjectOfType<EnemySpawner>().RemoveEnemy(this);
         FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnDeath);
         base.Die();
