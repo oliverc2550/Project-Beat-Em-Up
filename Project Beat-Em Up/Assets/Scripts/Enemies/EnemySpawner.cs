@@ -22,23 +22,22 @@ public struct EnemyToSpawn
 
 public class EnemySpawner : MonoBehaviour
 {
-    [Header("Settings")]
 
+    [Header("Settings")]
     [SerializeField] EnemyToSpawn BasicEnemy;
     [SerializeField] EnemyToSpawn ThiefEnemy;
     [SerializeField] EnemyToSpawn SummonerEnemy;
     [SerializeField] EnemyToSpawn TankEnemy;
     [SerializeField] EnemyToSpawn BossEnemy;
+
+
+    [Header("Do NOT change")]
+    public int enemyCount = 0;
+    public float m_minZ = 13.22f;
+    public float m_maxZ = 33.63f;
+
     [SerializeField] private Transform m_leftSpawnPoint;
     [SerializeField] private Transform m_RightSpawnPoint;
-
-    public int enemyCount = 0;
-
-    [Header("WARNING: Avoid Editing")]
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer + TESTING.")]
-    public float m_minZ = -1.6f;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer + TESTING.")]
-    public float m_maxZ = -11.5f;
 
     public void StartSpawning(EnemySpawnData data)
     {

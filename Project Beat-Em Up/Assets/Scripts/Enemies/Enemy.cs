@@ -167,7 +167,7 @@ public class Enemy : CombatandMovement
 
             m_agent.Move(direction * m_movementSpeed * Time.deltaTime);
 
-            LookAtDirection(-direction.x);
+            LookAtDirection(direction.x);
         }
     }
 
