@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7262013985841797245}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.79, y: 6.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.6, y: 6.5, z: 0}
+  m_LocalScale: {x: 2.530619, y: 2.530619, z: 2.530619}
   m_Children: []
   m_Father: {fileID: 7262013986928257722}
   m_RootOrder: 0
@@ -206,10 +206,10 @@ MonoBehaviour:
   m_animator: {fileID: 7262013986928257724}
   m_rigidbody: {fileID: 7262013986928257726}
   m_spriteRenderer: {fileID: 7262013986928257725}
-  m_interactPoint: {fileID: 7262013985841797242}
   m_normalAttackPoint: {fileID: 7262013985841797242}
+  m_interactPoint: {fileID: 7262013985841797242}
   m_specialAttackPoint: {fileID: 7262013985841797242}
-  m_chargedAttackPoint: {fileID: 0}
+  m_chargedAttackPoint: {fileID: 7262013985841797242}
   m_maxHealth: 100
   m_movementSpeed: 4.5
   m_jumpForce: 25
@@ -232,7 +232,8 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 3947052346462442082}
-  m_powerUpObject: {fileID: 0}
+  m_powerUpObject: {fileID: 1018628589899387840, guid: 2db6de830b57fa1438757b3bbbdb1ffa,
+    type: 3}
   m_agent: {fileID: 7262013986928258368}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: b858762d0617f7647bc74b6c3a66a912,
     type: 2}
@@ -242,12 +243,13 @@ MonoBehaviour:
   m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
-  m_stoppingDistance: 2
+  m_stoppingDistance: 3
   m_patrollingDistanceX: 5
   m_stunCooldown: 3
   m_PatrolWaitTime: 3
   m_petrolsOnStart: 0
   m_idleOnStart: 0
+  m_tutorialEnemy: 0
   summoner: {fileID: 0}
   m_ChargeToStealOnHit: 20
   m_ChanceToStealCharge: 100

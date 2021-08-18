@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CameraSwitcher : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] [Range(1f, 5f)] private float m_disableCamDelay = 3f;
     protected bool m_bossCameraEnabled;
     protected bool m_hasActivated;
+
+    public UnityEvent onCameraSwitched;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,13 @@ public class CameraSwitcher : MonoBehaviour
         {
             m_bossCameraEnabled = true;
             m_playerController.m_isBossCamEnabled = true;
+
+            StartCoroutine(TutorialAttackWaitTime());
+
+            //moved from update
+            EnableBossCam();
+            StartCoroutine(DisableAfterDelay());
+            m_hasActivated = true;
         }
     }
 
@@ -38,6 +48,13 @@ public class CameraSwitcher : MonoBehaviour
         m_bossCamera.Priority = 0;
     }
 
+    IEnumerator TutorialAttackWaitTime()
+    {
+        Debug.Log("CS");
+        yield return new WaitForSeconds(2);
+        onCameraSwitched.Invoke();
+    }
+
     IEnumerator DisableAfterDelay()
     {
         yield return new WaitForSeconds(m_disableCamDelay);
@@ -49,11 +66,11 @@ public class CameraSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(m_bossCameraEnabled == true && m_hasActivated == false)
-        {
-            EnableBossCam();
-            StartCoroutine(DisableAfterDelay());
-            m_hasActivated = true;
-        }
+        //if(m_bossCameraEnabled == true && m_hasActivated == false)
+        //{
+        //    EnableBossCam();
+        //    StartCoroutine(DisableAfterDelay());
+        //    m_hasActivated = true;
+        //}
     }
 }

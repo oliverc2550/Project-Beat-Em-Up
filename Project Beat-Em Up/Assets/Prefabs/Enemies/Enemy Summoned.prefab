@@ -260,7 +260,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -5343107611128160977, guid: d4f37c8025b2cef4c882caa1b0cdc025,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.36, y: 2.96}
@@ -284,10 +284,10 @@ MonoBehaviour:
   m_animator: {fileID: 9101316655266976777}
   m_rigidbody: {fileID: 9101316655266976783}
   m_spriteRenderer: {fileID: 9101316655266976781}
-  m_interactPoint: {fileID: 9101316655204151048}
   m_normalAttackPoint: {fileID: 9101316655204151048}
+  m_interactPoint: {fileID: 9101316655204151048}
   m_specialAttackPoint: {fileID: 9101316655204151048}
-  m_chargedAttackPoint: {fileID: 0}
+  m_chargedAttackPoint: {fileID: 9101316655204151048}
   m_maxHealth: 42
   m_movementSpeed: 4
   m_jumpForce: 25
@@ -310,7 +310,8 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 574648680}
-  m_powerUpObject: {fileID: 0}
+  m_powerUpObject: {fileID: 1018628589899387840, guid: 2db6de830b57fa1438757b3bbbdb1ffa,
+    type: 3}
   m_agent: {fileID: 9101316655266976780}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: a09d912cbde6be34cbd335e005b67bdb,
     type: 2}
@@ -320,12 +321,12 @@ MonoBehaviour:
   m_chanceToDropPowerUp: 0
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 1
-  m_stoppingDistance: 2.5
+  m_stoppingDistance: 3
   m_patrollingDistanceX: 4.37
   m_stunCooldown: 3
   m_PatrolWaitTime: 3
   m_petrolsOnStart: 0
-  m_idleOnStart: 0
+  m_tutorialEnemy: 1
   summoner: {fileID: 0}
 --- !u!136 &574648680
 CapsuleCollider:

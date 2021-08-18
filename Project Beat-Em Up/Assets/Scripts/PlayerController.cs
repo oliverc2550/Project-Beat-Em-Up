@@ -41,6 +41,7 @@ public class PlayerController : CombatandMovement
     [SerializeField] protected Collider m_collider;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected UIController m_uiController;
+
     [Header("Player Settings ")]
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] [Range(0, 10)] protected float m_chargedAttackRange = 1.0f;
@@ -54,8 +55,7 @@ public class PlayerController : CombatandMovement
     private float m_skinWidth = 0.1f;
     protected bool m_isGrounded;
     [HideInInspector] public bool m_isBossCamEnabled;
-
-    public UnityEvent onNormalAttackEvent;
+    [HideInInspector] public UnityEvent onNormalAttackEvent;
 
     protected override void Start()
     {

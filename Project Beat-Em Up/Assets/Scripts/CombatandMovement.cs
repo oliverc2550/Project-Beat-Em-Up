@@ -39,9 +39,9 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected SpriteRenderer m_spriteRenderer;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
-    [SerializeField] protected Transform m_interactPoint;
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")] 
     [SerializeField] protected Transform m_normalAttackPoint;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] protected Transform m_interactPoint;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Transform m_specialAttackPoint;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
@@ -57,11 +57,13 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [SerializeField] [Range(0, 50)] protected float m_normalAttackDamage = 1.0f;
     [SerializeField] [Range(0, 10)] protected float m_specialAttackRange = 0.75f;
     [SerializeField] [Range(0, 65)] protected float m_specialAttackDamage = 2.0f;
+
     [SerializeField] int m_scoreGainedOnSpecialAttack;
     [SerializeField] protected int m_scoreGainedOnChargedAttack;
     [SerializeField] protected LayerMask m_pickupLayer;
     [SerializeField] protected LayerMask m_targetLayer;
     [SerializeField] protected LayerMask m_collisionLayer;
+
     protected bool m_holdingObj;
     protected bool m_normalAttackActive;
     protected bool m_specialAttackActive;

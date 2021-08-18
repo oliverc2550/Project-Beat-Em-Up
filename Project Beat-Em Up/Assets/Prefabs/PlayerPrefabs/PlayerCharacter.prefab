@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 966030204255589214}
   - component: {fileID: 966030204255589212}
   m_Layer: 12
-  m_Name: Player
+  m_Name: PlayerCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +99,8 @@ Transform:
   - {fileID: 966030204522857734}
   - {fileID: 3093017587084126925}
   - {fileID: 3093017588160463991}
+  - {fileID: 8332795038461435923}
+  - {fileID: 2088613835541689731}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -232,9 +234,10 @@ MonoBehaviour:
   m_animator: {fileID: 966030204255589210}
   m_rigidbody: {fileID: 966030204255589215}
   m_spriteRenderer: {fileID: 966030204255589209}
-  m_interactPoint: {fileID: 966030203843406427}
   m_normalAttackPoint: {fileID: 966030203991592276}
+  m_interactPoint: {fileID: 966030203843406427}
   m_specialAttackPoint: {fileID: 966030203991592276}
+  m_chargedAttackPoint: {fileID: 966030204522857734}
   m_maxHealth: 100
   m_movementSpeed: 7
   m_jumpForce: 75
@@ -243,6 +246,8 @@ MonoBehaviour:
   m_normalAttackDamage: 10
   m_specialAttackRange: 1.5
   m_specialAttackDamage: 17.5
+  m_scoreGainedOnSpecialAttack: 0
+  m_scoreGainedOnChargedAttack: 0
   m_pickupLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -253,19 +258,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   m_invulnerable: 0
-  m_damageModifier: 0
   heldObject: {fileID: 0}
   m_playerInput: {fileID: 966030204255589212}
+  m_playerCamera: {fileID: 0}
   m_collider: {fileID: 966030204255589221}
   m_uiController: {fileID: 0}
-  m_chargedAttackPoint: {fileID: 966030204522857734}
   m_chargedAttackRange: 1
   m_chargedAttackDamage: 25
-  m_maxCharge: 75
   minimumChargeLevel: 25
   chargeGain: 2.5
   attackchargeDrain: 5
-  m_currentCharge: 0
+  maxCharge: 75
+  currentCharge: 0
+  m_isBossCamEnabled: 0
+  onNormalAttackEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &966030204255589212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,3 +624,63 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &4310566861215124902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088613835541689731}
+  m_Layer: 0
+  m_Name: Right Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2088613835541689731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310566861215124902}
+  m_LocalRotation: {x: -0.10452846, y: -0, z: -0, w: -0.9945219}
+  m_LocalPosition: {x: 25, y: 5.6544194, z: 1.7234077}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 966030204255589208}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8344791294887169505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8332795038461435923}
+  m_Layer: 0
+  m_Name: Left Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8332795038461435923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344791294887169505}
+  m_LocalRotation: {x: -0.10452846, y: -0, z: -0, w: -0.9945219}
+  m_LocalPosition: {x: -25, y: 5.6681223, z: 1.5627403}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 966030204255589208}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

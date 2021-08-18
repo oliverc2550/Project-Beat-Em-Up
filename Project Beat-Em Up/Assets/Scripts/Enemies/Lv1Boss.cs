@@ -12,6 +12,7 @@ public class Lv1Boss : EnemyBoss
     [SerializeField] public float m_aoeRange;
     [SerializeField] private float m_aoeDamage;
     [SerializeField] private SpikesTimer m_spikesTimerPrefab;
+    [SerializeField] SphereCollider m_rangeCollider;
     public List<SpikesTimer> aliveTimers = new List<SpikesTimer>();
 
     private const int m_spikesTimerCount = 3;
@@ -19,7 +20,6 @@ public class Lv1Boss : EnemyBoss
     protected override void Start()
     {
         base.Start();
-        PlayPickedAttack(1);
     }
 
     protected override void PlayPickedAttack(int attackToPlay)
@@ -87,5 +87,20 @@ public class Lv1Boss : EnemyBoss
                 damagableTarget.TakeDamage(m_aoeDamage);
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            m_currentState = EnemyState.Chase;
+        }
+    }
+
+    //called by onCameraSwitched event
+    public void PlayAttackWhenBossAppears()
+    {
+        Debug.Log("anim");
+        m_animator.SetTrigger("AOE Attack");
     }
 }

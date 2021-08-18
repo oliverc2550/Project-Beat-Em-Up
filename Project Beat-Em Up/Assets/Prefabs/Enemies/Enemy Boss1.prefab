@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 7526567011169837235}
   - component: {fileID: 1527508079}
   - component: {fileID: 1724877116421483690}
+  - component: {fileID: 6799432600320449814}
   m_Layer: 10
   m_Name: Enemy Boss1
   m_TagString: Enemy
@@ -440,7 +441,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -6220707378818204398, guid: 0806ae4b271446145afeb0ac2294529d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.82, y: 0.6}
@@ -478,10 +479,10 @@ MonoBehaviour:
   m_animator: {fileID: 7526567011169837236}
   m_rigidbody: {fileID: 7526567011169837238}
   m_spriteRenderer: {fileID: 7526567011169837235}
-  m_interactPoint: {fileID: 7526567011720164342}
   m_normalAttackPoint: {fileID: 7526567011720164342}
+  m_interactPoint: {fileID: 7526567011720164342}
   m_specialAttackPoint: {fileID: 7526567011720164342}
-  m_chargedAttackPoint: {fileID: 0}
+  m_chargedAttackPoint: {fileID: 7526567011720164342}
   m_maxHealth: 100
   m_movementSpeed: 2.5
   m_jumpForce: 0
@@ -504,7 +505,8 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 1527508079}
-  m_powerUpObject: {fileID: 0}
+  m_powerUpObject: {fileID: 1018628589899387840, guid: 2db6de830b57fa1438757b3bbbdb1ffa,
+    type: 3}
   m_agent: {fileID: 7526567011169837232}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: cd933da2f1f0f634bb534d694b5a3fff,
     type: 2}
@@ -519,7 +521,7 @@ MonoBehaviour:
   m_stunCooldown: 3
   m_PatrolWaitTime: 3
   m_petrolsOnStart: 0
-  m_idleOnStart: 0
+  m_tutorialEnemy: 1
   summoner: {fileID: 0}
   m_enemyToSummonOnPhase1: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
     type: 3}
@@ -536,7 +538,21 @@ MonoBehaviour:
   m_aoeDamage: 5
   m_spikesTimerPrefab: {fileID: 5118575594556964627, guid: 70112ab844c19c14488c7888a152a939,
     type: 3}
+  m_rangeCollider: {fileID: 6799432600320449814}
   aliveTimers: []
+--- !u!135 &6799432600320449814
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7526567011169837234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 13.086672
+  m_Center: {x: -3.4934118, y: 4.624996, z: 0.0000018339891}
 --- !u!1 &7526567011720164337
 GameObject:
   m_ObjectHideFlags: 0

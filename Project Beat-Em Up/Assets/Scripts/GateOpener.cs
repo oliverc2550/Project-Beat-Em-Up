@@ -15,7 +15,7 @@ public class GateOpener : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera m_playerCamera;
     [SerializeField] int m_gateMovementDuration = 10;
 
-    private bool m_hasOpened;
+    public bool m_hasOpened;
     private bool m_hasClosed;
     private float m_startingPosZ;
     private float m_endPosZ;
@@ -32,9 +32,9 @@ public class GateOpener : MonoBehaviour
     {
         int enemyCount = FindObjectOfType<EnemySpawner>().enemyCount;
 
-        if(other.gameObject.CompareTag("Player") && m_hasOpened == false && enemyCount == 0)
+        if(other.gameObject.CompareTag("Player") && m_hasOpened == false && enemyCount <= 0)
         {
-            m_playerCamera.transform.DOShakeRotation(m_gateMovementDuration, 0.3f);
+            m_playerCamera.transform.DOShakeRotation(m_gateMovementDuration, 0.35f);
             transform.DOMoveZ(m_endPosZ, m_gateMovementDuration);
 
             m_hasOpened = true;

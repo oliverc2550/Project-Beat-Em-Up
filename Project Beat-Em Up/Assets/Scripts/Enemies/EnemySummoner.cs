@@ -45,6 +45,7 @@ public class EnemySummoner : Enemy
         if (m_SummonedEnemy == null)
         {
             m_SummonedEnemy = Instantiate(m_EnemyToSummon, transform.position, Quaternion.identity);
+            m_enemySpawner.enemyCount++;
         }
         
     }

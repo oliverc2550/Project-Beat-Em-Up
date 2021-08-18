@@ -8,13 +8,26 @@ public class EnemyTank : Enemy
     [SerializeField] [Range(0, 100)] private int m_chanceToBlock = 100;
     [SerializeField] float m_blockDuration = 1;
     float m_lastMovementSpeed;
+    [SerializeField] SphereCollider m_rangeCollider;
+
     protected override void Start()
     {
-      //  FindObjectOfType<PlayerController>().onNormalAttackEvent.AddListener();
+        //  FindObjectOfType<PlayerController>().onNormalAttackEvent.AddListener();
         base.Start();
         GetComponentInChildren<ObjectToDealDamageOnTrigger>().damageToDeal = m_normalAttackDamage;
         m_attackAnimation = "LeftAttack";
         m_lastMovementSpeed = m_movementSpeed;
+
+        if (m_tutorialEnemy)
+        {
+            SetEnemyState(EnemyState.Idle);
+        }
+    }
+
+
+    void PlayAttackForTutorial()
+    {
+        m_animator.SetTrigger(m_attackAnimation);
     }
 
     public override void OnTakeDamage(float damage)
@@ -31,15 +44,22 @@ public class EnemyTank : Enemy
     private void OnEnable()
     {
         FindObjectOfType<PlayerController>().onNormalAttackEvent.AddListener(BlockByChance);
+        FindObjectOfType<CameraSwitcher>().onCameraSwitched.AddListener(PlayAttackForTutorial);
+
     }
 
     private void OnDisable()
     {
         PlayerController playerController = FindObjectOfType<PlayerController>();
+        CameraSwitcher cameraSwitcher = FindObjectOfType<CameraSwitcher>();
 
         if (playerController != null)
         {
             playerController.onNormalAttackEvent.RemoveListener(BlockByChance);
+        }
+        if (cameraSwitcher != null)
+        {
+            cameraSwitcher.onCameraSwitched.RemoveListener(PlayAttackForTutorial);
         }
 
     }
@@ -50,7 +70,6 @@ public class EnemyTank : Enemy
 
         if (Random.value < blockChance)
         {
-            Debug.Log("Blocking");
             m_animator.SetBool("isBlocking", true);
             m_movementSpeed = 0;
             IisBlocking = true;
@@ -63,7 +82,6 @@ public class EnemyTank : Enemy
     {
         yield return new WaitForSeconds(m_blockDuration);
 
-        Debug.Log("NOT Blocking");
         IisBlocking = false;
         m_animator.SetBool("isBlocking", false);
         m_movementSpeed = m_lastMovementSpeed;
@@ -85,4 +103,11 @@ public class EnemyTank : Enemy
     }
 
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            m_currentState = EnemyState.Chase;
+        }
+    }
 }

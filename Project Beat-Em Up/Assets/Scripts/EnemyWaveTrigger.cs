@@ -21,20 +21,22 @@ public struct EnemySpawnData
 public class EnemyWaveTrigger : MonoBehaviour
 {
     [SerializeField] EnemySpawnData enemySpawnData;
-    EnemySpawner enemySpawner;
+    EnemySpawner m_enemySpawner;
+    GateOpener m_gateOpener;
 
     bool m_isTriggered = false;
 
     private void Start()
     {
-        enemySpawner = FindObjectOfType<EnemySpawner>();
+        m_enemySpawner = FindObjectOfType<EnemySpawner>();
+        m_gateOpener = GetComponent<GateOpener>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")&&!m_isTriggered)
+        if (other.CompareTag("Player") && !m_isTriggered && m_gateOpener.m_hasOpened)
         {
-            enemySpawner.StartSpawning(enemySpawnData);
+            m_enemySpawner.StartSpawning(enemySpawnData);
             m_isTriggered = true;
         }
     }

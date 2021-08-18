@@ -71,7 +71,7 @@ public class EnemySpawner : MonoBehaviour
 
             SummonEnemy(enemyToSpawn, position);
 
-            Debug.Log("EnemySpawned: " + enemyToSpawn.enemyPrefab.name + enemiesSpawned);
+            //Debug.Log("EnemySpawned: " + enemyToSpawn.enemyPrefab.name + enemiesSpawned);
         
         }
     }

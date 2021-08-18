@@ -12,7 +12,6 @@ public class EnemyBoss : Enemy
 {
     public enum BossAttacks { Summoning, DeadlySpikes, HitWithAOE }
 
-    // [SerializeField] private Laser m_laserPrefab;
     [SerializeField] protected Enemy m_enemyToSummonOnPhase1;
     [SerializeField] protected Enemy m_enemyToSummonOnPhase2;
     [SerializeField] protected int m_enemyCountToSummonOnPhase1 = 2;
@@ -32,7 +31,6 @@ public class EnemyBoss : Enemy
 
     protected bool m_enemiesFromPhase1Summoned = false;
     private bool m_phase2Entered = false;
-    protected bool m_isChanneling = false;
 
     public List<Enemy> summonedEnemies = new List<Enemy>();
 
@@ -132,6 +130,7 @@ public class EnemyBoss : Enemy
             //Every time when an enemy is summoned, set the boss to be a sumoner
             enemy.summoner = this;
             summonedEnemies.Add(enemy);
+            m_enemySpawner.enemyCount++;
         }
     }
 }

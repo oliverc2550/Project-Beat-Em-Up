@@ -87,8 +87,11 @@ public class PickupsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_spriteRenderer = GetComponent<SpriteRenderer>();
+        m_animator = GetComponent<Animator>();
         GetRandomItem();
         Debug.Log(m_pickupItems);
         SetItem();
+
     }
 }

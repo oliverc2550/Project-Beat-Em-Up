@@ -25,13 +25,14 @@ public class Enemy : CombatandMovement
     [SerializeField] int m_PatrolWaitTime = 3;
     [SerializeField] bool m_petrolsOnStart;
     [SerializeField] bool m_idleOnStart;
-
+    [SerializeField] protected bool m_tutorialEnemy;
     float m_startXPos;
 
     bool m_canBeStunned = true;
     protected bool m_alreadyAttackedOnce = false;
     protected string m_attackAnimation;
     public EnemyBoss summoner;
+    protected EnemySpawner m_enemySpawner;
     Vector3 m_currentDirection;
 
 
@@ -44,6 +45,7 @@ public class Enemy : CombatandMovement
         base.Start();
         SetTarget(FindObjectOfType<PlayerController>().transform);
         m_enemyUI = GetComponentInChildren<EnemyUI>();
+        m_enemySpawner = FindObjectOfType<EnemySpawner>();
         m_enemyUI.SetEnemyNameUI(m_EnemyName);
         m_attackAnimation = "Attack";
         m_startXPos = transform.position.x;
@@ -168,6 +170,11 @@ public class Enemy : CombatandMovement
             m_agent.Move(direction * m_movementSpeed * Time.deltaTime);
 
             LookAtDirection(direction.x);
+
+            if (m_tutorialEnemy)
+            {
+                LookAtDirection(-direction.x);
+            }
         }
     }
 
@@ -191,7 +198,6 @@ public class Enemy : CombatandMovement
         {
             m_animator.SetTrigger("Stun");
             StartCoroutine(StunCooldown());
-            Debug.Log("stunned");
         }
 
         if (m_currentState == EnemyState.Patrol || m_currentState == EnemyState.Idle)
@@ -200,7 +206,6 @@ public class Enemy : CombatandMovement
         }
 
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
-        Debug.Log("health: " + IcurrentHealth);
     }
 
     protected void SetEnemyState(EnemyState state)
@@ -237,5 +242,7 @@ public class Enemy : CombatandMovement
 
         Destroy(gameObject);
     }
+
+
 }
 

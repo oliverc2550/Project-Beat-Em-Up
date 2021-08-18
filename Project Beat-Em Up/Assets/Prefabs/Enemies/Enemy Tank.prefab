@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 2102965868339181090}
   - component: {fileID: 4047494675808497159}
   - component: {fileID: 3886622432434536879}
+  - component: {fileID: 662666184683009162}
   m_Layer: 10
   m_Name: Enemy Tank
   m_TagString: Enemy
@@ -97,7 +98,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102965868339181091}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.36, y: 0, z: -4.47}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
@@ -107,7 +108,7 @@ Transform:
   - {fileID: 4630481787715778454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2102965868339181093
 Animator:
   serializedVersion: 3
@@ -245,13 +246,13 @@ MonoBehaviour:
   m_animator: {fileID: 2102965868339181093}
   m_rigidbody: {fileID: 2102965868339181095}
   m_spriteRenderer: {fileID: 2102965868339181090}
-  m_interactPoint: {fileID: 2102965868858434919}
   m_normalAttackPoint: {fileID: 1689245525527198331}
+  m_interactPoint: {fileID: 2102965868858434919}
   m_specialAttackPoint: {fileID: 2102965868858434919}
-  m_chargedAttackPoint: {fileID: 0}
-  m_maxHealth: 201
-  m_movementSpeed: 2.5
-  m_jumpForce: 0
+  m_chargedAttackPoint: {fileID: 2102965868858434919}
+  m_maxHealth: 100
+  m_movementSpeed: 5.1
+  m_jumpForce: 53
   m_pickupRange: 1.25
   m_normalAttackRange: 2
   m_normalAttackDamage: 1
@@ -271,25 +272,41 @@ MonoBehaviour:
   m_invulnerable: 0
   heldObject: {fileID: 0}
   m_collider: {fileID: 4047494675808497159}
-  m_powerUpObject: {fileID: 0}
+  m_powerUpObject: {fileID: 1018628589899387840, guid: 2db6de830b57fa1438757b3bbbdb1ffa,
+    type: 3}
   m_agent: {fileID: 2102965868339181089}
   m_enemyNonAttackingMaterial: {fileID: 2100000, guid: 9c6ce319c16ae1c4480df7e9f26596ed,
     type: 2}
   m_enemyAttackingMaterial: {fileID: 2100000, guid: 9c6ce319c16ae1c4480df7e9f26596ed,
     type: 2}
   m_EnemyName: Tank
-  m_chanceToDropPowerUp: 0
+  m_chanceToDropPowerUp: 41
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 5
-  m_patrollingDistanceX: 0
+  m_patrollingDistanceX: 4.9
   m_stunCooldown: 3
   m_PatrolWaitTime: 3
   m_petrolsOnStart: 0
-  m_idleOnStart: 1
+  m_idleOnStart: 0
+  m_tutorialEnemy: 0
   summoner: {fileID: 0}
-  m_chanceToBlock: 49
-  m_blockDuration: 1
+  m_chanceToBlock: 50
+  m_blockDuration: 2
+  m_rangeCollider: {fileID: 662666184683009162}
+--- !u!135 &662666184683009162
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102965868339181091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 12.626057
+  m_Center: {x: 2.5128975, y: 1.4724808, z: 0}
 --- !u!1 &2102965868858434912
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +562,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 9071237288512998726, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
