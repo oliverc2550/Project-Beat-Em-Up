@@ -23,7 +23,7 @@ public class Enemy : CombatandMovement
     [SerializeField] [Range(0, 10)] float m_patrollingDistanceX;
     [SerializeField] int m_stunCooldown = 3;
     [SerializeField] int m_PatrolWaitTime = 3;
-    [SerializeField] bool m_petrolsOnStart;
+    [SerializeField] bool m_patrolsOnStart;
     [SerializeField] bool m_idleOnStart;
     [SerializeField] protected bool m_tutorialEnemy;
     float m_startXPos;
@@ -51,7 +51,7 @@ public class Enemy : CombatandMovement
         m_startXPos = transform.position.x;
         m_currentDirection = Vector3.right;
 
-        if (m_petrolsOnStart)
+        if (m_patrolsOnStart)
         {
             SetEnemyState(EnemyState.Patrol);
         }
@@ -105,7 +105,6 @@ public class Enemy : CombatandMovement
         {
             m_spriteRenderer.material = m_enemyNonAttackingMaterial;
             m_animator.SetBool("Walking", true);
-
             Move(m_currentDirection);
 
             Vector3 targetPos;

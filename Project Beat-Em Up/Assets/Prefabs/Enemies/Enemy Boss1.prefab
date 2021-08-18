@@ -485,10 +485,13 @@ MonoBehaviour:
   m_chargedAttackPoint: {fileID: 7526567011720164342}
   m_maxHealth: 100
   m_movementSpeed: 2.5
+  m_footstepSFX: FootstepSFX
   m_jumpForce: 0
   m_pickupRange: 1.25
+  m_normalAttackSound: 
   m_normalAttackRange: 1
   m_normalAttackDamage: 1
+  m_specialAttackSound: 
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
   m_scoreGainedOnSpecialAttack: 0
@@ -521,6 +524,7 @@ MonoBehaviour:
   m_stunCooldown: 3
   m_PatrolWaitTime: 3
   m_petrolsOnStart: 0
+  m_idleOnStart: 0
   m_tutorialEnemy: 1
   summoner: {fileID: 0}
   m_enemyToSummonOnPhase1: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,

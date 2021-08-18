@@ -47,31 +47,31 @@ MonoBehaviour:
     enemyPrefab: {fileID: 6699325321448106667, guid: 92e23a0726a58a84c895b680dcf9f4d6,
       type: 3}
     minSpawnTime: 1
-    maxSpawnTime: 5
+    maxSpawnTime: 3
     spawnedEnemies: []
   ThiefEnemy:
     enemyPrefab: {fileID: 7262013986928258369, guid: 0feab71bf5b19ca4898f9d8cd1cd3582,
       type: 3}
-    minSpawnTime: 5
-    maxSpawnTime: 10
+    minSpawnTime: 3
+    maxSpawnTime: 5
     spawnedEnemies: []
   SummonerEnemy:
     enemyPrefab: {fileID: 1494901536624554732, guid: eb78e34429852234b918f55bb640f281,
       type: 3}
-    minSpawnTime: 10
-    maxSpawnTime: 15
+    minSpawnTime: 5
+    maxSpawnTime: 8
     spawnedEnemies: []
   TankEnemy:
     enemyPrefab: {fileID: 3886622432434536879, guid: 4e3d377efacd169409c94df9a2dfd633,
       type: 3}
-    minSpawnTime: 15
-    maxSpawnTime: 20
+    minSpawnTime: 8
+    maxSpawnTime: 10
     spawnedEnemies: []
   BossEnemy:
     enemyPrefab: {fileID: 1724877116421483690, guid: 7fe5415d0f24369439d55f1c5582959e,
       type: 3}
-    minSpawnTime: 20
-    maxSpawnTime: 25
+    minSpawnTime: 10
+    maxSpawnTime: 15
     spawnedEnemies: []
   enemyCount: 3
   m_minZ: -21.2

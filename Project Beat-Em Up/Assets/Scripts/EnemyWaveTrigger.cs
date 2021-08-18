@@ -22,19 +22,19 @@ public class EnemyWaveTrigger : MonoBehaviour
 {
     [SerializeField] EnemySpawnData enemySpawnData;
     EnemySpawner m_enemySpawner;
-    GateOpener m_gateOpener;
+    //GateOpener m_gateOpener;
 
     bool m_isTriggered = false;
 
     private void Start()
     {
         m_enemySpawner = FindObjectOfType<EnemySpawner>();
-        m_gateOpener = GetComponent<GateOpener>();
+        //m_gateOpener = GetComponent<GateOpener>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !m_isTriggered && m_gateOpener.m_hasOpened)
+        if (other.CompareTag("Player") && !m_isTriggered /*&& m_gateOpener.m_hasOpened*/)
         {
             m_enemySpawner.StartSpawning(enemySpawnData);
             m_isTriggered = true;

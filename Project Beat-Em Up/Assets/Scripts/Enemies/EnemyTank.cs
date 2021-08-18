@@ -30,6 +30,11 @@ public class EnemyTank : Enemy
         m_animator.SetTrigger(m_attackAnimation);
     }
 
+    protected void PlaySlamSound()
+    {
+        AudioManager.Instance.Play("TankSlamAttackSFX");
+    }
+
     public override void OnTakeDamage(float damage)
     {
         int chance = 50;

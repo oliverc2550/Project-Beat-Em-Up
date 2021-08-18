@@ -113,6 +113,7 @@ public class EnemyBoss : Enemy
     //anim event
     private void SummonEnemiesAnimEvent()
     {
+        AudioManager.Instance.Play("Summon/StealSFX");
         SummonEnemies(m_enemyToSummon, m_amountOfEnemiesToSummon);
     }
 

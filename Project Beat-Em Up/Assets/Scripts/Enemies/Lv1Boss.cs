@@ -76,7 +76,7 @@ public class Lv1Boss : EnemyBoss
     //anim event 
     private void UseAreaOfEffect()
     {
-
+        AudioManager.Instance.Play("BossSlamAttackSFX");
         Collider[] colliders = Physics.OverlapSphere(transform.position, m_aoeRange, m_targetLayer);
         foreach (Collider nearbyObject in colliders)
         {

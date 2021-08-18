@@ -51,10 +51,13 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     [Header("Settings")]
     [SerializeField] [Range(10, 300)] protected float m_maxHealth;
     [SerializeField] [Range(0, 10)] protected float m_movementSpeed;
+    [SerializeField] protected string m_footstepSFX;
     [SerializeField] [Range(25, 300)] protected float m_jumpForce;
     [SerializeField] [Range(0, 3)] protected float m_pickupRange = 1.25f;
+    [SerializeField] protected string m_normalAttackSound;
     [SerializeField] [Range(0, 10)] protected float m_normalAttackRange = 1.25f;
     [SerializeField] [Range(0, 50)] protected float m_normalAttackDamage = 1.0f;
+    [SerializeField] protected string m_specialAttackSound;
     [SerializeField] [Range(0, 10)] protected float m_specialAttackRange = 0.75f;
     [SerializeField] [Range(0, 65)] protected float m_specialAttackDamage = 2.0f;
 
@@ -105,6 +108,10 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     #region Movement Methods
     protected virtual void Move(Vector3 direction)
     {
+    }
+    protected void PlayFootstep()
+    {
+        AudioManager.Instance.Play(m_footstepSFX);
     }
     protected virtual void Jump()
     {
@@ -194,7 +201,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
 
     }
 
-    protected void Attack(Transform attackPoint, float attackRange, /*string targetTag,*/ LayerMask targetLayer, float attackDamage)
+    protected void Attack(Transform attackPoint, float attackRange, string sfxName, LayerMask targetLayer, float attackDamage)
     {
         Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, targetLayer); //Get an array of colliders using Physics.OverlapSphere
         foreach (Collider nearbyObject in colliders) //Iterate over each collider in the list
@@ -203,6 +210,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             IDamagable damagableTarget = nearbyObject.gameObject.GetComponent<IDamagable>();
             if (damagableTarget != null)
             {
+                AudioManager.Instance.Play(sfxName); //Uses the instance of the AudioManager to play the associated attack sounds
                 damagableTarget.TakeDamage(attackDamage);
                 Debug.Log("Dealt " + attackDamage + " to " + damagableTarget);
                 AttackEffects(nearbyObject.gameObject);
@@ -214,16 +222,16 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         }
     }
 
-    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, LayerMask enemyLayer, float normalAttackDamage)
+    protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, string sfxName, LayerMask enemyLayer, float normalAttackDamage)
     {
        
-        Attack(normalAttackPoint, normalAttackRange, enemyLayer, normalAttackDamage);
+        Attack(normalAttackPoint, normalAttackRange, sfxName, enemyLayer, normalAttackDamage);
     }
 
-    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, LayerMask enemyLayer, float specialAttackDamage)
+    protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, string sfxName, LayerMask enemyLayer, float specialAttackDamage)
     {
         Debug.Log("Special Attack");
-        Attack(specialAttackPoint, specialAttackRange, enemyLayer, specialAttackDamage);
+        Attack(specialAttackPoint, specialAttackRange, sfxName, enemyLayer, specialAttackDamage);
         FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnSpecialAttack);
     }
 
@@ -231,12 +239,12 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     //SetNormal/SpecialAttackBool() methods needed as Unity Animation events are unable to directly toggle bools.
     protected void NormalAttackAnimEvent()
     {
-        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_targetLayer, m_normalAttackDamage);
+        NormalAttack(m_normalAttackPoint, m_normalAttackRange, m_normalAttackSound, m_targetLayer, m_normalAttackDamage);
     }
 
     protected void SpecialAttackAnimEvent()
     {
-        SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_targetLayer, m_specialAttackDamage);
+        SpecialAttack(m_specialAttackPoint, m_specialAttackRange, m_specialAttackSound, m_targetLayer, m_specialAttackDamage);
     }
 
     protected void SetNormalAttackBool()

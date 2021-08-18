@@ -212,10 +212,13 @@ MonoBehaviour:
   m_chargedAttackPoint: {fileID: 7262013985841797242}
   m_maxHealth: 100
   m_movementSpeed: 4.5
+  m_footstepSFX: FootstepSFX
   m_jumpForce: 25
   m_pickupRange: 0.25
+  m_normalAttackSound: Summon/StealSFX
   m_normalAttackRange: 1
   m_normalAttackDamage: 1
+  m_specialAttackSound: Summon/StealSFX
   m_specialAttackRange: 0.75
   m_specialAttackDamage: 2
   m_scoreGainedOnSpecialAttack: 0

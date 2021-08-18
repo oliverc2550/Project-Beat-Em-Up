@@ -31,7 +31,6 @@ using UnityEngine.Events;
 
 public class PlayerController : CombatandMovement
 {
-
     private Vector2 m_input;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected PlayerInput m_playerInput;
@@ -43,9 +42,10 @@ public class PlayerController : CombatandMovement
     [SerializeField] protected UIController m_uiController;
 
     [Header("Player Settings ")]
-    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    public int m_playerLives = 3;
     [SerializeField] [Range(0, 10)] protected float m_chargedAttackRange = 1.0f;
     [SerializeField] [Range(0, 65)] protected float m_chargedAttackDamage = 25.0f;
+    [SerializeField] protected string m_chargedAttackSound;
     [SerializeField] protected float minimumChargeLevel = 25f;
     [SerializeField] protected float chargeGain = 0.5f;
     [SerializeField] protected float attackchargeDrain = 5f;
@@ -65,6 +65,7 @@ public class PlayerController : CombatandMovement
         currentCharge = 0;
         m_chargedAttackActive = false;
         m_isGrounded = true;
+        m_uiController.UpdateLives(m_playerLives);
     }
 
     protected bool IsGrounded(ref bool isGrounded)
@@ -106,11 +107,30 @@ public class PlayerController : CombatandMovement
     {
         Debug.Log("ChargedAttack");
 
-        Attack(m_chargedAttackPoint, m_chargedAttackRange, m_targetLayer, m_chargedAttackDamage);
+        Attack(m_chargedAttackPoint, m_chargedAttackRange, m_chargedAttackSound, m_targetLayer, m_chargedAttackDamage);
         currentCharge -= maxCharge;
+        m_uiController.SetChargeMeterPercent(currentCharge / maxCharge);
 
         FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnChargedAttack);
         m_playerCamera.transform.DOShakeRotation(1, 3);
+    }
+
+    IEnumerator InvulnerabilityTimer()
+    {
+        yield return new WaitForSeconds(5f);
+        m_invulnerable = false;
+        m_uiController.DisablePowerUpDisplay();
+    }
+
+    public override void Die()
+    {
+        m_playerLives -= 1;
+        m_uiController.UpdateLives(m_playerLives);
+        if (m_playerLives <= 0)
+        {
+            m_uiController.EnableRestartMenu();
+        }
+        IcurrentHealth = ImaxHealth;
     }
 
     //Unity Input Systems Action Callbacks
@@ -188,6 +208,10 @@ public class PlayerController : CombatandMovement
             currentCharge += chargeGain * Time.deltaTime;
         }
         m_uiController.SetChargeMeterPercent(currentCharge / maxCharge);
+        if(m_invulnerable == true)
+        {
+            StartCoroutine(InvulnerabilityTimer());
+        }
     }
 
     private void FixedUpdate()

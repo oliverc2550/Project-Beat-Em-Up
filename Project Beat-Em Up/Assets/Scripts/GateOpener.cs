@@ -34,6 +34,7 @@ public class GateOpener : MonoBehaviour
 
         if(other.gameObject.CompareTag("Player") && m_hasOpened == false && enemyCount <= 0)
         {
+            AudioManager.Instance.Play("GateOpening");
             m_playerCamera.transform.DOShakeRotation(m_gateMovementDuration, 0.35f);
             transform.DOMoveZ(m_endPosZ, m_gateMovementDuration);
 

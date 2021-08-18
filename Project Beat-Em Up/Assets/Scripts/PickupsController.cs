@@ -16,6 +16,8 @@ public class PickupsController : MonoBehaviour
 
     [Header("References (DO NOT EDIT)")]
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
+    [SerializeField] private UIController m_UIController;
+    [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] private Material m_healthPickupMat;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] private Material m_chargePickupMat;
@@ -80,6 +82,7 @@ public class PickupsController : MonoBehaviour
 
             case PickupItems.Invulnerability:
                 gameObject.GetComponent<CombatandMovement>().m_invulnerable = true;
+                m_UIController.EnablePowerUpDisplay();
                 break;
         }
     }
@@ -93,5 +96,14 @@ public class PickupsController : MonoBehaviour
         Debug.Log(m_pickupItems);
         SetItem();
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            PickupEffects(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

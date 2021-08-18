@@ -20,16 +20,19 @@ public class UIController : MonoBehaviour
     [SerializeField] private Image playerHealthBarForeground;
     [SerializeField] private Image playerChargeMeterBackground;
     [SerializeField] private Image playerChargeMeterForeground;
-    public Text ObjectiveDescription;
-    public Text FireModeDescription;
+    [SerializeField] private GameObject PowerupDisplay;
     public GameObject PopupBox;
     public Text PopupText;
     public GameObject PauseMenu;
-    public GameObject RespawnMenu;
+    [SerializeField] private Button m_resumeButton;
+    public GameObject RestartMenu;
+    [SerializeField] private Button m_restartButton;
+    [SerializeField] private GameObject m_tutorialMenu;
+    [SerializeField] private GameObject m_keyboardControlsText;
+    [SerializeField] private GameObject m_controllerControlsText;
     [HideInInspector] public bool PauseMenuActive;
-    [SerializeField] private GameObject _pickupNotification;
-    private bool _respawnMenuActive;
-
+    private bool _restartMenuActive;
+    [SerializeField] private Text m_livesDisplayText;
     [SerializeField] private TextMeshProUGUI m_scoreText;
 
     // Start is called before the first frame update
@@ -37,15 +40,25 @@ public class UIController : MonoBehaviour
     {
         PauseMenuActive = false; //Sets the PauseMenuActive bool to false
         PopupBox.SetActive(false); //Sets the PopupBox to inactive
-        _respawnMenuActive = false; //Sets the respawnMenuActive bool to false
+        _restartMenuActive = false; //Sets the respawnMenuActive bool to false
     }
     //Update used to check for key input and to check player progress
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Return) && PopupBox.activeSelf == true)
-        //{
-        //    PopupBox.SetActive(false);
-        //}
+        if(m_tutorialMenu.activeSelf == true)
+        {
+            if (Gamepad.current == null)
+            {
+                m_controllerControlsText.SetActive(false);
+                m_keyboardControlsText.SetActive(true);
+                //Debug.Log("Gamepad not conected");
+            }
+            else
+            {
+                m_keyboardControlsText.SetActive(false);
+                m_controllerControlsText.SetActive(true);
+            }
+        }
     }
 
     private void SetPercentFill(Image background, Image foreground, float percent)
@@ -70,33 +83,32 @@ public class UIController : MonoBehaviour
         m_scoreText.text = "Score: " + amount.ToString();
     }
 
-    //Method to Update the text within the ObjectiveText UI Object
-    public void UpdateObjectiveText(string currentObjective)
+    public void UpdateLives(int numOfLives)
     {
-        ObjectiveDescription.text = currentObjective;
-        ObjectiveDescription.color = Color.white;
+        m_livesDisplayText.color = Color.white;
+        m_livesDisplayText.text = "Lives: " + numOfLives.ToString();
     }
+
     //Method to Update the text within the UpdateFireModeText UI Object
-    public void UpdateFireModeText(string currentFiremode)
+    public void EnablePowerUpDisplay()
     {
-        FireModeDescription.text = currentFiremode;
-        FireModeDescription.color = Color.white;
+        PowerupDisplay.SetActive(true);
+    }
+    public void DisablePowerUpDisplay()
+    {
+        PowerupDisplay.SetActive(false);
     }
     //Method to Update the text within the UpdatePopupText UI Object
     public void UpdatePopupText(string popupMessage)
     {
         PopupText.text = popupMessage;
         PopupText.color = Color.white;
-        if (_pickupNotification.activeSelf == true) //Check to see if the pickupNotification UI Object is activated
-        {
-            _pickupNotification.SetActive(false); //Deactivate it if it is active so that it doesn't overlap with the popup box
-        }
         PopupBox.SetActive(true); //Activates the popup box
     }
     //Method to enable the Pause menu
     public void OnPause(InputAction.CallbackContext value)
     {
-        if (value.started && PauseMenu.activeSelf != true && _respawnMenuActive != true) //Check Key input and to see if the pause menu is already active and if the respawn menu is active
+        if (value.started && PauseMenu.activeSelf != true && _restartMenuActive != true) //Check Key input and to see if the pause menu is already active and if the respawn menu is active
         {
             m_playerInput.DeactivateInput();
             if (PopupBox.activeSelf == true) //Check to see if the Popup box is active
@@ -105,24 +117,28 @@ public class UIController : MonoBehaviour
             }
             PauseMenu.SetActive(true); //Set the pause menu to active
             PauseMenuActive = true; //Sets the PauseMenuActive bool to true
+            m_resumeButton.Select();
             Time.timeScale = 0f; //Pause the game time
             Cursor.visible = true; //Enable the cusor so that the player can interact with the menu
             Cursor.lockState = CursorLockMode.None;
         }
-        else if (value.started && PauseMenu.activeSelf == true && _respawnMenuActive != true) //Check Key input and to see if the pause menu is already active and if the respawn menu is active
+        else if (value.started && PauseMenu.activeSelf == true && _restartMenuActive != true) //Check Key input and to see if the pause menu is already active and if the respawn menu is active
         {
             Resume(); //Resume the game
         }
     }
     //Method to enable the Respawn menu
-    public void EnableRespawnMenu()
+    public void EnableRestartMenu()
     {
-        _respawnMenuActive = true; //Sets the respawnMenuActive bool to true
+        _restartMenuActive = true; //Sets the respawnMenuActive bool to true
+        m_playerInput.DeactivateInput();
         if (PopupBox.activeSelf == true) //Check to see if the Popup box is active
         {
             PopupBox.SetActive(false);  //Deactivate it if it is
         }
-        RespawnMenu.SetActive(true); //Sets the respawn menu to active
+        RestartMenu.SetActive(true); //Sets the respawn menu to active
+        m_restartButton.Select();
+        Time.timeScale = 0f; //Pause the game time
         Cursor.visible = true; //Enable the cusor so that the player can interact with the menu
         Cursor.lockState = CursorLockMode.None;
     }
@@ -139,6 +155,7 @@ public class UIController : MonoBehaviour
     //Method to Respawn after dying
     public void RestartLevel()
     {
+        m_playerInput.ActivateInput();
         bl_SceneLoader.GetActiveLoader().LoadLevel("Level1");
         //RespawnMenu.SetActive(false);
         //Cursor.visible = false;
@@ -150,6 +167,7 @@ public class UIController : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        m_playerInput.ActivateInput();
         bl_SceneLoader.GetActiveLoader().LoadLevel("MainMenu");
     }
     //Method to quit out of the game
