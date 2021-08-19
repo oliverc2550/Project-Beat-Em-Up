@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//Changelog
+/*Inital Script created by Thea
+ */
+
+#region Enum and Struct
 // Enum that stores left and right in order to give the designer the option to choose which direction enemies should be spawning from.
 public enum SpawnDirection {Left, Right}
-
 
 // This struct is created in order to pack spawn settings for each enemy together and make it cleaner.
 [System.Serializable]
@@ -22,6 +26,7 @@ public struct EnemySpawnData
     public float rightBound;
 }
 
+#endregion
 
 public class EnemyWaveTrigger : MonoBehaviour
 {
@@ -33,7 +38,7 @@ public class EnemyWaveTrigger : MonoBehaviour
     bool m_isTriggered = false;
     #endregion
 
-
+    #region Spawning
     private void Start()
     {
         m_enemySpawner = FindObjectOfType<EnemySpawner>();
@@ -48,4 +53,5 @@ public class EnemyWaveTrigger : MonoBehaviour
             m_isTriggered = true;
         }
     }
+    #endregion
 }

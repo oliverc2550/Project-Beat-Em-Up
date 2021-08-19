@@ -38,6 +38,7 @@ public class UIController : MonoBehaviour
     private bool _restartMenuActive;
     [SerializeField] private Text m_livesDisplayText;
     [SerializeField] private TextMeshProUGUI m_scoreText;
+    #endregion
 
     // Start is called before the first frame update
     void Start()

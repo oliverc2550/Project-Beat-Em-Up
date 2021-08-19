@@ -8,14 +8,15 @@ using UnityEngine;
  */
 public class ExplosiveBarrel : MonoBehaviour, IDamagable
 {
+    #region Variables
     [SerializeField] protected GameObject m_explosionVFX;
     [SerializeField] protected float m_maxHealth;
     public float ImaxHealth { get; set; }
     public float IcurrentHealth { get; set; }
     public bool IisBlocking { get; set; }
     public bool Iinvulnerable { get; set; }
+    #endregion
 
-    // Start is called before the first frame update
     void Start()
     {
         ImaxHealth = m_maxHealth;
@@ -24,6 +25,8 @@ public class ExplosiveBarrel : MonoBehaviour, IDamagable
         Iinvulnerable = false;
     }
 
+    #region On barrel hit
+    // Coming from the interface.
     public virtual void OnTakeDamage(float damage)
     {
     }
@@ -48,4 +51,5 @@ public class ExplosiveBarrel : MonoBehaviour, IDamagable
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
+    #endregion
 }

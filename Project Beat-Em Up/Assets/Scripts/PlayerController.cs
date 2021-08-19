@@ -7,7 +7,8 @@ using Cinemachine;
 using UnityEngine.Events;
 
 //Changelog
-/*Inital Script and movement logic created by Thea (date)
+/*Inital Script created by Thea (date)
+ * 19/06/21 - Thea - Movement logic 
  * 24/06/21 - Oliver - Changed local float variables h and v to declared Vector2 _input. _input.x/y used in same way that float h/v were.
  * Changed Input.GetKeyDown(Spacebar) to (Input.GetButtonDown("Jump") to make the base movement more platform agnostic.
  * Over rode the Move() function to add in m_animator controls for changing the animator state. Added a rigidbody velocity check to the if statement used to activate Jump().

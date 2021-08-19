@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 //Changelog
-/*Inital Script created by Thea (7/07/21)
+/*Script created by Thea
+* 19.08.2021 - Oliver - Added sound
  */
+
 public class EnemySummoner : Enemy
 {
     #region Variables
@@ -13,12 +16,7 @@ public class EnemySummoner : Enemy
     Enemy m_SummonedEnemy;
     #endregion
 
-
-    protected override void Start()
-    {
-        base.Start();
-    }
-
+    #region Overriding main functions
     // This overrides the move function in order to stop this enemy from attacking when it gets close to the player.
     // Once this enemy gets in range of the player, it stops moving and attacking.
     protected override void Move(Vector3 direction)
@@ -43,7 +41,9 @@ public class EnemySummoner : Enemy
             m_animator.SetTrigger("Summon");
         }
     }
+    #endregion
 
+    #region Animation events
     // This is an animation event that is called while playing summon animation. It spawns the summoned enemy if there is none alive.
     private void SummonAnimEvent()
     {
@@ -55,4 +55,5 @@ public class EnemySummoner : Enemy
         }
 
     }
+    #endregion
 }

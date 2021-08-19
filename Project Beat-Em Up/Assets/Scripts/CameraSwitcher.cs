@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 // Changelog
 /* Inital Script created by Oliver (17/08/21)
- * 17/08/2021 - Thea - Added in additional coroutine and Unity Event to control enemy attack during camera switch. Moved inital corutine out of the update function.
+ * 17/08/2021 - Thea - Added in additional coroutine and Unity Event to control enemy attack during camera switch. Moved the old coroutine out of the update function.
  */
 
 public class CameraSwitcher : MonoBehaviour
@@ -20,13 +20,15 @@ public class CameraSwitcher : MonoBehaviour
     protected bool m_hasActivated;
     public UnityEvent onCameraSwitched;
     #endregion
-    // Start is called before the first frame update
+
     void Start()
     {
         m_bossCameraEnabled = false;
         m_playerController.m_isBossCamEnabled = false;
         m_hasActivated = false;
     }
+
+    #region Enable the tutorial camera and play enemy animation
     //OnTriggerEnter to activate camera switch, only if the player enters the volume and the switch hasn't been activated already
     private void OnTriggerEnter(Collider other)
     {
@@ -41,23 +43,24 @@ public class CameraSwitcher : MonoBehaviour
             m_hasActivated = true;
         }
     }
+
     //Cinemachine Camera Priority changing
     private void EnableBossCam()
     {
         m_bossCamera.Priority = 20;
     }
 
-    private void DisableBossCam()
-    {
-        m_bossCamera.Priority = 0;
-    }
-    //Coroutine for enemy attack during camera switch
     IEnumerator TutorialAttackWaitTime()
     {
         Debug.Log("CS");
         yield return new WaitForSeconds(2);
         onCameraSwitched.Invoke();
     }
+    #endregion
+
+    #region Disable the tutorial camera
+    //Coroutine for enemy attack during camera switch
+
     //Coroutine to ensure that camera priority is changed back after delay and to ensure that camera switch can't be activated again
     IEnumerator DisableAfterDelay()
     {
@@ -66,4 +69,11 @@ public class CameraSwitcher : MonoBehaviour
         m_bossCameraEnabled = false;
         m_playerController.m_isBossCamEnabled = false;
     }
+
+    private void DisableBossCam()
+    {
+        m_bossCamera.Priority = 0;
+    }
+    #endregion
+
 }

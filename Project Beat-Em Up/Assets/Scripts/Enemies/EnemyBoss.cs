@@ -5,7 +5,8 @@ using UnityEngine;
 using DG.Tweening;
 
 //Changelog
-/*Inital Script created by Thea
+/*Script created by Thea
+ *19.08.2021 - Oliver - Added sound
  */
 
 public class EnemyBoss : Enemy
@@ -17,8 +18,8 @@ public class EnemyBoss : Enemy
     [SerializeField] protected Enemy m_enemyToSummonOnPhase2;
     [SerializeField] protected int m_enemyCountToSummonOnPhase1 = 2;
     [SerializeField] protected int m_enemyCountToSummonOnPhase2 = 2;
-    [SerializeField]  int m_gainedScoreOnBossEnteringPhase2 = 50;
-    [SerializeField]  Vector3 m_scaleBossOnPhase2 = new Vector3(0.7f, 0.7f, 0.7f);
+    [SerializeField] int m_gainedScoreOnBossEnteringPhase2 = 50;
+    [SerializeField] Vector3 m_scaleBossOnPhase2 = new Vector3(0.7f, 0.7f, 0.7f);
 
     [Tooltip("How many basic attacks will be done before the speacial attack is played.")]
     [SerializeField] private int m_minSpecialAttackHitCount = 1;
@@ -36,16 +37,12 @@ public class EnemyBoss : Enemy
     public List<Enemy> summonedEnemies = new List<Enemy>();
     #endregion
 
-    protected override void Start()
-    {
-        base.Start();
-    }
-
+    #region Combat
     // This is called when this enemy takes damage. It checks if the health is less than 75% or 50% to set enemy phase.
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
-
+        // Summons enemies only once using animation event when health is less than 75% .
         if (IcurrentHealth / ImaxHealth < 0.75f && !m_enemiesFromPhase1Summoned)
         {
             m_enemyToSummon = m_enemyToSummonOnPhase1;
@@ -53,6 +50,7 @@ public class EnemyBoss : Enemy
             m_animator.SetTrigger("Summon");
             m_enemiesFromPhase1Summoned = true;
         }
+        // Visually represents that phase 2 is entered when the health is less than 50% .
         else if (IcurrentHealth / ImaxHealth < 0.5f)
         {
             m_phase2Entered = true;
@@ -61,11 +59,12 @@ public class EnemyBoss : Enemy
             transform.DOScale(m_scaleBossOnPhase2, 2);
         }
     }
+    #endregion
 
-    // Called every time this enemy attacks. It plays a random special attack.
+    #region Attack logic in Phase 2 
+    // Called every time this enemy attacks. It plays a random special attack in between its normal attacks. 
     protected override void AttackEffects(GameObject gameObject)
     {
-
         base.AttackEffects(gameObject);
         if (m_phase2Entered)
         {
@@ -75,14 +74,13 @@ public class EnemyBoss : Enemy
             if (m_attackCount < specialAttackHitCount)
             {
                 m_attackCount++;
-                Debug.Log("attackCount: " + m_attackCount);
-                Debug.Log("specialAttackHitCount: " + specialAttackHitCount);
             }
+
             else
             {
                 PickRandomAttackInPhase2();
                 PlayPickedAttack(m_lastAttack);
-                Debug.Log("lastAttack: " + m_lastAttack);
+
 
                 m_attackCount = 0;
             }
@@ -114,7 +112,9 @@ public class EnemyBoss : Enemy
     protected virtual void PlayPickedAttack(int attackToPlay)
     {
     }
+    #endregion
 
+    #region Summoning enemies
     // Animation event that is called during summoning animation.
     private void SummonEnemiesAnimEvent()
     {
@@ -122,7 +122,7 @@ public class EnemyBoss : Enemy
         SummonEnemies(m_enemyToSummon, m_amountOfEnemiesToSummon);
     }
 
-    // Summons enemies near this boss randdomly positioned.
+    // Summons enemies near this boss, randdomly positioned.
     private void SummonEnemies(Enemy enemyToSummon, int amount)
     {
         for (int i = 0; i < amount; i++)
@@ -140,4 +140,5 @@ public class EnemyBoss : Enemy
             m_enemySpawner.enemyCount++;
         }
     }
+    #endregion
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // Changelog
-/* Inital Script created by Thea (29/06/21)
+/* Script created by Thea
  */
 
 // Enemy state enum that the movement states of the enemy are stored.
@@ -44,6 +44,7 @@ public class Enemy : CombatandMovement
     protected EnemyState m_currentState;
     #endregion
 
+    #region Enemy states / Update 
     protected override void Start()
     {
         base.Start();
@@ -55,6 +56,7 @@ public class Enemy : CombatandMovement
         m_startXPos = transform.position.x;
         m_currentDirection = Vector3.right;
 
+        // Checks which state shoud this enemy start with, depending on which bool is checked as true in the inspector.
         if (m_patrolsOnStart)
         {
             SetEnemyState(EnemyState.Patrol);
@@ -137,6 +139,7 @@ public class Enemy : CombatandMovement
             }
         }
     }
+
     // This coroutine stops the movement of a patrolling enemy, only to go back to patrolling after the patrol wait time has passed.
     // It is called when the enemy reaches to final destination while patrolling.
     IEnumerator WaitBeforeChangingDirection()
@@ -149,34 +152,25 @@ public class Enemy : CombatandMovement
         SetEnemyState(EnemyState.Patrol);
     }
 
-    // Changes the direction of the enemy from left to right or vice versa. Is called when a patrolling enemy reaches to its destination and waits some seconds.
-    void ChangeDirection()
+    // This is called to change the enemy state.
+    protected void SetEnemyState(EnemyState state)
     {
+        m_currentState = state;
+    }
 
-        if (m_currentDirection == Vector3.right)
+    // Normally all enemies chase the player. This one is created specifically for tutorial (only some tutorial enemies have trogger colliders), so that the enemy 
+    // starts chasing when the player is in range.
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
-            m_currentDirection = Vector3.left;
-        }
-        else
-        {
-            m_currentDirection = Vector3.right;
+            SetEnemyState(EnemyState.Chase);
         }
     }
 
-    // This is called during the chase state to check if the player is in the range of this enemy.
-    // It checks to see if the remaining distance is less than the stopping distance of this enemy and returns true or false accordingly.
-    protected bool PlayerInRange()
-    {
-        float distance = Vector3.Distance(m_target.position, transform.position);
-        return distance < m_stoppingDistance;
-    }
+    #endregion
 
-    // This is called while the player is in range of this enemy.
-    protected virtual void OnPlayerInRange()
-    {
-        m_animator.SetTrigger(m_attackAnimation);
-        m_alreadyAttackedOnce = true;
-    }
+    #region Movement 
 
     // This function moves the nav mesh agennt of the enemy in a direction.
     protected override void Move(Vector3 direction)
@@ -202,17 +196,42 @@ public class Enemy : CombatandMovement
         m_target = target;
     }
 
-    // This coroutine is called when the enemy is stuned.
-    // It waits for the cooldown duration, and then allows the enemy to be stunned again in order to prevent chain stunning.
-    IEnumerator StunCooldown()
+    // Changes the direction of the enemy from left to right or vice versa. Is called when a patrolling enemy reaches to its destination and waits some seconds.
+    void ChangeDirection()
     {
-        m_canBeStunned = false;
-        yield return new WaitForSeconds(m_stunCooldown);
-        m_canBeStunned = true;
+
+        if (m_currentDirection == Vector3.right)
+        {
+            m_currentDirection = Vector3.left;
+        }
+        else
+        {
+            m_currentDirection = Vector3.right;
+        }
+    }
+    #endregion
+
+    #region When player is in range
+
+    // This is called during the chase state to check if the player is in the range of this enemy.
+    // It checks to see if the remaining distance is less than the stopping distance of this enemy and returns true or false accordingly.
+    protected bool PlayerInRange()
+    {
+        float distance = Vector3.Distance(m_target.position, transform.position);
+        return distance < m_stoppingDistance;
     }
 
+    // This is called while the player is in range of this enemy.
+    protected virtual void OnPlayerInRange()
+    {
+        m_animator.SetTrigger(m_attackAnimation);
+        m_alreadyAttackedOnce = true;
+    }
+    #endregion
+
+    #region Combat
     // This overrides the TakeDamage function of CombatAndMovement and it comes from IDamageable interface. It is called when this enemy takes damage.
-    // It stuns the enemy and attracts this enemy to the player if the enemy was patrolling or idle.
+    // It stuns the enemy with a cooldown when damage is taken, and chases the player if the enemy was patrolling or idle.
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
@@ -230,18 +249,21 @@ public class Enemy : CombatandMovement
 
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
     }
-
-    // This is called to change the enemy state.
-    protected void SetEnemyState(EnemyState state)
+    // This coroutine is called when the enemy is stuned.
+    // It waits for the cooldown duration, and then allows the enemy to be stunned again in order to prevent chain stunning.
+    IEnumerator StunCooldown()
     {
-        m_currentState = state;
+        m_canBeStunned = false;
+        yield return new WaitForSeconds(m_stunCooldown);
+        m_canBeStunned = true;
     }
+
 
     // This overrides the Die function of CombatAndMovement and it comes from IDamageable interface. It is called when this enemies health reaches to 0.
     // It spawns a powerup object by a chance and adds score to the player.
     public override void Die()
     {
-        float chance = (float)m_chanceToDropPowerUp / 100; 
+        float chance = (float)m_chanceToDropPowerUp / 100;
         if (Random.value < chance)
         {
             Instantiate(m_powerUpObject, gameObject.transform.position, gameObject.transform.rotation);
@@ -268,7 +290,6 @@ public class Enemy : CombatandMovement
 
         Destroy(gameObject);
     }
-
-
+    #endregion
 }
 

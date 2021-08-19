@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Changelog
-/*Inital Script created by Thea (7/07/21)
+/*Script created by Thea
  */
 
+#region Struct
 // This struct is created to pack enemy information to make it easier for the designer.
 // How to use structs: https://www.tutorialsteacher.com/csharp/csharp-struct
 // How to serialize structs: https://forum.unity.com/threads/initialze-array-struct-variables-within-unity-editor.44473/
@@ -19,7 +20,7 @@ public struct EnemyToSpawn
     public float maxSpawnTime;
     public List<Enemy> spawnedEnemies;
 }
-
+#endregion
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform m_RightSpawnPoint;
     #endregion
 
+    #region Spawning
     // This is called when the player enters an EnemyWaveTrigger. It starts spawning these enemies based on the given EnemySpawnData
     public void StartSpawning(EnemySpawnData data)
     {
@@ -54,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
     // This coroutine spawns x amount of enemyToSpawn in left or right direction of the player between bounds.
     IEnumerator Spawning(int enemyAmount, SpawnDirection direction, EnemyToSpawn enemyToSpawn, float leftBound, float rightBound)
     {
-        int enemiesSpawned = 0; 
+        int enemiesSpawned = 0;
 
         while (enemiesSpawned < enemyAmount)
         {
@@ -74,16 +76,26 @@ public class EnemySpawner : MonoBehaviour
             //Restricting the Xpos of the enemies while spawning because they used to spawn on the other side of the gate if their Xpos wasnt restricted
             //https://docs.unity3d.com/ScriptReference/Mathf.Clamp.html
             xPos = Mathf.Clamp(xPos, rightBound, leftBound);
-                
+
             Vector3 position = new Vector3(xPos, 0, Random.Range(m_minZ, m_maxZ));
 
             SummonEnemy(enemyToSpawn, position);
 
             //Debug.Log("EnemySpawned: " + enemyToSpawn.enemyPrefab.name + enemiesSpawned);
-        
+
         }
     }
 
+    // Spawns the enemy at given position.
+    private void SummonEnemy(EnemyToSpawn enemyToSpawn, Vector3 position)
+    {
+        Enemy enemy = Instantiate(enemyToSpawn.enemyPrefab, position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
+        enemyToSpawn.spawnedEnemies.Add(enemy);
+        enemyCount++;
+    }
+    #endregion
+
+    #region On dead enemy
     // This is called when an enemy dies so that it can be removed from spawned enemies list.
     // It checks every spawned enemy from their lists to see if this is the correct enemy.
     // When the correct enemy is found, it removes it from the list and returns to save performance.
@@ -124,12 +136,6 @@ public class EnemySpawner : MonoBehaviour
             }
         }
     }
+    #endregion
 
-    // Spawns the enemy at given position.
-    private void SummonEnemy(EnemyToSpawn enemyToSpawn, Vector3 position)
-    {
-        Enemy enemy = Instantiate(enemyToSpawn.enemyPrefab, position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
-        enemyToSpawn.spawnedEnemies.Add(enemy);
-        enemyCount++;
-    }
 }

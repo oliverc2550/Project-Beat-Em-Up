@@ -18,11 +18,23 @@ public class EnemyUI : MonoBehaviour
     private IEnumerator m_hideCoroutine = null;
     #endregion
 
+    #region Show / Hide UI
     private void Start()
     {
         m_enemyUI.SetActive(false);
     }
 
+    //This coroutine hides the healthbar after some delay to avoind having too many health bars at the same time.
+    // How to start a coroutine only once: https://stackoverflow.com/questions/43461214/how-can-i-run-startcoroutine-once
+    IEnumerator HideAfterDelay()
+    {
+        yield return new WaitForSeconds(hideDelay);
+        m_enemyUI.SetActive(false);
+        m_hideCoroutine = null;
+    }
+    #endregion
+
+    #region Setting functions
     // Sets the name text of the enemy
     public void SetEnemyNameUI(string name)
     {
@@ -42,14 +54,5 @@ public class EnemyUI : MonoBehaviour
             StartCoroutine(m_hideCoroutine);
         }
     }
-
-
-    //This coroutine hides the healthbar after some delay to avoind having too many health bars at the same time.
-    // How to start a coroutine only once: https://stackoverflow.com/questions/43461214/how-can-i-run-startcoroutine-once
-    IEnumerator HideAfterDelay()
-    {
-        yield return new WaitForSeconds(hideDelay);
-        m_enemyUI.SetActive(false);
-        m_hideCoroutine = null;
-    }
+    #endregion
 }

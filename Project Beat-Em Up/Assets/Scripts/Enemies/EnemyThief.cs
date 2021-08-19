@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 //Changelog
-/*Inital Script created by Thea (6/07/21)
+/*Inital Script created by Thea
  */
+
 public class EnemyThief : Enemy
 {
     #region Variables
@@ -21,6 +23,7 @@ public class EnemyThief : Enemy
         m_playerController = FindObjectOfType<PlayerController>();
     }
 
+    #region Set states
     protected override void Update()
     {
         base.Update();
@@ -32,15 +35,17 @@ public class EnemyThief : Enemy
             SetEnemyState(EnemyState.Run);
         }
 
-        if (m_playerController.currentCharge > m_playerController.maxCharge/2 && m_currentState == EnemyState.Patrol)
+        if (m_playerController.currentCharge > m_playerController.maxCharge / 2 && m_currentState == EnemyState.Patrol)
         {
             SetEnemyState(EnemyState.Chase);
             m_chargeStollen = false;
             m_alreadyAttackedOnce = false;
         }
     }
+    #endregion
 
-    // It is called when the player gets in attack range. Once a charge is stolen, thief returns back to patrolling.
+    #region Steal charge
+    // It is called when the player gets in attack range. The thief steals the charge if its not stollen yet, once a charge is stolen, he returns back to patrolling.
     protected override void OnPlayerInRange()
     {
         if (m_chargeStollen)
@@ -65,7 +70,7 @@ public class EnemyThief : Enemy
             m_chargeStollen = true;
         }
     }
-    
+
     // Steals charge from the player.
     private void StealCharge(PlayerController player)
     {
@@ -76,4 +81,5 @@ public class EnemyThief : Enemy
         }
         Debug.Log("Player's charge is stolen by " + m_ChargeToStealOnHit + ". New charge is: " + player.currentCharge);
     }
+    #endregion
 }

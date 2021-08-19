@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Changelog
-/*Inital Script created by Thea
+/*Inital Script created by Thea. Called addScore function from different classes to add score whenever is needed
  * 18/08/21 - Oliver - Added in functionality to grant the player an addition life after a certian score threshold has been reached
  */
 public class ScoreManager : MonoBehaviour
@@ -22,6 +22,7 @@ public class ScoreManager : MonoBehaviour
         m_score += amount;
         m_scoreToLives += amount;
         m_uiController.SetScore(m_score);
+
         if(m_scoreToLives >= m_grantLifePerScore)
         {
             m_playerController.m_playerLives += 1;

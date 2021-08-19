@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*Inital Script created by Thea
+//Changelog
+/*Script created by Thea
+ * 19.08.2021 - Oliver - Added sound
  */
 
 public class Lv1Boss : EnemyBoss
@@ -17,11 +19,7 @@ public class Lv1Boss : EnemyBoss
     private const int m_spikesTimerCount = 3;
     #endregion
 
-    protected override void Start()
-    {
-        base.Start();
-    }
-
+    #region Combat
     // It is called when the boss enters phase 2. Plays an attack from a randomly given index by triggering the respective animation.
     protected override void PlayPickedAttack(int attackToPlay)
     {
@@ -48,6 +46,12 @@ public class Lv1Boss : EnemyBoss
         }
     }
 
+    // This function is called when onCameraSwitched event is invoked in inspector. It plays an animation only once when the camera focuses on this enemy.
+    public void PlayAttackWhenBossAppears()
+    {
+        m_animator.SetTrigger("AOE Attack");
+    }
+
     // It is called every time the enemy takes damage.
     public override void OnTakeDamage(float damage)
     {
@@ -58,7 +62,9 @@ public class Lv1Boss : EnemyBoss
             m_currentState = EnemyState.Chase;
         }
     }
+    #endregion
 
+    #region Animation events
     // This is an animation event during box spawn animation.
     private void InstantiateSpikesTimers()
     {
@@ -90,19 +96,5 @@ public class Lv1Boss : EnemyBoss
             }
         }
     }
-
-    // Normally all enemies chase the player. This one is created specifically for tutorial, so that the enemy starts chasing when the player is in range.
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            m_currentState = EnemyState.Chase;
-        }
-    }
-
-    // This function is called when onCameraSwitched event is invoked in inspector. It plays an animation only once when the camera focuses on this enemy.
-    public void PlayAttackWhenBossAppears()
-    {
-        m_animator.SetTrigger("AOE Attack");
-    }
+    #endregion
 }

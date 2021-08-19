@@ -9,6 +9,7 @@ using Cinemachine;
  * 8.08.2021 - Thea - Shake the camera while the gate is opening
  * 10.08.2021 - Thea - Opening the gate with DoTween and only if all the enemies from the previous combat area are defeated
  * 19.08.2021 - Thea - Closing the gate only if new enemies has spawned and the gate is currently open so that player won't get stuck in the previous combat area
+ * 19.08.2021 - Oliver - Added sound
  */
 
 public class GateOpener : MonoBehaviour
@@ -20,8 +21,9 @@ public class GateOpener : MonoBehaviour
     public bool m_hasOpened;
     private float m_startingPosZ;
     private float m_endPosZ;
-    #endregion 
+    #endregion
 
+    #region Open / Close gate
     private void Start()
     {
         m_hasOpened = false;
@@ -29,7 +31,6 @@ public class GateOpener : MonoBehaviour
         m_endPosZ = transform.position.z - 10;
 
     }
-
     // When the player enters this trigger, open the gate and shake the camera using DoTween.
     private void OnTriggerEnter(Collider other)
     {
@@ -56,4 +57,5 @@ public class GateOpener : MonoBehaviour
             m_hasOpened = false;
         }
     }
+    #endregion
 }

@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+//Changelog
+/*Script created by Thea
+ */
+
 public class SpikesTimer : MonoBehaviour, IDamagable
 {
     #region Variables
@@ -24,6 +28,17 @@ public class SpikesTimer : MonoBehaviour, IDamagable
     public bool IisBlocking { get; set; }
     public bool Iinvulnerable { get; set; }
     #endregion
+
+    #region Spawning and timer logic
+
+    // This is called by the enemy boss as soon as this is spawned. It gives this timer a random direction, and throws it using DoTween.
+    public void ThrowSpikesTimer(Vector3 direction)
+    {
+        float zPos = Random.Range(m_minZposForSpikesTimer, m_maxZposForSpikesTimer);
+        float xPos = Random.Range(m_minXposForSpikesTimer, m_maxXposForSpikesTimer);
+
+        transform.DOJump(new Vector3(transform.position.x + xPos + direction.x, transform.position.y + 0.5f, zPos), 1, 1, m_throwDuration);
+    }
 
     // These timers are activated as soon as they are spawned. Their healths are 1 so that they can be killed with one hit.
     void Start()
@@ -51,15 +66,6 @@ public class SpikesTimer : MonoBehaviour, IDamagable
         OnTimerComplete();
     }
 
-    // This is called by the enemy boss as soon as this is spawned. It gives this timer a random direction, and throws it using DoTween.
-    public void ThrowSpikesTimer(Vector3 direction)
-    {
-        float zPos = Random.Range(m_minZposForSpikesTimer, m_maxZposForSpikesTimer);
-        float xPos = Random.Range(m_minXposForSpikesTimer, m_maxXposForSpikesTimer);
-
-        transform.DOJump(new Vector3(transform.position.x  + xPos + direction.x, transform.position.y + 0.5f, zPos), 1, 1, m_throwDuration);
-    }
-
     // This is called when the timer reaches to 0. It instantiates spikes and animates them using DoTween.
     private void OnTimerComplete()
     {
@@ -75,9 +81,10 @@ public class SpikesTimer : MonoBehaviour, IDamagable
             };
         }
         Destroy(gameObject);
-
     }
+    #endregion
 
+    #region Damage
     // This comes from the IDamageable interface and it is called when timer is hit by the player.
     public void OnTakeDamage(float amount)
     {
@@ -97,4 +104,5 @@ public class SpikesTimer : MonoBehaviour, IDamagable
 
         Destroy(gameObject);
     }
+    #endregion
 }

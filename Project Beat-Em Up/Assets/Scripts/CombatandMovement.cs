@@ -51,7 +51,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
 
 
     [Header("Settings")]
-    [SerializeField] [Range(10, 300)] protected float m_maxHealth;
+    [SerializeField] [Range(10, 500)] protected float m_maxHealth;
     [SerializeField] [Range(0, 10)] protected float m_movementSpeed;
     [SerializeField] protected string m_footstepSFX;
     [SerializeField] [Range(25, 300)] protected float m_jumpForce;
@@ -108,6 +108,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             m_chargedAttackPointXpos = m_chargedAttackPoint.localPosition.x;
         }
     }
+
     #region Movement Methods
     // Empty virtual function that both player and enemies can override as movement varies among them.
     protected virtual void Move(Vector3 direction)
@@ -150,6 +151,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         }
     }
     #endregion
+
     #region Interaction Methods
     //Interact Method that was used when the game had scope to include objects that could be picked up by the player and enemies. Not used in the production build
     public void Interact(ref bool holdingObj)
@@ -194,6 +196,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         heldObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
     #endregion
+
     #region Attack Methods
     //AttackEffect Method to allow inheriting classes to add in additional effects to thier attacks
     protected virtual void AttackEffects(GameObject gameObject)
@@ -271,6 +274,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         }
     }
     #endregion
+
     #region Interface Required Methods
     //Mandatory functions, coming from the interface. If these functions are not added to this script, there will be an error. 
     //If these functions are not needed here anymore, they must be removed from the interface too
@@ -283,6 +287,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         Destroy(gameObject);
     }
     #endregion
+
     //Debug Function to see the Overlapsphere area for the attacks
     public void OnDrawGizmosSelected()
     {
