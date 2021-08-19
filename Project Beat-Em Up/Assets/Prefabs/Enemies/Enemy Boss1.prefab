@@ -483,7 +483,7 @@ MonoBehaviour:
   m_interactPoint: {fileID: 7526567011720164342}
   m_specialAttackPoint: {fileID: 7526567011720164342}
   m_chargedAttackPoint: {fileID: 7526567011720164342}
-  m_maxHealth: 100
+  m_maxHealth: 250
   m_movementSpeed: 2.5
   m_footstepSFX: FootstepSFX
   m_jumpForce: 0
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_enemyAttackingMaterial: {fileID: 2100000, guid: cd933da2f1f0f634bb534d694b5a3fff,
     type: 2}
   m_EnemyName: 'Boss '
-  m_chanceToDropPowerUp: 0
+  m_chanceToDropPowerUp: 100
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 5
   m_stoppingDistance: 5
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_maxSpecialAttackHitCount: 4
   summonedEnemies: []
   m_aoeRange: 5
-  m_aoeDamage: 5
+  m_aoeDamage: 25
   m_spikesTimerPrefab: {fileID: 5118575594556964627, guid: 70112ab844c19c14488c7888a152a939,
     type: 3}
   m_rangeCollider: {fileID: 6799432600320449814}

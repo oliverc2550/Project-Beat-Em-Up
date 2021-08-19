@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-//Audio Manager Script from <https://www.youtube.com/watch?v=6OT43pvUyfY&ab_channel=Brackeys> timestamp ~ 4:00
+//Changelog
+/*Inital Script created by Oliver for use on Module 4 Project "Surviving the Edge"
+ * Audio Manager Script from <https://www.youtube.com/watch?v=6OT43pvUyfY&ab_channel=Brackeys> timestamp ~ 4:00
+ */
 public class AudioManager : MonoBehaviour
 {
     public SoundClass[] Sounds;

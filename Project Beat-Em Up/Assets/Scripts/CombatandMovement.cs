@@ -32,6 +32,7 @@ using UnityEngine;
 public class CombatandMovement : MonoBehaviour, IDamagable
 {
     #region Variables
+    //Variables serialized so that they can be set by the designer in the editor
     [Header("References (DO NOT EDIT)")]
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Animator m_animator;
@@ -87,7 +88,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     public bool IisBlocking { get; set; }
     public bool Iinvulnerable { get; set; }
     #endregion 
-
+    //Start function made virtual so to reduce code rewrite
     protected virtual void Start()
     {
         ImaxHealth = m_maxHealth;
@@ -150,6 +151,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     }
     #endregion
     #region Interaction Methods
+    //Interact Method that was used when the game had scope to include objects that could be picked up by the player and enemies. Not used in the production build
     public void Interact(ref bool holdingObj)
     {
         Collider[] colliders = Physics.OverlapSphere(m_interactPoint.position, m_pickupRange, m_pickupLayer); //Get an array of colliders using Physics.OverlapSphere
@@ -174,6 +176,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             }
         }
     }
+    //EquipItem Method that was used when the game had scope to include objects that could be picked up by the player and enemies. Not used in the production build
     public void EquipItem(GameObject item)
     {
         heldObject = item;
@@ -182,7 +185,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         heldObject.transform.position = m_interactPoint.position;
         heldObject.transform.parent = m_interactPoint;
     }
-
+    //UnequipHeldItem Method that was used when the game had scope to include objects that could be picked up by the player and enemies. Not used in the production build
     public void UnequipHeldItem()
     {
         heldObject = null;
@@ -192,11 +195,12 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     }
     #endregion
     #region Attack Methods
+    //AttackEffect Method to allow inheriting classes to add in additional effects to thier attacks
     protected virtual void AttackEffects(GameObject gameObject)
     {
 
     }
-
+    //Base Attack Method that is used as the basis for the Normal and Special Attack methods
     protected void Attack(Transform attackPoint, float attackRange, string sfxName, LayerMask targetLayer, float attackDamage)
     {
         Collider[] colliders = Physics.OverlapSphere(attackPoint.position, attackRange, targetLayer); //Get an array of colliders using Physics.OverlapSphere
@@ -217,13 +221,13 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             }
         }
     }
-
+    //Normal Attack Method
     protected void NormalAttack(Transform normalAttackPoint, float normalAttackRange, string sfxName, LayerMask enemyLayer, float normalAttackDamage)
     {
        
         Attack(normalAttackPoint, normalAttackRange, sfxName, enemyLayer, normalAttackDamage);
     }
-
+    //Special Attack Method
     protected void SpecialAttack(Transform specialAttackPoint, float specialAttackRange, string sfxName, LayerMask enemyLayer, float specialAttackDamage)
     {
         Debug.Log("Special Attack");
@@ -274,9 +278,12 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     public virtual void OnTakeDamage(float damage)
     {
     }
-
-    //Debug
-
+    public virtual void Die()
+    {
+        Destroy(gameObject);
+    }
+    #endregion
+    //Debug Function to see the Overlapsphere area for the attacks
     public void OnDrawGizmosSelected()
     {
         if (m_normalAttackPoint == null)
@@ -285,11 +292,4 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         }
         Gizmos.DrawWireSphere(m_normalAttackPoint.position, m_normalAttackRange);
     }
-    public virtual void Die()
-    {
-        //debug:
-        Destroy(gameObject);
-        //todo: some particles, sounds and animations
-    }
-    #endregion
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+// Changelog
+/* Inital Script created by Oliver for use on Module 4 Project "Surviving the Edge"
+ * 10/08/21 - Oliver - Changed scene loading script to use bl_SceneLoader instead of BuildIndex to work with Loading Scene asset. Removed DeleteSave function as save data isn't used
+ * 17/08/21 - Oliver - Added in m_controllerNotification and update function to alert the player the game plays best with a controller
+ */
 public class MenuController : MonoBehaviour
 {
     [SerializeField] protected GameObject m_controllerNotification;
@@ -24,19 +29,11 @@ public class MenuController : MonoBehaviour
         Debug.Log("Quit Game");
         Application.Quit();
     }
-    //Method to Delete all PlayerPref Save Data
-    public void DeleteSaveData()
-    {
-        PlayerPrefs.DeleteAll();
-        Debug.Log("Save Data Deleted");
-    }
-
     public void Update()
     {
         if(Gamepad.current == null)
         {
             m_controllerNotification.SetActive(true);
-            //Debug.Log("Gamepad not conected");
         }
         else
         {

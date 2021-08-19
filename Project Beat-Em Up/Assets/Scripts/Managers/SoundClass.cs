@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
-//Sound Class Script from <https://www.youtube.com/watch?v=6OT43pvUyfY&ab_channel=Brackeys> timestamp ~ 5:30
+//Changelog
+/*Inital Script created by Oliver for use on Module 4 Project "Surviving the Edge"
+ * Audio Manager Script from <https://www.youtube.com/watch?v=6OT43pvUyfY&ab_channel=Brackeys> timestamp ~ 5:30
+ */
 [System.Serializable] //Allows the script to be used in the Unity Editor
 public class SoundClass
 {

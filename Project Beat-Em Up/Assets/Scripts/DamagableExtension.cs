@@ -10,11 +10,13 @@ using UnityEngine;
 
 public static class DamagableExtension
 {
+    //Common functionality to be used by all scripts that make use of the IDamagable interface
     public static void TakeDamage(this IDamagable idamagable, float damage)
     {
+        //Determines how much damage the player should take depending on if they are blocking or invulnerable
         if(idamagable.IisBlocking == true)
         {
-            idamagable.IcurrentHealth += (damage / 2);
+            idamagable.IcurrentHealth += (damage / 2); //+= used to to bug using -=
         }
         if (idamagable.Iinvulnerable == true)
         {
@@ -24,7 +26,6 @@ public static class DamagableExtension
         {
             idamagable.IcurrentHealth -= damage;
         }
-        //add in health bar updating to individual implementation
         idamagable.OnTakeDamage(damage);
         if (idamagable.IcurrentHealth <= 0)
         {

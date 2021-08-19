@@ -244,7 +244,7 @@ public class Enemy : CombatandMovement
         float chance = (float)m_chanceToDropPowerUp / 100; 
         if (Random.value < chance)
         {
-            Instantiate(m_powerUpObject);
+            Instantiate(m_powerUpObject, gameObject.transform.position, gameObject.transform.rotation);
         }
 
 

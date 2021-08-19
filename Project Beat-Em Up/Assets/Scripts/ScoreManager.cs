@@ -4,6 +4,7 @@ using UnityEngine;
 
 //Changelog
 /*Inital Script created by Thea
+ * 18/08/21 - Oliver - Added in functionality to grant the player an addition life after a certian score threshold has been reached
  */
 public class ScoreManager : MonoBehaviour
 {

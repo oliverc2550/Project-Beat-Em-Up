@@ -37,22 +37,12 @@ public class EnemyWaveTrigger : MonoBehaviour
     private void Start()
     {
         m_enemySpawner = FindObjectOfType<EnemySpawner>();
-        //m_gateOpener = GetComponent<GateOpener>();
     }
 
-    // When the player enters or exits this trigger, start spawning with enemySpawnData.
+    // When the player enters this trigger, start spawning with enemySpawnData.
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !m_isTriggered /*&& m_gateOpener.m_hasOpened*/)
-        {
-            m_enemySpawner.StartSpawning(enemySpawnData);
-            m_isTriggered = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player") && !m_isTriggered /*&& m_gateOpener.m_hasOpened*/)
+        if (other.CompareTag("Player") && !m_isTriggered)
         {
             m_enemySpawner.StartSpawning(enemySpawnData);
             m_isTriggered = true;

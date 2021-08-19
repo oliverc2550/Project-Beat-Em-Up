@@ -27,10 +27,13 @@ using UnityEngine.Events;
  * 09/07/21 - Oliver - Added in the functionality to update the UI Charge Bar.
  * 09/08/21 - Thea - Gain score and shake the camera when charged attack is used
  * 15/08/21 - Thea - onNormalAttack event created in order to know when the player is going to attack and so that evemies can block it.
+ * 17/08/21 - Oliver - Added in functionality for playerlives and changed OnInteract method to properly work with pickups
  */
 
 public class PlayerController : CombatandMovement
 {
+    #region Variables
+    //Variables serialized so that the designer could edit them in the editor
     private Vector2 m_input;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected PlayerInput m_playerInput;
@@ -40,6 +43,7 @@ public class PlayerController : CombatandMovement
     [SerializeField] protected Collider m_collider;
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected UIController m_uiController;
+    [HideInInspector] public PickupsController m_pickupController;
 
     [Header("Player Settings ")]
     public int m_playerLives = 3;
@@ -54,9 +58,11 @@ public class PlayerController : CombatandMovement
     private bool m_chargedAttackActive;
     private float m_skinWidth = 0.1f;
     protected bool m_isGrounded;
+    [HideInInspector] public bool m_pickupInRange;
     [HideInInspector] public bool m_isBossCamEnabled;
     [HideInInspector] public UnityEvent onNormalAttackEvent;
-
+    #endregion
+    //Overriden Start method
     protected override void Start()
     {
         Cursor.visible = false;
@@ -65,9 +71,11 @@ public class PlayerController : CombatandMovement
         currentCharge = 0;
         m_chargedAttackActive = false;
         m_isGrounded = true;
+        m_pickupInRange = false;
         m_uiController.UpdateLives(m_playerLives);
+        m_pickupController = null;
     }
-
+    //Custom method to check if the player is grounded or not
     protected bool IsGrounded(ref bool isGrounded)
     {
         if (Physics.BoxCast(m_collider.bounds.max, m_collider.bounds.extents, Vector3.down, transform.rotation, m_collider.bounds.extents.y + m_skinWidth, m_collisionLayer))
@@ -80,7 +88,7 @@ public class PlayerController : CombatandMovement
             return isGrounded = false;
         }
     }
-
+    //Overriden Move method
     protected override void Move(Vector3 direction)
     {
         if (m_normalAttackActive == false && m_specialAttackActive == false && m_chargedAttackActive == false && m_isBlocking == false && m_isBossCamEnabled == false)
@@ -90,7 +98,7 @@ public class PlayerController : CombatandMovement
             transform.position += movement;
         }
     }
-
+    //SetChargedAttackBool used in the same way the Normal and Special Attack versions are in the base class
     protected void SetChargedAttackBool()
     {
         if (m_chargedAttackActive == false)
@@ -102,7 +110,7 @@ public class PlayerController : CombatandMovement
             m_chargedAttackActive = false;
         }
     }
-
+    //ChargedAttack method used with Unity Animation event to trigger attack
     protected void ChargedAttack()
     {
         Debug.Log("ChargedAttack");
@@ -114,14 +122,14 @@ public class PlayerController : CombatandMovement
         FindObjectOfType<ScoreManager>().AddScore(m_scoreGainedOnChargedAttack);
         m_playerCamera.transform.DOShakeRotation(1, 3);
     }
-
+    //Coroutine to disable invulnerability after a set amount of time
     IEnumerator InvulnerabilityTimer()
     {
         yield return new WaitForSeconds(5f);
         m_invulnerable = false;
         m_uiController.DisablePowerUpDisplay();
     }
-
+    //Overriden Die method to reduce the players lives once they hit 0 hp
     public override void Die()
     {
         m_playerLives -= 1;
@@ -134,7 +142,7 @@ public class PlayerController : CombatandMovement
     }
 
     //Unity Input Systems Action Callbacks
-
+    //Functions to be used with the new Unity Input System. Assign in the inspector through the Input component on the player
     public void OnMovement(InputAction.CallbackContext value)
     {
         m_input = value.ReadValue<Vector2>();
@@ -145,7 +153,10 @@ public class PlayerController : CombatandMovement
 
     public void OnInteract(InputAction.CallbackContext value)
     {
-        Interact(ref m_holdingObj);
+        if(m_pickupInRange == true && value.performed)
+        {
+            m_pickupController.PickupEffects(gameObject);
+        }
     }
 
     public void OnNormalAttack(InputAction.CallbackContext value)
@@ -198,7 +209,7 @@ public class PlayerController : CombatandMovement
             Jump();
         }
     }
-
+    //Update used to move the player, gradually increase the players charge level and check if the player has an active invulnerability pickup active
     void Update()
     {
         Move(new Vector3(m_input.x, 0, m_input.y));
@@ -213,13 +224,13 @@ public class PlayerController : CombatandMovement
             StartCoroutine(InvulnerabilityTimer());
         }
     }
-
+    //FixedUpdate used for ground checks
     private void FixedUpdate()
     {
         IsGrounded(ref m_isGrounded);
         //Debug.Log(IsGrounded(ref m_isGrounded));
     }
-
+    //LateUpdate used to flip the character sprite if needed
     void LateUpdate()
     {
         LookAtDirection(m_input.x);

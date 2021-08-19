@@ -47,14 +47,84 @@ MonoBehaviour:
   - Name: ThemePlaceholder
     Clip: {fileID: 8300000, guid: b1d904b0a1eee7e43b750773a317e28b, type: 3}
     Loop: 1
-    Volume: 0.15
+    Volume: 0.05
     Pitch: 1
     SpatialBlend: 0
     Source: {fileID: 0}
   - Name: BackgroundNoise
     Clip: {fileID: 8300000, guid: f1f266671e9df19469302bf24102cdf4, type: 3}
     Loop: 1
-    Volume: 0.05
+    Volume: 0.025
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: NormalAttackSFX
+    Clip: {fileID: 8300000, guid: 04c1b75ae53069847a75ebd390e91c35, type: 3}
+    Loop: 0
+    Volume: 0.055
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: SpecialAttackSFX
+    Clip: {fileID: 8300000, guid: 22c0e9b0ac434db458fce3a97bb77f6e, type: 3}
+    Loop: 0
+    Volume: 0.15
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: ChargedAttackSFX
+    Clip: {fileID: 8300000, guid: 3e5b59fe344bf9c449eb386b8ca86c7d, type: 3}
+    Loop: 0
+    Volume: 0.175
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: FootstepSFX
+    Clip: {fileID: 8300000, guid: 9d1c64f1bcb64764d8452558dab2f5fe, type: 3}
+    Loop: 0
+    Volume: 0.015
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: Summon/StealSFX
+    Clip: {fileID: 8300000, guid: bd71f40bb3a5f764ba074080dfe2acb0, type: 3}
+    Loop: 0
+    Volume: 0.175
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: TankSlamAttackSFX
+    Clip: {fileID: 8300000, guid: 1103a661d5ed16142a7547572d840c26, type: 3}
+    Loop: 0
+    Volume: 0.175
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: BossSlamAttackSFX
+    Clip: {fileID: 8300000, guid: 9d2a110bae026a44ea41a3bba8246fa1, type: 3}
+    Loop: 0
+    Volume: 0.175
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: MinionMovementSFX
+    Clip: {fileID: 8300000, guid: 463cfa753a3fb3b4c95761dd2eced335, type: 3}
+    Loop: 0
+    Volume: 0.175
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: RobotDeathSFX
+    Clip: {fileID: 8300000, guid: 5c9d7f39b353e86478405d9039bd7940, type: 3}
+    Loop: 0
+    Volume: 0.175
+    Pitch: 1
+    SpatialBlend: 0
+    Source: {fileID: 0}
+  - Name: GateOpening
+    Clip: {fileID: 8300000, guid: 3a2bcf4adcae787499ec00207224ff54, type: 3}
+    Loop: 0
+    Volume: 0.175
     Pitch: 1
     SpatialBlend: 0
     Source: {fileID: 0}

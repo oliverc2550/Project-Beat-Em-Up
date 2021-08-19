@@ -250,7 +250,7 @@ MonoBehaviour:
   m_interactPoint: {fileID: 2102965868858434919}
   m_specialAttackPoint: {fileID: 2102965868858434919}
   m_chargedAttackPoint: {fileID: 2102965868858434919}
-  m_maxHealth: 100
+  m_maxHealth: 150
   m_movementSpeed: 5.1
   m_footstepSFX: FootstepSFX
   m_jumpForce: 53
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_enemyAttackingMaterial: {fileID: 2100000, guid: 9c6ce319c16ae1c4480df7e9f26596ed,
     type: 2}
   m_EnemyName: Tank
-  m_chanceToDropPowerUp: 41
+  m_chanceToDropPowerUp: 55
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 5

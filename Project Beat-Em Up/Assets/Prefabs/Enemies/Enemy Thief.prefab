@@ -210,7 +210,7 @@ MonoBehaviour:
   m_interactPoint: {fileID: 7262013985841797242}
   m_specialAttackPoint: {fileID: 7262013985841797242}
   m_chargedAttackPoint: {fileID: 7262013985841797242}
-  m_maxHealth: 100
+  m_maxHealth: 60
   m_movementSpeed: 4.5
   m_footstepSFX: FootstepSFX
   m_jumpForce: 25
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_enemyAttackingMaterial: {fileID: 2100000, guid: b858762d0617f7647bc74b6c3a66a912,
     type: 2}
   m_EnemyName: Thief
-  m_chanceToDropPowerUp: 0
+  m_chanceToDropPowerUp: 25
   m_scoreGainedOnDeath: 200
   m_gainChargeOnEnemyDamaged: 2
   m_stoppingDistance: 3
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_idleOnStart: 0
   m_tutorialEnemy: 0
   summoner: {fileID: 0}
-  m_ChargeToStealOnHit: 20
+  m_ChargeToStealOnHit: 10
   m_ChanceToStealCharge: 100
   m_healthTresholdToRun: 20
 --- !u!1 &7653250959611753696
