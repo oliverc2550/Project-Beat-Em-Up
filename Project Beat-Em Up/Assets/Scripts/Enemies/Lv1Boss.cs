@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
 /*Inital Script created by Thea
  */
 
 public class Lv1Boss : EnemyBoss
 {
-
+    #region Variables
     [SerializeField] public float m_aoeRange;
     [SerializeField] private float m_aoeDamage;
     [SerializeField] private SpikesTimer m_spikesTimerPrefab;
@@ -16,12 +15,14 @@ public class Lv1Boss : EnemyBoss
     public List<SpikesTimer> aliveTimers = new List<SpikesTimer>();
 
     private const int m_spikesTimerCount = 3;
+    #endregion
 
     protected override void Start()
     {
         base.Start();
     }
 
+    // It is called when the boss enters phase 2. Plays an attack from a randomly given index by triggering the respective animation.
     protected override void PlayPickedAttack(int attackToPlay)
     {
         base.PlayPickedAttack(attackToPlay);
@@ -47,6 +48,7 @@ public class Lv1Boss : EnemyBoss
         }
     }
 
+    // It is called every time the enemy takes damage.
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
@@ -57,7 +59,7 @@ public class Lv1Boss : EnemyBoss
         }
     }
 
-    //anim evet
+    // This is an animation event during box spawn animation.
     private void InstantiateSpikesTimers()
     {
         for (int i = 0; i < m_spikesTimerCount; i++)
@@ -73,7 +75,7 @@ public class Lv1Boss : EnemyBoss
         aliveTimers[2].ThrowSpikesTimer(Vector3.zero);
     }
 
-    //anim event 
+    // This is an animation event called during Slam Attack animation
     private void UseAreaOfEffect()
     {
         AudioManager.Instance.Play("BossSlamAttackSFX");
@@ -89,6 +91,7 @@ public class Lv1Boss : EnemyBoss
         }
     }
 
+    // Normally all enemies chase the player. This one is created specifically for tutorial, so that the enemy starts chasing when the player is in range.
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -97,10 +100,9 @@ public class Lv1Boss : EnemyBoss
         }
     }
 
-    //called by onCameraSwitched event
+    // This function is called when onCameraSwitched event is invoked in inspector. It plays an animation only once when the camera focuses on this enemy.
     public void PlayAttackWhenBossAppears()
     {
-        Debug.Log("anim");
         m_animator.SetTrigger("AOE Attack");
     }
 }

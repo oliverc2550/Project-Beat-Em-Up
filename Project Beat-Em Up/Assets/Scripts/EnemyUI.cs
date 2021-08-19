@@ -9,21 +9,27 @@ using UnityEngine.UI;
  */
 public class EnemyUI : MonoBehaviour
 {
+    #region Variables
     [SerializeField] [Range(0.1f, 5f)] private float hideDelay = 1f;
     [SerializeField] private GameObject m_enemyUI;
     [SerializeField] public Image fillImage;
     [SerializeField] private TextMeshProUGUI m_enemyName;
 
     private IEnumerator m_hideCoroutine = null;
+    #endregion
 
     private void Start()
     {
         m_enemyUI.SetActive(false);
     }
+
+    // Sets the name text of the enemy
     public void SetEnemyNameUI(string name)
     {
         m_enemyName.text = name;
     }
+
+    // Enables and sets the healthbar image percentage of the enemy.
     public void SetHealthUI(float health, float maxHealth)
     {
         fillImage.fillAmount = health / maxHealth;
@@ -38,7 +44,8 @@ public class EnemyUI : MonoBehaviour
     }
 
 
-    // how to start a coroutine only once: https://stackoverflow.com/questions/43461214/how-can-i-run-startcoroutine-once
+    //This coroutine hides the healthbar after some delay to avoind having too many health bars at the same time.
+    // How to start a coroutine only once: https://stackoverflow.com/questions/43461214/how-can-i-run-startcoroutine-once
     IEnumerator HideAfterDelay()
     {
         yield return new WaitForSeconds(hideDelay);

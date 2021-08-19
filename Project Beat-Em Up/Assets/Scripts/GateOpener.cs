@@ -13,12 +13,14 @@ using Cinemachine;
 
 public class GateOpener : MonoBehaviour
 {
+    #region Variables
     [SerializeField] CinemachineVirtualCamera m_playerCamera;
     [SerializeField] int m_gateMovementDuration = 10;
 
     public bool m_hasOpened;
     private float m_startingPosZ;
     private float m_endPosZ;
+    #endregion 
 
     private void Start()
     {
@@ -28,6 +30,7 @@ public class GateOpener : MonoBehaviour
 
     }
 
+    // When the player enters this trigger, open the gate and shake the camera using DoTween.
     private void OnTriggerEnter(Collider other)
     {
         int enemyCount = FindObjectOfType<EnemySpawner>().enemyCount;
@@ -42,6 +45,7 @@ public class GateOpener : MonoBehaviour
         }
     }
 
+    // When the player exits this trigger, close the gate using DoTween.
     private void OnTriggerExit(Collider other)
     {
         int enemyCount = FindObjectOfType<EnemySpawner>().enemyCount;

@@ -15,7 +15,7 @@ using UnityEngine;
 // https://www.youtube.com/watch?v=A7qwuFnyIpM
 public interface IDamagable
 {
-    // every class that inherits from this interface is forced to have health, deal damage and die.
+    // every class that inherits from this interface is forced to have these variables and functions.
     float ImaxHealth { get; set; }
     float IcurrentHealth { get; set; }
     bool IisBlocking { get; set; }

@@ -5,10 +5,13 @@ using UnityEngine.AI;
 // Changelog
 /* Inital Script created by Thea (29/06/21)
  */
+
+// Enemy state enum that the movement states of the enemy are stored.
 public enum EnemyState { Idle, Chase, Run, Patrol }
 
 public class Enemy : CombatandMovement
 {
+    #region Variables
     [SerializeField] protected CapsuleCollider m_collider;
     [SerializeField] GameObject m_powerUpObject;
     [SerializeField] NavMeshAgent m_agent;
@@ -39,6 +42,7 @@ public class Enemy : CombatandMovement
     EnemyUI m_enemyUI;
     Transform m_target;
     protected EnemyState m_currentState;
+    #endregion
 
     protected override void Start()
     {
@@ -65,22 +69,26 @@ public class Enemy : CombatandMovement
         }
     }
 
+    // Checks which state the enemy is currently in and moves the enemy accordingly.
     protected virtual void Update()
     {
 
-        //don't read the update while the stun animation is running
+        // Don't read the update while the stun animation is running
+        // How to check if an animation is being played: https://answers.unity.com/questions/362629/how-can-i-check-if-an-animation-is-being-played-or.html
         if (m_animator.GetCurrentAnimatorStateInfo(0).IsName("Stun"))
         {
             return;
         }
 
+        // During Idle state, enemy stays idle and does nothing.
         if (m_currentState == EnemyState.Idle)
         {
             m_animator.SetBool("Walking", false);
             m_spriteRenderer.material = m_enemyNonAttackingMaterial;
         }
 
-        //https://answers.unity.com/questions/362629/how-can-i-check-if-an-animation-is-being-played-or.html
+        // During the chase state, enemy chases the player. When the enemy gets close, it starts attacking.
+        // To prevent enemy from moving while attacking, it also checks if the attack animation is not played at the same time.
         else if (m_currentState == EnemyState.Chase && !m_animator.GetCurrentAnimatorStateInfo(0).IsName(m_attackAnimation))
         {
             m_animator.SetBool("Walking", true);
@@ -93,6 +101,7 @@ public class Enemy : CombatandMovement
                 OnPlayerInRange();
             }
         }
+        // During run state, enemy runs away from the player.
         else if (m_currentState == EnemyState.Run)
         {
             m_animator.SetBool("Walking", true);
@@ -101,6 +110,9 @@ public class Enemy : CombatandMovement
 
             m_spriteRenderer.material = m_enemyAttackingMaterial;
         }
+
+        // During patrolling state, enemy picks a random direction and moves in that direction.
+        // Once the enemy reaches to max patrolling distance, it waits some seconds, then it changes its direction and repeats this cycle forever.
         else if (m_currentState == EnemyState.Patrol)
         {
             m_spriteRenderer.material = m_enemyNonAttackingMaterial;
@@ -125,6 +137,8 @@ public class Enemy : CombatandMovement
             }
         }
     }
+    // This coroutine stops the movement of a patrolling enemy, only to go back to patrolling after the patrol wait time has passed.
+    // It is called when the enemy reaches to final destination while patrolling.
     IEnumerator WaitBeforeChangingDirection()
     {
         SetEnemyState(EnemyState.Idle);
@@ -135,6 +149,7 @@ public class Enemy : CombatandMovement
         SetEnemyState(EnemyState.Patrol);
     }
 
+    // Changes the direction of the enemy from left to right or vice versa. Is called when a patrolling enemy reaches to its destination and waits some seconds.
     void ChangeDirection()
     {
 
@@ -148,18 +163,22 @@ public class Enemy : CombatandMovement
         }
     }
 
+    // This is called during the chase state to check if the player is in the range of this enemy.
+    // It checks to see if the remaining distance is less than the stopping distance of this enemy and returns true or false accordingly.
     protected bool PlayerInRange()
     {
         float distance = Vector3.Distance(m_target.position, transform.position);
         return distance < m_stoppingDistance;
     }
 
+    // This is called while the player is in range of this enemy.
     protected virtual void OnPlayerInRange()
     {
         m_animator.SetTrigger(m_attackAnimation);
         m_alreadyAttackedOnce = true;
     }
 
+    // This function moves the nav mesh agennt of the enemy in a direction.
     protected override void Move(Vector3 direction)
     {
         if (m_isBlocking == false)
@@ -177,11 +196,14 @@ public class Enemy : CombatandMovement
         }
     }
 
+    // This sets the target of this enemy. The enemy chases that target during chase state.
     void SetTarget(Transform target)
     {
         m_target = target;
     }
 
+    // This coroutine is called when the enemy is stuned.
+    // It waits for the cooldown duration, and then allows the enemy to be stunned again in order to prevent chain stunning.
     IEnumerator StunCooldown()
     {
         m_canBeStunned = false;
@@ -189,6 +211,8 @@ public class Enemy : CombatandMovement
         m_canBeStunned = true;
     }
 
+    // This overrides the TakeDamage function of CombatAndMovement and it comes from IDamageable interface. It is called when this enemy takes damage.
+    // It stuns the enemy and attracts this enemy to the player if the enemy was patrolling or idle.
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
@@ -207,11 +231,14 @@ public class Enemy : CombatandMovement
         m_enemyUI.SetHealthUI(IcurrentHealth, ImaxHealth);
     }
 
+    // This is called to change the enemy state.
     protected void SetEnemyState(EnemyState state)
     {
         m_currentState = state;
     }
 
+    // This overrides the Die function of CombatAndMovement and it comes from IDamageable interface. It is called when this enemies health reaches to 0.
+    // It spawns a powerup object by a chance and adds score to the player.
     public override void Die()
     {
         float chance = (float)m_chanceToDropPowerUp / 100; 

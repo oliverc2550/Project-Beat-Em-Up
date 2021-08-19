@@ -6,13 +6,14 @@ using UnityEngine;
  */
 public class EnemyThief : Enemy
 {
+    #region Variables
     [Header("Thief Settings")]
     [SerializeField][Range(0,50)] private float m_ChargeToStealOnHit = 10;
     [SerializeField][Range(0,100)] private float m_ChanceToStealCharge = 30;
     [SerializeField] private float m_healthTresholdToRun = 20;
     PlayerController m_playerController;
     private bool m_chargeStollen = false;
-
+    #endregion
 
     protected override void Start()
     {
@@ -24,10 +25,13 @@ public class EnemyThief : Enemy
     {
         base.Update();
 
+        // Checking if the health of this thief is less than x amount. If so, it starts running.
+        // If the player has more than 50% charge, the thief starts chasing the player to steal it. Otherwise it patrols.
         if (IcurrentHealth <= m_healthTresholdToRun)
         {
             SetEnemyState(EnemyState.Run);
         }
+
         if (m_playerController.currentCharge > m_playerController.maxCharge/2 && m_currentState == EnemyState.Patrol)
         {
             SetEnemyState(EnemyState.Chase);
@@ -36,6 +40,7 @@ public class EnemyThief : Enemy
         }
     }
 
+    // It is called when the player gets in attack range. Once a charge is stolen, thief returns back to patrolling.
     protected override void OnPlayerInRange()
     {
         if (m_chargeStollen)
@@ -49,7 +54,7 @@ public class EnemyThief : Enemy
         }
     }
 
-    //anim event
+    // Animation event called during attack animation. It steals players charge by a chance.
     protected override void AttackEffects(GameObject gameObject)
     {
         PlayerController player = gameObject.GetComponent<PlayerController>();
@@ -60,7 +65,8 @@ public class EnemyThief : Enemy
             m_chargeStollen = true;
         }
     }
-
+    
+    // Steals charge from the player.
     private void StealCharge(PlayerController player)
     {
         player.currentCharge -= m_ChargeToStealOnHit;

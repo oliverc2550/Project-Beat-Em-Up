@@ -31,6 +31,7 @@ using UnityEngine;
 
 public class CombatandMovement : MonoBehaviour, IDamagable
 {
+    #region Variables
     [Header("References (DO NOT EDIT)")]
     [Tooltip("Changing this might cause errors. Please DO NOT change this without consulting with a developer.")]
     [SerializeField] protected Animator m_animator;
@@ -85,6 +86,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     public float IcurrentHealth { get; set; }
     public bool IisBlocking { get; set; }
     public bool Iinvulnerable { get; set; }
+    #endregion 
 
     protected virtual void Start()
     {
@@ -106,6 +108,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
         }
     }
     #region Movement Methods
+    // Empty virtual function that both player and enemies can override as movement varies among them.
     protected virtual void Move(Vector3 direction)
     {
     }
@@ -113,15 +116,15 @@ public class CombatandMovement : MonoBehaviour, IDamagable
     {
         AudioManager.Instance.Play(m_footstepSFX);
     }
+    // This is called when a character jumps. It is called only by the player for now, but can be added to enemies too in the future.
     protected virtual void Jump()
     {
         m_rigidbody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
     }
+
+    // Changes the direction of the characters sprite and attack points. It is called by enemies and the player.
     protected void LookAtDirection(float direction)
     {
-
-        //Vector3 CharacterScale = transform.localScale;
-        //Debug.Log(CharacterScale);
         // if the direction is left
         if (direction < 0)
         {
@@ -132,10 +135,6 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             {
                 m_chargedAttackPoint.localPosition = new Vector3(-m_chargedAttackPointXpos, m_chargedAttackPoint.localPosition.y, m_chargedAttackPoint.localPosition.z);
             }
-            
-
-            //CharacterScale.x = -m_startScale.x;
-            //transform.localScale = CharacterScale;
         }
         // if the direction is right
         else if (direction > 0)
@@ -147,10 +146,7 @@ public class CombatandMovement : MonoBehaviour, IDamagable
             {
                 m_chargedAttackPoint.localPosition = new Vector3(m_chargedAttackPointXpos, m_chargedAttackPoint.localPosition.y, m_chargedAttackPoint.localPosition.z);
             }
-            //CharacterScale.x = m_startScale.x;
-            //transform.localScale = CharacterScale;
         }
-        //Debug.Log(CharacterScale);
     }
     #endregion
     #region Interaction Methods

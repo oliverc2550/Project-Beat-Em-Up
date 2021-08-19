@@ -6,6 +6,7 @@ public class ObjectToDealDamageOnTrigger : MonoBehaviour
 {
     [HideInInspector] public float damageToDeal;
 
+    // When an IDamageable object triggers with this object, deal damage to it.
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") || other.CompareTag("Explosive"))

@@ -6,8 +6,9 @@ using UnityEngine;
 /*Inital Script created by Thea (7/07/21)
  */
 
-//how to use structs: https://www.tutorialsteacher.com/csharp/csharp-struct
-//how to serialize structs: https://forum.unity.com/threads/initialze-array-struct-variables-within-unity-editor.44473/
+// This struct is created to pack enemy information to make it easier for the designer.
+// How to use structs: https://www.tutorialsteacher.com/csharp/csharp-struct
+// How to serialize structs: https://forum.unity.com/threads/initialze-array-struct-variables-within-unity-editor.44473/
 [System.Serializable]
 public struct EnemyToSpawn
 {
@@ -22,7 +23,7 @@ public struct EnemyToSpawn
 
 public class EnemySpawner : MonoBehaviour
 {
-
+    #region Variables
     [Header("Settings")]
     [SerializeField] EnemyToSpawn BasicEnemy;
     [SerializeField] EnemyToSpawn ThiefEnemy;
@@ -38,7 +39,9 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Transform m_leftSpawnPoint;
     [SerializeField] private Transform m_RightSpawnPoint;
+    #endregion
 
+    // This is called when the player enters an EnemyWaveTrigger. It starts spawning these enemies based on the given EnemySpawnData
     public void StartSpawning(EnemySpawnData data)
     {
         StartCoroutine(Spawning(data.basicEnemiesToSpawnCount, data.spawnDirection, BasicEnemy, data.leftBound, data.rightBound));
@@ -48,6 +51,7 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(Spawning(data.bossEnemiesToSpawnCount, data.spawnDirection, BossEnemy, data.leftBound, data.rightBound));
     }
 
+    // This coroutine spawns x amount of enemyToSpawn in left or right direction of the player between bounds.
     IEnumerator Spawning(int enemyAmount, SpawnDirection direction, EnemyToSpawn enemyToSpawn, float leftBound, float rightBound)
     {
         int enemiesSpawned = 0; 
@@ -80,6 +84,9 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    // This is called when an enemy dies so that it can be removed from spawned enemies list.
+    // It checks every spawned enemy from their lists to see if this is the correct enemy.
+    // When the correct enemy is found, it removes it from the list and returns to save performance.
     public void RemoveEnemy(Enemy enemy)
     {
         enemyCount--;
@@ -118,6 +125,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    // Spawns the enemy at given position.
     private void SummonEnemy(EnemyToSpawn enemyToSpawn, Vector3 position)
     {
         Enemy enemy = Instantiate(enemyToSpawn.enemyPrefab, position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));

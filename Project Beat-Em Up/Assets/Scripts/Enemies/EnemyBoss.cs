@@ -10,6 +10,7 @@ using DG.Tweening;
 
 public class EnemyBoss : Enemy
 {
+    #region Variables
     public enum BossAttacks { Summoning, DeadlySpikes, HitWithAOE }
 
     [SerializeField] protected Enemy m_enemyToSummonOnPhase1;
@@ -33,13 +34,14 @@ public class EnemyBoss : Enemy
     private bool m_phase2Entered = false;
 
     public List<Enemy> summonedEnemies = new List<Enemy>();
-
+    #endregion
 
     protected override void Start()
     {
         base.Start();
     }
 
+    // This is called when this enemy takes damage. It checks if the health is less than 75% or 50% to set enemy phase.
     public override void OnTakeDamage(float damage)
     {
         base.OnTakeDamage(damage);
@@ -60,7 +62,7 @@ public class EnemyBoss : Enemy
         }
     }
 
-
+    // Called every time this enemy attacks. It plays a random special attack.
     protected override void AttackEffects(GameObject gameObject)
     {
 
@@ -87,6 +89,8 @@ public class EnemyBoss : Enemy
         }
     }
 
+    // Picks and plays a random attack once the boss reaches to phase 2.
+    // It checks if the animation picked, wasn't the last animation so that the boss doesn't repeat the same special attack twice in a row.
     private void PickRandomAttackInPhase2()
     {
         //https://stackoverflow.com/questions/856154/total-number-of-items-defined-in-an-enum
@@ -106,17 +110,19 @@ public class EnemyBoss : Enemy
         m_lastAttack = randomAttack;
     }
 
+    // Virtual function that is overriden by inheriting boss classes.
     protected virtual void PlayPickedAttack(int attackToPlay)
     {
     }
 
-    //anim event
+    // Animation event that is called during summoning animation.
     private void SummonEnemiesAnimEvent()
     {
         AudioManager.Instance.Play("Summon/StealSFX");
         SummonEnemies(m_enemyToSummon, m_amountOfEnemiesToSummon);
     }
 
+    // Summons enemies near this boss randdomly positioned.
     private void SummonEnemies(Enemy enemyToSummon, int amount)
     {
         for (int i = 0; i < amount; i++)

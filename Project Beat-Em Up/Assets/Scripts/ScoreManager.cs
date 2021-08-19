@@ -7,12 +7,15 @@ using UnityEngine;
  */
 public class ScoreManager : MonoBehaviour
 {
+    #region Variables
     private int m_score = 0;
     private int m_scoreToLives = 0;
     [SerializeField] private int m_grantLifePerScore = 5000;
     [SerializeField] private UIController m_uiController;
     [SerializeField] private PlayerController m_playerController;
+    #endregion
 
+    // This is called when an enemy dies. It adds score to the player and updates the UI text.
     public void AddScore(int amount)
     {
         m_score += amount;

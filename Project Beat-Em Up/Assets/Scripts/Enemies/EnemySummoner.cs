@@ -6,17 +6,21 @@ using UnityEngine;
  */
 public class EnemySummoner : Enemy
 {
-    //[Header("Summoner Settings")]
+    #region Variables
 
     [SerializeField] private Enemy m_EnemyToSummon;
 
     Enemy m_SummonedEnemy;
+    #endregion
+
 
     protected override void Start()
     {
         base.Start();
     }
 
+    // This overrides the move function in order to stop this enemy from attacking when it gets close to the player.
+    // Once this enemy gets in range of the player, it stops moving and attacking.
     protected override void Move(Vector3 direction)
     {
         if (!PlayerInRange())
@@ -31,6 +35,7 @@ public class EnemySummoner : Enemy
         LookAtDirection(-direction.x);
     }
 
+    // This is called when the player gets in range of this summoner. It plays the summon animation if there is no summoned enemy.
     protected override void OnPlayerInRange()
     {
         if (m_SummonedEnemy == null)
@@ -39,7 +44,7 @@ public class EnemySummoner : Enemy
         }
     }
 
-    // animation event
+    // This is an animation event that is called while playing summon animation. It spawns the summoned enemy if there is none alive.
     private void SummonAnimEvent()
     {
         if (m_SummonedEnemy == null)
@@ -48,6 +53,6 @@ public class EnemySummoner : Enemy
             m_SummonedEnemy = Instantiate(m_EnemyToSummon, transform.position, Quaternion.Euler(0f, 180f, 0f));
             m_enemySpawner.enemyCount++;
         }
-        
+
     }
 }

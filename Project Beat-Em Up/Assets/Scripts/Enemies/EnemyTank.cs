@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EnemyTank : Enemy
 {
+    #region Variables
     [Header("Tank Settings")]
     [SerializeField] [Range(0, 100)] private int m_chanceToBlock = 100;
     [SerializeField] float m_blockDuration = 1;
     float m_lastMovementSpeed;
     [SerializeField] SphereCollider m_rangeCollider;
+    #endregion
 
     protected override void Start()
     {
@@ -19,6 +21,7 @@ public class EnemyTank : Enemy
         m_lastMovementSpeed = m_movementSpeed;
     }
 
+    // Plays the attack animation which is called during tutorial.
     void PlayAttackForTutorial()
     {
         m_animator.SetTrigger(m_attackAnimation);
@@ -29,6 +32,7 @@ public class EnemyTank : Enemy
         AudioManager.Instance.Play("TankSlamAttackSFX");
     }
 
+    // This is called when this enemy takes damage. It is stunned by a chance.
     public override void OnTakeDamage(float damage)
     {
         int chance = 50;
@@ -39,7 +43,7 @@ public class EnemyTank : Enemy
         }
 
     }
-
+    // Start listening to events.
     private void OnEnable()
     {
         FindObjectOfType<PlayerController>().onNormalAttackEvent.AddListener(BlockByChance);
@@ -47,6 +51,7 @@ public class EnemyTank : Enemy
 
     }
 
+    // Stop listening to events.
     private void OnDisable()
     {
         PlayerController playerController = FindObjectOfType<PlayerController>();
@@ -63,6 +68,7 @@ public class EnemyTank : Enemy
 
     }
 
+    // This is called every time the player attacks by the player's onNormalAttack event. It starts playing the block animation by a chance.
     void BlockByChance()
     {
         float blockChance = (float)m_chanceToBlock / 100;
@@ -77,6 +83,7 @@ public class EnemyTank : Enemy
         }
     }
 
+    // This coroutine stops playing the block animation after waiting for the block duration.
     IEnumerator OnBlocking()
     {
         yield return new WaitForSeconds(m_blockDuration);
@@ -86,6 +93,8 @@ public class EnemyTank : Enemy
         m_movementSpeed = m_lastMovementSpeed;
     }
 
+    // This is called when the player enters the attack range of this enemy. It plays left or right animation based on the direction of the enemy.
+    // This animation enables a projectile that damages the player when collided.
     protected override void OnPlayerInRange()
     {
         // if the direction is left
@@ -101,7 +110,7 @@ public class EnemyTank : Enemy
         m_animator.SetTrigger(m_attackAnimation);
     }
 
-
+    // Checks if the player is in range. If so, starts chasing. Only used during tutorial as spawned enemies chase automatically.
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
