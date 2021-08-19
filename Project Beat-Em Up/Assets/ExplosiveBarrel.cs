@@ -20,19 +20,28 @@ public class ExplosiveBarrel : MonoBehaviour, IDamagable
         Iinvulnerable = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public virtual void OnTakeDamage(float damage)
     {
     }
 
+    //The meshRenderer of the barrel is disabled because if the object itself is destroyed immediately, the VFX can never be destroyed or disabled because it is 
+    //instantiated by the barrelObj.
     public virtual void Die()
     {
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        StartCoroutine(PlayVFX());
+    }
+
+    //After the explosionVFX is instantiated and played, the explosion is being destroyed. The main game object is destroyed after delay because otherwise the VFX gets
+    //stuck in the last frame of its animation and it never gets destroyed or disabled.
+    IEnumerator PlayVFX()
+    {
+        GameObject explosion = Instantiate(m_explosionVFX);
+
+        yield return new WaitForSeconds(0.5f);
+        Destroy(explosion);
+
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
-        Instantiate(m_explosionVFX);
     }
 }

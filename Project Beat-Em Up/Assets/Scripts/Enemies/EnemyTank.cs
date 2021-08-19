@@ -17,13 +17,7 @@ public class EnemyTank : Enemy
         GetComponentInChildren<ObjectToDealDamageOnTrigger>().damageToDeal = m_normalAttackDamage;
         m_attackAnimation = "LeftAttack";
         m_lastMovementSpeed = m_movementSpeed;
-
-        if (m_tutorialEnemy)
-        {
-            SetEnemyState(EnemyState.Idle);
-        }
     }
-
 
     void PlayAttackForTutorial()
     {

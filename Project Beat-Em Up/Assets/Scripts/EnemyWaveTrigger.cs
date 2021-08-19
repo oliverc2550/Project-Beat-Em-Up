@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum SpawnDirection {Left, Right}
 
@@ -15,6 +16,8 @@ public struct EnemySpawnData
     public int bossEnemiesToSpawnCount;
 
     public SpawnDirection spawnDirection;
+    public float leftBound;
+    public float rightBound;
 }
 
 
@@ -25,6 +28,8 @@ public class EnemyWaveTrigger : MonoBehaviour
     //GateOpener m_gateOpener;
 
     bool m_isTriggered = false;
+    
+
 
     private void Start()
     {
@@ -35,6 +40,15 @@ public class EnemyWaveTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !m_isTriggered /*&& m_gateOpener.m_hasOpened*/)
+        {
+            m_enemySpawner.StartSpawning(enemySpawnData);
+            m_isTriggered = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player") && m_isTriggered /*&& m_gateOpener.m_hasOpened*/)
         {
             m_enemySpawner.StartSpawning(enemySpawnData);
             m_isTriggered = true;

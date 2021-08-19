@@ -41,14 +41,14 @@ public class EnemySpawner : MonoBehaviour
 
     public void StartSpawning(EnemySpawnData data)
     {
-        StartCoroutine(Spawning(data.basicEnemiesToSpawnCount, data.spawnDirection, BasicEnemy));
-        StartCoroutine(Spawning(data.summonerEnemiesToSpawnCount, data.spawnDirection, SummonerEnemy));
-        StartCoroutine(Spawning(data.tankEnemiesToSpawnCount, data.spawnDirection, TankEnemy));
-        StartCoroutine(Spawning(data.thiefEnemiesToSpawnCount, data.spawnDirection, ThiefEnemy));
-        StartCoroutine(Spawning(data.bossEnemiesToSpawnCount, data.spawnDirection, BossEnemy));
+        StartCoroutine(Spawning(data.basicEnemiesToSpawnCount, data.spawnDirection, BasicEnemy, data.leftBound, data.rightBound));
+        StartCoroutine(Spawning(data.summonerEnemiesToSpawnCount, data.spawnDirection, SummonerEnemy, data.leftBound, data.rightBound));
+        StartCoroutine(Spawning(data.tankEnemiesToSpawnCount, data.spawnDirection, TankEnemy, data.leftBound, data.rightBound));
+        StartCoroutine(Spawning(data.thiefEnemiesToSpawnCount, data.spawnDirection, ThiefEnemy, data.leftBound, data.rightBound));
+        StartCoroutine(Spawning(data.bossEnemiesToSpawnCount, data.spawnDirection, BossEnemy, data.leftBound, data.rightBound));
     }
 
-    IEnumerator Spawning(int enemyAmount, SpawnDirection direction, EnemyToSpawn enemyToSpawn)
+    IEnumerator Spawning(int enemyAmount, SpawnDirection direction, EnemyToSpawn enemyToSpawn, float leftBound, float rightBound)
     {
         int enemiesSpawned = 0; 
 
@@ -67,6 +67,10 @@ public class EnemySpawner : MonoBehaviour
                 xPos = m_RightSpawnPoint.position.x;
             }
 
+            //Restricting the Xpos of the enemies while spawning because they used to spawn on the other side of the gate if their Xpos wasnt restricted
+            //https://docs.unity3d.com/ScriptReference/Mathf.Clamp.html
+            xPos = Mathf.Clamp(xPos, rightBound, leftBound);
+                
             Vector3 position = new Vector3(xPos, 0, Random.Range(m_minZ, m_maxZ));
 
             SummonEnemy(enemyToSpawn, position);
@@ -116,7 +120,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SummonEnemy(EnemyToSpawn enemyToSpawn, Vector3 position)
     {
-        Enemy enemy = Instantiate(enemyToSpawn.enemyPrefab, position, Quaternion.identity);
+        Enemy enemy = Instantiate(enemyToSpawn.enemyPrefab, position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
         enemyToSpawn.spawnedEnemies.Add(enemy);
         enemyCount++;
     }

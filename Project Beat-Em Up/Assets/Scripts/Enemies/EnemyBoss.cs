@@ -126,7 +126,7 @@ public class EnemyBoss : Enemy
             xPos = UnityEngine.Random.value * i + transform.position.x;
             zPos = UnityEngine.Random.value * i + transform.position.z;
 
-            Enemy enemy = Instantiate(enemyToSummon, new Vector3(xPos, transform.position.y, zPos), Quaternion.identity);
+            Enemy enemy = Instantiate(enemyToSummon, new Vector3(xPos, transform.position.y, zPos), Quaternion.Euler(0f, 180f, 0f));
 
             //Every time when an enemy is summoned, set the boss to be a sumoner
             enemy.summoner = this;

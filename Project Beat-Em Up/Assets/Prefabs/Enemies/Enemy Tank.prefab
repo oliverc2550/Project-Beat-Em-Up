@@ -98,7 +98,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102965868339181091}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -3.36, y: 0, z: -4.47}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
@@ -108,7 +108,7 @@ Transform:
   - {fileID: 4630481787715778454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &2102965868339181093
 Animator:
   serializedVersion: 3
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_patrollingDistanceX: 4.9
   m_stunCooldown: 3
   m_PatrolWaitTime: 3
-  m_petrolsOnStart: 0
+  m_patrolsOnStart: 0
   m_idleOnStart: 0
   m_tutorialEnemy: 0
   summoner: {fileID: 0}
@@ -569,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -579,7 +579,7 @@ PrefabInstance:
     - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
@@ -589,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 5585400079543634889, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9071237288512998726, guid: 52d7aa06c1fee9e4eb3693cbf9baa27d,
         type: 3}

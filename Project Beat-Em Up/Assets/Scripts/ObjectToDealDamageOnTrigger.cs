@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ObjectToDealDamageOnTrigger : MonoBehaviour
 {
-    public float damageToDeal;
+    [HideInInspector] public float damageToDeal;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Explosive"))
         {
             other.GetComponent<IDamagable>().TakeDamage(damageToDeal);
             Debug.Log(other.name + ": " + other.GetComponent<IDamagable>().IcurrentHealth);
